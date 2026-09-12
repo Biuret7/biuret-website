@@ -1,0 +1,9 @@
+{
+  "name": "biuret-licensing-function",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "node-appwrite": "^21.0.0"
+  }
+}
