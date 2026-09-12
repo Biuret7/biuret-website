@@ -181,6 +181,15 @@ async function entitlement(request, res, config, tables, users, headers) {
   });
 }
 
+async function accountAccess(request, res, users, headers) {
+  const user = await currentUser(request, users, headers);
+  if (!user) return response(res, 401, { ok: false, error: 'Sign in is required.' });
+  if (!user.verified) {
+    return response(res, 403, { ok: false, error: 'Verify your email before using your account.' });
+  }
+  return response(res, 200, { ok: true, access: 'account' });
+}
+
 async function checkoutIntent(request, res, config, tables, users, headers) {
   const body = asJson(request.body);
   const productSlug = String(body?.productSlug || '').trim().toLowerCase();
@@ -304,6 +313,7 @@ export default async ({ req, res, log, error }) => {
     const payload = asJson(req.body);
     if (!payload) return response(res, 400, { ok: false, error: 'Request body is not valid JSON.' });
     if (payload.action === 'entitlement') return entitlement(req, res, config, tables, users, headers);
+    if (payload.action === 'account-access') return accountAccess(req, res, users, headers);
     if (payload.action === 'checkout-intent') return checkoutIntent(req, res, config, tables, users, headers);
     return response(res, 404, { ok: false, error: 'Unknown licensing action.' });
   } catch (exception) {

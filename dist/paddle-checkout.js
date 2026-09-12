@@ -10,7 +10,6 @@
     element.textContent = getCopy(english, arabic);
     element.dataset.status = kind;
   };
-  const getPriceId = (product, plan) => config.prices?.[product]?.[plan] || '';
   const validPriceId = (priceId) => /^pri_[a-z\d]{26}$/i.test(priceId);
 
   function initializePaddle() {
@@ -22,8 +21,8 @@
       eventCallback(event) {
         if (event?.name === 'checkout.completed') {
           setStatus(
-            'Sandbox checkout completed. License delivery is enabled only after the secure webhook is connected.',
-            'اكتمل اختبار الدفع في بيئة Sandbox. تسليم الترخيص سيتفعّل بعد ربط Webhook الآمن.',
+            'Payment completed. Your license will appear in your account after secure server verification.',
+            'اكتمل الدفع. سيظهر الترخيص في حسابك بعد تحقّق الخادم الآمن.',
             'success'
           );
         }
@@ -35,15 +34,6 @@
   async function openCheckout(button) {
     const product = button.dataset.product;
     const plan = button.dataset.plan;
-    const priceId = getPriceId(product, plan);
-    if (!validPriceId(priceId)) {
-      setStatus(
-        'Online checkout for this plan is being prepared. Please select an available plan or check back soon.',
-        'الشراء الإلكتروني لهذه الخطة قيد التجهيز. اختر خطة متاحة أو عُد قريبًا.',
-        'neutral'
-      );
-      return;
-    }
 
     try {
       await window.BiuretAppwrite?.getCurrentUser();
@@ -56,10 +46,16 @@
     try {
       initializePaddle();
       button.disabled = true;
+      setStatus('Preparing your secure checkout…', 'جارٍ تجهيز عملية الشراء الآمنة…', 'neutral');
+      const intent = await window.BiuretAppwrite.createCheckoutIntent({
+        productSlug: product,
+        plan
+      });
+      if (!validPriceId(intent.priceId)) throw new Error('The licensing service returned an invalid price.');
       setStatus('Opening secure Paddle checkout…', 'جارٍ فتح صفحة الدفع الآمنة…', 'neutral');
       window.Paddle.Checkout.open({
-        items: [{ priceId, quantity: 1 }],
-        customData: { biuretProduct: product, biuretPlan: plan, environment: 'sandbox' }
+        items: [{ priceId: intent.priceId, quantity: 1 }],
+        customData: intent.customData
       });
     } catch (error) {
       console.error('Unable to open Paddle checkout.', error);

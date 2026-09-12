@@ -19,6 +19,11 @@ here because the function rejects every non-webhook request without an
 authenticated Appwrite user, and rejects every webhook without a valid
 Paddle signature. Do not add any other public actions to this function.
 
+The authenticated `account-access` action is intentionally limited to checking
+that an email-verified Biuret account exists. It is used by the Academy desktop
+app; paid desktop products use `entitlement` and still require an active row in
+the licenses table (or the `biuretadmin` account label).
+
 ## Required environment variables
 
 | Variable | Value |

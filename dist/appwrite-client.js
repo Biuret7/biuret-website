@@ -5,6 +5,7 @@
   let client;
   let account;
   let tablesDB;
+  let functions;
 
   if (configured) {
     client = new window.Appwrite.Client()
@@ -12,6 +13,7 @@
       .setProject(config.projectId);
     account = new window.Appwrite.Account(client);
     tablesDB = new window.Appwrite.TablesDB(client);
+    functions = new window.Appwrite.Functions(client);
   }
 
   const requireConfigured = () => {
@@ -78,6 +80,26 @@
         tableId: config.licensesTableId,
         queries: [window.Appwrite.Query.orderDesc('expiresAt')]
       });
+    },
+    async createCheckoutIntent({ productSlug, plan }) {
+      requireConfigured();
+      if (!config.licensingFunctionId) {
+        throw new Error('The secure licensing function is not configured yet.');
+      }
+      const execution = await functions.createExecution({
+        functionId: config.licensingFunctionId,
+        body: JSON.stringify({ action: 'checkout-intent', productSlug, plan }),
+        async: false,
+        path: '/',
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' }
+      });
+      let result;
+      try { result = JSON.parse(execution.responseBody || '{}'); } catch { throw new Error('The licensing service returned an invalid response.'); }
+      if (!result?.ok || !result?.priceId || !result?.intentId) {
+        throw new Error(result?.error || 'The licensing service could not prepare this checkout.');
+      }
+      return result;
     }
   };
 }());
