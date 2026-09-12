@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Manage your Biuret account and licenses.">
+  <meta name="theme-color" content="#080a0d">
+  <title>My Account — Biuret</title>
+  <link rel="icon" type="image/png" href="assets/biuret-wordmark-icon.png?v=20260912-13">
+  <link rel="stylesheet" href="style.css?v=20260912-18">
+</head>
+<body class="account-dashboard">
+  <header class="navbar">
+    <a class="logo" href="index.html" aria-label="Biuret home"><span class="logo-mark" aria-hidden="true">B</span><span>Biuret</span></a>
+    <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+      <a href="index.html#home">Home</a><a href="index.html#projects">Projects</a><a href="licenses.html">Licenses</a><a href="index.html#about">About</a><a href="index.html#now">Now</a><a href="index.html#contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="language-toggle" type="button" data-language-toggle aria-label="Switch language to Arabic" aria-pressed="false"><span class="language-code" aria-hidden="true">ع</span><span class="language-copy"><span class="language-kicker">Language</span><span class="language-label">العربية</span></span><span class="language-switch" aria-hidden="true">⇄</span></button>
+      <a class="account-btn" href="account.html">Account</a>
+      <a class="github-btn" href="https://github.com/Biuret7" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+      <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-controls="site-nav" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main class="account-dashboard-main">
+    <section class="account-dashboard-hero" aria-labelledby="account-title">
+      <div>
+        <span class="eyebrow">BIURET ACCOUNT</span>
+        <h1 id="account-title">Your workspace.</h1>
+        <p>Account access and licenses, kept clear and in your control.</p>
+      </div>
+      <p class="account-session-status" data-account-status aria-live="polite"></p>
+    </section>
+
+    <section class="account-overview" aria-label="Account details">
+      <div class="account-avatar" aria-hidden="true">B</div>
+      <div class="account-identity"><span class="eyebrow">SIGNED IN AS</span><h2 data-account-name>Loading account…</h2><p data-account-email></p></div>
+      <span class="account-verification" data-account-verification>Checking account…</span>
+      <div class="account-overview-actions"><a class="button-secondary account-settings-link" href="settings.html">Account settings</a><button class="button-secondary account-sign-out" type="button" data-sign-out>Sign out</button></div>
+    </section>
+
+    <section class="account-licenses-section" aria-labelledby="account-licenses-title">
+      <div class="account-section-heading"><div><span class="eyebrow">MY LICENSES</span><h2 id="account-licenses-title">Software, clearly licensed.</h2></div><a href="licenses.html" class="license-catalog-link">Explore licenses <span>↗</span></a></div>
+      <div class="account-license-grid" data-account-licenses aria-live="polite"><p class="account-empty">Loading your licenses…</p></div>
+    </section>
+
+    <section class="account-help-panel">
+      <div><span class="eyebrow">NEED HELP?</span><h2>We keep support straightforward.</h2><p>For activation, renewal, or license support, contact Biuret with your product name and account email.</p></div>
+      <a class="button-primary" href="mailto:hello@biuret.dev?subject=Biuret%20license%20support">Contact support ↗</a>
+    </section>
+  </main>
+
+  <footer class="site-footer"><span>© 2026 Biuret — Built with intent.</span><span>Ramallah · Palestine</span><span>Security · Tools · Identity</span></footer>
+  <script src="https://cdn.jsdelivr.net/npm/appwrite@23.0.0"></script>
+  <script src="appwrite-config.js?v=20260912-4"></script>
+  <script src="appwrite-client.js?v=20260912-3"></script>
+  <script src="script.js?v=20260912-7"></script>
+  <script src="account.js?v=20260912-3"></script>
+</body>
+</html>

@@ -1,6 +1,6 @@
 const arabicTranslations = {
-  'Home': 'الرئيسية', 'Projects': 'المشاريع', 'About': 'عن بيوريت', 'Now': 'حالياً', 'Contact': 'تواصل',
-  'GitHub ↗': 'جيت هب ↗', 'CYBERSECURITY · DEVELOPMENT · RESEARCH': 'الأمن السيبراني · التطوير · البحث',
+  'Home': 'الرئيسية', 'Projects': 'المشاريع', 'Licenses': 'التراخيص', 'About': 'عن بيوريت', 'Now': 'حالياً', 'Contact': 'تواصل',
+  'Sign in': 'تسجيل الدخول', 'Create account': 'إنشاء حساب', 'Buy': 'شراء', 'GitHub ↗': 'جيت هب ↗', 'CYBERSECURITY · DEVELOPMENT · RESEARCH': 'الأمن السيبراني · التطوير · البحث',
   'Building tools.': 'بناء أدوات.', 'Learning by creating.': 'التعلّم عبر البناء.',
   'A focused collection of cybersecurity tools, learning platforms, and software experiments. Each project is a practical step in a continuing process of research and building.': 'مجموعة مركّزة من أدوات الأمن السيبراني ومنصات التعلّم والتجارب البرمجية. كل مشروع هو خطوة عملية ضمن رحلة مستمرة من البحث والبناء.',
   'Explore projects ↓': 'استكشف المشاريع ↓', 'About Biuret': 'عن بيوريت', '⌘ CODE': '⌘ برمجة', '◈ SECURITY': '◈ أمن', '⚡ RESEARCH': '⚡ بحث',
@@ -50,11 +50,21 @@ const arabicTranslations = {
   'Protection with clear boundaries.': 'حماية بحدود واضحة.', 'BiuCrypt is a practical desktop suite for encrypting and decrypting files or folders. Its format validates headers, derives protection from the user’s password, processes data in chunks, and keeps the workflow explicit and controlled.': 'BiuCrypt حزمة سطح مكتب عملية لتشفير وفك تشفير الملفات أو المجلدات. يتحقق تنسيقها من الترويسات ويستمد الحماية من كلمة مرور المستخدم ويعالج البيانات على دفعات ويحافظ على سير عمل واضح ومضبوط.', 'Security in the workflow.': 'الأمان ضمن سير العمل.', 'Modern key derivation': 'اشتقاق مفاتيح حديث', 'Argon2id derives protection from the chosen password before encryption begins.': 'يشتق Argon2id الحماية من كلمة المرور المختارة قبل بدء التشفير.', 'Authenticated encryption': 'تشفير موثّق', 'AES-256-GCM and ChaCha20-Poly1305 protect encrypted content with integrity-aware processing.': 'يحمي AES-256-GCM وChaCha20-Poly1305 المحتوى المشفّر بمعالجة تراعي السلامة.', 'File & folder flow': 'مسار الملفات والمجلدات', 'Files and folders are handled with progress, cancellation, safe extraction checks, and optional secure cleanup.': 'تُعالَج الملفات والمجلدات مع عرض التقدّم والإلغاء وفحوصات الاستخراج الآمن والتنظيف الآمن الاختياري.', 'Making strong file protection approachable without hiding the security decisions that matter.': 'جعل حماية الملفات القوية سهلة الاقتراب دون إخفاء قرارات الأمان المهمة.',
   'Network discovery with clearer signals.': 'اكتشاف الشبكة بإشارات أوضح.', 'Biuret Reaper is a desktop scanner focused on practical, responsive network visibility. Its interface keeps the scan flow visible while it works through addresses, ports, device clues, and results on networks where scanning is permitted.': 'Biuret Reaper ماسح سطح مكتب يركّز على رؤية عملية وسريعة الاستجابة للشبكة. تحافظ واجهته على وضوح مسار الفحص أثناء معالجة العناوين والمنافذ ودلائل الأجهزة والنتائج في الشبكات المسموح بفحصها.', 'Designed for useful results.': 'مصمّم لنتائج مفيدة.', 'Smart scanning': 'فحص ذكي', 'Standard and Deep Scan modes balance faster discovery with deeper checks when ping responses are unavailable.': 'توازن وضعي الفحص القياسي والعميق بين اكتشاف أسرع وفحوص أعمق عند غياب استجابات ping.', 'Device profiling': 'توصيف الأجهزة', 'Expanded OUI data, TTL signals, and open-port context help classify devices more clearly.': 'تساعد بيانات OUI الموسّعة وإشارات TTL وسياق المنافذ المفتوحة على تصنيف الأجهزة بوضوح أكبر.', 'Responsive workflow': 'سير عمل سريع الاستجابة', 'Accurate progress feedback, safer socket handling, and threaded work keep the interface responsive during scanning.': 'تحافظ تغذية راجعة دقيقة للتقدّم ومعالجة أكثر أماناً للمقابس والعمل متعدد الخيوط على استجابة الواجهة أثناء الفحص.', 'Helping authorized users understand a network more clearly through an intentional, responsive desktop workflow.': 'مساعدة المستخدمين المصرّح لهم على فهم الشبكة بوضوح أكبر عبر سير عمل مكتبي مقصود وسريع الاستجابة.',
   'PORTFOLIO': 'الحافظة', 'PREVIOUS PROJECT': 'المشروع السابق', 'NEXT PROJECT': 'المشروع التالي', 'Back to projects ↑': 'العودة إلى المشاريع ↑',
-  '← Biuret Academy': 'Biuret Academy →', 'BiuLock →': '← BiuLock', '← BiuLock': 'BiuLock →', 'B-Recon →': '← B-Recon', '← B-Recon': 'B-Recon →', 'BiuSniff →': '← BiuSniff', '← BiuSniff': 'BiuSniff →', 'BiuCrypt →': '← BiuCrypt', '← BiuCrypt': 'BiuCrypt →', 'Biuret Reaper →': '← Biuret Reaper'
+  '← Biuret Academy': 'Biuret Academy →', 'BiuLock →': '← BiuLock', '← BiuLock': 'BiuLock →', 'B-Recon →': '← B-Recon', '← B-Recon': 'B-Recon →', 'BiuSniff →': '← BiuSniff', '← BiuSniff': 'BiuSniff →', 'BiuCrypt →': '← BiuCrypt', '← BiuCrypt': 'BiuCrypt →', 'Biuret Reaper →': '← Biuret Reaper',
+
+  'BIURET ACCOUNT': 'حساب بيوريت', 'Account': 'الحساب', 'My Account': 'حسابي', 'Account settings': 'إعدادات الحساب', 'Profile & security.': 'الملف الشخصي والأمان.', 'Keep your identity, contact details, and access secure.': 'حافظ على هويتك وبيانات التواصل والوصول بشكل آمن.', 'Back to account': 'العودة إلى الحساب', 'PROFILE': 'الملف الشخصي', 'Your display name.': 'اسم العرض الخاص بك.', 'This is the name shown in your Biuret account workspace.': 'هذا هو الاسم الظاهر في مساحة حسابك على بيوريت.', 'Display name': 'اسم العرض', 'Save name': 'حفظ الاسم', 'EMAIL': 'البريد الإلكتروني', 'Keep your email current.': 'حدّث بريدك الإلكتروني.', 'Changing your email requires your current password and sends a new verification message.': 'يتطلب تغيير البريد الإلكتروني كلمة مرورك الحالية ويرسل رسالة تحقق جديدة.', 'Current email': 'البريد الحالي', 'New email address': 'البريد الإلكتروني الجديد', 'Current password': 'كلمة المرور الحالية', 'Update email': 'تحديث البريد الإلكتروني', 'PASSWORD': 'كلمة المرور', 'Choose a stronger password.': 'اختر كلمة مرور أقوى.', 'We never display your current password. Use at least 8 characters for a new one.': 'لا نعرض كلمة مرورك الحالية أبدًا. استخدم 8 أحرف على الأقل لكلمة المرور الجديدة.', 'New password': 'كلمة المرور الجديدة', 'Confirm new password': 'تأكيد كلمة المرور الجديدة', 'Update password': 'تحديث كلمة المرور', 'VERIFICATION': 'التحقق', 'Confirm your email address.': 'أكّد عنوان بريدك الإلكتروني.', 'Your email is verified and ready for account communication.': 'بريدك الإلكتروني موثّق وجاهز لتواصل الحساب.', 'Your email still needs verification before important account communication.': 'لا يزال بريدك الإلكتروني بحاجة إلى تحقق قبل تواصل الحساب المهم.', 'Send verification email': 'إرسال رسالة تحقق', 'Account settings are protected by your active session.': 'إعدادات الحساب محمية بجلسة نشطة.', 'Your workspace.': 'مساحة عملك.', 'Account access and licenses, kept clear and in your control.': 'وصول الحساب والتراخيص، بوضوح وتحت تحكمك.', 'SIGNED IN AS': 'تم تسجيل الدخول باسم', 'Loading account…': 'جارٍ تحميل الحساب…', 'Checking account…': 'جارٍ التحقق من الحساب…', 'Sign out': 'تسجيل الخروج', 'MY LICENSES': 'تراخيصي', 'Software, clearly licensed.': 'برامج مرخّصة بوضوح.', 'Explore licenses': 'استكشف التراخيص', 'Loading your licenses…': 'جارٍ تحميل تراخيصك…', 'NEED HELP?': 'تحتاج مساعدة؟', 'We keep support straightforward.': 'نبقي الدعم واضحًا ومباشرًا.', 'For activation, renewal, or license support, contact Biuret with your product name and account email.': 'للتفعيل أو التجديد أو دعم الترخيص، تواصل مع بيوريت مع اسم المنتج وبريد الحساب.', 'Contact support ↗': 'تواصل مع الدعم ↗', 'Verifying your email.': 'جارٍ توثيق بريدك.', 'Checking your verification link securely…': 'جارٍ فحص رابط التوثيق بأمان…', 'Return to sign in': 'العودة لتسجيل الدخول', 'Welcome back.': 'مرحباً بعودتك.', 'Access your licenses and keep your project tools in one clear place.': 'ادخل إلى تراخيصك واحتفظ بأدوات مشاريعك في مكان واحد وواضح.',
+  'Email address': 'البريد الإلكتروني', 'Password': 'كلمة المرور', 'Confirm password': 'تأكيد كلمة المرور', 'Remember this device': 'تذكّر هذا الجهاز', 'Need help?': 'تحتاج مساعدة؟', 'Forgot password?': 'نسيت كلمة المرور؟', 'Password recovery.': 'استعادة كلمة المرور.', 'Recover your account access securely.': 'استعد وصولك إلى حسابك بأمان.', 'Enter your email and we will send a secure reset link if an account exists.': 'أدخل بريدك الإلكتروني وسنرسل رابط استعادة آمنًا إذا كان الحساب موجودًا.', 'Send recovery link': 'إرسال رابط الاستعادة', 'Back to sign in': 'العودة إلى تسجيل الدخول', 'RESET WITH CONFIDENCE': 'استعد الوصول بثقة', 'Secure account recovery.': 'استعادة حساب آمنة.', 'A one-time recovery link is safer than sharing or storing passwords.': 'رابط استعادة لمرة واحدة أكثر أمانًا من مشاركة كلمات المرور أو تخزينها.', 'The recovery link expires automatically and can only be used once.': 'ينتهي رابط الاستعادة تلقائيًا ولا يمكن استخدامه إلا مرة واحدة.', 'Set a new password.': 'عيّن كلمة مرور جديدة.', 'Choose a new password for your Biuret account.': 'اختر كلمة مرور جديدة لحساب بيوريت الخاص بك.', 'ACCOUNT SECURITY': 'أمان الحساب', 'Make it memorable, not predictable.': 'اجعلها سهلة التذكر، لا سهلة التخمين.', 'Use a unique password with at least 8 characters. Your old password is never displayed or stored in this website.': 'استخدم كلمة مرور فريدة من 8 أحرف على الأقل. لا تُعرض كلمة مرورك القديمة ولا تُخزّن في هذا الموقع.', 'This reset page only accepts a valid, time-limited Appwrite recovery link.': 'تقبل صفحة الاستعادة هذه رابط Appwrite صالحًا ومحدود الوقت فقط.', 'New password': 'كلمة المرور الجديدة', 'Confirm new password': 'تأكيد كلمة المرور الجديدة', 'Save new password': 'حفظ كلمة المرور الجديدة', 'New to Biuret?': 'جديد في بيوريت؟',
+  'ONE ACCOUNT · CLEAR ACCESS': 'حساب واحد · وصول واضح', 'Your licenses, in one place.': 'تراخيصك في مكان واحد.', 'Keep track of your Biuret product access with a focused account experience designed around clarity.': 'تابع وصولك إلى منتجات بيوريت من خلال تجربة حساب مركّزة ومصمّمة للوضوح.',
+  'Manage eligible licenses': 'إدارة التراخيص المؤهلة', 'Keep product access organized': 'تنظيم الوصول إلى المنتجات', 'Get help from one place': 'الحصول على المساعدة من مكان واحد', 'Privacy first — credentials are handled securely by Appwrite.': 'الخصوصية أولاً — تُدار بيانات الدخول بأمان عبر Appwrite.',
+  'BIURET LICENSING': 'تراخيص بيوريت', 'Licenses that stay clear.': 'تراخيص تبقى واضحة.', 'Choose a project, review the license path, and request your purchase link with confidence.': 'اختر مشروعاً، راجع مسار الترخيص، واطلب رابط الشراء بثقة.', 'Choose a license ↓': 'اختر ترخيصاً ↓', 'Sign in to manage licenses': 'سجّل الدخول لإدارة التراخيص', '◈ Product-focused': '◈ تركيز على المنتج', '◈ Clear next steps': '◈ خطوات تالية واضحة', '◈ Account-ready': '◈ جاهز للحسابات',
+  'SELECTED PRODUCT': 'المنتج المختار', 'LICENSE INQUIRY': 'طلب ترخيص', 'LICENSE PLANS': 'خطط الترخيص', 'Price examples': 'أمثلة للأسعار', 'Plan': 'الخطة', 'Duration': 'المدة', 'Price example': 'مثال للسعر', 'Monthly': 'شهري', '1 month': 'شهر', '3 Months': '3 أشهر', '3 months': '3 أشهر', 'Yearly': 'سنوي', '1 year': 'سنة', 'Request purchase link': 'اطلب رابط الشراء', 'Pricing and license availability are confirmed before any payment.': 'يتم تأكيد السعر وتوفّر الترخيص قبل أي عملية دفع.',
+  'Buy Biuret Academy': 'شراء Biuret Academy', 'Buy BiuLock': 'شراء BiuLock', 'Buy B-Recon': 'شراء B-Recon', 'Buy BiuSniff': 'شراء BiuSniff', 'Buy BiuCrypt': 'شراء BiuCrypt', 'Buy Biuret Reaper': 'شراء Biuret Reaper',
+  'Arabic learning platform': 'منصّة تعلّم عربية', 'Secure local protection': 'حماية محلية آمنة', 'Reconnaissance workspace': 'مساحة عمل للاستطلاع', 'Network inspection': 'فحص الشبكة', 'Practical encryption': 'تشفير عملي', 'Purpose-built red tooling': 'أدوات حمراء مخصّصة',
+  'HOW IT WORKS': 'كيف يعمل', 'A careful purchase flow.': 'مسار شراء مدروس.', 'Select a product': 'اختر منتجاً', 'Start from any Buy button or choose directly from this page.': 'ابدأ من أي زر شراء أو اختر مباشرة من هذه الصفحة.', 'Confirm license fit': 'أكّد ملاءمة الترخيص', 'We confirm the right access and availability before a payment step.': 'نؤكد نوع الوصول المناسب والتوفّر قبل خطوة الدفع.', 'Receive the next step': 'استلم الخطوة التالية', 'Get a clear purchase link and the details relevant to your product.': 'احصل على رابط شراء واضح والتفاصيل المتعلقة بمنتجك.'
 };
 
 const arabicTitles = {
-  'index.html': 'بيوريت — مشاريع وبحوث أمنية',
+  'index.html': 'بيوريت — مشاريع وبحوث أمنية', 'auth.html': 'تسجيل الدخول — بيوريت', 'account.html': 'حسابي — بيوريت', 'settings.html': 'إعدادات الحساب — بيوريت', 'forgot-password.html': 'استعادة كلمة المرور — بيوريت', 'reset-password.html': 'كلمة مرور جديدة — بيوريت', 'verify.html': 'توثيق البريد — بيوريت', 'licenses.html': 'تراخيص بيوريت',
   'biuret-academy.html': 'Biuret Academy — بيوريت', 'biulock.html': 'BiuLock — بيوريت', 'b-recon.html': 'B-Recon — بيوريت',
   'biusniff.html': 'BiuSniff — بيوريت', 'biucrypt.html': 'BiuCrypt — بيوريت', 'biuret-reaper.html': 'Biuret Reaper — بيوريت'
 };
@@ -155,6 +165,115 @@ document.addEventListener('DOMContentLoaded', () => {
     else document.title = document.title.replace('— بيوريت', '— Biuret');
     renderProjectCount(cards.filter((card) => !card.hidden).length);
   };
-  languageToggle?.addEventListener('click', () => { const nextLanguage = language === 'en' ? 'ar' : 'en'; saveLanguage(nextLanguage); applyLanguage(nextLanguage); });
+  const authForm = document.querySelector('[data-auth-form]');
+  const authTabs = [...document.querySelectorAll('[data-auth-mode]')];
+  const authHeading = document.querySelector('[data-auth-heading]');
+  const authDescription = document.querySelector('[data-auth-description]');
+  const authConfirm = document.querySelector('[data-auth-confirm]');
+  const authSubmit = document.querySelector('[data-auth-submit]');
+  const authSwitchCopy = document.querySelector('[data-auth-switch-copy]');
+  const authSwitch = document.querySelector('[data-auth-switch]');
+  const authNotice = document.querySelector('[data-auth-notice]');
+  let authMode = 'signin';
+  const authCopy = {
+    signin: {
+      en: { heading: 'Welcome back.', description: 'Access your licenses and keep your project tools in one clear place.', submit: 'Sign in', switchCopy: 'New to Biuret?', switchAction: 'Create account' },
+      ar: { heading: 'مرحباً بعودتك.', description: 'ادخل إلى تراخيصك واحتفظ بأدوات مشاريعك في مكان واحد وواضح.', submit: 'تسجيل الدخول', switchCopy: 'جديد في بيوريت؟', switchAction: 'إنشاء حساب' }
+    },
+    signup: {
+      en: { heading: 'Set up your account.', description: 'Create one place for future licenses, product access, and support.', submit: 'Create account', switchCopy: 'Already have an account?', switchAction: 'Sign in' },
+      ar: { heading: 'أنشئ حسابك.', description: 'أنشئ مكاناً واحداً لتراخيصك المستقبلية ووصول المنتجات والدعم.', submit: 'إنشاء حساب', switchCopy: 'لديك حساب بالفعل؟', switchAction: 'تسجيل الدخول' }
+    }
+  };
+  function syncAuthMode() {
+    if (!authForm) return;
+    const copy = authCopy[authMode][language];
+    authTabs.forEach((tab) => { const active = tab.dataset.authMode === authMode; tab.classList.toggle('is-active', active); tab.setAttribute('aria-selected', String(active)); });
+    if (authHeading) authHeading.textContent = copy.heading;
+    if (authDescription) authDescription.textContent = copy.description;
+    if (authSubmit) authSubmit.textContent = copy.submit;
+    if (authSwitchCopy) authSwitchCopy.textContent = copy.switchCopy;
+    if (authSwitch) authSwitch.textContent = copy.switchAction;
+    if (authConfirm) { authConfirm.hidden = authMode !== 'signup'; authConfirm.querySelector('input')?.toggleAttribute('required', authMode === 'signup'); }
+    const password = authForm.querySelector('[name="password"]');
+    if (password) password.autocomplete = authMode === 'signup' ? 'new-password' : 'current-password';
+    if (authNotice) authNotice.textContent = '';
+  }
+  authTabs.forEach((tab) => tab.addEventListener('click', () => { authMode = tab.dataset.authMode === 'signup' ? 'signup' : 'signin'; syncAuthMode(); }));
+  authSwitch?.addEventListener('click', () => { authMode = authMode === 'signin' ? 'signup' : 'signin'; syncAuthMode(); });
+  const getSafeAccountRedirect = () => {
+    const target = new URLSearchParams(window.location.search).get('redirect');
+    return target && /^(?:account|licenses)\.html(?:[?#]|$)/.test(target) ? target : 'account.html';
+  };
+  authForm?.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const service = window.BiuretAppwrite;
+    if (!service?.configured) {
+      if (authNotice) authNotice.textContent = language === 'ar' ? 'أكمل إعداد Appwrite أولاً لتفعيل الحسابات الحقيقية.' : 'Complete the Appwrite setup first to activate real accounts.';
+      return;
+    }
+    if (authMode === 'signup') {
+      const password = authForm.querySelector('[name="password"]')?.value;
+      const confirmation = authForm.querySelector('[name="password-confirm"]')?.value;
+      if (password !== confirmation) { if (authNotice) authNotice.textContent = language === 'ar' ? 'كلمتا المرور غير متطابقتين.' : 'Passwords do not match.'; return; }
+    }
+    const email = authForm.querySelector('[name="email"]')?.value.trim();
+    const password = authForm.querySelector('[name="password"]')?.value;
+    if (!email || !password) return;
+    if (authSubmit) authSubmit.disabled = true;
+    if (authNotice) authNotice.textContent = language === 'ar' ? 'جارٍ التحقق بأمان…' : 'Checking securely…';
+    try {
+      if (authMode === 'signup') await service.signUp({ email, password });
+      else await service.signIn({ email, password });
+      window.location.assign(getSafeAccountRedirect());
+    } catch {
+      if (authNotice) authNotice.textContent = language === 'ar'
+        ? 'تعذر إكمال العملية. تحقق من بيانات الدخول أو جرّب بريدًا آخر.'
+        : 'We could not complete that request. Check your details or try another email.';
+      if (authSubmit) authSubmit.disabled = false;
+    }
+  });
+  if (authForm && window.BiuretAppwrite?.configured) {
+    window.BiuretAppwrite.getCurrentUser().then(() => window.location.replace(getSafeAccountRedirect())).catch(() => {});
+  }
+
+  const licenseProducts = {
+    academy: { name: 'Biuret Academy', accent: 'EDUCATION · ARABIC LEARNING', subject: 'Biuret Academy license inquiry', en: 'An Arabic cybersecurity learning platform designed for a focused and accessible student experience.', ar: 'منصّة عربية لتعلّم الأمن السيبراني، مصمّمة لتجربة طالب مركّزة وسهلة الوصول.' },
+    biulock: { name: 'BiuLock', accent: 'SECURITY · LOCAL PROTECTION', subject: 'BiuLock license inquiry', en: 'A local-first security tool for carefully protected credentials and personal data.', ar: 'أداة أمان محلية أولاً لحماية بيانات الدخول والبيانات الشخصية بعناية.' },
+    brecon: { name: 'B-Recon', accent: 'RESEARCH · OSINT', subject: 'B-Recon license inquiry', en: 'A structured workspace for authorized research, cases, evidence, and clear reporting.', ar: 'مساحة عمل منظّمة للبحث المصرّح به والقضايا والأدلة والتقارير الواضحة.' },
+    biusniff: { name: 'BiuSniff', accent: 'NETWORK · INSPECTION', subject: 'BiuSniff license inquiry', en: 'A focused network inspection experience for authorized learning and analysis.', ar: 'تجربة مركّزة لفحص الشبكات للتعلّم والتحليل المصرّح بهما.' },
+    biucrypt: { name: 'BiuCrypt', accent: 'CRYPTOGRAPHY · FILE PROTECTION', subject: 'BiuCrypt license inquiry', en: 'A practical encryption suite for more deliberate file and folder protection.', ar: 'حزمة تشفير عملية لحماية أكثر وعياً للملفات والمجلدات.' },
+    reaper: { name: 'Biuret Reaper', accent: 'SECURITY · NETWORK TOOLING', subject: 'Biuret Reaper license inquiry', en: 'A purpose-built network visibility tool for authorized environments.', ar: 'أداة مخصّصة لرؤية الشبكات في البيئات المصرّح بها.' }
+  };
+  const licenseButtons = [...document.querySelectorAll('.license-product[data-product]')];
+  const licensePlanButtons = [...document.querySelectorAll('[data-license-plan]')];
+  const licenseName = document.querySelector('[data-license-name]');
+  const licenseDescription = document.querySelector('[data-license-description]');
+  const licenseAccent = document.querySelector('[data-license-accent]');
+  const licenseCheckout = document.querySelector('[data-license-checkout]');
+  const licenseCheckoutLabel = document.querySelector('[data-license-checkout-label]');
+  const initialProduct = new URLSearchParams(window.location.search).get('product');
+  const initialPlan = new URLSearchParams(window.location.search).get('plan');
+  let selectedProduct = licenseProducts[initialProduct] ? initialProduct : 'academy';
+  let selectedPlan = ['monthly', 'threeMonths', 'yearly'].includes(initialPlan) ? initialPlan : 'monthly';
+  function syncLicenseSelection() {
+    const product = licenseProducts[selectedProduct];
+    if (!product || !licenseName) return;
+    licenseName.textContent = product.name;
+    if (licenseDescription) licenseDescription.textContent = product[language];
+    if (licenseAccent) licenseAccent.textContent = product.accent;
+    if (licenseCheckout) {
+      licenseCheckout.dataset.product = selectedProduct;
+      licenseCheckout.dataset.plan = selectedPlan;
+    }
+    if (licenseCheckoutLabel) licenseCheckoutLabel.textContent = language === 'ar' ? `شراء ${product.name}` : `Buy ${product.name}`;
+    licenseButtons.forEach((button) => { const selected = button.dataset.product === selectedProduct; button.classList.toggle('is-selected', selected); button.setAttribute('aria-pressed', String(selected)); });
+    licensePlanButtons.forEach((button) => { const selected = button.dataset.licensePlan === selectedPlan; button.classList.toggle('is-selected', selected); button.setAttribute('aria-pressed', String(selected)); });
+  }
+  licenseButtons.forEach((button) => button.addEventListener('click', () => { selectedProduct = button.dataset.product; syncLicenseSelection(); }));
+  licensePlanButtons.forEach((button) => button.addEventListener('click', () => { selectedPlan = button.dataset.licensePlan; syncLicenseSelection(); }));
+  languageToggle?.addEventListener('click', () => { const nextLanguage = language === 'en' ? 'ar' : 'en'; saveLanguage(nextLanguage); applyLanguage(nextLanguage); syncAuthMode(); syncLicenseSelection(); });
   applyLanguage(getSavedLanguage());
+  syncAuthMode();
+  syncLicenseSelection();
 });

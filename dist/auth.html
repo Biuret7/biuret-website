@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sign in to manage your Biuret licenses.">
+  <meta name="theme-color" content="#080a0d">
+  <title>Sign in — Biuret</title>
+  <link rel="icon" type="image/png" href="assets/biuret-wordmark-icon.png?v=20260912-13">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=20260912-18">
+</head>
+<body class="account-page">
+  <header class="navbar">
+    <a class="logo" href="index.html" aria-label="Biuret home"><span class="logo-mark" aria-hidden="true">B</span><span>Biuret</span></a>
+    <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+      <a href="index.html#home">Home</a><a href="index.html#projects">Projects</a><a href="licenses.html">Licenses</a><a href="index.html#about">About</a><a href="index.html#now">Now</a><a href="index.html#contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="language-toggle" type="button" data-language-toggle aria-label="Switch language to Arabic" aria-pressed="false"><span class="language-code" aria-hidden="true">ع</span><span class="language-copy"><span class="language-kicker">Language</span><span class="language-label">العربية</span></span><span class="language-switch" aria-hidden="true">⇄</span></button>
+      <a class="account-btn" href="auth.html">Sign in</a>
+      <a class="github-btn" href="https://github.com/Biuret7" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+      <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-controls="site-nav" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main class="account-shell">
+    <section class="auth-card" aria-labelledby="auth-heading">
+      <div class="auth-card-heading">
+        <span class="eyebrow">BIURET ACCOUNT</span>
+        <h1 id="auth-heading" data-auth-heading>Welcome back.</h1>
+        <p data-auth-description>Access your licenses and keep your project tools in one clear place.</p>
+      </div>
+
+      <div class="auth-tabs" role="tablist" aria-label="Account mode">
+        <button class="auth-tab is-active" type="button" data-auth-mode="signin" role="tab" aria-selected="true">Sign in</button>
+        <button class="auth-tab" type="button" data-auth-mode="signup" role="tab" aria-selected="false">Create account</button>
+      </div>
+
+      <form class="auth-form" data-auth-form>
+        <label>
+          <span>Email address</span>
+          <input type="email" name="email" autocomplete="email" placeholder="you@example.com" required>
+        </label>
+        <label>
+          <span>Password</span>
+          <input type="password" name="password" autocomplete="current-password" placeholder="••••••••" minlength="8" required>
+        </label>
+        <label class="auth-confirm" data-auth-confirm hidden>
+          <span>Confirm password</span>
+          <input type="password" name="password-confirm" autocomplete="new-password" placeholder="••••••••" minlength="8">
+        </label>
+        <div class="form-row">
+          <label class="check-row"><input type="checkbox" name="remember"><span>Remember this device</span></label>
+          <a href="forgot-password.html">Forgot password?</a>
+        </div>
+        <button class="button-primary" type="submit" data-auth-submit>Sign in</button>
+        <p class="form-notice" data-auth-notice role="status"></p>
+      </form>
+
+      <p class="auth-switch"><span data-auth-switch-copy>New to Biuret?</span> <button class="auth-text-button" type="button" data-auth-switch>Create account</button></p>
+    </section>
+
+    <aside class="auth-aside" aria-label="Account benefits">
+      <span class="account-signal" aria-hidden="true">◈</span>
+      <span class="eyebrow">ONE ACCOUNT · CLEAR ACCESS</span>
+      <h2>Your licenses, in one place.</h2>
+      <p>Keep track of your Biuret product access with a focused account experience designed around clarity.</p>
+      <ul class="account-benefits">
+        <li><span>01</span>Manage eligible licenses</li>
+        <li><span>02</span>Keep product access organized</li>
+        <li><span>03</span>Get help from one place</li>
+      </ul>
+      <p class="account-note">Privacy first — credentials are handled securely by Appwrite.</p>
+    </aside>
+  </main>
+
+  <footer class="site-footer"><span>© 2025 Biuret — Built with intent.</span><span>Ramallah · Palestine</span><span>Security · Tools · Identity</span></footer>
+  <script src="https://cdn.jsdelivr.net/npm/appwrite@23.0.0"></script>
+  <script src="appwrite-config.js?v=20260912-4"></script>
+  <script src="appwrite-client.js?v=20260912-3"></script>
+  <script src="script.js?v=20260912-8"></script>
+</body>
+</html>
