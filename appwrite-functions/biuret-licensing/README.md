@@ -30,7 +30,7 @@ the licenses table (or the `biuretadmin` account label).
 | --- | --- |
 | `BIURET_LICENSE_DATABASE_ID` | `6aa56477002e28054068` |
 | `BIURET_LICENSES_TABLE_ID` | `6aa5648e00020bbf8f1d` |
-| `BIURET_CHECKOUT_INTENTS_TABLE_ID` | ID of the new server-only checkout-intents table |
+| `BIURET_CHECKOUT_INTENTS_TABLE_ID` | `6aa59c41001c11db12ef` |
 | `BIURET_PADDLE_PRICES` | JSON map of allowed Paddle price IDs; see below |
 | `PADDLE_WEBHOOK_SECRET` | Paddle webhook secret — mark as Secret |
 | `BIURET_ADMIN_LABEL` | `biuretadmin` |
