@@ -10,5 +10,5 @@ window.BIURET_APPWRITE_CONFIG = Object.freeze({
   projectId: '6aa55a88003959a536e9',
   databaseId: '6aa56477002e28054068',
   licensesTableId: '6aa5648e00020bbf8f1d',
-  licensingFunctionId: ''
+  licensingFunctionId: '6aa5abef002dd368d5cc'
 });
