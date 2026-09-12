@@ -28,7 +28,7 @@ Paddle signature. Do not add any other public actions to this function.
 | `BIURET_CHECKOUT_INTENTS_TABLE_ID` | ID of the new server-only checkout-intents table |
 | `BIURET_PADDLE_PRICES` | JSON map of allowed Paddle price IDs; see below |
 | `PADDLE_WEBHOOK_SECRET` | Paddle webhook secret — mark as Secret |
-| `BIURET_ADMIN_LABEL` | `biuret-admin` |
+| `BIURET_ADMIN_LABEL` | `biuretadmin` |
 
 Example `BIURET_PADDLE_PRICES` for the existing BiuLock Sandbox monthly price:
 
@@ -75,7 +75,7 @@ records with its server-only dynamic key.
 ## Admin access
 
 In Appwrite Console, open **Auth → Users**, select your own user, and add the
-label `biuret-admin`. The function receives the signed-in user's labels from
+label `biuretadmin`. The function receives the signed-in user's labels from
 Appwrite and grants that account access to every product without a license row.
 No admin email, secret key, or offline bypass is embedded in the applications.
 

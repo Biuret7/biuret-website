@@ -46,7 +46,7 @@ function readConfig() {
     licensesTableId: requiredEnvironment('BIURET_LICENSES_TABLE_ID'),
     intentsTableId: requiredEnvironment('BIURET_CHECKOUT_INTENTS_TABLE_ID'),
     paddleWebhookSecret: process.env.PADDLE_WEBHOOK_SECRET || '',
-    adminLabel: process.env.BIURET_ADMIN_LABEL || 'biuret-admin',
+    adminLabel: process.env.BIURET_ADMIN_LABEL || 'biuretadmin',
     prices
   };
 }
@@ -128,7 +128,7 @@ async function currentUser(request, users, headers) {
   return {
     id: user.$id,
     verified: Boolean(user.emailVerification),
-    isAdmin: Array.isArray(user.labels) && user.labels.includes(process.env.BIURET_ADMIN_LABEL || 'biuret-admin')
+    isAdmin: Array.isArray(user.labels) && user.labels.includes(process.env.BIURET_ADMIN_LABEL || 'biuretadmin')
   };
 }
 
