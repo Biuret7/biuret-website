@@ -83,6 +83,14 @@ document.addEventListener('DOMContentLoaded', () => {
   scrollProgress.className = 'scroll-progress';
   scrollProgress.setAttribute('aria-hidden', 'true');
   document.body.prepend(scrollProgress);
+  if (siteNav && !siteNav.querySelector('[data-mobile-account-link]')) {
+    const mobileAccountLink = document.createElement('a');
+    mobileAccountLink.className = 'mobile-account-link';
+    mobileAccountLink.href = document.querySelector('.account-btn')?.getAttribute('href') || 'auth.html';
+    mobileAccountLink.dataset.mobileAccountLink = 'true';
+    mobileAccountLink.textContent = 'Sign in';
+    siteNav.append(mobileAccountLink);
+  }
   const projectPage = document.querySelector('.project-page');
   if (projectPage) {
     const projectColor = getComputedStyle(projectPage).getPropertyValue('--project-color').trim();
