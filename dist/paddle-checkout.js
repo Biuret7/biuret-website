@@ -35,6 +35,12 @@
         'هذه الخطة غير مهيأة في خدمة التراخيص بعد.'
       ];
     }
+    if (lower.includes('appwrite') && lower.includes('not configured')) {
+      return [
+        'The account service is not configured on this site yet.',
+        'خدمة الحساب غير مهيأة في الموقع بعد.'
+      ];
+    }
     if (lower.includes('domain') && (lower.includes('approv') || lower.includes('allow') || lower.includes('whitelist'))) {
       return [
         'Approve biuret.dev in Paddle Checkout settings before opening Sandbox checkout.',
