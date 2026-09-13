@@ -19,6 +19,12 @@ document.addEventListener('DOMContentLoaded', async () => {
   const setBusy = (form, busy) => {
     form?.querySelectorAll('button, input').forEach((element) => { element.disabled = busy; });
   };
+  const verificationError = (error) => {
+    const rateLimited = Number(error?.code) === 429 || String(error?.type || '').includes('rate_limit');
+    return rateLimited
+      ? text('Too many verification emails were requested. Wait a few minutes, then try again.', 'تم طلب رسائل تحقق كثيرة. انتظر بضع دقائق ثم حاول مجددًا.')
+      : text('We could not request a verification email right now. Please try again shortly.', 'تعذر طلب رسالة التحقق الآن. حاول بعد قليل.');
+  };
   const showVerification = (user) => {
     if (!verification) return;
     const verified = Boolean(user.emailVerification);
@@ -83,9 +89,9 @@ document.addEventListener('DOMContentLoaded', async () => {
       showVerification(user);
       try {
         await service.sendVerification();
-        setStatus(text('Your email was updated. A verification email is on its way.', 'تم تحديث بريدك. رسالة التحقق في طريقها إليك.'), 'success');
-      } catch {
-        setStatus(text('Your email was updated. Use the verification button to try sending a new message.', 'تم تحديث بريدك. استخدم زر التحقق لمحاولة إرسال رسالة جديدة.'), 'notice');
+        setStatus(text('Your email was updated. A verification email was requested; check your inbox and spam folder.', 'تم تحديث بريدك. تم طلب رسالة تحقق؛ افحص الوارد ومجلد الرسائل غير المرغوب فيها.'), 'success');
+      } catch (error) {
+        setStatus(`${text('Your email was updated. ', 'تم تحديث بريدك. ')}${verificationError(error)}`, 'notice');
       }
     } catch {
       setStatus(text('We could not update your email. Check your current password and try again.', 'تعذر تحديث بريدك. تحقق من كلمة المرور الحالية وحاول مرة أخرى.'), 'error');
@@ -119,9 +125,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     resendVerification.disabled = true;
     try {
       await service.sendVerification();
-      setStatus(text('A new verification email has been sent.', 'تم إرسال رسالة تحقق جديدة.'), 'success');
-    } catch {
-      setStatus(text('We could not send a verification email right now. Please try again shortly.', 'تعذر إرسال رسالة التحقق الآن. حاول بعد قليل.'), 'error');
+      setStatus(text('A verification email was requested. Check your inbox and spam folder.', 'تم طلب رسالة تحقق. افحص الوارد ومجلد الرسائل غير المرغوب فيها.'), 'success');
+    } catch (error) {
+      setStatus(verificationError(error), 'error');
     } finally { resendVerification.disabled = false; }
   });
 });
