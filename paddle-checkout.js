@@ -35,6 +35,12 @@
         'هذه الخطة غير مهيأة في خدمة التراخيص بعد.'
       ];
     }
+    if (lower.includes('domain') && (lower.includes('approv') || lower.includes('allow') || lower.includes('whitelist'))) {
+      return [
+        'Approve biuret.dev in Paddle Checkout settings before opening Sandbox checkout.',
+        'يجب اعتماد biuret.dev في إعدادات Paddle Checkout قبل فتح الدفع التجريبي.'
+      ];
+    }
     if (lower.includes('not configured') || lower.includes('licensing function') || lower.includes('licensing service')) {
       return [
         'The licensing function is not deployed or configured in Appwrite yet.',
@@ -78,6 +84,10 @@
             'اكتمل الدفع. سيظهر الترخيص في حسابك بعد تحقّق الخادم الآمن.',
             'success'
           );
+        }
+        if (event?.name === 'checkout.error') {
+          const [english, arabic] = checkoutErrorCopy(event?.data?.error || event?.data || new Error('Paddle checkout error.'));
+          setStatus(english, arabic, 'error');
         }
       }
     });
