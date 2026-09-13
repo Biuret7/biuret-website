@@ -12,6 +12,59 @@
   };
   const validPriceId = (priceId) => /^pri_[a-z\d]{26}$/i.test(priceId);
 
+  function checkoutErrorCopy(error) {
+    const message = String(error?.message || '').trim();
+    const lower = message.toLowerCase();
+    const code = Number(error?.code || error?.status || 0);
+
+    if (lower.includes('sign in is required') || lower.includes('not authenticated')) {
+      return [
+        'Sign in to your Biuret account before checkout.',
+        'سجّل الدخول إلى حساب Biuret قبل إتمام الشراء.'
+      ];
+    }
+    if (lower.includes('verify your email')) {
+      return [
+        'Verify your email from your Biuret account, then try checkout again.',
+        'أكّد بريدك الإلكتروني من حساب Biuret ثم حاول الشراء مرة أخرى.'
+      ];
+    }
+    if (lower.includes('unknown product') || lower.includes('invalid price')) {
+      return [
+        'This plan is not configured in the licensing service yet.',
+        'هذه الخطة غير مهيأة في خدمة التراخيص بعد.'
+      ];
+    }
+    if (lower.includes('not configured') || lower.includes('licensing function') || lower.includes('licensing service')) {
+      return [
+        'The licensing function is not deployed or configured in Appwrite yet.',
+        'لم يتم نشر أو إعداد Function التراخيص في Appwrite بعد.'
+      ];
+    }
+    if (code === 401 || code === 403) {
+      return [
+        'Your Biuret session is not authorized. Sign in again and retry.',
+        'جلسة Biuret غير مصرح بها. سجّل الدخول مجددًا ثم حاول.'
+      ];
+    }
+    if (code === 429) {
+      return [
+        'The checkout service is temporarily rate-limited. Try again shortly.',
+        'خدمة الشراء محدودة مؤقتًا. حاول بعد قليل.'
+      ];
+    }
+    if (code >= 500) {
+      return [
+        'The licensing function returned a server error. Check its Appwrite deployment and variables.',
+        'أعادت Function التراخيص خطأً من الخادم. تحقّق من نشرها ومتغيراتها في Appwrite.'
+      ];
+    }
+    return [
+      'Checkout is not ready. Deploy and configure the Biuret Licensing function, then try again.',
+      'الشراء غير جاهز. انشر واضبط Function ‏Biuret Licensing ثم حاول مجددًا.'
+    ];
+  }
+
   function initializePaddle() {
     if (paddleInitialized) return;
     if (!window.Paddle || !config.clientToken) throw new Error('Paddle.js is unavailable.');
@@ -35,9 +88,20 @@
     const product = button.dataset.product;
     const plan = button.dataset.plan;
 
+    if (!window.BiuretAppwrite?.configured) {
+      const [english, arabic] = checkoutErrorCopy(new Error('Appwrite is not configured.'));
+      setStatus(english, arabic, 'error');
+      return;
+    }
+
     try {
-      await window.BiuretAppwrite?.getCurrentUser();
-    } catch {
+      await window.BiuretAppwrite.getCurrentUser();
+    } catch (error) {
+      if (String(error?.message || '').toLowerCase().includes('not configured')) {
+        const [english, arabic] = checkoutErrorCopy(error);
+        setStatus(english, arabic, 'error');
+        return;
+      }
       const redirect = `licenses.html?product=${encodeURIComponent(product)}&plan=${encodeURIComponent(plan)}`;
       window.location.assign(`auth.html?redirect=${encodeURIComponent(redirect)}`);
       return;
@@ -59,9 +123,10 @@
       });
     } catch (error) {
       console.error('Unable to open Paddle checkout.', error);
+      const [english, arabic] = checkoutErrorCopy(error);
       setStatus(
-        'Checkout could not be opened. Please try again in a moment.',
-        'تعذّر فتح صفحة الدفع. حاول مجددًا بعد لحظات.',
+        english,
+        arabic,
         'error'
       );
     } finally {
