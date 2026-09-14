@@ -10,6 +10,7 @@ import {
 } from 'node-appwrite';
 
 const activeStatus = 'active';
+const fallbackAppwriteEndpoint = 'https://fra.cloud.appwrite.io/v1';
 
 function asJson(value) {
   if (value && typeof value === 'object') {
@@ -50,9 +51,21 @@ function readConfig() {
     licensesTableId: requiredEnvironment('BIURET_LICENSES_TABLE_ID'),
     intentsTableId: requiredEnvironment('BIURET_CHECKOUT_INTENTS_TABLE_ID'),
     paddleWebhookSecret: process.env.PADDLE_WEBHOOK_SECRET || '',
-    adminLabel: process.env.BIURET_ADMIN_LABEL || 'biuretadmin',
+    adminLabel: process.env.BIURET_ADMIN_LABEL || 'admin',
     prices
   };
+}
+
+function appwriteEndpoint() {
+  // The deployed Biuret function runs in Appwrite's FRA cloud region.  Cloud
+  // functions normally receive APPWRITE_FUNCTION_API_ENDPOINT automatically,
+  // but older/manual deployments may omit it at runtime.  A concrete fallback
+  // keeps the dynamic function key usable instead of failing before checkout.
+  const supplied = String(process.env.APPWRITE_FUNCTION_API_ENDPOINT || '').trim().replace(/\/+$/, '');
+  if (!/^https:\/\/fra\.cloud\.appwrite\.io(?:\/v1)?$/i.test(supplied)) {
+    return fallbackAppwriteEndpoint;
+  }
+  return supplied.endsWith('/v1') ? supplied : `${supplied}/v1`;
 }
 
 function serverServices(request) {
@@ -61,7 +74,7 @@ function serverServices(request) {
   if (!key) throw new Error('This function must run inside Appwrite.');
 
   const client = new Client()
-    .setEndpoint(process.env.APPWRITE_FUNCTION_API_ENDPOINT)
+    .setEndpoint(appwriteEndpoint())
     .setProject(process.env.APPWRITE_FUNCTION_PROJECT_ID)
     .setKey(key);
 
@@ -125,14 +138,26 @@ function paddleSignatureIsValid(rawBody, signature, webhookSecret) {
   return submitted.some((candidate) => sameDigest(candidate, expected));
 }
 
-async function currentUser(request, users, headers) {
+function configuredAdminLabels(config) {
+  const configured = String(config.adminLabel || 'admin')
+    .split(',')
+    .map((label) => label.trim().toLowerCase())
+    .filter(Boolean);
+
+  // `admin` was the label assigned to the owner account before this function
+  // was deployed. Keep it valid alongside any configured label.
+  return new Set([...configured, 'admin']);
+}
+
+async function currentUser(request, users, headers, config) {
   const userId = headers['x-appwrite-user-id'];
   if (!userId) return null;
   const user = await users.get({ userId });
+  const adminLabels = configuredAdminLabels(config);
   return {
     id: user.$id,
     verified: Boolean(user.emailVerification),
-    isAdmin: Array.isArray(user.labels) && user.labels.includes(process.env.BIURET_ADMIN_LABEL || 'biuretadmin')
+    isAdmin: Array.isArray(user.labels) && user.labels.some((label) => adminLabels.has(String(label).toLowerCase()))
   };
 }
 
@@ -141,7 +166,7 @@ async function entitlement(request, res, config, tables, users, headers) {
   const productSlug = String(body?.productSlug || '').trim().toLowerCase();
   if (!productSlug) return response(res, 400, { ok: false, error: 'productSlug is required.' });
 
-  const user = await currentUser(request, users, headers);
+  const user = await currentUser(request, users, headers, config);
   if (!user) return response(res, 401, { ok: false, error: 'Sign in is required.' });
   if (!user.verified) return response(res, 403, { ok: false, error: 'Verify your email before using a license.' });
   if (user.isAdmin) {
@@ -185,8 +210,8 @@ async function entitlement(request, res, config, tables, users, headers) {
   });
 }
 
-async function accountAccess(request, res, users, headers) {
-  const user = await currentUser(request, users, headers);
+async function accountAccess(request, res, config, users, headers) {
+  const user = await currentUser(request, users, headers, config);
   if (!user) return response(res, 401, { ok: false, error: 'Sign in is required.' });
   if (!user.verified) {
     return response(res, 403, { ok: false, error: 'Verify your email before using your account.' });
@@ -201,7 +226,7 @@ async function checkoutIntent(request, res, config, tables, users, headers) {
   const product = productFor(config, productSlug, plan);
   if (!product) return response(res, 400, { ok: false, error: 'Unknown product or plan.' });
 
-  const user = await currentUser(request, users, headers);
+  const user = await currentUser(request, users, headers, config);
   if (!user) return response(res, 401, { ok: false, error: 'Sign in is required.' });
   if (!user.verified) return response(res, 403, { ok: false, error: 'Verify your email before checkout.' });
 
@@ -317,11 +342,14 @@ export default async ({ req, res, log, error }) => {
     const payload = asJson(req.body);
     if (!payload) return response(res, 400, { ok: false, error: 'Request body is not valid JSON.' });
     if (payload.action === 'entitlement') return entitlement(req, res, config, tables, users, headers);
-    if (payload.action === 'account-access') return accountAccess(req, res, users, headers);
+    if (payload.action === 'account-access') return accountAccess(req, res, config, users, headers);
     if (payload.action === 'checkout-intent') return checkoutIntent(req, res, config, tables, users, headers);
     return response(res, 404, { ok: false, error: 'Unknown licensing action.' });
   } catch (exception) {
-    error(`Licensing function error: ${exception instanceof Error ? exception.message : String(exception)}`);
+    const cause = exception instanceof Error && exception.cause instanceof Error
+      ? `; cause: ${exception.cause.message}`
+      : '';
+    error(`Licensing function error: ${exception instanceof Error ? exception.message : String(exception)}${cause}`);
     return response(res, 500, { ok: false, error: 'The licensing service could not complete this request.' });
   }
 };
