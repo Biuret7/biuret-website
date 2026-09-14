@@ -12,8 +12,12 @@ import {
 const activeStatus = 'active';
 
 function asJson(value) {
+  if (value && typeof value === 'object') {
+    return value;
+  }
+
   try {
-    return JSON.parse(value || '{}');
+    return JSON.parse(String(value || '{}'));
   } catch {
     return null;
   }
