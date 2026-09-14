@@ -219,6 +219,19 @@ async function accountAccess(request, res, config, users, headers) {
   return response(res, 200, { ok: true, access: 'account' });
 }
 
+// A deliberately data-free operational check. It lets the owner verify that
+// the deployed runtime can reach both Appwrite services before relying on
+// licensing or checkout; no rows or user details are returned to the caller.
+async function healthCheck(res, config, tables, users) {
+  await tables.listRows({
+    databaseId: config.databaseId,
+    tableId: config.licensesTableId,
+    queries: [Query.limit(1)]
+  });
+  await users.list({ queries: [Query.limit(1)] });
+  return response(res, 200, { ok: true, service: 'biuret-licensing' });
+}
+
 async function checkoutIntent(request, res, config, tables, users, headers) {
   const body = asJson(request.body);
   const productSlug = String(body?.productSlug || '').trim().toLowerCase();
@@ -341,6 +354,7 @@ export default async ({ req, res, log, error }) => {
 
     const payload = asJson(req.body);
     if (!payload) return response(res, 400, { ok: false, error: 'Request body is not valid JSON.' });
+    if (payload.action === 'health-check') return healthCheck(res, config, tables, users);
     if (payload.action === 'entitlement') return entitlement(req, res, config, tables, users, headers);
     if (payload.action === 'account-access') return accountAccess(req, res, config, users, headers);
     if (payload.action === 'checkout-intent') return checkoutIntent(req, res, config, tables, users, headers);
