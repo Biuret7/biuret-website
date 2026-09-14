@@ -213,6 +213,31 @@ document.addEventListener('DOMContentLoaded', () => {
     const target = new URLSearchParams(window.location.search).get('redirect');
     return target && /^(?:account|licenses)\.html(?:[?#]|$)/.test(target) ? target : 'account.html';
   };
+  const authErrorCopy = (error) => {
+    const code = Number(error?.code || error?.status || error?.response?.status || 0);
+    const type = String(error?.type || error?.response?.data?.type || '').toLowerCase();
+    if (code === 429 || type.includes('rate_limit')) {
+      return language === 'ar'
+        ? 'تم إيقاف محاولات تسجيل الدخول مؤقتًا لحماية الحساب. انتظر قليلًا ثم حاول مرة واحدة فقط.'
+        : 'Sign-in attempts are temporarily limited to protect the account. Wait a little, then try once.';
+    }
+    if (code === 401 || type.includes('invalid_credentials')) {
+      return language === 'ar' ? 'البريد الإلكتروني أو كلمة المرور غير صحيحة.' : 'The email or password is incorrect.';
+    }
+    if (code === 403 || type.includes('email_not_verified')) {
+      return language === 'ar'
+        ? 'تحقق من بريدك الإلكتروني أولًا، ثم حاول تسجيل الدخول.'
+        : 'Verify your email first, then try signing in.';
+    }
+    if (type.includes('project') || type.includes('platform')) {
+      return language === 'ar'
+        ? 'إعداد اتصال الموقع بالحسابات غير مكتمل. أعد تحميل الصفحة ثم حاول مرة أخرى.'
+        : 'The site-to-account connection is not configured correctly. Reload the page and try again.';
+    }
+    return language === 'ar'
+      ? 'تعذر إكمال تسجيل الدخول الآن. أعد تحميل الصفحة ثم حاول مرة واحدة.'
+      : 'Sign-in could not be completed right now. Reload the page, then try once.';
+  };
   authForm?.addEventListener('submit', async (event) => {
     event.preventDefault();
     const service = window.BiuretAppwrite;
@@ -234,10 +259,8 @@ document.addEventListener('DOMContentLoaded', () => {
       if (authMode === 'signup') await service.signUp({ email, password });
       else await service.signIn({ email, password });
       window.location.assign(getSafeAccountRedirect());
-    } catch {
-      if (authNotice) authNotice.textContent = language === 'ar'
-        ? 'تعذر إكمال العملية. تحقق من بيانات الدخول أو جرّب بريدًا آخر.'
-        : 'We could not complete that request. Check your details or try another email.';
+    } catch (error) {
+      if (authNotice) authNotice.textContent = authErrorCopy(error);
       if (authSubmit) authSubmit.disabled = false;
     }
   });
