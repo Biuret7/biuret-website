@@ -103,6 +103,16 @@
   async function openCheckout(button) {
     const product = button.dataset.product;
     const plan = button.dataset.plan;
+    const configuredPriceId = config.prices?.[product]?.[plan];
+
+    if (!validPriceId(configuredPriceId)) {
+      setStatus(
+        'This product or plan is not available for purchase yet.',
+        'هذا المنتج أو الخطة غير متاح للشراء بعد.',
+        'neutral'
+      );
+      return;
+    }
 
     if (!window.BiuretAppwrite?.configured) {
       const [english, arabic] = checkoutErrorCopy(new Error('Appwrite is not configured.'));

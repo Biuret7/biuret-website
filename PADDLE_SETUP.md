@@ -6,6 +6,8 @@ The site is configured for Paddle **Sandbox** with a public Paddle.js client-sid
 
 Create the actual catalog in the Paddle Sandbox dashboard. For each product and billing period, record the generated **Price ID** (it starts with `pri_`). Add those IDs to the matching values in `paddle-config.js`. The first Sandbox test price for BiuLock Monthly is configured; `paddle-checkout.js` opens checkout only for plans that have a valid Price ID.
 
+The licenses page derives availability from this same configuration. Empty Price IDs remain disabled and are shown as **Coming soon**, so the interface cannot advertise an unconfigured checkout path.
+
 Suggested first test product:
 
 | Field | Value |

@@ -1,0 +1,9 @@
+{
+  "name": "biuret-website",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-site.mjs",
+    "check": "node --check script.js && node --check paddle-checkout.js && node --check appwrite-functions/biuret-licensing/index.js && node --check scripts/build-site.mjs"
+  }
+}

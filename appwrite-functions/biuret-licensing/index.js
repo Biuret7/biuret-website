@@ -11,6 +11,7 @@ import {
 
 const activeStatus = 'active';
 const fallbackAppwriteEndpoint = 'https://fra.cloud.appwrite.io/v1';
+const defaultWebhookToleranceSeconds = 300;
 
 function asJson(value) {
   if (value && typeof value === 'object') {
@@ -51,6 +52,7 @@ function readConfig() {
     licensesTableId: requiredEnvironment('BIURET_LICENSES_TABLE_ID'),
     intentsTableId: requiredEnvironment('BIURET_CHECKOUT_INTENTS_TABLE_ID'),
     paddleWebhookSecret: process.env.PADDLE_WEBHOOK_SECRET || '',
+    paddleWebhookToleranceSeconds: Number(process.env.PADDLE_WEBHOOK_TOLERANCE_SECONDS || defaultWebhookToleranceSeconds),
     adminLabel: process.env.BIURET_ADMIN_LABEL || 'admin',
     prices
   };
@@ -119,8 +121,8 @@ function sameDigest(left, right) {
   return leftBytes.length === rightBytes.length && crypto.timingSafeEqual(leftBytes, rightBytes);
 }
 
-function paddleSignatureIsValid(rawBody, signature, webhookSecret) {
-  if (!signature) return false;
+function paddleSignatureStatus(rawBody, signature, webhookSecret, toleranceSeconds) {
+  if (!signature) return { valid: false, reason: 'missing signature header' };
   const parts = signature.split(';').reduce((all, item) => {
     const [key, value] = item.trim().split('=', 2);
     if (key && value) (all[key] ||= []).push(value);
@@ -128,14 +130,49 @@ function paddleSignatureIsValid(rawBody, signature, webhookSecret) {
   }, {});
   const timestampValue = parts.ts?.[0];
   const submitted = parts.h1 || [];
-  if (!timestampValue || !submitted.length) return false;
+  if (!timestampValue || !submitted.length) return { valid: false, reason: 'malformed signature header' };
+  const signedAtSeconds = Number(timestampValue);
+  if (!Number.isFinite(signedAtSeconds)) return { valid: false, reason: 'invalid signature timestamp' };
+  const allowedAge = Number.isFinite(toleranceSeconds) && toleranceSeconds > 0
+    ? toleranceSeconds
+    : defaultWebhookToleranceSeconds;
+  if (Math.abs(Date.now() / 1000 - signedAtSeconds) > allowedAge) {
+    return { valid: false, reason: 'signature timestamp outside tolerance' };
+  }
 
   const expected = crypto
     .createHmac('sha256', webhookSecret)
     .update(`${timestampValue}:${rawBody}`, 'utf8')
     .digest('hex');
 
-  return submitted.some((candidate) => sameDigest(candidate, expected));
+  const valid = submitted.some((candidate) => sameDigest(candidate, expected));
+  return { valid, reason: valid ? 'valid' : 'HMAC mismatch' };
+}
+
+function rawBodyOf(request) {
+  // Appwrite's current Node runtime exposes the exact request bytes as
+  // `bodyText`. Paddle signs those exact bytes, so a parsed object (or a
+  // re-serialized equivalent) cannot be used for signature verification.
+  if (typeof request.bodyText === 'string') return request.bodyText;
+  if (typeof request.body === 'string') return request.body;
+  if (Buffer.isBuffer(request.body)) return request.body.toString('utf8');
+  return request.body && typeof request.body === 'object'
+    ? JSON.stringify(request.body)
+    : '';
+}
+
+function jsonBodyOf(request) {
+  if (request.bodyJson && typeof request.bodyJson === 'object') return request.bodyJson;
+  if (request.body && typeof request.body === 'object' && !Buffer.isBuffer(request.body)) {
+    return request.body;
+  }
+  return asJson(rawBodyOf(request));
+}
+
+function licenseRowIdForTransaction(transactionId) {
+  if (!transactionId) throw new Error('Transaction ID is required for fulfillment.');
+  const digest = crypto.createHash('sha256').update(transactionId, 'utf8').digest('hex');
+  return `paddle_${digest.slice(0, 28)}`;
 }
 
 function configuredAdminLabels(config) {
@@ -162,7 +199,7 @@ async function currentUser(request, users, headers, config) {
 }
 
 async function entitlement(request, res, config, tables, users, headers) {
-  const body = asJson(request.body);
+  const body = jsonBodyOf(request);
   const productSlug = String(body?.productSlug || '').trim().toLowerCase();
   if (!productSlug) return response(res, 400, { ok: false, error: 'productSlug is required.' });
 
@@ -233,7 +270,7 @@ async function healthCheck(res, config, tables, users) {
 }
 
 async function checkoutIntent(request, res, config, tables, users, headers) {
-  const body = asJson(request.body);
+  const body = jsonBodyOf(request);
   const productSlug = String(body?.productSlug || '').trim().toLowerCase();
   const plan = String(body?.plan || '').trim();
   const product = productFor(config, productSlug, plan);
@@ -301,6 +338,8 @@ async function fulfillTransaction(event, config, tables, log) {
   const now = new Date().toISOString();
   const expiresAt = transaction.billing_period?.ends_at || dateAfterDays(Number(product.durationDays || 31));
   const subscriptionId = String(transaction.subscription_id || '');
+  const transactionId = String(transaction.id || '').trim();
+  const licenseRowId = licenseRowIdForTransaction(transactionId);
   const rowData = {
     userId: intent.userId,
     productSlug: product.productSlug,
@@ -312,24 +351,39 @@ async function fulfillTransaction(event, config, tables, log) {
     licenseKeyMasked: 'Managed through your Biuret account',
     downloadUrl: product.downloadUrl || '',
     providerSubscriptionId: subscriptionId,
-    providerTransactionId: String(transaction.id || '')
+    providerTransactionId: transactionId
   };
 
-  await tables.createRow({
-    databaseId: config.databaseId,
-    tableId: config.licensesTableId,
-    rowId: ID.unique(),
-    data: rowData,
-    permissions: [Permission.read(Role.user(intent.userId))]
-  });
+  let duplicate = false;
+  try {
+    await tables.createRow({
+      databaseId: config.databaseId,
+      tableId: config.licensesTableId,
+      rowId: licenseRowId,
+      data: rowData,
+      permissions: [Permission.read(Role.user(intent.userId))]
+    });
+  } catch (createError) {
+    if (Number(createError?.code) !== 409) throw createError;
+    const existing = await tables.getRow({
+      databaseId: config.databaseId,
+      tableId: config.licensesTableId,
+      rowId: licenseRowId
+    });
+    const sameFulfillment = existing.providerTransactionId === transactionId
+      && existing.userId === intent.userId
+      && existing.productSlug === product.productSlug;
+    if (!sameFulfillment) throw new Error('Transaction ID conflicts with an existing license.');
+    duplicate = true;
+  }
   await tables.updateRow({
     databaseId: config.databaseId,
     tableId: config.intentsTableId,
     rowId: intent.$id,
     data: { status: 'fulfilled', fulfillmentTransactionId: String(transaction.id || '') }
   });
-  log(`Fulfilled ${product.productSlug} for Appwrite user ${intent.userId}.`);
-  return { fulfilled: true };
+  log(`${duplicate ? 'Confirmed duplicate' : 'Fulfilled'} ${product.productSlug} for Appwrite user ${intent.userId}.`);
+  return duplicate ? { duplicate: true } : { fulfilled: true };
 }
 
 async function paddleWebhook(request, res, config, tables, log) {
@@ -337,10 +391,18 @@ async function paddleWebhook(request, res, config, tables, log) {
   if (!config.paddleWebhookSecret) {
     return response(res, 503, { ok: false, error: 'Paddle webhook is not configured.' });
   }
-  if (!paddleSignatureIsValid(request.body || '', headers['paddle-signature'], config.paddleWebhookSecret)) {
+  const rawBody = rawBodyOf(request);
+  const signatureStatus = paddleSignatureStatus(
+    rawBody,
+    headers['paddle-signature'],
+    config.paddleWebhookSecret,
+    config.paddleWebhookToleranceSeconds
+  );
+  if (!signatureStatus.valid) {
+    log(`Rejected Paddle webhook: ${signatureStatus.reason}; raw body length ${Buffer.byteLength(rawBody, 'utf8')}.`);
     return response(res, 401, { ok: false, error: 'Invalid Paddle signature.' });
   }
-  const event = asJson(request.body);
+  const event = asJson(rawBody);
   if (!event) return response(res, 400, { ok: false, error: 'Webhook body is not valid JSON.' });
   const result = await fulfillTransaction(event, config, tables, log);
   return response(res, 200, { ok: true, ...result });
@@ -352,7 +414,7 @@ export default async ({ req, res, log, error }) => {
     const { tables, users, headers } = serverServices(req);
     if (headers['paddle-signature']) return paddleWebhook(req, res, config, tables, log);
 
-    const payload = asJson(req.body);
+    const payload = jsonBodyOf(req);
     if (!payload) return response(res, 400, { ok: false, error: 'Request body is not valid JSON.' });
     if (payload.action === 'health-check') return healthCheck(res, config, tables, users);
     if (payload.action === 'entitlement') return entitlement(req, res, config, tables, users, headers);

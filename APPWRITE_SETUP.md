@@ -29,10 +29,12 @@ Create a database with ID `biuret`, then add a `licenses` table with these requi
 | `productName` | string | `BiuLock` |
 | `plan` | string | `Monthly` |
 | `status` | string | `active` |
-| `activatedAt` | datetime | activation timestamp |
+| `activateAt` | datetime | activation timestamp |
 | `expiresAt` | datetime | expiry timestamp |
 | `licenseKeyMasked` | string | `BIULOCK-••••-9X2A` |
 | `downloadUrl` | string, optional | signed or controlled download URL |
+| `providerSubscriptionId` | string, optional | Paddle subscription ID |
+| `providerTransactionId` | string | Paddle transaction ID |
 
 Do **not** grant client users create, update, or delete permission on the table. The checkout/admin server function must create each row and grant read access only to that exact user. Keep table-level public read disabled. The browser can then list only the rows for which its signed-in user has explicit row permission.
 

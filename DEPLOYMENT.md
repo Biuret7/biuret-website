@@ -1,12 +1,21 @@
 # Publish Biuret at `biuret.dev`
 
-The project has a ready-to-run GitHub Pages workflow at `.github/workflows/deploy-pages.yml`. It publishes the production-safe `dist` directory whenever you push to `main` or `master`.
+The project has a ready-to-run GitHub Pages workflow at `.github/workflows/deploy-pages.yml`. Files in the repository root are the single source of truth. The workflow validates the JavaScript, rebuilds the production-safe `dist` directory, and publishes it whenever you push to `main` or `master`.
+
+Do not edit or commit `dist` manually. It is ignored by Git and generated with:
+
+```bash
+npm run check
+npm run build
+```
+
+The build uses an explicit allowlist. It publishes only the static browser files, assets, and project pages; setup documentation, Appwrite Functions, deployment archives, and ZIP releases are excluded from the public artifact.
 
 ## 1. GitHub repository
 
 Create a repository under the **Biuret7** GitHub account, then push this `Website` folder to it. The site uses public browser configuration only; do not add Appwrite API keys, Paddle API keys, or webhook secrets to Git.
 
-In the repository, go to **Settings > Pages** and select **GitHub Actions** under *Build and deployment*. The workflow deploys `dist` automatically after the next push.
+In the repository, go to **Settings > Pages** and select **GitHub Actions** under *Build and deployment*. The workflow builds and deploys `dist` automatically after the next push.
 
 ## 2. Add the custom domain before DNS
 

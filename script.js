@@ -53,14 +53,16 @@ const arabicTranslations = {
   '← Biuret Academy': 'Biuret Academy →', 'BiuLock →': '← BiuLock', '← BiuLock': 'BiuLock →', 'B-Recon →': '← B-Recon', '← B-Recon': 'B-Recon →', 'BiuSniff →': '← BiuSniff', '← BiuSniff': 'BiuSniff →', 'BiuCrypt →': '← BiuCrypt', '← BiuCrypt': 'BiuCrypt →', 'Biuret Reaper →': '← Biuret Reaper',
 
   'BIURET ACCOUNT': 'حساب بيوريت', 'Account': 'الحساب', 'My Account': 'حسابي', 'Account settings': 'إعدادات الحساب', 'Profile & security.': 'الملف الشخصي والأمان.', 'Keep your identity, contact details, and access secure.': 'حافظ على هويتك وبيانات التواصل والوصول بشكل آمن.', 'Back to account': 'العودة إلى الحساب', 'PROFILE': 'الملف الشخصي', 'Your display name.': 'اسم العرض الخاص بك.', 'This is the name shown in your Biuret account workspace.': 'هذا هو الاسم الظاهر في مساحة حسابك على بيوريت.', 'Display name': 'اسم العرض', 'Save name': 'حفظ الاسم', 'EMAIL': 'البريد الإلكتروني', 'Keep your email current.': 'حدّث بريدك الإلكتروني.', 'Changing your email requires your current password and sends a new verification message.': 'يتطلب تغيير البريد الإلكتروني كلمة مرورك الحالية ويرسل رسالة تحقق جديدة.', 'Current email': 'البريد الحالي', 'New email address': 'البريد الإلكتروني الجديد', 'Current password': 'كلمة المرور الحالية', 'Update email': 'تحديث البريد الإلكتروني', 'PASSWORD': 'كلمة المرور', 'Choose a stronger password.': 'اختر كلمة مرور أقوى.', 'We never display your current password. Use at least 8 characters for a new one.': 'لا نعرض كلمة مرورك الحالية أبدًا. استخدم 8 أحرف على الأقل لكلمة المرور الجديدة.', 'New password': 'كلمة المرور الجديدة', 'Confirm new password': 'تأكيد كلمة المرور الجديدة', 'Update password': 'تحديث كلمة المرور', 'VERIFICATION': 'التحقق', 'Confirm your email address.': 'أكّد عنوان بريدك الإلكتروني.', 'Your email is verified and ready for account communication.': 'بريدك الإلكتروني موثّق وجاهز لتواصل الحساب.', 'Your email still needs verification before important account communication.': 'لا يزال بريدك الإلكتروني بحاجة إلى تحقق قبل تواصل الحساب المهم.', 'Send verification email': 'إرسال رسالة تحقق', 'Account settings are protected by your active session.': 'إعدادات الحساب محمية بجلسة نشطة.', 'Your workspace.': 'مساحة عملك.', 'Account access and licenses, kept clear and in your control.': 'وصول الحساب والتراخيص، بوضوح وتحت تحكمك.', 'SIGNED IN AS': 'تم تسجيل الدخول باسم', 'Loading account…': 'جارٍ تحميل الحساب…', 'Checking account…': 'جارٍ التحقق من الحساب…', 'Sign out': 'تسجيل الخروج', 'MY LICENSES': 'تراخيصي', 'Software, clearly licensed.': 'برامج مرخّصة بوضوح.', 'Explore licenses': 'استكشف التراخيص', 'Loading your licenses…': 'جارٍ تحميل تراخيصك…', 'NEED HELP?': 'تحتاج مساعدة؟', 'We keep support straightforward.': 'نبقي الدعم واضحًا ومباشرًا.', 'For activation, renewal, or license support, contact Biuret with your product name and account email.': 'للتفعيل أو التجديد أو دعم الترخيص، تواصل مع بيوريت مع اسم المنتج وبريد الحساب.', 'Contact support ↗': 'تواصل مع الدعم ↗', 'Verifying your email.': 'جارٍ توثيق بريدك.', 'Checking your verification link securely…': 'جارٍ فحص رابط التوثيق بأمان…', 'Return to sign in': 'العودة لتسجيل الدخول', 'Welcome back.': 'مرحباً بعودتك.', 'Access your licenses and keep your project tools in one clear place.': 'ادخل إلى تراخيصك واحتفظ بأدوات مشاريعك في مكان واحد وواضح.',
-  'Email address': 'البريد الإلكتروني', 'Password': 'كلمة المرور', 'Confirm password': 'تأكيد كلمة المرور', 'Remember this device': 'تذكّر هذا الجهاز', 'Need help?': 'تحتاج مساعدة؟', 'Forgot password?': 'نسيت كلمة المرور؟', 'Password recovery.': 'استعادة كلمة المرور.', 'Recover your account access securely.': 'استعد وصولك إلى حسابك بأمان.', 'Enter your email and we will send a secure reset link if an account exists.': 'أدخل بريدك الإلكتروني وسنرسل رابط استعادة آمنًا إذا كان الحساب موجودًا.', 'Send recovery link': 'إرسال رابط الاستعادة', 'Back to sign in': 'العودة إلى تسجيل الدخول', 'RESET WITH CONFIDENCE': 'استعد الوصول بثقة', 'Secure account recovery.': 'استعادة حساب آمنة.', 'A one-time recovery link is safer than sharing or storing passwords.': 'رابط استعادة لمرة واحدة أكثر أمانًا من مشاركة كلمات المرور أو تخزينها.', 'The recovery link expires automatically and can only be used once.': 'ينتهي رابط الاستعادة تلقائيًا ولا يمكن استخدامه إلا مرة واحدة.', 'Set a new password.': 'عيّن كلمة مرور جديدة.', 'Choose a new password for your Biuret account.': 'اختر كلمة مرور جديدة لحساب بيوريت الخاص بك.', 'ACCOUNT SECURITY': 'أمان الحساب', 'Make it memorable, not predictable.': 'اجعلها سهلة التذكر، لا سهلة التخمين.', 'Use a unique password with at least 8 characters. Your old password is never displayed or stored in this website.': 'استخدم كلمة مرور فريدة من 8 أحرف على الأقل. لا تُعرض كلمة مرورك القديمة ولا تُخزّن في هذا الموقع.', 'This reset page only accepts a valid, time-limited Appwrite recovery link.': 'تقبل صفحة الاستعادة هذه رابط Appwrite صالحًا ومحدود الوقت فقط.', 'New password': 'كلمة المرور الجديدة', 'Confirm new password': 'تأكيد كلمة المرور الجديدة', 'Save new password': 'حفظ كلمة المرور الجديدة', 'New to Biuret?': 'جديد في بيوريت؟',
+  'Email address': 'البريد الإلكتروني', 'Password': 'كلمة المرور', 'Confirm password': 'تأكيد كلمة المرور', 'Need help?': 'تحتاج مساعدة؟', 'Forgot password?': 'نسيت كلمة المرور؟', 'Password recovery.': 'استعادة كلمة المرور.', 'Recover your account access securely.': 'استعد وصولك إلى حسابك بأمان.', 'Enter your email and we will send a secure reset link if an account exists.': 'أدخل بريدك الإلكتروني وسنرسل رابط استعادة آمنًا إذا كان الحساب موجودًا.', 'Send recovery link': 'إرسال رابط الاستعادة', 'Back to sign in': 'العودة إلى تسجيل الدخول', 'RESET WITH CONFIDENCE': 'استعد الوصول بثقة', 'Secure account recovery.': 'استعادة حساب آمنة.', 'A one-time recovery link is safer than sharing or storing passwords.': 'رابط استعادة لمرة واحدة أكثر أمانًا من مشاركة كلمات المرور أو تخزينها.', 'The recovery link expires automatically and can only be used once.': 'ينتهي رابط الاستعادة تلقائيًا ولا يمكن استخدامه إلا مرة واحدة.', 'Set a new password.': 'عيّن كلمة مرور جديدة.', 'Choose a new password for your Biuret account.': 'اختر كلمة مرور جديدة لحساب بيوريت الخاص بك.', 'ACCOUNT SECURITY': 'أمان الحساب', 'Make it memorable, not predictable.': 'اجعلها سهلة التذكر، لا سهلة التخمين.', 'Use a unique password with at least 8 characters. Your old password is never displayed or stored in this website.': 'استخدم كلمة مرور فريدة من 8 أحرف على الأقل. لا تُعرض كلمة مرورك القديمة ولا تُخزّن في هذا الموقع.', 'This reset page only accepts a valid, time-limited Appwrite recovery link.': 'تقبل صفحة الاستعادة هذه رابط Appwrite صالحًا ومحدود الوقت فقط.', 'New password': 'كلمة المرور الجديدة', 'Confirm new password': 'تأكيد كلمة المرور الجديدة', 'Save new password': 'حفظ كلمة المرور الجديدة', 'New to Biuret?': 'جديد في بيوريت؟',
   'ONE ACCOUNT · CLEAR ACCESS': 'حساب واحد · وصول واضح', 'Your licenses, in one place.': 'تراخيصك في مكان واحد.', 'Keep track of your Biuret product access with a focused account experience designed around clarity.': 'تابع وصولك إلى منتجات بيوريت من خلال تجربة حساب مركّزة ومصمّمة للوضوح.',
   'Manage eligible licenses': 'إدارة التراخيص المؤهلة', 'Keep product access organized': 'تنظيم الوصول إلى المنتجات', 'Get help from one place': 'الحصول على المساعدة من مكان واحد', 'Privacy first — credentials are handled securely by Appwrite.': 'الخصوصية أولاً — تُدار بيانات الدخول بأمان عبر Appwrite.',
-  'BIURET LICENSING': 'تراخيص بيوريت', 'Licenses that stay clear.': 'تراخيص تبقى واضحة.', 'Choose a project, review the license path, and request your purchase link with confidence.': 'اختر مشروعاً، راجع مسار الترخيص، واطلب رابط الشراء بثقة.', 'Choose a license ↓': 'اختر ترخيصاً ↓', 'Sign in to manage licenses': 'سجّل الدخول لإدارة التراخيص', '◈ Product-focused': '◈ تركيز على المنتج', '◈ Clear next steps': '◈ خطوات تالية واضحة', '◈ Account-ready': '◈ جاهز للحسابات',
-  'SELECTED PRODUCT': 'المنتج المختار', 'LICENSE INQUIRY': 'طلب ترخيص', 'LICENSE PLANS': 'خطط الترخيص', 'Price examples': 'أمثلة للأسعار', 'Plan': 'الخطة', 'Duration': 'المدة', 'Price example': 'مثال للسعر', 'Monthly': 'شهري', '1 month': 'شهر', '3 Months': '3 أشهر', '3 months': '3 أشهر', 'Yearly': 'سنوي', '1 year': 'سنة', 'Request purchase link': 'اطلب رابط الشراء', 'Pricing and license availability are confirmed before any payment.': 'يتم تأكيد السعر وتوفّر الترخيص قبل أي عملية دفع.',
+  'BIURET LICENSING': 'تراخيص بيوريت', 'Licenses that stay clear.': 'تراخيص تبقى واضحة.', 'Choose a license ↓': 'اختر ترخيصاً ↓', 'Sign in to manage licenses': 'سجّل الدخول لإدارة التراخيص', '◈ Product-focused': '◈ تركيز على المنتج', '◈ Clear next steps': '◈ خطوات تالية واضحة', '◈ Account-ready': '◈ جاهز للحسابات',
+  'SELECTED PRODUCT': 'المنتج المختار', 'LICENSE PLANS': 'خطط الترخيص', 'Plan': 'الخطة', 'Duration': 'المدة', 'Monthly': 'شهري', '1 month': 'شهر', '3 Months': '3 أشهر', '3 months': '3 أشهر', 'Yearly': 'سنوي', '1 year': 'سنة',
   'Buy Biuret Academy': 'شراء Biuret Academy', 'Buy BiuLock': 'شراء BiuLock', 'Buy B-Recon': 'شراء B-Recon', 'Buy BiuSniff': 'شراء BiuSniff', 'Buy BiuCrypt': 'شراء BiuCrypt', 'Buy Biuret Reaper': 'شراء Biuret Reaper',
   'Arabic learning platform': 'منصّة تعلّم عربية', 'Secure local protection': 'حماية محلية آمنة', 'Reconnaissance workspace': 'مساحة عمل للاستطلاع', 'Network inspection': 'فحص الشبكة', 'Practical encryption': 'تشفير عملي', 'Purpose-built red tooling': 'أدوات حمراء مخصّصة',
-  'HOW IT WORKS': 'كيف يعمل', 'A careful purchase flow.': 'مسار شراء مدروس.', 'Select a product': 'اختر منتجاً', 'Start from any Buy button or choose directly from this page.': 'ابدأ من أي زر شراء أو اختر مباشرة من هذه الصفحة.', 'Confirm license fit': 'أكّد ملاءمة الترخيص', 'We confirm the right access and availability before a payment step.': 'نؤكد نوع الوصول المناسب والتوفّر قبل خطوة الدفع.', 'Receive the next step': 'استلم الخطوة التالية', 'Get a clear purchase link and the details relevant to your product.': 'احصل على رابط شراء واضح والتفاصيل المتعلقة بمنتجك.'
+  'HOW IT WORKS': 'كيف يعمل', 'A careful purchase flow.': 'مسار شراء مدروس.', 'Select a product': 'اختر منتجاً', 'Start from any Buy button or choose directly from this page.': 'ابدأ من أي زر شراء أو اختر مباشرة من هذه الصفحة.',
+  'Choose an available plan and open secure Paddle checkout directly from your Biuret account.': 'اختر خطة متاحة وافتح دفع Paddle الآمن مباشرة من حساب Biuret.', 'SECURE CHECKOUT': 'دفع آمن', 'Current rollout': 'الإتاحة الحالية', 'Availability': 'التوفّر', 'Coming soon': 'قريبًا',
+  'Sign in securely': 'سجّل الدخول بأمان', 'Checkout requires a verified Biuret account so the license reaches the correct user.': 'يتطلب الدفع حساب Biuret موثّقًا حتى يصل الترخيص إلى المستخدم الصحيح.', 'Open Paddle checkout': 'افتح دفع Paddle', 'Complete payment securely; the verified webhook activates the license in your account.': 'أكمل الدفع بأمان؛ ويفعّل إشعار الخادم الموثّق الترخيص في حسابك.'
 };
 
 const arabicTitles = {
@@ -270,7 +272,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const licenseProducts = {
     academy: { name: 'Biuret Academy', accent: 'EDUCATION · ARABIC LEARNING', subject: 'Biuret Academy license inquiry', en: 'An Arabic cybersecurity learning platform designed for a focused and accessible student experience.', ar: 'منصّة عربية لتعلّم الأمن السيبراني، مصمّمة لتجربة طالب مركّزة وسهلة الوصول.' },
-    biulock: { name: 'BiuLock', accent: 'SECURITY · LOCAL PROTECTION', subject: 'BiuLock license inquiry', en: 'A local-first security tool for carefully protected credentials and personal data.', ar: 'أداة أمان محلية أولاً لحماية بيانات الدخول والبيانات الشخصية بعناية.' },
+    biulock: { name: 'BiuLock', accent: 'SECURITY · LOCAL PROTECTION', subject: 'BiuLock license inquiry', prices: { monthly: '$9.99' }, en: 'A local-first security tool for carefully protected credentials and personal data.', ar: 'أداة أمان محلية أولاً لحماية بيانات الدخول والبيانات الشخصية بعناية.' },
     brecon: { name: 'B-Recon', accent: 'RESEARCH · OSINT', subject: 'B-Recon license inquiry', en: 'A structured workspace for authorized research, cases, evidence, and clear reporting.', ar: 'مساحة عمل منظّمة للبحث المصرّح به والقضايا والأدلة والتقارير الواضحة.' },
     biusniff: { name: 'BiuSniff', accent: 'NETWORK · INSPECTION', subject: 'BiuSniff license inquiry', en: 'A focused network inspection experience for authorized learning and analysis.', ar: 'تجربة مركّزة لفحص الشبكات للتعلّم والتحليل المصرّح بهما.' },
     biucrypt: { name: 'BiuCrypt', accent: 'CRYPTOGRAPHY · FILE PROTECTION', subject: 'BiuCrypt license inquiry', en: 'A practical encryption suite for more deliberate file and folder protection.', ar: 'حزمة تشفير عملية لحماية أكثر وعياً للملفات والمجلدات.' },
@@ -283,25 +285,71 @@ document.addEventListener('DOMContentLoaded', () => {
   const licenseAccent = document.querySelector('[data-license-accent]');
   const licenseCheckout = document.querySelector('[data-license-checkout]');
   const licenseCheckoutLabel = document.querySelector('[data-license-checkout-label]');
+  const licenseCheckoutStatus = document.querySelector('[data-license-checkout-status]');
+  const licenseAvailabilityCells = [...document.querySelectorAll('[data-license-availability]')];
+  const checkoutPrices = window.BIURET_PADDLE_CONFIG?.prices || {};
+  const planKeys = ['monthly', 'threeMonths', 'yearly'];
+  const priceIsConfigured = (productSlug, plan) => /^pri_[a-z\d]{26}$/i.test(String(checkoutPrices[productSlug]?.[plan] || ''));
   const initialProduct = new URLSearchParams(window.location.search).get('product');
   const initialPlan = new URLSearchParams(window.location.search).get('plan');
-  let selectedProduct = licenseProducts[initialProduct] ? initialProduct : 'academy';
-  let selectedPlan = ['monthly', 'threeMonths', 'yearly'].includes(initialPlan) ? initialPlan : 'monthly';
+  let selectedProduct = licenseProducts[initialProduct] ? initialProduct : 'biulock';
+  let selectedPlan = planKeys.includes(initialPlan) ? initialPlan : 'monthly';
   function syncLicenseSelection() {
     const product = licenseProducts[selectedProduct];
     if (!product || !licenseName) return;
+    const availablePlans = planKeys.filter((plan) => priceIsConfigured(selectedProduct, plan));
+    if (!priceIsConfigured(selectedProduct, selectedPlan)) selectedPlan = availablePlans[0] || 'monthly';
+    const checkoutAvailable = priceIsConfigured(selectedProduct, selectedPlan);
     licenseName.textContent = product.name;
     if (licenseDescription) licenseDescription.textContent = product[language];
     if (licenseAccent) licenseAccent.textContent = product.accent;
     if (licenseCheckout) {
       licenseCheckout.dataset.product = selectedProduct;
       licenseCheckout.dataset.plan = selectedPlan;
+      licenseCheckout.disabled = !checkoutAvailable;
     }
-    if (licenseCheckoutLabel) licenseCheckoutLabel.textContent = language === 'ar' ? `شراء ${product.name}` : `Buy ${product.name}`;
-    licenseButtons.forEach((button) => { const selected = button.dataset.product === selectedProduct; button.classList.toggle('is-selected', selected); button.setAttribute('aria-pressed', String(selected)); });
-    licensePlanButtons.forEach((button) => { const selected = button.dataset.licensePlan === selectedPlan; button.classList.toggle('is-selected', selected); button.setAttribute('aria-pressed', String(selected)); });
+    if (licenseCheckoutLabel) {
+      licenseCheckoutLabel.textContent = checkoutAvailable
+        ? (language === 'ar' ? `شراء ${product.name}` : `Buy ${product.name}`)
+        : (language === 'ar' ? 'قريبًا' : 'Coming soon');
+    }
+    if (licenseCheckoutStatus) {
+      licenseCheckoutStatus.textContent = checkoutAvailable
+        ? (language === 'ar' ? 'هذه الخطة متاحة حاليًا عبر Paddle Sandbox.' : 'This plan is currently available through Paddle Sandbox.')
+        : (language === 'ar' ? 'هذا المنتج أو الخطة غير متاح للشراء بعد.' : 'This product or plan is not available for purchase yet.');
+      licenseCheckoutStatus.dataset.status = 'neutral';
+    }
+    licenseAvailabilityCells.forEach((cell) => {
+      const plan = cell.dataset.licenseAvailability;
+      const available = priceIsConfigured(selectedProduct, plan);
+      const displayPrice = product.prices?.[plan];
+      cell.textContent = available
+        ? `${product.name} · ${displayPrice || (language === 'ar' ? 'متاح' : 'Available')}`
+        : (language === 'ar' ? 'قريبًا' : 'Coming soon');
+    });
+    licenseButtons.forEach((button) => {
+      const selected = button.dataset.product === selectedProduct;
+      const productAvailable = planKeys.some((plan) => priceIsConfigured(button.dataset.product, plan));
+      button.classList.toggle('is-selected', selected);
+      button.classList.toggle('is-coming-soon', !productAvailable);
+      button.setAttribute('aria-pressed', String(selected));
+      if (button.lastElementChild) button.lastElementChild.textContent = productAvailable ? '→' : (language === 'ar' ? 'قريبًا' : 'Soon');
+    });
+    licensePlanButtons.forEach((button) => {
+      const available = priceIsConfigured(selectedProduct, button.dataset.licensePlan);
+      const selected = button.dataset.licensePlan === selectedPlan;
+      button.disabled = !available;
+      button.classList.toggle('is-selected', selected);
+      button.setAttribute('aria-pressed', String(selected));
+      const availability = button.querySelector('strong');
+      if (availability) {
+        availability.textContent = available
+          ? (product.prices?.[button.dataset.licensePlan] || (language === 'ar' ? 'متاح' : 'Available'))
+          : (language === 'ar' ? 'قريبًا' : 'Coming soon');
+      }
+    });
   }
-  licenseButtons.forEach((button) => button.addEventListener('click', () => { selectedProduct = button.dataset.product; syncLicenseSelection(); }));
+  licenseButtons.forEach((button) => button.addEventListener('click', () => { selectedProduct = button.dataset.product; selectedPlan = 'monthly'; syncLicenseSelection(); }));
   licensePlanButtons.forEach((button) => button.addEventListener('click', () => { selectedPlan = button.dataset.licensePlan; syncLicenseSelection(); }));
   languageToggle?.addEventListener('click', () => { const nextLanguage = language === 'en' ? 'ar' : 'en'; saveLanguage(nextLanguage); applyLanguage(nextLanguage); syncAuthMode(); syncLicenseSelection(); });
   applyLanguage(getSavedLanguage());

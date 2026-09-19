@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=20260912-20">
+<link rel="stylesheet" href="style.css?v=20260919-1">
 </head>
 <body class="license-page">
   <header class="navbar">
@@ -30,7 +30,7 @@
     <section class="license-hero" aria-labelledby="license-title">
       <span class="badge">BIURET LICENSING</span>
       <h1 id="license-title">Licenses that stay clear.</h1>
-      <p>Choose a project, review the license path, and request your purchase link with confidence.</p>
+      <p>Choose an available plan and open secure Paddle checkout directly from your Biuret account.</p>
       <div class="hero-actions">
         <a class="button-primary" href="#purchase">Choose a license <span>↓</span></a>
         <a class="button-secondary" href="auth.html">Sign in to manage licenses</a>
@@ -41,34 +41,34 @@
     <section class="license-workspace" id="purchase" aria-label="Choose a license">
       <div class="license-summary" aria-live="polite">
         <span class="eyebrow">SELECTED PRODUCT</span>
-        <h2 data-license-name>Biuret Academy</h2>
-        <p data-license-description>An Arabic cybersecurity learning platform designed for a focused and accessible student experience.</p>
-        <div class="license-meta"><span data-license-accent>EDUCATION · ARABIC LEARNING</span><span>LICENSE INQUIRY</span></div>
+        <h2 data-license-name>BiuLock</h2>
+        <p data-license-description>A local-first security tool for carefully protected credentials and personal data.</p>
+        <div class="license-meta"><span data-license-accent>SECURITY · LOCAL PROTECTION</span><span>SECURE CHECKOUT</span></div>
         <div class="license-pricing" aria-label="License plan examples">
-          <div class="license-pricing-heading"><span class="eyebrow">LICENSE PLANS</span><span>Price examples</span></div>
+          <div class="license-pricing-heading"><span class="eyebrow">LICENSE PLANS</span><span>Current rollout</span></div>
           <div class="license-table-wrap">
             <table>
-              <thead><tr><th>Plan</th><th>Duration</th><th>Price example</th></tr></thead>
+              <thead><tr><th>Plan</th><th>Duration</th><th>Availability</th></tr></thead>
               <tbody>
-                <tr><td>Monthly</td><td>1 month</td><td>$9.99</td></tr>
-                <tr><td>3 Months</td><td>3 months</td><td>$24.99</td></tr>
-                <tr><td>Yearly</td><td>1 year</td><td>$59.99</td></tr>
+                <tr><td>Monthly</td><td>1 month</td><td data-license-availability="monthly">BiuLock · $9.99</td></tr>
+                <tr><td>3 Months</td><td>3 months</td><td data-license-availability="threeMonths">Coming soon</td></tr>
+                <tr><td>Yearly</td><td>1 year</td><td data-license-availability="yearly">Coming soon</td></tr>
               </tbody>
             </table>
           </div>
         </div>
         <div class="license-plan-picker" role="group" aria-label="Select a billing plan">
           <button type="button" class="license-plan is-selected" data-license-plan="monthly" aria-pressed="true"><span>Monthly</span><strong>$9.99</strong></button>
-          <button type="button" class="license-plan" data-license-plan="threeMonths" aria-pressed="false"><span>3 Months</span><strong>$24.99</strong></button>
-          <button type="button" class="license-plan" data-license-plan="yearly" aria-pressed="false"><span>Yearly</span><strong>$59.99</strong></button>
+          <button type="button" class="license-plan" data-license-plan="threeMonths" aria-pressed="false" disabled><span>3 Months</span><strong>Coming soon</strong></button>
+          <button type="button" class="license-plan" data-license-plan="yearly" aria-pressed="false" disabled><span>Yearly</span><strong>Coming soon</strong></button>
         </div>
-        <button type="button" class="button-primary" data-license-checkout data-plan="monthly"><span data-license-checkout-label>Buy Biuret Academy</span><span aria-hidden="true">↗</span></button>
-        <p class="license-disclaimer" data-license-checkout-status data-status="neutral">Secure checkout opens here when this plan is available.</p>
+        <button type="button" class="button-primary" data-license-checkout data-product="biulock" data-plan="monthly"><span data-license-checkout-label>Buy BiuLock</span><span aria-hidden="true">↗</span></button>
+        <p class="license-disclaimer" data-license-checkout-status data-status="neutral">BiuLock Monthly is available in Paddle Sandbox. Other plans are coming soon.</p>
       </div>
 
       <div class="license-catalog" aria-label="Available products">
-        <button class="license-product is-selected" type="button" data-product="academy" aria-pressed="true" style="--license-color:#d7ab45"><span class="license-product-mark">01</span><span><strong>Biuret Academy</strong><small>Arabic learning platform</small></span><span aria-hidden="true">→</span></button>
-        <button class="license-product" type="button" data-product="biulock" aria-pressed="false" style="--license-color:#c59cff"><span class="license-product-mark">02</span><span><strong>BiuLock</strong><small>Secure local protection</small></span><span aria-hidden="true">→</span></button>
+        <button class="license-product" type="button" data-product="academy" aria-pressed="false" style="--license-color:#d7ab45"><span class="license-product-mark">01</span><span><strong>Biuret Academy</strong><small>Arabic learning platform</small></span><span aria-hidden="true">Soon</span></button>
+        <button class="license-product is-selected" type="button" data-product="biulock" aria-pressed="true" style="--license-color:#c59cff"><span class="license-product-mark">02</span><span><strong>BiuLock</strong><small>Secure local protection</small></span><span aria-hidden="true">→</span></button>
         <button class="license-product" type="button" data-product="brecon" aria-pressed="false" style="--license-color:#6cb4ff"><span class="license-product-mark">03</span><span><strong>B-Recon</strong><small>Reconnaissance workspace</small></span><span aria-hidden="true">→</span></button>
         <button class="license-product" type="button" data-product="biusniff" aria-pressed="false" style="--license-color:#ffd166"><span class="license-product-mark">04</span><span><strong>BiuSniff</strong><small>Network inspection</small></span><span aria-hidden="true">→</span></button>
         <button class="license-product" type="button" data-product="biucrypt" aria-pressed="false" style="--license-color:#63e2aa"><span class="license-product-mark">05</span><span><strong>BiuCrypt</strong><small>Practical encryption</small></span><span aria-hidden="true">→</span></button>
@@ -81,19 +81,19 @@
       <h2 id="license-flow-title">A careful purchase flow.</h2>
       <div class="license-step-grid">
         <article><span>01</span><h3>Select a product</h3><p>Start from any Buy button or choose directly from this page.</p></article>
-        <article><span>02</span><h3>Confirm license fit</h3><p>We confirm the right access and availability before a payment step.</p></article>
-        <article><span>03</span><h3>Receive the next step</h3><p>Get a clear purchase link and the details relevant to your product.</p></article>
+        <article><span>02</span><h3>Sign in securely</h3><p>Checkout requires a verified Biuret account so the license reaches the correct user.</p></article>
+        <article><span>03</span><h3>Open Paddle checkout</h3><p>Complete payment securely; the verified webhook activates the license in your account.</p></article>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer"><span>© 2025 Biuret — Built with intent.</span><span>Ramallah · Palestine</span><span>Security · Tools · Identity</span></footer>
+  <footer class="site-footer"><span>© 2026 Biuret — Built with intent.</span><span>Ramallah · Palestine</span><span>Security · Tools · Identity</span></footer>
   <script src="https://cdn.jsdelivr.net/npm/appwrite@23.0.0"></script>
   <script src="appwrite-config.js?v=20260912-23"></script>
   <script src="appwrite-client.js?v=20260912-21"></script>
   <script src="paddle-config.js?v=20260913-3"></script>
   <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
-  <script src="paddle-checkout.js?v=20260913-3"></script>
-<script src="script.js?v=20260912-9"></script>
+  <script src="paddle-checkout.js?v=20260919-1"></script>
+<script src="script.js?v=20260919-1"></script>
 </body>
 </html>

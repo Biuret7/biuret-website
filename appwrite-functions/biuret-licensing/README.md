@@ -33,6 +33,7 @@ the licenses table (or the `biuretadmin` account label).
 | `BIURET_CHECKOUT_INTENTS_TABLE_ID` | `6aa59c41001c11db12ef` |
 | `BIURET_PADDLE_PRICES` | JSON map of allowed Paddle price IDs; see below |
 | `PADDLE_WEBHOOK_SECRET` | Paddle webhook secret — mark as Secret |
+| `PADDLE_WEBHOOK_TOLERANCE_SECONDS` | Optional signature age tolerance; defaults to `300` |
 | `BIURET_ADMIN_LABEL` | `biuretadmin` |
 
 Example `BIURET_PADDLE_PRICES` for the existing BiuLock Sandbox monthly price:
@@ -76,6 +77,12 @@ Enable Row Security for the licenses table. A fulfillment row gets only
 `read` access for the buyer's Appwrite user; users must not receive create,
 update, or delete permission. The function creates and updates all payment
 records with its server-only dynamic key.
+
+License row IDs are derived deterministically from Paddle transaction IDs. This
+makes concurrent delivery of the same webhook idempotent: only one license row
+can be created, while retries are acknowledged after the existing row is
+verified. Webhook signatures older than the configured tolerance are rejected
+to limit replay attacks.
 
 ## Admin access
 
