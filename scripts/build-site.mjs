@@ -5,11 +5,12 @@ import { fileURLToPath } from 'node:url';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const output = path.join(root, 'dist');
 
-// Only browser-safe files belong in the GitHub Pages artifact. Documentation,
-// server functions, deployment archives, and release binaries stay private to
-// the repository/release process and are never copied by this build.
+// Only browser-safe portfolio files belong in the GitHub Pages artifact.
+// Commerce sources remain in the repository for a future launch, but licensing
+// pages and Paddle checkout code are intentionally excluded from this build.
 const publicFiles = [
   '.openai/hosting.json',
+  '404.html',
   'academy_icon.ico',
   'account.html',
   'account.js',
@@ -18,19 +19,19 @@ const publicFiles = [
   'auth.html',
   'biucrypt_icon.ico',
   'biulock_icon.ico',
+  'certifications.html',
   'forgot-password.html',
   'icon.png',
   'index.html',
-  'licenses.html',
   'osint_icon.ico',
-  'paddle-checkout.js',
-  'paddle-config.js',
   'reaper_icon.ico',
   'recovery.js',
   'reset-password.html',
+  'robots.txt',
   'script.js',
   'settings.html',
   'settings.js',
+  'sitemap.xml',
   'sniff_icon.ico',
   'style.css',
   'verify.html',
@@ -39,6 +40,7 @@ const publicFiles = [
 
 const publicDirectories = ['assets', 'sites'];
 const forbiddenExtensions = new Set(['.md', '.zip', '.gz']);
+const commerceFiles = new Set(['licenses.html', 'paddle-checkout.js', 'paddle-config.js']);
 
 async function copyFromRoot(relativePath) {
   const source = path.join(root, relativePath);
@@ -68,6 +70,7 @@ const outputFiles = await walk(output);
 const forbidden = outputFiles.filter((file) => (
   file.startsWith(`appwrite-functions${path.sep}`)
   || forbiddenExtensions.has(path.extname(file).toLowerCase())
+  || commerceFiles.has(file.replaceAll('\\', '/'))
 ));
 
 if (forbidden.length) {

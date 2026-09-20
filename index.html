@@ -3,17 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Biuret is a cybersecurity-focused portfolio of practical learning projects, research, and software experiments.">
+  <meta name="description" content="Adam Hamdan (Biuret) — a cybersecurity developer portfolio featuring security tooling, applied research, and learning projects.">
   <meta name="theme-color" content="#080a0d">
-  <title>Biuret — Security Projects & Research</title>
+  <meta property="og:title" content="Adam Hamdan (Biuret) — Cybersecurity Portfolio">
+  <meta property="og:description" content="Cybersecurity projects, applied research, technical growth, and learning in public.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://biuret.dev/">
+  <meta property="og:image" content="https://biuret.dev/assets/biuret-wordmark-dark.png">
+  <title>Adam Hamdan (Biuret) — Cybersecurity Portfolio</title>
   <link rel="icon" type="image/png" href="assets/biuret-wordmark-icon.png?v=20260912-13">
-<link rel="stylesheet" href="style.css?v=20260919-1">
+  <link rel="stylesheet" href="style.css?v=20260920-1">
 </head>
 <body>
   <header class="navbar">
-    <a class="logo" href="#home" aria-label="Biuret home"><span class="logo-mark" aria-hidden="true">B</span><span>Biuret</span></a>
+    <a class="logo" href="#home" aria-label="Adam Hamdan portfolio home"><span class="logo-mark" aria-hidden="true">B</span><span>Biuret</span></a>
     <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
-      <a href="#home">Home</a><a href="#projects">Projects</a><a href="licenses.html">Licenses</a><a href="#about">About</a><a href="#now">Now</a><a href="#contact">Contact</a>
+      <a href="#home">Home</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#journey">Journey</a><a href="certifications.html">Credentials</a><a href="#contact">Contact</a>
     </nav>
     <div class="nav-actions">
       <button class="language-toggle" type="button" data-language-toggle aria-label="Switch language to Arabic" aria-pressed="false"><span class="language-code" aria-hidden="true">ع</span><span class="language-copy"><span class="language-kicker">Language</span><span class="language-label">العربية</span></span><span class="language-switch" aria-hidden="true">⇄</span></button>
@@ -23,26 +28,36 @@
   </header>
 
   <main>
-    <section id="home" class="hero">
+    <section id="home" class="hero portfolio-hero">
       <div class="hero-content">
-        <span class="badge">CYBERSECURITY · DEVELOPMENT · RESEARCH</span>
-        <h1>Building tools.<br><span>Learning by creating.</span></h1>
-        <p class="hero-text">A focused collection of cybersecurity tools, learning platforms, and software experiments. Each project is a practical step in a continuing process of research and building.</p>
+        <span class="badge">ADAM HAMDAN · CYBERSECURITY BUILDER</span>
+        <p class="portfolio-name">BIURET / PORTFOLIO</p>
+        <h1>Security ideas,<br><span>engineered into tools.</span></h1>
+        <p class="hero-text">I’m Adam Hamdan, the developer behind Biuret. I build practical cybersecurity software, explore defensive and research workflows, and turn what I learn into focused tools and educational experiences.</p>
         <div class="hero-actions">
-          <a class="button-primary" href="#projects">Explore projects ↓</a>
-          <a class="button-secondary" href="#about">About Biuret</a>
+          <a class="button-primary" href="#projects">Explore the work ↓</a>
+          <a class="button-secondary" href="#journey">Follow the journey</a>
+        </div>
+        <div class="hero-proof" aria-label="Portfolio focus">
+          <span><b>06</b> BUILT PROJECTS</span><span><b>99</b> LESSONS DESIGNED</span><span><b>04</b> SECURITY TRACKS</span>
         </div>
       </div>
       <div class="hero-orbit">
-<figure class="brand-portrait"><img src="assets/biuret-wordmark-dark.png?v=20260912-11" alt="Biuret wordmark"></figure>
-        <span class="float-card card-1">⌘ CODE</span><span class="float-card card-2">◈ SECURITY</span><span class="float-card card-3">⚡ RESEARCH</span>
+        <figure class="brand-portrait"><img src="assets/biuret-wordmark-dark.png?v=20260912-11" alt="Biuret — Adam Hamdan"></figure>
+        <span class="float-card card-1">⌘ BUILD</span><span class="float-card card-2">◈ DEFEND</span><span class="float-card card-3">⚡ RESEARCH</span>
       </div>
+    </section>
+
+    <section class="section portfolio-snapshot reveal" aria-label="Portfolio snapshot">
+      <article class="snapshot-card"><span class="snapshot-index">01</span><strong>Build</strong><p>Desktop security tools with deliberate workflows, local-first thinking, and clear boundaries.</p></article>
+      <article class="snapshot-card"><span class="snapshot-index">02</span><strong>Learn</strong><p>Cybersecurity progress documented through experiments, safe labs, and project milestones.</p></article>
+      <article class="snapshot-card"><span class="snapshot-index">03</span><strong>Share</strong><p>Technical ideas presented in English and Arabic with clarity, context, and responsible use.</p></article>
     </section>
 
     <section id="projects" class="section reveal">
       <div class="section-heading">
-        <div><span class="eyebrow">SELECTED WORK</span><h2>Projects with purpose.</h2></div>
-        <p>Explore each project by its focus area, then open its overview for the context behind the work.</p>
+        <div><span class="eyebrow">SELECTED WORK</span><h2>Projects that make the learning real.</h2></div>
+        <p>Six projects across secure software, networks, OSINT, cryptography, and cybersecurity education. Each page explains the idea, the engineering focus, and the current direction.</p>
       </div>
       <div class="project-toolbar">
         <div class="project-filter" aria-label="Filter projects">
@@ -60,7 +75,7 @@
           <span class="category">EDUCATION · CYBERSECURITY</span><h3>Biuret Academy</h3>
           <p>An Arabic PyQt6 learning platform with 99 structured lessons, safe labs, assessments, CTF-style challenges, and smart review.</p>
           <div class="tags"><span>PyQt6</span><span>Arabic · RTL</span><span>99 Lessons</span></div>
-          <div class="card-actions"><a class="project-link" href="sites/biuret-academy.html">View project <b aria-hidden="true">→</b></a><span class="buy-link is-disabled" aria-disabled="true">Coming soon</span></div>
+          <div class="card-actions"><a class="project-link" href="sites/biuret-academy.html">Explore case study <b aria-hidden="true">→</b></a></div>
         </article>
         <article class="project-card accent-lock" data-category="security" data-project-index="02">
           <div class="project-top"><span class="project-icon" aria-hidden="true"></span><span class="status">ACTIVE BUILD</span></div>
@@ -68,7 +83,7 @@
           <span class="category">SECURITY · PASSWORD MANAGER</span><h3>BiuLock</h3>
           <p>A local-first Windows password manager for encrypted credentials, cards, TOTP, attachments, backups, and device exchange.</p>
           <div class="tags"><span>Argon2id</span><span>Device Mesh</span><span>Android</span></div>
-          <div class="card-actions"><a class="project-link" href="sites/biulock.html">View project <b aria-hidden="true">→</b></a><a class="buy-link" href="licenses.html?product=biulock#purchase">Buy</a></div>
+          <div class="card-actions"><a class="project-link" href="sites/biulock.html">Explore case study <b aria-hidden="true">→</b></a></div>
         </article>
         <article class="project-card accent-recon" data-category="research security" data-project-index="03">
           <div class="project-top"><span class="project-icon" aria-hidden="true"></span><span class="status">SOON</span></div>
@@ -76,7 +91,7 @@
           <span class="category">OSINT · RESEARCH</span><h3>B-Recon</h3>
           <p>A professional OSINT framework for authorized investigations, case workspaces, research pivots, protected evidence, and reports.</p>
           <div class="tags"><span>Case Management</span><span>PDF Reports</span><span>PyQt6</span></div>
-          <div class="card-actions"><a class="project-link" href="sites/b-recon.html">View project <b aria-hidden="true">→</b></a><span class="buy-link is-disabled" aria-disabled="true">Coming soon</span></div>
+          <div class="card-actions"><a class="project-link" href="sites/b-recon.html">Explore case study <b aria-hidden="true">→</b></a></div>
         </article>
         <article class="project-card accent-sniff" data-category="research security" data-project-index="04">
           <div class="project-top"><span class="project-icon" aria-hidden="true"></span><span class="status">SOON</span></div>
@@ -84,7 +99,7 @@
           <span class="category">NETWORK · SECURITY</span><h3>BiuSniff</h3>
           <p>A network packet analyzer with live capture, protocol inspection, DNS and TLS context, raw hex views, and PDF reports.</p>
           <div class="tags"><span>Scapy</span><span>PyQt6</span><span>PDF Reports</span></div>
-          <div class="card-actions"><a class="project-link" href="sites/biusniff.html">View project <b aria-hidden="true">→</b></a><span class="buy-link is-disabled" aria-disabled="true">Coming soon</span></div>
+          <div class="card-actions"><a class="project-link" href="sites/biusniff.html">Explore case study <b aria-hidden="true">→</b></a></div>
         </article>
         <article class="project-card accent-crypt" data-category="security" data-project-index="05">
           <div class="project-top"><span class="project-icon" aria-hidden="true"></span><span class="status">SOON</span></div>
@@ -92,7 +107,7 @@
           <span class="category">CRYPTOGRAPHY · FILE PROTECTION</span><h3>BiuCrypt</h3>
           <p>A file-encryption suite for files and folders using Argon2id, AES-256-GCM, and ChaCha20-Poly1305.</p>
           <div class="tags"><span>Argon2id</span><span>AES-256-GCM</span><span>PyQt6</span></div>
-          <div class="card-actions"><a class="project-link" href="sites/biucrypt.html">View project <b aria-hidden="true">→</b></a><span class="buy-link is-disabled" aria-disabled="true">Coming soon</span></div>
+          <div class="card-actions"><a class="project-link" href="sites/biucrypt.html">Explore case study <b aria-hidden="true">→</b></a></div>
         </article>
         <article class="project-card accent-reaper" data-category="security research" data-project-index="06">
           <div class="project-top"><span class="project-icon" aria-hidden="true"></span><span class="status">ACTIVE BUILD</span></div>
@@ -100,18 +115,54 @@
           <span class="category">NETWORK · SECURITY TOOLING</span><h3>Biuret Reaper</h3>
           <p>A red-and-black desktop network scanner for authorized discovery, smart scanning, device profiling, and responsive progress.</p>
           <div class="tags"><span>Network Scanner</span><span>PyQt6</span><span>Reporting</span></div>
-          <div class="card-actions"><a class="project-link" href="sites/biuret-reaper.html">View project <b aria-hidden="true">→</b></a><span class="buy-link is-disabled" aria-disabled="true">Coming soon</span></div>
+          <div class="card-actions"><a class="project-link" href="sites/biuret-reaper.html">Explore case study <b aria-hidden="true">→</b></a></div>
         </article>
       </div>
     </section>
 
     <section id="about" class="about section reveal">
-      <div><span class="eyebrow">ABOUT BIURET</span><h2>Curiosity, turned into working projects.</h2></div>
-      <div class="about-copy"><p>Biuret is a cybersecurity-focused developer portfolio shaped by practical learning. The work here spans security, OSINT, reverse engineering, Linux, programming, and educational tools.</p><p>This portfolio is intentionally alive: concepts become experiments, experiments become projects, and each project documents the next area to explore.</p></div>
+      <div><span class="eyebrow">ABOUT ADAM / BIURET</span><h2>Learning deeply. Building deliberately.</h2></div>
+      <div class="about-copy"><p>I’m Adam Hamdan, a cybersecurity-focused developer based in Ramallah, Palestine. Biuret is the identity I use to bring together security engineering, programming, applied research, and technical education.</p><p>This portfolio is intentionally practical: ideas become prototypes, prototypes become documented projects, and every project becomes evidence of progress.</p></div>
+    </section>
+
+    <section id="skills" class="section skill-section reveal">
+      <div class="section-heading"><div><span class="eyebrow">TECHNICAL PRACTICE</span><h2>Capabilities shaped through projects.</h2></div><p>Not a keyword wall—these are the areas repeatedly applied across the work shown here.</p></div>
+      <div class="skill-grid">
+        <article class="skill-card"><span>01</span><h3>Secure software design</h3><p>Local-first architecture, authentication flows, encrypted storage, recovery paths, and safe defaults.</p><div class="skill-tags"><b>Threat-aware UX</b><b>Appwrite</b><b>Access control</b></div></article>
+        <article class="skill-card"><span>02</span><h3>Applied cryptography</h3><p>Password-based key derivation, authenticated encryption, protected archives, and format validation.</p><div class="skill-tags"><b>Argon2id</b><b>AES-GCM</b><b>ChaCha20</b></div></article>
+        <article class="skill-card"><span>03</span><h3>Network visibility</h3><p>Packet inspection, protocol context, device discovery, service analysis, and practical reporting.</p><div class="skill-tags"><b>Scapy</b><b>DNS / TLS</b><b>OUI / TTL</b></div></article>
+        <article class="skill-card"><span>04</span><h3>OSINT workflows</h3><p>Structured case work, research pivots, evidence integrity, ethical scope, and exportable reports.</p><div class="skill-tags"><b>Case design</b><b>Evidence</b><b>Reporting</b></div></article>
+        <article class="skill-card"><span>05</span><h3>Python desktop systems</h3><p>Responsive PyQt6 interfaces, worker threads, local data, cross-feature state, and polished flows.</p><div class="skill-tags"><b>Python</b><b>PyQt6</b><b>SQLite</b></div></article>
+        <article class="skill-card"><span>06</span><h3>Technical education</h3><p>Arabic-first learning paths, safe labs, assessment design, progress systems, and clear explanation.</p><div class="skill-tags"><b>Arabic RTL</b><b>Curriculum</b><b>Safe labs</b></div></article>
+      </div>
+    </section>
+
+    <section id="journey" class="section journey-section reveal">
+      <div class="section-heading"><div><span class="eyebrow">CYBERSECURITY JOURNEY</span><h2>Progress measured by what gets built.</h2></div><p>A living record of technical growth—from foundations to complete tools, clearer documentation, and more disciplined security thinking.</p></div>
+      <div class="journey-layout">
+        <div class="journey-track">
+          <article class="journey-item"><span>01 · FOUNDATIONS</span><h3>Systems, Linux, networking, and Python</h3><p>Building the base needed to understand how software, operating systems, and network communication fit together.</p></article>
+          <article class="journey-item"><span>02 · APPLICATION</span><h3>Turning concepts into controlled experiments</h3><p>Using cryptography, packet analysis, OSINT, and secure data handling in tools designed for authorized environments.</p></article>
+          <article class="journey-item"><span>03 · ENGINEERING</span><h3>Shipping complete desktop experiences</h3><p>Combining security logic with resilient workflows, usable interfaces, reporting, backup, recovery, and documentation.</p></article>
+          <article class="journey-item"><span>04 · CURRENT DIRECTION</span><h3>Deeper practice and verifiable credentials</h3><p>Refining the project portfolio, documenting technical progress, and preparing verified certification records for publication.</p></article>
+        </div>
+        <aside class="journey-console" aria-label="Current cybersecurity focus">
+          <span class="eyebrow">CURRENT FOCUS</span>
+          <h3>Build → test → explain → improve.</h3>
+          <dl><div><dt>Primary track</dt><dd>Cybersecurity engineering</dd></div><div><dt>Core language</dt><dd>Python</dd></div><div><dt>Research lens</dt><dd>OSINT &amp; network analysis</dd></div><div><dt>Learning style</dt><dd>Project-driven</dd></div></dl>
+        </aside>
+      </div>
+    </section>
+
+    <section id="credentials" class="section credentials-section reveal">
+      <div class="credentials-panel">
+        <div><span class="eyebrow">CERTIFICATIONS &amp; LEARNING</span><h2>Verified credentials, presented with context.</h2><p>The credential archive is structured for issuer, date, credential ID, verification link, and the practical skills behind each certificate. Only verified records will be published.</p></div>
+        <div class="credential-action"><span class="credential-status"><i aria-hidden="true"></i> Archive ready · records pending</span><a class="button-primary" href="certifications.html">Open learning profile ↗</a></div>
+      </div>
     </section>
 
     <section id="now" class="section now-section reveal">
-      <div class="section-heading"><div><span class="eyebrow">CURRENT DIRECTIONS</span><h2>Where the work is heading.</h2></div><p>Three themes connect the projects in this portfolio: useful learning, thoughtful security practice, and better research workflows.</p></div>
+      <div class="section-heading"><div><span class="eyebrow">CURRENT DIRECTIONS</span><h2>What I’m sharpening now.</h2></div><p>The portfolio keeps evolving around three connected goals: deeper understanding, stronger engineering, and clearer communication.</p></div>
       <div class="now-grid">
         <article class="now-card"><span class="now-index">01</span><span class="eyebrow">EDUCATION</span><h3>Structured learning</h3><p>Making cybersecurity subjects more approachable through an Arabic-first learning path and practical context.</p><a href="sites/biuret-academy.html">Explore Biuret Academy <b aria-hidden="true">→</b></a></article>
         <article class="now-card"><span class="now-index">02</span><span class="eyebrow">SECURITY</span><h3>Focused tooling</h3><p>Turning security concepts into carefully scoped desktop, cryptography, and network-learning projects.</p><a href="sites/biuret-reaper.html">Explore security tooling <b aria-hidden="true">→</b></a></article>
@@ -120,12 +171,15 @@
     </section>
 
     <section id="contact" class="section reveal">
-      <div class="section-heading"><div><span class="eyebrow">GET IN TOUCH</span><h2>Let’s connect.</h2></div><p>For projects, ideas, or collaboration, reach out through email or follow the work on GitHub.</p></div>
-      <div class="contact-panel"><p>Interested in the work? The GitHub profile is the best place to follow what is being built next.</p><div class="hero-actions"><a class="button-primary" href="https://github.com/Biuret7" target="_blank" rel="noopener noreferrer">Open GitHub ↗</a><a class="button-secondary" href="mailto:hello@biuret.dev">Send an email</a></div></div>
+      <div class="section-heading"><div><span class="eyebrow">GET IN TOUCH</span><h2>Let’s build something meaningful.</h2></div><p>For collaboration, project discussions, or cybersecurity learning, email me directly or follow the work on GitHub.</p></div>
+      <div class="contact-panel portfolio-contact"><div><span class="contact-label">DIRECT EMAIL</span><a class="email-link" href="mailto:biuret956@gmail.com">biuret956@gmail.com</a><p>Ramallah · Palestine · Open to thoughtful technical conversations and collaboration.</p></div><div class="hero-actions"><a class="button-primary" href="mailto:biuret956@gmail.com">Send an email ↗</a><a class="button-secondary" href="https://github.com/Biuret7" target="_blank" rel="noopener noreferrer">Open GitHub ↗</a></div></div>
     </section>
   </main>
 
-  <footer class="site-footer"><span>© 2026 Biuret</span><span>Security projects · research · learning</span><span><a href="#home">Back to top ↑</a></span></footer>
-<script src="script.js?v=20260919-1"></script>
+  <footer class="site-footer"><span>© 2026 Adam Hamdan · Biuret</span><span>Cybersecurity · software · research · learning</span><span><a href="#home">Back to top ↑</a></span></footer>
+  <script src="https://cdn.jsdelivr.net/npm/appwrite@23.0.0"></script>
+  <script src="appwrite-config.js?v=20260912-23"></script>
+  <script src="appwrite-client.js?v=20260912-21"></script>
+  <script src="script.js?v=20260920-1"></script>
 </body>
 </html>
