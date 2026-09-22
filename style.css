@@ -267,6 +267,9 @@ h1, h2, h3, p { margin-top: 0; }
 .credential-status { display: inline-flex; align-items: center; gap: .55rem; color: #dbe4c1; font-size: .7rem; font-weight: 700; }
 .credential-status i { width: .48rem; aspect-ratio: 1; border-radius: 50%; background: var(--accent); box-shadow: 0 0 .7rem var(--accent); }
 .portfolio-contact { padding: clamp(1.35rem, 4vw, 2rem); }.contact-label { display: block; margin-bottom: .5rem; color: var(--accent); font-size: .64rem; font-weight: 800; letter-spacing: .14em; }.email-link { display: inline-block; margin-bottom: .55rem; font: 700 clamp(1.35rem, 3vw, 2rem)/1 'Space Grotesk', sans-serif; letter-spacing: -.04em; }.email-link:hover { color: var(--accent); }
+.status-stack { display: grid; justify-items: end; gap: .35rem; text-align: right; }
+.status-stack small { color: #77838f; font: 700 .55rem/1 'DM Mono', monospace; letter-spacing: .08em; }
+[dir='rtl'] .status-stack { justify-items: start; text-align: left; }
 .card-actions { grid-template-columns: 1fr; }
 
 /* Credentials and learning */

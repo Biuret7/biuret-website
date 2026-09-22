@@ -28,6 +28,7 @@ const publicFiles = [
   'recovery.js',
   'reset-password.html',
   'robots.txt',
+  'security.html',
   'script.js',
   'settings.html',
   'settings.js',
@@ -38,7 +39,7 @@ const publicFiles = [
   'verify.js'
 ];
 
-const publicDirectories = ['assets', 'sites'];
+const publicDirectories = ['.well-known', 'assets', 'sites'];
 const forbiddenExtensions = new Set(['.md', '.zip', '.gz']);
 const commerceFiles = new Set(['licenses.html', 'paddle-checkout.js', 'paddle-config.js']);
 
