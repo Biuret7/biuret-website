@@ -207,8 +207,66 @@ Object.assign(arabicTranslations, {
   'Arabic RTL': 'العربية · من اليمين إلى اليسار'
 });
 
+Object.assign(arabicTranslations, {
+  'Profile': 'الملف الشخصي',
+  'PERSONAL WORKSPACE': 'مساحتك الشخصية',
+  'A calm home for your identity, preferences, security, and the work you follow.': 'مساحة هادئة لهويتك وتفضيلاتك وأمانك والأعمال التي تتابعها.',
+  'Loading profile…': 'جارٍ تحميل الملف الشخصي…',
+  'Checking profile…': 'جارٍ التحقق من الملف الشخصي…',
+  'Member since': 'عضو منذ',
+  'Session checked': 'تم فحص الجلسة',
+  'now': 'الآن',
+  'Customize profile': 'تخصيص الملف الشخصي',
+  'Projects documented': 'مشاريع موثقة',
+  'Credentials recorded': 'شهادات مسجلة',
+  'Practice areas': 'مجالات ممارسة',
+  'Bilingual experience': 'تجربة ثنائية اللغة',
+  'QUICK ACCESS': 'وصول سريع',
+  'Pick up where you left off.': 'تابع من حيث توقفت.',
+  'The public portfolio stays at the center; your profile adds a more personal, accessible experience around it.': 'يبقى ملف الأعمال العام في المركز، ويضيف ملفك الشخصي تجربة أكثر تخصيصاً وسهولة حوله.',
+  'Browse documented certificates and the applied learning map behind the work.': 'تصفح الشهادات الموثقة وخريطة التعلّم التطبيقي خلف الأعمال.',
+  'Follow the journey': 'تابع الرحلة',
+  'See the current direction, working method, and areas being strengthened next.': 'اطّلع على الاتجاه الحالي ومنهج العمل والمجالات التي يجري تطويرها تالياً.',
+  'Journey →': 'الرحلة ←',
+  'Profile preferences': 'تفضيلات الملف الشخصي',
+  'Manage identity, language, accessibility, email verification, and password security.': 'أدر الهوية واللغة وإمكانية الوصول وتوثيق البريد وأمان كلمة المرور.',
+  'CONNECT': 'تواصل',
+  'One profile, two direct channels.': 'ملف واحد وقناتان مباشرتان.',
+  'Follow public project records on GitHub or start a focused conversation with Adam through Gmail.': 'تابع سجلات المشاريع العامة على GitHub أو ابدأ محادثة مباشرة مع آدم عبر Gmail.',
+  'PROFILE CONTROL CENTER': 'مركز إدارة الملف الشخصي',
+  'Make it yours.': 'اجعله مناسباً لك.',
+  'Shape your profile, interface, accessibility, and account security from one place.': 'خصّص ملفك وواجهتك وإمكانية الوصول وأمان حسابك من مكان واحد.',
+  'Back to profile': 'العودة إلى الملف الشخصي',
+  'Experience': 'التجربة',
+  '01 · PROFILE': '01 · الملف الشخصي',
+  'Identity & communication.': 'الهوية والتواصل.',
+  'Keep the details attached to your private Biuret profile accurate.': 'حافظ على دقة البيانات المرتبطة بملفك الخاص في بيوريت.',
+  'SESSION': 'الجلسة',
+  'Your current access.': 'وصولك الحالي.',
+  'This device is using your active Biuret session. Security actions remain protected by Appwrite.': 'يستخدم هذا الجهاز جلسة بيوريت النشطة، وتبقى الإجراءات الأمنية محمية عبر Appwrite.',
+  'Signed in as': 'مسجل الدخول باسم',
+  'Session status': 'حالة الجلسة',
+  'Protected': 'محمية',
+  'View profile overview': 'عرض ملخص الملف الشخصي',
+  '02 · EXPERIENCE': '02 · التجربة',
+  'Interface & accessibility.': 'الواجهة وإمكانية الوصول.',
+  'These preferences stay on this device and never leave your browser.': 'تبقى هذه التفضيلات على هذا الجهاز ولا تغادر متصفحك.',
+  'Preferred language': 'اللغة المفضلة',
+  'Reduce motion': 'تقليل الحركة',
+  'Minimize transitions and animated movement across the site.': 'قلّل الانتقالات والحركة المتحركة في الموقع.',
+  'Higher contrast': 'تباين أعلى',
+  'Strengthen text and border contrast for easier reading.': 'عزّز تباين النصوص والحدود لقراءة أسهل.',
+  'Compact layout': 'تخطيط مضغوط',
+  'Reduce vertical spacing to show more content at once.': 'قلّل المسافات العمودية لإظهار محتوى أكثر في الوقت نفسه.',
+  'Save site preferences': 'حفظ تفضيلات الموقع',
+  '03 · SECURITY': '03 · الأمان',
+  'Email & password.': 'البريد وكلمة المرور.',
+  'Critical changes require your current password or verified email access.': 'تتطلب التغييرات الحساسة كلمة مرورك الحالية أو وصولاً موثقاً إلى البريد.',
+  'Your site preferences were saved on this device.': 'تم حفظ تفضيلات الموقع على هذا الجهاز.'
+});
+
 const arabicTitles = {
-  'index.html': 'آدم حمدان (بيوريت) — ملف أعمال الأمن السيبراني', 'certifications.html': 'الشهادات والتعلّم — آدم حمدان', 'security.html': 'الأمن والاستخدام المسؤول — بيوريت', '404.html': 'الصفحة غير موجودة — بيوريت', 'auth.html': 'تسجيل الدخول — بيوريت', 'account.html': 'حسابي — بيوريت', 'settings.html': 'إعدادات الحساب — بيوريت', 'forgot-password.html': 'استعادة كلمة المرور — بيوريت', 'reset-password.html': 'كلمة مرور جديدة — بيوريت', 'verify.html': 'توثيق البريد — بيوريت', 'licenses.html': 'تراخيص بيوريت',
+  'index.html': 'آدم حمدان (بيوريت) — ملف أعمال الأمن السيبراني', 'certifications.html': 'الشهادات والتعلّم — آدم حمدان', 'security.html': 'الأمن والاستخدام المسؤول — بيوريت', '404.html': 'الصفحة غير موجودة — بيوريت', 'auth.html': 'تسجيل الدخول — بيوريت', 'account.html': 'ملفي الشخصي — بيوريت', 'settings.html': 'إعدادات الملف الشخصي — بيوريت', 'forgot-password.html': 'استعادة كلمة المرور — بيوريت', 'reset-password.html': 'كلمة مرور جديدة — بيوريت', 'verify.html': 'توثيق البريد — بيوريت', 'licenses.html': 'تراخيص بيوريت',
   'biuret-academy.html': 'Biuret Academy — بيوريت', 'biulock.html': 'BiuLock — بيوريت', 'b-recon.html': 'B-Recon — بيوريت',
   'biusniff.html': 'BiuSniff — بيوريت', 'biucrypt.html': 'BiuCrypt — بيوريت', 'biuret-reaper.html': 'Biuret Reaper — بيوريت'
 };
@@ -225,6 +283,10 @@ document.addEventListener('DOMContentLoaded', () => {
   let accountSignedIn = false;
   const getSavedLanguage = () => { try { return localStorage.getItem('biuret-language') === 'ar' ? 'ar' : 'en'; } catch { return 'en'; } };
   const saveLanguage = (value) => { try { localStorage.setItem('biuret-language', value); } catch {} };
+  const getSavedBoolean = (key) => { try { return localStorage.getItem(key) === 'true'; } catch { return false; } };
+  document.documentElement.classList.toggle('reduce-motion', getSavedBoolean('biuret-reduced-motion'));
+  document.documentElement.classList.toggle('high-contrast', getSavedBoolean('biuret-high-contrast'));
+  document.documentElement.classList.toggle('compact-layout', getSavedBoolean('biuret-compact-layout'));
   const scrollProgress = document.createElement('div');
   scrollProgress.className = 'scroll-progress';
   scrollProgress.setAttribute('aria-hidden', 'true');
@@ -245,7 +307,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const sourceHref = link.dataset.accountSourceHref || link.getAttribute('href') || 'auth.html';
     link.dataset.accountSourceHref = sourceHref;
     link.href = accountSignedIn ? toAccountHref(sourceHref) : toAuthHref(sourceHref);
-    link.textContent = accountSignedIn ? (language === 'ar' ? 'الحساب' : 'Account') : (language === 'ar' ? 'تسجيل الدخول' : 'Sign in');
+    link.textContent = accountSignedIn ? (language === 'ar' ? 'الملف الشخصي' : 'Profile') : (language === 'ar' ? 'تسجيل الدخول' : 'Sign in');
   });
   const syncAccountLinks = async () => {
     const service = window.BiuretAppwrite;

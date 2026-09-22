@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Manage your Biuret profile and account security.">
+  <meta name="description" content="Your personal Biuret profile, portfolio shortcuts, and security overview.">
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#080a0d">
-  <title>My Account — Biuret</title>
+  <title>My Profile — Biuret</title>
   <link rel="icon" type="image/png" href="assets/biuret-wordmark-icon.png?v=20260912-13">
-<link rel="stylesheet" href="style.css?v=20260920-3">
+<link rel="stylesheet" href="style.css?v=20260922-1">
 </head>
 <body class="account-dashboard">
   <header class="navbar">
@@ -16,36 +16,48 @@
     <nav class="site-nav" id="site-nav" aria-label="Primary navigation"><a href="index.html#home">Home</a><a href="index.html#projects">Projects</a><a href="index.html#skills">Skills</a><a href="index.html#journey">Journey</a><a href="certifications.html">Credentials</a><a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=biuret956%40gmail.com&amp;su=Biuret%20portfolio%20inquiry" target="_blank" rel="noopener noreferrer">Contact</a></nav>
     <div class="nav-actions">
       <button class="language-toggle" type="button" data-language-toggle aria-label="Switch language to Arabic" aria-pressed="false"><span class="language-code" aria-hidden="true">ع</span><span class="language-copy"><span class="language-kicker">Language</span><span class="language-label">العربية</span></span><span class="language-switch" aria-hidden="true">⇄</span></button>
-      <a class="account-btn" href="account.html">Account</a><a class="github-btn" href="https://github.com/Biuret7" target="_blank" rel="noopener noreferrer">GitHub ↗</a><button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-controls="site-nav" aria-expanded="false">☰</button>
+      <a class="account-btn" href="account.html">Profile</a><a class="github-btn" href="https://github.com/Biuret7" target="_blank" rel="noopener noreferrer">GitHub ↗</a><button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-controls="site-nav" aria-expanded="false">☰</button>
     </div>
   </header>
 
   <main class="account-dashboard-main">
-    <section class="account-dashboard-hero" aria-labelledby="account-title"><div><span class="eyebrow">BIURET ACCOUNT</span><h1 id="account-title">Your Biuret profile.</h1><p>Profile, security, and portfolio access in one focused workspace.</p></div><p class="account-session-status" data-account-status aria-live="polite"></p></section>
-    <section class="account-overview" aria-label="Account details">
-      <div class="account-avatar" aria-hidden="true">B</div>
-      <div class="account-identity"><span class="eyebrow">SIGNED IN AS</span><h2 data-account-name>Loading account…</h2><p data-account-email></p></div>
-      <span class="account-verification" data-account-verification>Checking account…</span>
-      <div class="account-overview-actions"><a class="button-secondary account-settings-link" href="settings.html">Account settings</a><button class="button-secondary account-sign-out" type="button" data-sign-out>Sign out</button></div>
+    <section class="account-dashboard-hero profile-dashboard-hero" aria-labelledby="account-title">
+      <div><span class="eyebrow">PERSONAL WORKSPACE</span><h1 id="account-title">Your Biuret profile.</h1><p>A calm home for your identity, preferences, security, and the work you follow.</p></div>
+      <p class="account-session-status" data-account-status aria-live="polite"></p>
+    </section>
+
+    <section class="account-overview profile-overview" aria-label="Profile details">
+      <div class="account-avatar" data-account-initial aria-hidden="true">B</div>
+      <div class="account-identity"><span class="eyebrow">SIGNED IN AS</span><h2 data-account-name>Loading profile…</h2><p data-account-email></p><div class="profile-meta"><span>Member since <b data-account-member-since>—</b></span><span>Session checked <b data-account-session-time>now</b></span></div></div>
+      <span class="account-verification" data-account-verification>Checking profile…</span>
+      <div class="account-overview-actions"><a class="button-primary account-settings-link" href="settings.html">Customize profile</a><button class="button-secondary account-sign-out" type="button" data-sign-out>Sign out</button></div>
+    </section>
+
+    <section class="profile-metrics" aria-label="Portfolio snapshot">
+      <article><span>01</span><strong>6</strong><p>Projects documented</p></article>
+      <article><span>02</span><strong>6</strong><p>Credentials recorded</p></article>
+      <article><span>03</span><strong>4</strong><p>Practice areas</p></article>
+      <article><span>04</span><strong>AR + EN</strong><p>Bilingual experience</p></article>
     </section>
 
     <section class="account-portal-section" aria-labelledby="account-portal-title">
-      <div class="account-section-heading"><div><span class="eyebrow">YOUR WORKSPACE</span><h2 id="account-portal-title">Continue exploring.</h2></div></div>
+      <div class="account-section-heading"><div><span class="eyebrow">QUICK ACCESS</span><h2 id="account-portal-title">Pick up where you left off.</h2></div><p class="profile-section-copy">The public portfolio stays at the center; your profile adds a more personal, accessible experience around it.</p></div>
       <div class="account-portal-grid">
         <a class="account-portal-card" href="index.html#projects"><span>01</span><h3>Explore projects</h3><p>Open the complete collection of security, research, and learning projects.</p><b>Portfolio →</b></a>
-        <a class="account-portal-card" href="certifications.html"><span>02</span><h3>Learning &amp; credentials</h3><p>Follow the applied learning map and future verified certificate records.</p><b>Learning profile →</b></a>
-        <a class="account-portal-card" href="settings.html"><span>03</span><h3>Profile &amp; security</h3><p>Update your identity, email verification, and account password.</p><b>Open settings →</b></a>
+        <a class="account-portal-card" href="certifications.html"><span>02</span><h3>Learning &amp; credentials</h3><p>Browse documented certificates and the applied learning map behind the work.</p><b>Learning profile →</b></a>
+        <a class="account-portal-card" href="index.html#journey"><span>03</span><h3>Follow the journey</h3><p>See the current direction, working method, and areas being strengthened next.</p><b>Journey →</b></a>
+        <a class="account-portal-card account-portal-card-featured" href="settings.html"><span>04</span><h3>Profile preferences</h3><p>Manage identity, language, accessibility, email verification, and password security.</p><b>Open settings →</b></a>
       </div>
     </section>
 
-    <section class="account-help-panel"><div><span class="eyebrow">CONTACT</span><h2>Start a technical conversation.</h2><p>For collaboration, project questions, or cybersecurity learning, contact Adam Hamdan directly.</p></div><a class="button-primary" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=biuret956%40gmail.com&amp;su=Biuret%20portfolio%20inquiry" target="_blank" rel="noopener noreferrer">Write in Gmail ↗</a></section>
+    <section class="account-help-panel profile-connect-panel"><div><span class="eyebrow">CONNECT</span><h2>One profile, two direct channels.</h2><p>Follow public project records on GitHub or start a focused conversation with Adam through Gmail.</p></div><div class="profile-connect-actions"><a class="button-secondary" href="https://github.com/Biuret7" target="_blank" rel="noopener noreferrer">Open GitHub ↗</a><a class="button-primary" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=biuret956%40gmail.com&amp;su=Biuret%20portfolio%20inquiry" target="_blank" rel="noopener noreferrer">Write in Gmail ↗</a></div></section>
   </main>
 
   <footer class="site-footer"><span>© 2026 Adam Hamdan · Biuret</span><span>Ramallah · Palestine</span><span>Security · software · learning</span></footer>
   <script src="https://cdn.jsdelivr.net/npm/appwrite@23.0.0"></script>
   <script src="appwrite-config.js?v=20260912-23"></script>
   <script src="appwrite-client.js?v=20260912-21"></script>
-<script src="script.js?v=20260920-4"></script>
-  <script src="account.js?v=20260920-1"></script>
+<script src="script.js?v=20260922-1"></script>
+  <script src="account.js?v=20260922-1"></script>
 </body>
 </html>

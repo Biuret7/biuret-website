@@ -9,6 +9,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   const verification = document.querySelector('[data-settings-verification]');
   const verificationCopy = document.querySelector('[data-verification-copy]');
   const resendVerification = document.querySelector('[data-resend-verification]');
+  const preferencesForm = document.querySelector('[data-preferences-form]');
+  const sessionEmail = document.querySelector('[data-settings-session-email]');
+  const memberSince = document.querySelector('[data-settings-member-since]');
 
   const redirectToAuth = () => window.location.replace('auth.html?redirect=settings.html');
   const setStatus = (message, kind = '') => {
@@ -38,6 +41,37 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (resendVerification) resendVerification.hidden = verified;
   };
 
+  const readPreference = (key) => {
+    try { return localStorage.getItem(key) === 'true'; } catch { return false; }
+  };
+  const savePreference = (key, value) => {
+    try { localStorage.setItem(key, String(Boolean(value))); } catch {}
+  };
+  const applyInterfacePreferences = ({ reducedMotion, highContrast, compactLayout }) => {
+    document.documentElement.classList.toggle('reduce-motion', reducedMotion);
+    document.documentElement.classList.toggle('high-contrast', highContrast);
+    document.documentElement.classList.toggle('compact-layout', compactLayout);
+  };
+  if (preferencesForm) {
+    preferencesForm.elements.namedItem('language').value = document.documentElement.lang === 'ar' ? 'ar' : 'en';
+    preferencesForm.elements.namedItem('reduced-motion').checked = readPreference('biuret-reduced-motion');
+    preferencesForm.elements.namedItem('high-contrast').checked = readPreference('biuret-high-contrast');
+    preferencesForm.elements.namedItem('compact-layout').checked = readPreference('biuret-compact-layout');
+    preferencesForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const language = String(preferencesForm.elements.namedItem('language').value || 'en');
+      const reducedMotion = Boolean(preferencesForm.elements.namedItem('reduced-motion').checked);
+      const highContrast = Boolean(preferencesForm.elements.namedItem('high-contrast').checked);
+      const compactLayout = Boolean(preferencesForm.elements.namedItem('compact-layout').checked);
+      savePreference('biuret-reduced-motion', reducedMotion);
+      savePreference('biuret-high-contrast', highContrast);
+      savePreference('biuret-compact-layout', compactLayout);
+      applyInterfacePreferences({ reducedMotion, highContrast, compactLayout });
+      if (language !== document.documentElement.lang) document.querySelector('[data-language-toggle]')?.click();
+      setStatus(text('Your site preferences were saved on this device.', 'تم حفظ تفضيلات الموقع على هذا الجهاز.'), 'success');
+    });
+  }
+
   if (!service?.configured) {
     setStatus(text('Appwrite setup is required before account settings can load.', 'يلزم إعداد Appwrite قبل تحميل إعدادات الحساب.'), 'error');
     return;
@@ -51,6 +85,13 @@ document.addEventListener('DOMContentLoaded', async () => {
   if (nameInput) nameInput.value = user.name || '';
   if (currentEmailInput) currentEmailInput.value = user.email;
   if (newEmailInput) newEmailInput.value = user.email;
+  if (sessionEmail) sessionEmail.textContent = user.email;
+  if (memberSince) {
+    const registration = user.registration ? new Date(user.registration) : null;
+    memberSince.textContent = registration && !Number.isNaN(registration.getTime())
+      ? new Intl.DateTimeFormat(isArabic() ? 'ar' : 'en', { month: 'long', year: 'numeric' }).format(registration)
+      : text('Biuret member', 'عضو في بيوريت');
+  }
   showVerification(user);
   setStatus(text('Account settings are protected by your active session.', 'إعدادات الحساب محمية بجلسة نشطة.'), 'success');
 

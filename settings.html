@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Manage your Biuret account profile and security settings.">
+  <meta name="description" content="Manage your Biuret profile, interface preferences, accessibility, and security.">
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#080a0d">
-  <title>Account Settings — Biuret</title>
+  <title>Profile Settings — Biuret</title>
   <link rel="icon" type="image/png" href="assets/biuret-wordmark-icon.png?v=20260912-13">
-<link rel="stylesheet" href="style.css?v=20260920-3">
+<link rel="stylesheet" href="style.css?v=20260922-1">
 </head>
 <body class="account-dashboard account-settings-page">
   <header class="navbar">
@@ -18,7 +18,7 @@
     </nav>
     <div class="nav-actions">
       <button class="language-toggle" type="button" data-language-toggle aria-label="Switch language to Arabic" aria-pressed="false"><span class="language-code" aria-hidden="true">ع</span><span class="language-copy"><span class="language-kicker">Language</span><span class="language-label">العربية</span></span><span class="language-switch" aria-hidden="true">⇄</span></button>
-      <a class="account-btn" href="account.html">Account</a>
+      <a class="account-btn" href="account.html">Profile</a>
       <a class="github-btn" href="https://github.com/Biuret7" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
       <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-controls="site-nav" aria-expanded="false">☰</button>
     </div>
@@ -27,16 +27,20 @@
   <main class="account-dashboard-main account-settings-main">
     <section class="account-dashboard-hero account-settings-hero" aria-labelledby="settings-title">
       <div>
-        <span class="eyebrow">BIURET ACCOUNT</span>
-        <h1 id="settings-title">Profile &amp; security.</h1>
-        <p>Keep your identity, contact details, and access secure.</p>
+        <span class="eyebrow">PROFILE CONTROL CENTER</span>
+        <h1 id="settings-title">Make it yours.</h1>
+        <p>Shape your profile, interface, accessibility, and account security from one place.</p>
       </div>
-      <a class="button-secondary account-back-link" href="account.html">Back to account <span>←</span></a>
+      <a class="button-secondary account-back-link" href="account.html">Back to profile <span>←</span></a>
     </section>
 
     <p class="account-session-status" data-settings-status aria-live="polite"></p>
 
-    <section class="settings-grid" aria-label="Account settings">
+    <nav class="settings-index" aria-label="Settings sections"><a href="#profile-settings">Profile</a><a href="#experience-settings">Experience</a><a href="#security-settings">Security</a></nav>
+
+    <section class="settings-group" id="profile-settings" aria-labelledby="profile-settings-title">
+      <div class="settings-group-heading"><span class="eyebrow">01 · PROFILE</span><h2 id="profile-settings-title">Identity &amp; communication.</h2><p>Keep the details attached to your private Biuret profile accurate.</p></div>
+      <div class="settings-grid">
       <article class="settings-card settings-profile-card">
         <div class="settings-card-heading"><span class="eyebrow">PROFILE</span><h2>Your display name.</h2><p>This is the name shown in your Biuret account workspace.</p></div>
         <form class="settings-form" data-profile-form>
@@ -50,6 +54,31 @@
         <div class="settings-verification-state" data-settings-verification aria-live="polite"></div>
         <button class="button-secondary" type="button" data-resend-verification>Send verification email</button>
       </article>
+
+      <article class="settings-card settings-session-card">
+        <div class="settings-card-heading"><span class="eyebrow">SESSION</span><h2>Your current access.</h2><p>This device is using your active Biuret session. Security actions remain protected by Appwrite.</p></div>
+        <dl class="settings-session-details"><div><dt>Signed in as</dt><dd data-settings-session-email>Loading…</dd></div><div><dt>Member since</dt><dd data-settings-member-since>—</dd></div><div><dt>Session status</dt><dd class="is-secure">Protected</dd></div></dl>
+        <a class="button-secondary" href="account.html">View profile overview</a>
+      </article>
+      </div>
+    </section>
+
+    <section class="settings-group" id="experience-settings" aria-labelledby="experience-settings-title">
+      <div class="settings-group-heading"><span class="eyebrow">02 · EXPERIENCE</span><h2 id="experience-settings-title">Interface &amp; accessibility.</h2><p>These preferences stay on this device and never leave your browser.</p></div>
+      <article class="settings-card settings-preferences-card">
+        <form class="settings-form preference-form" data-preferences-form>
+          <label><span>Preferred language</span><select name="language"><option value="en">English</option><option value="ar">العربية</option></select></label>
+          <label class="preference-toggle"><span><b>Reduce motion</b><small>Minimize transitions and animated movement across the site.</small></span><input type="checkbox" name="reduced-motion"><i aria-hidden="true"></i></label>
+          <label class="preference-toggle"><span><b>Higher contrast</b><small>Strengthen text and border contrast for easier reading.</small></span><input type="checkbox" name="high-contrast"><i aria-hidden="true"></i></label>
+          <label class="preference-toggle"><span><b>Compact layout</b><small>Reduce vertical spacing to show more content at once.</small></span><input type="checkbox" name="compact-layout"><i aria-hidden="true"></i></label>
+          <button class="button-primary" type="submit">Save site preferences</button>
+        </form>
+      </article>
+    </section>
+
+    <section class="settings-group" id="security-settings" aria-labelledby="security-settings-title">
+      <div class="settings-group-heading"><span class="eyebrow">03 · SECURITY</span><h2 id="security-settings-title">Email &amp; password.</h2><p>Critical changes require your current password or verified email access.</p></div>
+      <div class="settings-grid">
 
       <article class="settings-card settings-email-card">
         <div class="settings-card-heading"><span class="eyebrow">EMAIL</span><h2>Keep your email current.</h2><p>Changing your email requires your current password and sends a new verification message.</p></div>
@@ -70,6 +99,7 @@
           <button class="button-primary" type="submit">Update password</button>
         </form>
       </article>
+      </div>
     </section>
   </main>
 
@@ -77,7 +107,7 @@
   <script src="https://cdn.jsdelivr.net/npm/appwrite@23.0.0"></script>
   <script src="appwrite-config.js?v=20260912-23"></script>
   <script src="appwrite-client.js?v=20260912-21"></script>
-<script src="script.js?v=20260920-4"></script>
-  <script src="settings.js?v=20260913-1"></script>
+<script src="script.js?v=20260922-1"></script>
+  <script src="settings.js?v=20260922-1"></script>
 </body>
 </html>
