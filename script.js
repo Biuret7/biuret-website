@@ -287,6 +287,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const englishTitle = document.title;
   let language = 'en';
   let accountSignedIn = false;
+  let accountUser = null;
   const getSavedLanguage = () => { try { return localStorage.getItem('biuret-language') === 'ar' ? 'ar' : 'en'; } catch { return 'en'; } };
   const saveLanguage = (value) => { try { localStorage.setItem('biuret-language', value); } catch {} };
   const getSavedBoolean = (key) => { try { return localStorage.getItem(key) === 'true'; } catch { return false; } };
@@ -313,15 +314,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const sourceHref = link.dataset.accountSourceHref || link.getAttribute('href') || 'auth.html';
     link.dataset.accountSourceHref = sourceHref;
     link.href = accountSignedIn ? toAccountHref(sourceHref) : toAuthHref(sourceHref);
-    link.textContent = accountSignedIn ? (language === 'ar' ? 'الملف الشخصي' : 'Profile') : (language === 'ar' ? 'تسجيل الدخول' : 'Sign in');
+    const label = accountSignedIn ? (language === 'ar' ? 'الملف الشخصي' : 'Profile') : (language === 'ar' ? 'تسجيل الدخول' : 'Sign in');
+    if (window.BiuretProfilePhoto) window.BiuretProfilePhoto.renderLink(link, accountUser, label);
+    else link.textContent = label;
   });
   const syncAccountLinks = async () => {
     const service = window.BiuretAppwrite;
     if (!service?.configured) { renderAccountLinks(); return; }
-    try { await service.getCurrentUser(); accountSignedIn = true; }
-    catch { accountSignedIn = false; }
+    try { accountUser = await service.getCurrentUser(); accountSignedIn = true; }
+    catch { accountSignedIn = false; accountUser = null; }
     renderAccountLinks();
   };
+  window.addEventListener('biuret:profile-updated', (event) => {
+    accountUser = event.detail;
+    accountSignedIn = Boolean(accountUser);
+    renderAccountLinks();
+  });
   const projectPage = document.querySelector('.project-page');
   if (projectPage) {
     const projectColor = getComputedStyle(projectPage).getPropertyValue('--project-color').trim();

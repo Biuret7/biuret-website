@@ -43,6 +43,21 @@
       throw new Error('size');
     } finally { URL.revokeObjectURL(url); }
   }
+  function renderLink(link, user, label) {
+    link.textContent = '';
+    link.classList.toggle('has-profile-avatar', Boolean(user));
+    if (user) {
+      const avatar = document.createElement('span');
+      avatar.className = 'nav-profile-avatar';
+      avatar.setAttribute('aria-hidden', 'true');
+      avatar.setAttribute('translate', 'no');
+      render(avatar, user);
+      link.append(avatar);
+    }
+    const copy = document.createElement('span');
+    copy.textContent = label;
+    link.append(copy);
+  }
   function bindEditor(root, initialUser, service) {
     if (!root) return;
     let user = initialUser;
@@ -83,6 +98,7 @@
       message('Saving your profile photo…', 'جارٍ حفظ صورة ملفك…');
       try {
         user = await service.updateProfilePhoto({ dataUrl });
+        window.dispatchEvent(new CustomEvent('biuret:profile-updated', { detail: user }));
         pending = undefined;
         message(dataUrl === null ? 'Profile photo removed.' : 'Profile photo saved.', dataUrl === null ? 'تمت إزالة صورة الملف الشخصي.' : 'تم حفظ صورة الملف الشخصي.', 'success');
       } catch {
@@ -93,5 +109,5 @@
     remove.addEventListener('click', () => persist(null));
     sync();
   }
-  window.BiuretProfilePhoto = { render, prepare, bindEditor };
+  window.BiuretProfilePhoto = { render, renderLink, prepare, bindEditor };
 }());

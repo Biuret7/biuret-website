@@ -389,6 +389,11 @@ html.compact-layout .account-portal-card { min-height: 12rem; }
 @media (max-width: 480px) { .portfolio-snapshot { padding: .85rem; border-radius: 1rem; }.snapshot-heading { padding: .35rem .2rem 1.1rem; }.snapshot-card { min-height: 0; }.snapshot-tags { margin-top: 1rem; } }
 
 /* Utility attribute must always override component display declarations. */
+.account-btn.has-profile-avatar, .mobile-account-link.has-profile-avatar { align-items: center; gap: .55rem; }
+.account-btn.has-profile-avatar { padding-block: .45rem; }
+.nav-profile-avatar { display: inline-grid; place-items: center; flex: 0 0 28px; width: 28px; height: 28px; overflow: hidden; border: 1px solid rgba(201,255,57,.3); border-radius: 50%; background: #1b2414; color: var(--accent); font-size: .75rem; line-height: 1; }
+.nav-profile-avatar img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.mobile-account-link.has-profile-avatar { justify-content: flex-start; }
 .account-avatar { overflow: hidden; flex-shrink: 0; }
 .account-avatar img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .profile-photo-layout { display: flex; align-items: center; gap: 1.25rem; margin-block: 1.5rem; }

@@ -45,7 +45,10 @@ test('oversized preference object and failed server save leave saved prefs intac
   assert.equal(f.user().prefs.biuretProfilePhoto, undefined);
 });
 class Element {
-  constructor() { this.listeners = {}; this.dataset = {}; this.disabled = false; }
+  constructor() { this.listeners = {}; this.dataset = {}; this.disabled = false; this.children = []; this.classList = { toggle() {} }; }
+  set textContent(value) { this.text = value; this.children = []; this.child = undefined; }
+  get textContent() { return this.text; }
+  append(child) { this.children.push(child); }
   addEventListener(event, fn) { this.listeners[event] = fn; }
   replaceChildren(child) { this.child = child; }
   setAttribute() {}
@@ -60,9 +63,11 @@ function photoFixture() {
     naturalWidth = 600; naturalHeight = 400;
     set src(value) { queueMicrotask(() => this.onload()); }
   }
-  const window = {};
-  vm.runInNewContext(source('profile-photo.js'), { window, document, Image, URL: { createObjectURL: () => 'blob:test', revokeObjectURL: () => revoked++ } });
-  return { api: window.BiuretProfilePhoto, revoked: () => revoked, setOutput: (value) => { output = value; } };
+  const events = [];
+  const window = { dispatchEvent: (event) => events.push(event) };
+  class CustomEvent { constructor(type, options) { this.type = type; this.detail = options.detail; } }
+  vm.runInNewContext(source('profile-photo.js'), { window, document, Image, CustomEvent, URL: { createObjectURL: () => 'blob:test', revokeObjectURL: () => revoked++ } });
+  return { api: window.BiuretProfilePhoto, events, revoked: () => revoked, setOutput: (value) => { output = value; } };
 }
 test('prepare validates input and releases object URLs after successful or failed compression', async () => {
   const f = photoFixture();
@@ -108,8 +113,26 @@ test('editor previews without saving, retries errors, saves and removes', async 
   await new Promise(setImmediate);
   assert.equal(elements.status.dataset.state, 'success');
   assert.equal(elements.remove.disabled, false);
+  assert.equal(f.events.length, 1);
+  assert.equal(f.events[0].detail.prefs.biuretProfilePhoto, photo);
   await elements.remove.listeners.click();
   assert.equal(elements.remove.disabled, true);
+  assert.equal(f.events.length, 2);
+  assert.equal(f.events[1].detail.prefs.biuretProfilePhoto, undefined);
+});
+test('navigation shows saved photo or initial beside localized label, and removes it for guests', () => {
+  const { api } = photoFixture();
+  const link = new Element();
+  api.renderLink(link, { name: 'Adam', prefs: { biuretProfilePhoto: photo } }, 'Profile');
+  assert.equal(link.children.length, 2);
+  assert.equal(link.children[0].child.src, photo);
+  assert.equal(link.children[1].textContent, 'Profile');
+  api.renderLink(link, { name: 'Adam', prefs: {} }, 'الملف الشخصي');
+  assert.equal(link.children[0].textContent, 'A');
+  assert.equal(link.children[1].textContent, 'الملف الشخصي');
+  api.renderLink(link, null, 'Sign in');
+  assert.equal(link.children.length, 1);
+  assert.equal(link.children[0].textContent, 'Sign in');
 });
 test('admin identity comes from server labels, never contact email or preferences', async () => {
   const backend = source('appwrite-functions/biuret-licensing/index.js');
