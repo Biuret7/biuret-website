@@ -45,6 +45,23 @@
       requireConfigured();
       return account.updateName({ name });
     },
+    async updateProfilePhoto({ dataUrl }) {
+      requireConfigured();
+      if (dataUrl !== null && (typeof dataUrl !== 'string' || dataUrl.length > 24000 || !/^data:image\/jpeg;base64,\/9j\/[A-Za-z0-9+/]+={0,2}$/.test(dataUrl))) {
+        throw new Error('Invalid profile photo.');
+      }
+      // Fetch fresh preferences so changing the photo preserves other settings.
+      // Preferences are user-editable and must never determine authorization.
+      const current = await account.get();
+      const prefs = { ...current.prefs };
+      if (dataUrl === null) delete prefs.biuretProfilePhoto;
+      else prefs.biuretProfilePhoto = dataUrl;
+      if (new TextEncoder().encode(JSON.stringify(prefs)).length > 64000) {
+        throw new Error('Account preferences are full.');
+      }
+      await account.updatePrefs({ prefs });
+      return { ...current, prefs };
+    },
     async updateEmail({ email, password }) {
       requireConfigured();
       return account.updateEmail({ email, password });

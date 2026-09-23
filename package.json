@@ -4,6 +4,6 @@
   "type": "module",
   "scripts": {
     "build": "node scripts/build-site.mjs",
-    "check": "node --check script.js && node --check paddle-checkout.js && node --check appwrite-functions/biuret-licensing/index.js && node --check scripts/build-site.mjs"
+    "check": "node --check script.js && node --check account.js && node --check settings.js && node --check profile-photo.js && node --check appwrite-client.js && node --check paddle-checkout.js && node --check appwrite-functions/biuret-licensing/index.js && node --check scripts/build-site.mjs && node --test tests/profile-photo.test.mjs"
   }
 }

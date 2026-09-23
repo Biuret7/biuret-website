@@ -1,4 +1,10 @@
 const arabicTranslations = {
+  'PROFILE PHOTO': 'صورة الملف الشخصي',
+  'A face to your profile.': 'صورة تعبّر عنك.',
+  'Your photo stays with your private account, across devices.': 'تُحفظ صورتك ضمن حسابك الخاص وتظهر عبر أجهزتك.',
+  'Choose a photo': 'اختر صورة',
+  'JPG, PNG or WebP · up to 5 MB. Cropped to a square and compressed before upload.': 'JPG أو PNG أو WebP · حتى 5 ميغابايت. تُقص إلى مربع وتُضغط قبل الرفع.',
+  'Save photo': 'حفظ الصورة', 'Cancel preview': 'إلغاء المعاينة', 'Remove photo': 'إزالة الصورة',
   'Home': 'الرئيسية', 'Projects': 'المشاريع', 'Licenses': 'التراخيص', 'About': 'عن بيوريت', 'Now': 'حالياً', 'Contact': 'تواصل',
   'Sign in': 'تسجيل الدخول', 'Create account': 'إنشاء حساب', 'Buy': 'شراء', 'GitHub ↗': 'جيت هب ↗', 'CYBERSECURITY · DEVELOPMENT · RESEARCH': 'الأمن السيبراني · التطوير · البحث',
   'Building tools.': 'بناء أدوات.', 'Learning by creating.': 'التعلّم عبر البناء.',
@@ -364,7 +370,7 @@ document.addEventListener('DOMContentLoaded', () => {
     renderProjectCount(shown);
   }));
   const translateTextNodes = () => {
-    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, { acceptNode: (node) => node.parentElement?.closest('script, style, [data-language-toggle]') ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT });
+    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, { acceptNode: (node) => node.parentElement?.closest('script, style, [data-language-toggle], [translate="no"]') ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT });
     const textNodes = [];
     while (walker.nextNode()) textNodes.push(walker.currentNode);
     textNodes.forEach((node) => {
@@ -436,7 +442,7 @@ document.addEventListener('DOMContentLoaded', () => {
   authSwitch?.addEventListener('click', () => { authMode = authMode === 'signin' ? 'signup' : 'signin'; syncAuthMode(); });
   const getSafeAccountRedirect = () => {
     const target = new URLSearchParams(window.location.search).get('redirect');
-    return target && /^account\.html(?:[?#]|$)/.test(target) ? target : 'account.html';
+    return target && /^(?:account|settings)\.html(?:[?#]|$)/.test(target) ? target : 'account.html';
   };
   const authErrorCopy = (error) => {
     const code = Number(error?.code || error?.status || error?.response?.status || 0);

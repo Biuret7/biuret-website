@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const displayName = user.name || user.email.split('@')[0];
   if (name) name.textContent = displayName;
   if (email) email.textContent = user.email;
-  if (initial) initial.textContent = displayName.trim().charAt(0).toUpperCase() || 'B';
+  window.BiuretProfilePhoto.render(initial, user);
   if (memberSince) {
     const registration = user.registration ? new Date(user.registration) : null;
     memberSince.textContent = registration && !Number.isNaN(registration.getTime())

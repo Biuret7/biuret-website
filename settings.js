@@ -79,6 +79,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   let user;
   try { user = await service.getCurrentUser(); } catch { redirectToAuth(); return; }
+  window.BiuretProfilePhoto.bindEditor(document.querySelector('[data-photo-editor]'), user, service);
   const nameInput = profileForm?.elements.namedItem('name');
   const currentEmailInput = emailForm?.elements.namedItem('current-email');
   const newEmailInput = emailForm?.elements.namedItem('email');
@@ -122,6 +123,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     setBusy(emailForm, true);
     try {
       user = await service.updateEmail({ email, password });
+      if (sessionEmail) sessionEmail.textContent = user.email;
       if (currentEmailInput) currentEmailInput.value = user.email;
       if (newEmailInput) newEmailInput.value = user.email;
       emailForm.reset();

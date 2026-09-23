@@ -14,6 +14,7 @@ const publicFiles = [
   'academy_icon.ico',
   'account.html',
   'account.js',
+  'profile-photo.js',
   'appwrite-client.js',
   'appwrite-config.js',
   'auth.html',

@@ -4,7 +4,7 @@ Biuret repositories are public portfolio records. They do not distribute applica
 
 ## Reporting a security issue
 
-Please report potential vulnerabilities privately to **biuret956@gmail.com** with:
+Please report potential vulnerabilities privately to **adam7.workspace@gmail.com** with:
 
 - the affected project or URL;
 - a concise description and expected impact;
