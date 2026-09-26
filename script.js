@@ -98,6 +98,12 @@ const arabicTranslations = {
 };
 
 Object.assign(arabicTranslations, {
+  'LIVE WEB ACADEMY': 'الأكاديمية متاحة الآن',
+  'Start learning ↗': 'ابدأ التعلّم ↗',
+  'Try Biuret Academy': 'جرّب أكاديمية بيوريت',
+  'View desktop project ↗': 'اعرض مشروع سطح المكتب ↗',
+  'DESKTOP + WEB': 'سطح المكتب والويب',
+  'The project connects structured content with practical exercises and visible progress. A new, free web edition brings daily challenges and three starter tracks to the browser.': 'يربط المشروع المحتوى المنظّم بالتدريب العملي والتقدّم الواضح. وتقدّم نسخة ويب مجانية جديدة تحديات يومية وثلاثة مسارات تمهيدية داخل المتصفح.',
   'View all projects': 'عرض جميع المشاريع',
   'ACTIVE DEVELOPMENT': 'قيد التطوير النشط',
   'FORMAT': 'النوع',
