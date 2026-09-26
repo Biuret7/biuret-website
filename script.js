@@ -421,6 +421,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const authSwitchCopy = document.querySelector('[data-auth-switch-copy]');
   const authSwitch = document.querySelector('[data-auth-switch]');
   const authNotice = document.querySelector('[data-auth-notice]');
+  const authSocial = document.querySelector('.auth-social');
+  const authProviderButtons = [...document.querySelectorAll('[data-auth-provider]')];
+  const authDivider = document.querySelector('[data-auth-divider]');
   let authMode = 'signin';
   const authCopy = {
     signin: {
@@ -441,6 +444,16 @@ document.addEventListener('DOMContentLoaded', () => {
     if (authSubmit) authSubmit.textContent = copy.submit;
     if (authSwitchCopy) authSwitchCopy.textContent = copy.switchCopy;
     if (authSwitch) authSwitch.textContent = copy.switchAction;
+    if (authSocial) authSocial.setAttribute('aria-label', language === 'ar' ? 'الدخول عبر مزود خارجي' : 'Social sign in');
+    authProviderButtons.forEach((button) => {
+      const label = button.querySelector('[data-provider-label]');
+      if (!label) return;
+      const provider = button.dataset.authProvider === 'github' ? 'GitHub' : 'Google';
+      label.textContent = language === 'ar'
+        ? `${authMode === 'signup' ? 'إنشاء حساب' : 'المتابعة'} باستخدام ${provider}`
+        : `${authMode === 'signup' ? 'Sign up' : 'Continue'} with ${provider}`;
+    });
+    if (authDivider) authDivider.textContent = language === 'ar' ? 'أو تابع بالبريد الإلكتروني' : 'or continue with email';
     if (authConfirm) { authConfirm.hidden = authMode !== 'signup'; authConfirm.querySelector('input')?.toggleAttribute('required', authMode === 'signup'); }
     const password = authForm.querySelector('[name="password"]');
     if (password) password.autocomplete = authMode === 'signup' ? 'new-password' : 'current-password';
@@ -452,6 +465,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const target = new URLSearchParams(window.location.search).get('redirect');
     return target && /^(?:account|settings)\.html(?:[?#]|$)/.test(target) ? target : 'account.html';
   };
+  authProviderButtons.forEach((button) => button.addEventListener('click', async () => {
+    const service = window.BiuretAppwrite;
+    if (!service?.configured) {
+      if (authNotice) authNotice.textContent = language === 'ar' ? 'أكمل إعداد Appwrite أولاً لتفعيل الحسابات الحقيقية.' : 'Complete the Appwrite setup first to activate real accounts.';
+      return;
+    }
+    authProviderButtons.forEach((providerButton) => { providerButton.disabled = true; });
+    if (authNotice) authNotice.textContent = language === 'ar' ? 'جارٍ تحويلك إلى مزود الحساب…' : 'Redirecting to your account provider…';
+    const success = new URL('auth.html', window.location.href);
+    success.searchParams.set('oauth', 'success');
+    success.searchParams.set('redirect', getSafeAccountRedirect());
+    const failure = new URL('auth.html', window.location.href);
+    failure.searchParams.set('oauth', 'failed');
+    try {
+      await service.signInWithProvider({ provider: button.dataset.authProvider, success: success.href, failure: failure.href });
+    } catch (error) {
+      if (authNotice) authNotice.textContent = authErrorCopy(error);
+      authProviderButtons.forEach((providerButton) => { providerButton.disabled = false; });
+    }
+  }));
   const authErrorCopy = (error) => {
     const code = Number(error?.code || error?.status || error?.response?.status || 0);
     const type = String(error?.type || error?.response?.data?.type || '').toLowerCase();
@@ -504,7 +537,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
   if (authForm && window.BiuretAppwrite?.configured) {
-    window.BiuretAppwrite.getCurrentUser().then(() => window.location.replace(getSafeAccountRedirect())).catch(() => {});
+    window.BiuretAppwrite.getCurrentUser()
+      .then(() => window.location.replace(getSafeAccountRedirect()))
+      .catch(() => {
+        if (new URLSearchParams(window.location.search).get('oauth') === 'success' && authNotice) {
+          authNotice.textContent = language === 'ar'
+            ? 'اكتمل التحويل، لكن تعذر تأكيد الجلسة. أعد المحاولة.'
+            : 'The redirect completed, but the session could not be confirmed. Try again.';
+        }
+      });
   }
 
   const licenseProducts = {
@@ -592,5 +633,10 @@ document.addEventListener('DOMContentLoaded', () => {
   applyLanguage(getSavedLanguage());
   syncAccountLinks();
   syncAuthMode();
+  if (authForm && new URLSearchParams(window.location.search).get('oauth') === 'failed' && authNotice) {
+    authNotice.textContent = language === 'ar'
+      ? 'لم يكتمل الدخول عبر المزود. حاول مرة أخرى أو استخدم بريدك الإلكتروني.'
+      : 'Social sign-in was not completed. Try again or use your email.';
+  }
   syncLicenseSelection();
 });

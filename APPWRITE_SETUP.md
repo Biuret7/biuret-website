@@ -18,6 +18,16 @@ window.BIURET_APPWRITE_CONFIG = Object.freeze({
 });
 ```
 
+### Google and GitHub sign-in
+
+The sign-in and account creation tabs both use Appwrite OAuth2. To activate their buttons:
+
+1. In the Appwrite Console, open **Auth > Social providers** and enable Google and GitHub.
+2. Create an OAuth application with each provider. Copy its client ID and client secret into the matching Appwrite provider settings. Keep those secrets in Appwrite; never put them in the website files.
+3. For each provider application, use the **exact authorization callback URL shown by Appwrite**. That callback points to Appwrite; Appwrite then returns the user to this site's `auth.html`.
+4. Register `biuret.dev`, `www.biuret.dev`, and any local test hostname as Appwrite Web platforms.
+5. Test both providers from both tabs, including a cancelled sign-in and return to `account.html` or `settings.html`.
+
 ## 2. Create the licenses database
 
 Create a database with ID `biuret`, then add a `licenses` table with these required columns:

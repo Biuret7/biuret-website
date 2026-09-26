@@ -37,6 +37,11 @@
       await account.createEmailPasswordSession({ email, password });
       return account.get();
     },
+    signInWithProvider({ provider, success, failure }) {
+      requireConfigured();
+      if (!['google', 'github'].includes(provider)) throw new Error('Unsupported sign-in provider.');
+      return account.createOAuth2Session({ provider, success, failure });
+    },
     async getCurrentUser() {
       requireConfigured();
       return account.get();
