@@ -25,6 +25,7 @@ const publicFiles = [
   'icon.png',
   'index.html',
   'osint_icon.ico',
+  'privacy.html',
   'reaper_icon.ico',
   'recovery.js',
   'reset-password.html',
@@ -36,6 +37,7 @@ const publicFiles = [
   'sitemap.xml',
   'sniff_icon.ico',
   'style.css',
+  'terms.html',
   'verify.html',
   'verify.js'
 ];
