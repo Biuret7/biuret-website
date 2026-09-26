@@ -453,7 +453,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ? `${authMode === 'signup' ? 'إنشاء حساب' : 'المتابعة'} باستخدام ${provider}`
         : `${authMode === 'signup' ? 'Sign up' : 'Continue'} with ${provider}`;
     });
-    if (authDivider) authDivider.textContent = language === 'ar' ? 'أو تابع بالبريد الإلكتروني' : 'or continue with email';
+    if (authDivider) authDivider.textContent = language === 'ar' ? 'أو تابع باستخدام' : 'or continue with';
     if (authConfirm) { authConfirm.hidden = authMode !== 'signup'; authConfirm.querySelector('input')?.toggleAttribute('required', authMode === 'signup'); }
     const password = authForm.querySelector('[name="password"]');
     if (password) password.autocomplete = authMode === 'signup' ? 'new-password' : 'current-password';
