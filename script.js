@@ -6,7 +6,7 @@ const arabicTranslations = {
   'JPG, PNG or WebP · up to 5 MB. Cropped to a square and compressed before upload.': 'JPG أو PNG أو WebP · حتى 5 ميغابايت. تُقص إلى مربع وتُضغط قبل الرفع.',
   'Save photo': 'حفظ الصورة', 'Cancel preview': 'إلغاء المعاينة', 'Remove photo': 'إزالة الصورة',
   'Home': 'الرئيسية', 'Projects': 'المشاريع', 'Licenses': 'التراخيص', 'About': 'عن بيوريت', 'Now': 'حالياً', 'Contact': 'تواصل',
-  'Sign in': 'تسجيل الدخول', 'Create account': 'إنشاء حساب', 'Buy': 'شراء', 'GitHub ↗': 'جيت هب ↗', 'CYBERSECURITY · DEVELOPMENT · RESEARCH': 'الأمن السيبراني · التطوير · البحث',
+  'Sign in': 'تسجيل الدخول', 'Create account': 'إنشاء حساب', 'Buy': 'شراء', 'GitHub ↗': 'جيت هب ↗', 'Academy ↗': 'الأكاديمية ↗', 'CYBERSECURITY · DEVELOPMENT · RESEARCH': 'الأمن السيبراني · التطوير · البحث',
   'Building tools.': 'بناء أدوات.', 'Learning by creating.': 'التعلّم عبر البناء.',
   'A focused collection of cybersecurity tools, learning platforms, and software experiments. Each project is a practical step in a continuing process of research and building.': 'مجموعة مركّزة من أدوات الأمن السيبراني ومنصات التعلّم والتجارب البرمجية. كل مشروع هو خطوة عملية ضمن رحلة مستمرة من البحث والبناء.',
   'Explore projects ↓': 'استكشف المشاريع ↓', 'About Biuret': 'عن بيوريت', '⌘ CODE': '⌘ برمجة', '◈ SECURITY': '◈ أمن', '⚡ RESEARCH': '⚡ بحث',
