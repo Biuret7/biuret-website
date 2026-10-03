@@ -278,6 +278,82 @@ Object.assign(arabicTranslations, {
   'Your site preferences were saved on this device.': 'تم حفظ تفضيلات الموقع على هذا الجهاز.'
 });
 
+Object.assign(arabicTranslations, {
+  'Thirteen records, presented with honest context.': 'ثلاثة عشر سجلاً بسياق واضح وصادق.',
+  'The archive brings together cybersecurity and programming courses, technical workshops, Model United Nations participation, and karate progression—each documented with its original certificate and accurate scope.': 'يجمع الأرشيف دورات الأمن السيبراني والبرمجة والورش التقنية والمشاركة في نموذج الأمم المتحدة والتدرّج في الكاراتيه، وكل سجل موثّق بشهادته الأصلية ونطاقه الدقيق.',
+  '13 credential records documented': '13 سجلاً موثقاً للشهادات',
+  'This page documents Adam Hamdan’s technical learning, leadership experience, and personal development through thirteen original certificate records. Select any certificate to inspect it closely.': 'توثّق هذه الصفحة تعلّم آدم حمدان التقني وخبرته القيادية وتطوره الشخصي من خلال ثلاث عشرة شهادة أصلية. اضغط على أي شهادة لعرضها بحجم أكبر.',
+  'Every entry reflects the original certificate, names its issuer and date when shown, and avoids claiming skills or external verification that the document does not provide.': 'يعكس كل سجل الشهادة الأصلية ويذكر الجهة المصدرة والتاريخ عندما يظهر في الشهادة، دون ادعاء مهارات أو توثيق خارجي لا توفره الوثيقة.',
+  'Cybersecurity, programming, AI & robotics.': 'الأمن السيبراني والبرمجة والذكاء الاصطناعي والروبوتات.',
+  'View larger ↗': 'عرض مكبّر ↗', 'Certificate preview': 'معاينة الشهادة',
+  'Open original file ↗': 'فتح الملف الأصلي ↗',
+  'PYTHON · COMPLETION': 'بايثون · إتمام', 'October 2026': 'أكتوبر 2026',
+  'Python Programming Course': 'دورة برمجة بايثون',
+  'Completion of a 36-hour Python programming course.': 'إتمام دورة في برمجة بايثون مدتها 36 ساعة.',
+  'Training': 'التدريب', '36 hours': '36 ساعة', '15 hours': '15 ساعة',
+  'CYBERSECURITY · COURSE': 'الأمن السيبراني · دورة',
+  'Practical Ethical Hacker v2': 'الهاكر الأخلاقي العملي 2',
+  'Udemy course completion with Waleed Kamal Shawawrah.': 'إتمام دورة على Udemy مع وليد كمال شواورة.',
+  'Length': 'المدة', '12.5 hours': '12.5 ساعة', '9.5 hours': '9.5 ساعة', '2.5 hours': '2.5 ساعة',
+  'CYBERSECURITY · TRAINING': 'الأمن السيبراني · تدريب', 'Practical': 'عملي',
+  'PEH v2 · CybersMind': 'PEH v2 · سايبرز مايند',
+  'Completion of practical training in penetration testing, security tools, and cybersecurity applications.': 'إتمام تدريب عملي في اختبار الاختراق والأدوات الأمنية وتطبيقات الأمن السيبراني.',
+  'PROGRAMMING · COURSE': 'البرمجة · دورة',
+  'Functional Programming, Lambdas & Streams': 'البرمجة الوظيفية وLambdas وStreams',
+  'Udemy course completion covering lambdas, method references, and streams.': 'إتمام دورة Udemy عن Lambdas ومراجع الدوال وStreams.',
+  'Practical Ethical Hacker': 'الهاكر الأخلاقي العملي',
+  'KOTLIN · PARTICIPATION': 'كوتلن · مشاركة', 'Session': 'جلسة',
+  'Your First Step into Android Development': 'خطوتك الأولى في تطوير أندرويد',
+  'Participation in a NawrasEdu session introducing Kotlin and Android fundamentals.': 'المشاركة في جلسة من NawrasEdu تعرّف بأساسيات Kotlin وأندرويد.',
+  'Organizer': 'المنظّم', 'Presenter': 'المقدّمة'
+});
+
+Object.assign(arabicTranslations, {
+  'planned with purpose.': 'مخطط لها بهدف.',
+  'I’m Adam Hamdan, the developer behind Biuret. This portfolio presents six original cybersecurity and education concepts. Their repositories contain experiments and planning material; the complete products are future goals.': 'أنا آدم حمدان، المطوّر خلف بيوريت. يعرض هذا الموقع ست أفكار أصلية للأمن السيبراني والتعليم. تحتوي مستودعاتها على تجارب وخطط، أما المنتجات الكاملة فهي أهداف مستقبلية.',
+  'PROJECT CONCEPTS': 'أفكار مشاريع', 'ACADEMY WEB PILOT': 'نسخة ويب تجريبية للأكاديمية', 'ROOM TO GROW': 'مساحة للتوسع',
+  'A simple loop guides the concepts: research the need, prototype carefully, and explain what remains to be built.': 'توجّه الأفكار خطوات بسيطة: دراسة الحاجة، وبناء نموذج بعناية، وتوضيح ما تبقّى للتنفيذ.',
+  'Plan deliberately.': 'خطّط بعناية.',
+  'Desktop security concepts with deliberate workflows, local-first thinking, and clear boundaries.': 'أفكار لأدوات أمنية مكتبية بمسارات استخدام واضحة وتركيز على البيانات المحلية وحدود محددة.',
+  'Cybersecurity progress documented through experiments, safe labs, and proposed milestones.': 'تقدّم في الأمن السيبراني موثّق بالتجارب والمختبرات الآمنة والمراحل المقترحة.',
+  'FUTURE PROJECTS': 'مشاريع مستقبلية', 'Six ideas, each with a clear direction.': 'ست أفكار، لكل منها اتجاه واضح.',
+  'These are proposed products across secure software, networks, OSINT, cryptography, and education. Experimental code may exist, but the complete products are not released or ready for deployment.': 'هذه منتجات مقترحة في البرمجيات الآمنة والشبكات وOSINT والتشفير والتعليم. قد تتوفر شيفرة تجريبية، لكن المنتجات الكاملة غير منشورة وغير جاهزة للاستخدام.',
+  'FUTURE PLATFORM · WEB PILOT LIVE': 'منصة مستقبلية · نسخة ويب مصغّرة متاحة',
+  'FUTURE CONCEPT': 'فكرة مستقبلية', 'CONCEPT ROADMAP': 'خطة الفكرة', 'EXPERIMENTAL CODE': 'شيفرة تجريبية',
+  'A proposed full cybersecurity learning platform. A smaller web pilot is live today; the broader curriculum and product remain future work.': 'فكرة لمنصة متكاملة لتعلّم الأمن السيبراني. تتوفر الآن نسخة ويب مصغّرة، فيما يبقى المنهج الأوسع والمنتج الكامل عملاً مستقبلياً.',
+  'A future privacy-focused vault concept for local control, secure organization, recovery, and companion access.': 'فكرة مستقبلية لخزنة تركز على الخصوصية والتحكم المحلي والتنظيم الآمن والاستعادة والوصول المرافق.',
+  'A proposed OSINT workspace for keeping authorized research organized from the first lead to a clear final report.': 'فكرة لمساحة OSINT تنظّم البحث المصرّح به من أول خيط إلى تقرير واضح.',
+  'A future network-analysis concept for turning authorized traffic captures into readable context and useful summaries.': 'فكرة مستقبلية لتحليل الشبكات وتحويل التقاط الحركة المصرّح بها إلى سياق مفهوم وملخصات مفيدة.',
+  'A proposed desktop utility for protecting files and folders through a clear, controlled workflow.': 'فكرة لأداة مكتبية لحماية الملفات والمجلدات عبر خطوات واضحة ومضبوطة.',
+  'A future network-visibility concept for authorized discovery, device context, and practical reporting.': 'فكرة مستقبلية لرؤية الشبكات والاستكشاف المصرّح به وسياق الأجهزة والتقارير العملية.',
+  'Explore concept': 'استكشف الفكرة', 'Visit web pilot ↗': 'زر نسخة الويب المصغّرة ↗',
+  'These project pages document ideas and experimental work. I plan to develop and validate the complete products over time.': 'توثّق صفحات المشاريع أفكاراً وعملاً تجريبياً. أخطط لتطوير المنتجات الكاملة والتحقق منها تدريجياً.',
+  'AREAS OF INTEREST': 'مجالات الاهتمام', 'Skills I am developing.': 'مهارات أعمل على تطويرها.',
+  'These topics guide my learning and future project concepts; they are not claims of finished products.': 'توجّه هذه المجالات تعلّمي وأفكار مشاريعي المستقبلية، ولا تعني وجود منتجات مكتملة.',
+  'From foundations to future builds.': 'من الأساسيات إلى البناء المستقبلي.',
+  'A learning plan moving from foundations through controlled prototypes toward documented, tested tools.': 'خطة تعلّم تنتقل من الأساسيات عبر نماذج تجريبية مضبوطة نحو أدوات موثّقة ومختبرة.',
+  'Planning complete desktop experiences': 'التخطيط لتجارب مكتبية متكاملة',
+  'The future goal is to combine security logic with resilient workflows, usable interfaces, reporting, backup, recovery, and documentation.': 'الهدف المستقبلي هو الجمع بين المنطق الأمني ومسارات عمل متينة وواجهات مريحة وتقارير ونسخ احتياطي واستعادة وتوثيق.',
+  'FUTURE LEARNING MAP': 'خريطة التعلّم المستقبلية', 'Where this learning could lead.': 'إلى أين يمكن أن يقود هذا التعلّم.',
+  'These areas connect the certificates to proposed Biuret projects. The projects remain concepts and experiments, not completed products.': 'تربط هذه المجالات الشهادات بمشاريع بيوريت المقترحة. تبقى المشاريع أفكاراً وتجارب وليست منتجات مكتملة.',
+  'Concept: BiuLock →': 'فكرة: BiuLock ←', 'Concept: BiuCrypt →': 'فكرة: BiuCrypt ←', 'Concept: BiuSniff →': 'فكرة: BiuSniff ←',
+  'Concept: B-Recon →': 'فكرة: B-Recon ←', 'Concept: Biuret Academy →': 'فكرة: Biuret Academy ←', 'Concept: Biuret Reaper →': 'فكرة: Biuret Reaper ←',
+  'Separate plans from proof': 'افصل الخطة عن الدليل', 'Certificates document learning; project concepts describe possible future applications.': 'توثّق الشهادات التعلّم، وتصف أفكار المشاريع تطبيقات مستقبلية محتملة.',
+  'Future concept · experimental code · no product release': 'فكرة مستقبلية · شيفرة تجريبية · لا يوجد منتج منشور',
+  'Full platform planned · smaller web pilot live': 'المنصة الكاملة مخططة · نسخة ويب مصغّرة متاحة',
+  'CONCEPT SUMMARY': 'ملخص الفكرة', 'PLANNED FEATURES': 'ميزات مخططة', 'Project status:': 'حالة المشروع:',
+  'This page is a future product plan. Repository code is experimental and does not represent a released, validated, or deployment-ready application.': 'تعرض هذه الصفحة خطة منتج مستقبلي. شيفرة المستودع تجريبية ولا تمثّل تطبيقاً منشوراً أو متحققاً منه أو جاهزاً للاستخدام.',
+  'The full academy is a future concept. The current web pilot is smaller in scope; the desktop repository is experimental and not a released product.': 'الأكاديمية الكاملة فكرة مستقبلية. نسخة الويب الحالية أصغر نطاقاً، ومستودع سطح المكتب تجريبي وليس منتجاً منشوراً.',
+  'View experimental code ↗': 'عرض الشيفرة التجريبية ↗', 'View desktop experiment ↗': 'عرض تجربة سطح المكتب ↗',
+  'FULL PLATFORM PLANNED': 'المنصة الكاملة مخططة',
+  'The proposed BiuLock would explore private storage, deliberate account recovery, and companion access. The current code is experimental planning work.': 'ستستكشف فكرة BiuLock التخزين الخاص واستعادة الحساب المدروسة والوصول المرافق. الشيفرة الحالية عمل تجريبي ضمن التخطيط.',
+  'The proposed B-Recon would organize scope, leads, evidence, and reporting in one research workflow. The current code is experimental planning work.': 'ستجمع فكرة B-Recon النطاق والخيوط والأدلة والتقارير في مسار بحث واحد. الشيفرة الحالية عمل تجريبي ضمن التخطيط.',
+  'The proposed BiuSniff would make authorized network captures easier to inspect and explain. The current code is experimental planning work.': 'ستسهّل فكرة BiuSniff فحص التقاط الشبكات المصرّح به وشرحه. الشيفرة الحالية عمل تجريبي ضمن التخطيط.',
+  'The proposed BiuCrypt would make file and folder protection clearer through guided operations and integrity checks. The current code is experimental planning work.': 'ستجعل فكرة BiuCrypt حماية الملفات والمجلدات أوضح عبر خطوات موجّهة وفحوصات السلامة. الشيفرة الحالية عمل تجريبي ضمن التخطيط.',
+  'The proposed Biuret Reaper would turn discovery results into readable device context and practical reports. The current code is experimental planning work.': 'ستحوّل فكرة Biuret Reaper نتائج الاستكشاف إلى سياق مفهوم للأجهزة وتقارير عملية. الشيفرة الحالية عمل تجريبي ضمن التخطيط.',
+  'The full Biuret Academy is a future platform concept. A smaller web pilot is available today; the desktop repository contains experiments and planning material.': 'أكاديمية Biuret الكاملة فكرة لمنصة مستقبلية. تتوفر اليوم نسخة ويب مصغّرة، بينما يحتوي مستودع سطح المكتب على تجارب ومواد تخطيطية.'
+});
+
 const arabicTitles = {
   'index.html': 'آدم حمدان (بيوريت) — ملف أعمال الأمن السيبراني', 'certifications.html': 'الشهادات والتعلّم — آدم حمدان', 'security.html': 'الأمن والاستخدام المسؤول — بيوريت', '404.html': 'الصفحة غير موجودة — بيوريت', 'auth.html': 'تسجيل الدخول — بيوريت', 'account.html': 'ملفي الشخصي — بيوريت', 'settings.html': 'إعدادات الملف الشخصي — بيوريت', 'forgot-password.html': 'استعادة كلمة المرور — بيوريت', 'reset-password.html': 'كلمة مرور جديدة — بيوريت', 'verify.html': 'توثيق البريد — بيوريت', 'licenses.html': 'تراخيص بيوريت',
   'biuret-academy.html': 'Biuret Academy — بيوريت', 'biulock.html': 'BiuLock — بيوريت', 'b-recon.html': 'B-Recon — بيوريت',
@@ -393,7 +469,7 @@ document.addEventListener('DOMContentLoaded', () => {
       sourceTexts.set(node, source);
       if (language === 'en') { node.nodeValue = source; return; }
       const match = source.match(/^(\s*)([\s\S]*?)(\s*)$/);
-      const translated = arabicTranslations[match[2]];
+      const translated = arabicTranslations[match[2]] || (match[2].startsWith('Planned capability: ') && arabicTranslations[match[2].slice(20)] ? `ميزة مخططة: ${arabicTranslations[match[2].slice(20)]}` : null);
       node.nodeValue = translated ? `${match[1]}${translated}${match[3]}` : source;
     });
   };

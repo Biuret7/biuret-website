@@ -21,6 +21,7 @@ const publicFiles = [
   'biucrypt_icon.ico',
   'biulock_icon.ico',
   'certifications.html',
+  'certificates.js',
   'forgot-password.html',
   'icon.png',
   'index.html',
