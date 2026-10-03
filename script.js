@@ -279,6 +279,22 @@ Object.assign(arabicTranslations, {
 });
 
 Object.assign(arabicTranslations, {
+  'Sixteen records, presented with honest context.': 'ستة عشر سجلاً بسياق واضح وصادق.',
+  'The archive brings together cybersecurity, programming, and AI learning, technical workshops, Model United Nations participation, and karate progression—each documented with its original certificate and accurate scope.': 'يجمع الأرشيف تعلّم الأمن السيبراني والبرمجة والذكاء الاصطناعي والورش التقنية والمشاركة في نموذج الأمم المتحدة والتدرّج في الكاراتيه، وكل سجل موثّق بشهادته الأصلية ونطاقه الدقيق.',
+  '16 credential records documented': '16 سجلاً موثقاً للشهادات',
+  'This page documents Adam Hamdan’s technical learning, leadership experience, and personal development through sixteen original certificate records. Select any certificate to inspect it closely.': 'توثّق هذه الصفحة تعلّم آدم حمدان التقني وخبرته القيادية وتطوره الشخصي من خلال ست عشرة شهادة أصلية. اضغط على أي شهادة لعرضها بحجم أكبر.',
+  'AI DESIGN · ATTENDANCE': 'تصميم بالذكاء الاصطناعي · حضور',
+  'AI-Powered UI & UX Design': 'تصميم الواجهات وتجربة المستخدم بالذكاء الاصطناعي',
+  'Attendance and participation in an online workshop presented by Reem Al Hayzae.': 'حضور ومشاركة في ورشة عبر الإنترنت قدّمتها ريم آل هيزع.',
+  'AI Challenge Serving Islamic Content': 'تحدي الذكاء الاصطناعي في خدمة المحتوى الإسلامي',
+  'Format': 'النوع', 'Online workshop': 'ورشة عبر الإنترنت',
+  'AI DEVELOPMENT · ATTENDANCE': 'تطوير بالذكاء الاصطناعي · حضور',
+  'AI-Assisted Agentic Software Development': 'التطوير البرمجي الوكيلي بمساعدة الذكاء الاصطناعي',
+  'Attendance and participation in an online workshop presented by Eng. Hasan Alshikh.': 'حضور ومشاركة في ورشة عبر الإنترنت قدّمها م. حسن الشيخ.',
+  'AI AUTOMATION · COMPLETION': 'أتمتة بالذكاء الاصطناعي · إتمام',
+  'AI Automation with n8n': 'أتمتة الذكاء الاصطناعي باستخدام n8n',
+  'Completion of a hands-on workshop on designing AI-powered automation workflows with n8n.': 'إتمام ورشة عملية لتصميم مسارات أتمتة مدعومة بالذكاء الاصطناعي باستخدام n8n.',
+  'Qimma Team': 'فريق قمة', 'Instructor': 'المدرّب', 'Anas Al-Hasan': 'أنس الحسن',
   'Thirteen records, presented with honest context.': 'ثلاثة عشر سجلاً بسياق واضح وصادق.',
   'The archive brings together cybersecurity and programming courses, technical workshops, Model United Nations participation, and karate progression—each documented with its original certificate and accurate scope.': 'يجمع الأرشيف دورات الأمن السيبراني والبرمجة والورش التقنية والمشاركة في نموذج الأمم المتحدة والتدرّج في الكاراتيه، وكل سجل موثّق بشهادته الأصلية ونطاقه الدقيق.',
   '13 credential records documented': '13 سجلاً موثقاً للشهادات',
