@@ -309,7 +309,7 @@ h1, h2, h3, p { margin-top: 0; }
 .certificate-card { --certificate-color: var(--accent); overflow: hidden; border: 1px solid color-mix(in srgb, var(--certificate-color) 25%, var(--line)); border-radius: 1rem; background: linear-gradient(145deg, color-mix(in srgb, var(--certificate-color) 5%, #14191f), #0b0e12 72%); box-shadow: 0 1rem 2.8rem rgba(0,0,0,.15); transition: transform .24s ease, border-color .24s ease, box-shadow .24s ease; }
 .certificate-card:hover { border-color: color-mix(in srgb, var(--certificate-color) 55%, transparent); box-shadow: 0 1.3rem 3rem color-mix(in srgb, var(--certificate-color) 9%, rgba(0,0,0,.32)); transform: translateY(-4px); }
 .certificate-technical { --certificate-color: #c9ff39; }.certificate-leadership { --certificate-color: #6cb4ff; }.certificate-discipline { --certificate-color: #e5b85b; }
-.certificate-media { position: relative; display: block; overflow: hidden; aspect-ratio: 16 / 9; border-bottom: 1px solid color-mix(in srgb, var(--certificate-color) 22%, var(--line)); background: #e9ecef; cursor: zoom-in; }
+.certificate-media { position: relative; display: block; overflow: hidden; aspect-ratio: 16 / 9; border-bottom: 1px solid color-mix(in srgb, var(--certificate-color) 22%, var(--line)); background: radial-gradient(circle at 50% 40%, #25313a, #10171c 78%); cursor: zoom-in; }
 .certificate-media:focus-visible { outline: 3px solid var(--accent); outline-offset: -3px; }
 .certificate-media::after { position: absolute; inset: 0; content: ''; background: linear-gradient(to top, rgba(5,7,9,.65), transparent 35%); opacity: .7; transition: opacity .22s ease; }
 .certificate-media img { display: block; width: 100%; height: 100%; object-fit: contain; transition: transform .35s cubic-bezier(.2,.8,.2,1); }
