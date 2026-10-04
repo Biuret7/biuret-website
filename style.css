@@ -25,7 +25,7 @@ img { max-width: 100%; }
 .navbar { position: sticky; top: 0; z-index: 30; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; min-height: 76px; padding: 0 max(5vw, 1.4rem); border-bottom: 1px solid rgba(255,255,255,.075); background: rgba(8,10,13,.86); backdrop-filter: blur(16px); }
 .navbar.scrolled { min-height: 64px; background: rgba(8,10,13,.96); }
 .logo { justify-self: start; display: inline-flex; align-items: center; gap: .6rem; color: var(--accent); font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 700; letter-spacing: -.05em; }
-.logo-mark { display: grid; width: 1.7rem; aspect-ratio: 1; place-items: center; border: 0; border-radius: .38rem; background: #0a0d0c url('assets/biuret-wordmark-icon.png?v=20260912-12') center / cover no-repeat; box-shadow: 0 0 16px rgba(201,255,57,.16); color: transparent; font-size: 0; }
+.logo-mark { display: grid; width: 1.7rem; aspect-ratio: 1; place-items: center; border: 0; border-radius: .38rem; background: #0a0d0c url('assets/biuret-logo.png') center / contain no-repeat; box-shadow: 0 0 16px rgba(201,255,57,.16); color: transparent; font-size: 0; }
 .site-nav { display: flex; gap: clamp(1rem, 2.5vw, 2.15rem); }
 .site-nav a { position: relative; color: var(--muted); font-size: .875rem; font-weight: 600; transition: color .2s ease; }
 .site-nav a::after { position: absolute; right: 0; bottom: -.48rem; left: 0; height: 1px; content: ''; background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform .2s ease; }
@@ -63,7 +63,7 @@ h1, h2, h3, p { margin-top: 0; }
 .brand-portrait { position: relative; width: min(100%, 23rem); margin: 0; padding: .55rem; border: 1px solid rgba(201,255,57,.24); border-radius: 1.6rem; background: linear-gradient(145deg, rgba(201,255,57,.13), rgba(255,255,255,.025) 45%, rgba(0,0,0,.2)); box-shadow: 0 0 0 .8rem rgba(201,255,57,.025), 0 1.7rem 3.6rem rgba(0,0,0,.38), 0 0 4.5rem rgba(201,255,57,.1); transform: rotate(2deg); }
 .brand-portrait::before { position: absolute; inset: -1.25rem; z-index: -1; content: ''; border: 1px dashed rgba(201,255,57,.18); border-radius: 2rem; animation: rotate 36s linear infinite; }
 .brand-portrait::after { position: absolute; inset: 1.25rem; content: ''; border: 1px solid rgba(255,255,255,.07); border-radius: 1.1rem; background: linear-gradient(118deg, transparent 42%, rgba(201,255,57,0) 47%, rgba(201,255,57,.18) 50%, rgba(255,255,255,.14) 51%, rgba(201,255,57,0) 54%, transparent 59%); background-position: 140% 0; background-size: 240% 100%; pointer-events: none; animation: signature-sweep 8s cubic-bezier(.22,.75,.2,1) infinite; }
-.brand-portrait img { display: block; width: 100%; aspect-ratio: 1; border-radius: 1.1rem; object-fit: cover; }
+.brand-portrait img { display: block; width: 100%; aspect-ratio: 1; border-radius: 1.1rem; object-fit: contain; }
 .orbit { position: absolute; border: 1px solid rgba(255,255,255,.1); border-radius: 50%; }
 .orbit-1 { width: 17rem; aspect-ratio: 1; }
 .orbit-2 { width: 24rem; aspect-ratio: 1; border-style: dashed; animation: rotate 25s linear infinite; }
