@@ -1,4 +1,13 @@
 const arabicTranslations = {
+  'EXPLORE THE CONCEPTS': 'استكشف الأفكار',
+  'Six ideas. A future roadmap.': 'ست أفكار وخطة للمستقبل.',
+  'Read the problem, proposed approach and current experimental status of each project.': 'تعرّف على المشكلة والحل المقترح والحالة التجريبية لكل مشروع.',
+  'START LEARNING': 'ابدأ التعلّم',
+  'A clear route into cybersecurity.': 'طريق واضح إلى الأمن السيبراني.',
+  'Visit the Academy web pilot for Foundations, guided practice and specialty roadmaps.': 'زر النسخة التجريبية للأكاديمية: أساسيات وتطبيق موجّه وخرائط تخصصات.',
+  'VIEW THE EVIDENCE': 'شاهد إثباتات التعلّم',
+  'Training, documented.': 'تعلّم موثّق.',
+  'Browse a compact certificate gallery and open any record for the original document.': 'تصفح معرض الشهادات المختصر وافتح أي شهادة لعرض الوثيقة الأصلية.',
   'PROFILE PHOTO': 'صورة الملف الشخصي',
   'A face to your profile.': 'صورة تعبّر عنك.',
   'Your photo stays with your private account, across devices.': 'تُحفظ صورتك ضمن حسابك الخاص وتظهر عبر أجهزتك.',

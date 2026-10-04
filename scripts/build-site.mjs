@@ -41,6 +41,7 @@ const publicFiles = [
   'sitemap.xml',
   'sniff_icon.ico',
   'style.css',
+  'experience.css',
   'terms.html',
   'verify.html',
   'verify.js'
