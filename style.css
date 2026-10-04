@@ -507,3 +507,7 @@ html.compact-layout .account-portal-card { min-height: 12rem; }
   .navbar { grid-template-columns: auto minmax(0, 1fr) auto; gap: clamp(1rem, 2vw, 2rem); }
   .site-nav { justify-self: center; gap: clamp(.8rem, 1.4vw, 1.6rem); }
 }
+@media (min-width: 1600px) {
+  .navbar { grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); }
+  .navbar > .logo { justify-self: start; }
+}
