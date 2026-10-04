@@ -503,3 +503,7 @@ html.compact-layout .account-portal-card { min-height: 12rem; }
   .navbar.menu-open .site-nav { display: flex; }
   .site-nav a { padding: .7rem 0; }
 }
+@media (min-width: 1121px) {
+  .navbar { grid-template-columns: auto minmax(0, 1fr) auto; gap: clamp(1rem, 2vw, 2rem); }
+  .site-nav { justify-self: center; gap: clamp(.8rem, 1.4vw, 1.6rem); }
+}
