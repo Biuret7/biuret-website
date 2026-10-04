@@ -1,4 +1,5 @@
 import crypto from 'node:crypto';
+import analytics from './analytics.js';
 import {
   Client,
   ID,
@@ -410,6 +411,10 @@ async function paddleWebhook(request, res, config, tables, log) {
 
 export default async ({ req, res, log, error }) => {
   try {
+    const analyticsInput = jsonBodyOf(req);
+    if (!headersOf(req)['paddle-signature'] && typeof analyticsInput?.action === 'string' && analyticsInput.action.startsWith('analytics:')) {
+      return analytics({ req: { ...req, bodyJson: { ...analyticsInput, action: analyticsInput.action.slice(10) } }, res, error });
+    }
     const config = readConfig();
     const { tables, users, headers } = serverServices(req);
     if (headers['paddle-signature']) return paddleWebhook(req, res, config, tables, log);

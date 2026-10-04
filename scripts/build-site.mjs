@@ -1,4 +1,4 @@
-import { cp, mkdir, readdir, rm, stat, writeFile } from 'node:fs/promises';
+import { cp, mkdir, readdir, rm, stat, writeFile, readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -14,6 +14,9 @@ const publicFiles = [
   'academy_icon.ico',
   'account.html',
   'account.js',
+  'analytics.html',
+  'analytics.js',
+  'analytics-dashboard.js',
   'profile-photo.js',
   'appwrite-client.js',
   'appwrite-config.js',
@@ -69,6 +72,12 @@ async function walk(directory, prefix = '') {
 await rm(output, { recursive: true, force: true });
 await mkdir(output, { recursive: true });
 await Promise.all([...publicFiles, ...publicDirectories].map(copyFromRoot));
+for (const file of (await walk(output)).filter((name) => name.endsWith('.html'))) {
+  const destination = path.join(output, file);
+  const html = await readFile(destination, 'utf8');
+  const source = file.startsWith(`sites${path.sep}`) ? '../analytics.js' : 'analytics.js';
+  await writeFile(destination, html.replace('</body>', `  <script defer src="${source}?v=20261004-1"></script>\n</body>`), 'utf8');
+}
 await writeFile(path.join(output, '.nojekyll'), '', 'utf8');
 
 const outputFiles = await walk(output);

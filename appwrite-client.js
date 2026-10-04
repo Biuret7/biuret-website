@@ -25,6 +25,13 @@
   window.BiuretAppwrite = {
     configured,
     tableConfigured,
+    async analytics(action, data = {}) {
+      requireConfigured();
+      const execution = await functions.createExecution({ functionId: config.licensingFunctionId, body: JSON.stringify({ ...data, action: `analytics:${action}` }), async: false, path: '/', method: 'POST' });
+      const result = JSON.parse(execution.responseBody || '{}');
+      if (execution.responseStatusCode >= 400 || !result.ok) throw Object.assign(new Error(result.error || 'Analytics unavailable'), { status: execution.responseStatusCode });
+      return result;
+    },
     async signUp({ email, password }) {
       requireConfigured();
       await account.create({ userId: window.Appwrite.ID.unique(), email, password });

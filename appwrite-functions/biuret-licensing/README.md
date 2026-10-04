@@ -17,7 +17,10 @@ released desktop app.
 The Paddle webhook must use the function's generated domain URL. `Any` is safe
 here because the function rejects every non-webhook request without an
 authenticated Appwrite user, and rejects every webhook without a valid
-Paddle signature. Do not add any other public actions to this function.
+Paddle signature. Namespaced `analytics:track` and `analytics:totals` actions
+also accept anonymous visitors; they access only the fixed `portfolio_visits`
+table. `analytics:stats` validates the session JWT and the server-assigned admin
+label before returning aggregate traffic data. They cannot invoke licensing actions.
 
 The authenticated `account-access` action is intentionally limited to checking
 that an email-verified Biuret account exists. It is used by the Academy desktop
