@@ -33,10 +33,18 @@ jobs:
         run: npm run build
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
+      - name: Package public site including security contact
+        run: |
+          tar --dereference --hard-dereference --directory dist \
+            -cf "$RUNNER_TEMP/artifact.tar" \
+            --exclude=.git --exclude=.github --exclude=.openai .
       - name: Upload site artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-artifact@v4
         with:
-          path: ./dist
+          name: github-pages
+          path: ${{ runner.temp }}/artifact.tar
+          retention-days: 1
+          if-no-files-found: error
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
