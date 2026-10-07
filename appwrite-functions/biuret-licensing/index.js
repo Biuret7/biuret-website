@@ -11,6 +11,8 @@ import {
 } from 'node-appwrite';
 
 const activeStatus = 'active';
+const deviceSignatureWindowMs = 5 * 60 * 1000;
+function normalizedStatus(value) { return String(value || '').trim().toLowerCase(); }
 const fallbackAppwriteEndpoint = 'https://fra.cloud.appwrite.io/v1';
 const defaultWebhookToleranceSeconds = 300;
 
@@ -199,55 +201,87 @@ async function currentUser(request, users, headers, config) {
   };
 }
 
+async function productRows(config, tables, userId, productSlug) {
+  const result = await tables.listRows({
+    databaseId: config.databaseId, tableId: config.licensesTableId,
+    queries: [Query.equal('userId', [userId]), Query.equal('productSlug', [productSlug]), Query.limit(100)]
+  });
+  return result.rows || [];
+}
+function activeLicense(rows) {
+  return rows.filter((row) => isActiveLicense(row)).sort((left, right) => timestamp(right.expiresAt) - timestamp(left.expiresAt))[0] || null;
+}
+function deviceProofMessage(userId, productSlug, issuedAt) { return `BIURET-DEVICE-ENTITLEMENT|${userId}|${productSlug}|${issuedAt}`; }
+function validDevicePublicKey(value) {
+  const key = String(value || '').trim();
+  return key.length >= 100 && key.length <= 2048 && key.includes('BEGIN PUBLIC KEY');
+}
+function publicKeyHash(publicKey) { return crypto.createHash('sha256').update(publicKey, 'utf8').digest('hex'); }
+function verifyDeviceProof({ userId, productSlug, publicKey, signature, issuedAt }) {
+  const issued = Number(issuedAt);
+  if (!validDevicePublicKey(publicKey) || !signature || !Number.isFinite(issued) || Math.abs(Date.now() - issued) > deviceSignatureWindowMs) return false;
+  try {
+    return crypto.verify(null, Buffer.from(deviceProofMessage(userId, productSlug, issued), 'utf8'), crypto.createPublicKey(publicKey), Buffer.from(String(signature), 'base64'));
+  } catch { return false; }
+}
+function licensePayload(productSlug, license, access = 'licensed') {
+  return { ok: true, access, productSlug, productName: license.productName, plan: license.plan, status: normalizedStatus(license.status), expiresAt: license.expiresAt };
+}
+async function authenticatedUser(res, config, users, headers, purpose) {
+  const user = await currentUser(null, users, headers, config);
+  if (!user) return { ok: false, reply: response(res, 401, { ok: false, error: 'Sign in is required.' }) };
+  if (!user.verified) return { ok: false, reply: response(res, 403, { ok: false, error: `Verify your email before ${purpose}.` }) };
+  return { ok: true, user };
+}
+
 async function entitlement(request, res, config, tables, users, headers) {
   const body = jsonBodyOf(request);
   const productSlug = String(body?.productSlug || '').trim().toLowerCase();
   if (!productSlug) return response(res, 400, { ok: false, error: 'productSlug is required.' });
-
-  const user = await currentUser(request, users, headers, config);
-  if (!user) return response(res, 401, { ok: false, error: 'Sign in is required.' });
-  if (!user.verified) return response(res, 403, { ok: false, error: 'Verify your email before using a license.' });
-  if (user.isAdmin) {
-    return response(res, 200, {
-      ok: true,
-      access: 'admin',
-      productSlug,
-      plan: 'admin',
-      expiresAt: null
-    });
+  const auth = await authenticatedUser(res, config, users, headers, 'using a license');
+  if (!auth.ok) return auth.reply;
+  const { user } = auth;
+  if (user.isAdmin) return response(res, 200, { ok: true, access: 'admin', productSlug, plan: 'admin', status: 'active', expiresAt: null });
+  const license = activeLicense(await productRows(config, tables, user.id, productSlug));
+  if (!license) return response(res, 403, { ok: false, access: 'none', productSlug, error: 'No active license was found for this product.' });
+  const publicKey = String(body?.devicePublicKey || '').trim();
+  const signature = String(body?.deviceSignature || '').trim();
+  const issuedAt = body?.deviceIssuedAt;
+  const keyHash = publicKeyHash(publicKey);
+  if (!license.deviceKeyHash || !license.devicePublicKey) {
+    return response(res, 428, { ok: false, code: 'device_activation_required', error: 'Activate this license on this device first.' });
   }
-
-  const result = await tables.listRows({
-    databaseId: config.databaseId,
-    tableId: config.licensesTableId,
-    queries: [
-      Query.equal('userId', [user.id]),
-      Query.equal('productSlug', [productSlug])
-    ]
-  });
-  const license = (result.rows || [])
-    .filter((row) => isActiveLicense(row))
-    .sort((left, right) => timestamp(right.expiresAt) - timestamp(left.expiresAt))[0];
-
-  if (!license) {
-    return response(res, 403, {
-      ok: false,
-      access: 'none',
-      productSlug,
-      error: 'No active license was found for this product.'
-    });
+  if (license.deviceKeyHash !== keyHash || !verifyDeviceProof({ userId: user.id, productSlug, publicKey, signature, issuedAt })) {
+    return response(res, 403, { ok: false, code: 'device_proof_invalid', error: 'This license is bound to a different device.' });
   }
-
-  return response(res, 200, {
-    ok: true,
-    access: 'licensed',
-    productSlug,
-    productName: license.productName,
-    plan: license.plan,
-    expiresAt: license.expiresAt
-  });
+  await tables.updateRow({ databaseId: config.databaseId, tableId: config.licensesTableId, rowId: license.$id, data: { lastValidatedAt: new Date().toISOString() } });
+  return response(res, 200, licensePayload(productSlug, license));
 }
 
+async function activateDevice(request, res, config, tables, users, headers) {
+  const body = jsonBodyOf(request);
+  const productSlug = String(body?.productSlug || '').trim().toLowerCase();
+  const publicKey = String(body?.devicePublicKey || '').trim();
+  const deviceName = String(body?.deviceName || '').trim().slice(0, 128);
+  if (!productSlug || !validDevicePublicKey(publicKey)) return response(res, 400, { ok: false, error: 'A productSlug and valid device public key are required.' });
+  const auth = await authenticatedUser(res, config, users, headers, 'activating a device');
+  if (!auth.ok) return auth.reply;
+  const { user } = auth;
+  if (user.isAdmin) return response(res, 200, { ok: true, access: 'admin', productSlug });
+  const license = activeLicense(await productRows(config, tables, user.id, productSlug));
+  if (!license) return response(res, 403, { ok: false, error: 'No active license was found for this product.' });
+  const keyHash = publicKeyHash(publicKey);
+  if (license.deviceKeyHash && license.deviceKeyHash !== keyHash) {
+    return response(res, 409, { ok: false, code: 'license_already_activated', error: 'This license is already active on another device. Contact support to reset it.' });
+  }
+  if (!license.deviceKeyHash) {
+    await tables.updateRow({
+      databaseId: config.databaseId, tableId: config.licensesTableId, rowId: license.$id,
+      data: { deviceKeyHash: keyHash, devicePublicKey: publicKey, deviceName: deviceName || 'Unnamed device', deviceBoundAt: new Date().toISOString(), lastValidatedAt: new Date().toISOString() }
+    });
+  }
+  return response(res, 200, { ok: true, access: 'licensed', productSlug, deviceBound: true });
+}
 async function accountAccess(request, res, config, users, headers) {
   const user = await currentUser(request, users, headers, config);
   if (!user) return response(res, 401, { ok: false, error: 'Sign in is required.' });
@@ -422,6 +456,7 @@ export default async ({ req, res, log, error }) => {
     const payload = jsonBodyOf(req);
     if (!payload) return response(res, 400, { ok: false, error: 'Request body is not valid JSON.' });
     if (payload.action === 'health-check') return healthCheck(res, config, tables, users);
+    if (payload.action === 'activate-device') return activateDevice(req, res, config, tables, users, headers);
     if (payload.action === 'entitlement') return entitlement(req, res, config, tables, users, headers);
     if (payload.action === 'account-access') return accountAccess(req, res, config, users, headers);
     if (payload.action === 'checkout-intent') return checkoutIntent(req, res, config, tables, users, headers);

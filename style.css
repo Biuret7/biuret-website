@@ -144,7 +144,7 @@ h1, h2, h3, p { margin-top: 0; }
 .now-index { display: block; margin-bottom: 1.5rem; color: color-mix(in srgb, var(--now-color) 52%, white); font: 700 .74rem/1 'Space Grotesk', sans-serif; letter-spacing: .13em; }.now-card .eyebrow { color: var(--now-color); }.now-card h3 { margin: .55rem 0 .7rem; font: 700 1.4rem/1.15 'Space Grotesk', sans-serif; letter-spacing: -.04em; }.now-card p { min-height: 5.5rem; margin-bottom: 1.25rem; color: var(--muted); font-size: .86rem; }.now-card a { display: inline-flex; align-items: center; gap: .55rem; color: #e7ecf2; font-size: .8rem; font-weight: 800; }.now-card a b { color: var(--now-color); font-size: 1.15rem; transition: transform .2s ease; }.now-card a:hover b { transform: translateX(.2rem); }
 
 .project-page { position: relative; isolation: isolate; padding: clamp(3.8rem, 8vw, 6.5rem) max(5vw, 1.4rem); border-top: 2px solid color-mix(in srgb, var(--project-color) 72%, transparent); animation: page-enter .42s cubic-bezier(.2,.8,.2,1) both; }
-.project-page::before { position: absolute; top: -14rem; right: -12rem; z-index: -1; width: 39rem; aspect-ratio: 1; content: ''; border-radius: 50%; background: radial-gradient(circle, color-mix(in srgb, var(--project-color) 17%, transparent), transparent 67%); filter: blur(10px); pointer-events: none; }
+.project-page::before { position: absolute; top: -14rem; right: 0; z-index: -1; width: min(39rem,100%); aspect-ratio: 1; content: ''; border-radius: 50%; background: radial-gradient(circle, color-mix(in srgb, var(--project-color) 17%, transparent), transparent 67%); filter: blur(10px); pointer-events: none; }
 .project-page .eyebrow { color: var(--project-color); }
 .project-page .project-hero h1 span { color: var(--project-color); text-shadow: 0 0 2.2rem color-mix(in srgb, var(--project-color) 32%, transparent); }
 .project-page .button-primary { border-color: var(--project-color); background: var(--project-color); box-shadow: 0 10px 28px color-mix(in srgb, var(--project-color) 20%, transparent); }
@@ -512,3 +512,6 @@ html.compact-layout .account-portal-card { min-height: 12rem; }
   .navbar { grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); }
   .navbar > .logo { justify-self: start; }
 }
+
+.skip-link{position:fixed;top:1rem;left:1rem;z-index:1000;padding:.7rem 1rem;background:var(--accent,#c59aff);color:#080a0d;border-radius:.5rem;transform:translateY(-200%)}
+.skip-link:focus{transform:translateY(0)}
