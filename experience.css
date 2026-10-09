@@ -134,3 +134,11 @@ body{min-width:0}
 @media(max-width:580px){.navbar{--nav-control-width:clamp(60px,18vw,76px);--nav-control-height:44px}.navbar,.navbar.scrolled{min-height:72px}.navbar .nav-actions>:is(a,button){padding:6px;font-size:11px}}
 @media(max-width:400px){.navbar{padding-inline:12px}.navbar .nav-actions>:is(a,button){padding-inline:4px;font-size:10px}}
 @media(max-width:1799px){.navbar .nav-actions>.github-btn{display:none}}
+
+/* Navigation stays quieter than the account and utility controls. */
+.navbar .site-nav>a:not(.mobile-account-link):not(.mobile-github-link){position:relative;background:transparent;border-color:transparent;border-radius:8px;color:#b4bec8;font-weight:600}
+.navbar .site-nav>a:not(.mobile-account-link):not(.mobile-github-link):hover{background:rgba(255,255,255,.04);border-color:transparent;color:#f3f6f8;transform:none;box-shadow:none}
+.navbar .site-nav>a:not(.mobile-account-link):not(.mobile-github-link).active{color:var(--accent)}
+.navbar .site-nav>a:not(.mobile-account-link):not(.mobile-github-link)::after{display:block;inset-inline:20px;bottom:5px;height:2px;border-radius:2px;transform:scaleX(0);background:var(--accent)}
+.navbar .site-nav>a:not(.mobile-account-link):not(.mobile-github-link):hover::after,.navbar .site-nav>a:not(.mobile-account-link):not(.mobile-github-link).active::after{transform:scaleX(1)}
+@media(max-width:1799px){.navbar .site-nav>a:not(.mobile-account-link):not(.mobile-github-link){justify-content:flex-start;padding-inline:16px}.navbar .site-nav>a:not(.mobile-account-link):not(.mobile-github-link).active{background:#1b251a}.navbar .site-nav>a:not(.mobile-account-link):not(.mobile-github-link)::after{display:none}}
