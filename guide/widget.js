@@ -34,7 +34,7 @@
       if(!remote){const h=document.createElement('h3');h.textContent=card.title[en()?'en':'ar'];const p=document.createElement('p');p.textContent=card.body[en()?'en':'ar'];parent.append(h,p);}
       const link=document.createElement('a');link.href=core.sourceURL(card);link.textContent=card.title[en()?'en':'ar']+' ↗';parent.append(link);
     }
-    if(!matches.length){const p=document.createElement('p');p.textContent=tr('I could not match that to a site topic. Ask about learning, certificates, projects or your account, or use one of the suggestions above. This guide does not answer general programming questions yet.','لم أجد موضوعاً مطابقاً في معلومات الموقع. اسأل عن التعلم أو الشهادات أو المشاريع أو الحساب، أو اختر اقتراحاً أعلاه. الدليل لا يجيب حالياً عن أسئلة البرمجة العامة.');parent.append(p);}
+    if(!matches.length){const p=document.createElement('p');p.textContent=site==='playground'?tr('I could not match that to a tool topic. Ask about study plans, the focus timer, JSON or file fingerprints, or choose a suggestion above. General programming answers are not available yet.','لم أجد موضوعاً مطابقاً في معلومات الأدوات. اسأل عن خطط التعلم أو مؤقّت التركيز أو JSON أو بصمة الملفات، أو اختر اقتراحاً أعلاه. إجابات البرمجة العامة غير متاحة بعد.'):tr('I could not match that to a site topic. Ask about learning, certificates, projects or your account, or use one of the suggestions above. This guide does not answer general programming questions yet.','لم أجد موضوعاً مطابقاً في معلومات الموقع. اسأل عن التعلم أو الشهادات أو المشاريع أو الحساب، أو اختر اقتراحاً أعلاه. الدليل لا يجيب حالياً عن أسئلة البرمجة العامة.');parent.append(p);}
   }
   function render(){
     root.dir=en()?'ltr':'rtl';launcher.textContent='✦ Biuret Guide';launcher.setAttribute('aria-label',tr('Open Biuret Guide','افتح دليل Biuret'));close.setAttribute('aria-label',tr('Close guide','إغلاق الدليل'));
@@ -66,7 +66,7 @@
   form.addEventListener('submit',event=>{event.preventDefault();ask(input.value.trim());});
   new MutationObserver(()=>{render();status.textContent='';}).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});
   render();
-  Promise.all([import(new URL('core.mjs?v=20261009-pg1',asset)),fetch(new URL('knowledge.json?v=20261009-pg1',asset)).then(r=>{if(!r.ok)throw new Error();return r.json();})]).then(([module,data])=>{core=module;cards=data;render();}).catch(()=>{status.textContent=tr('Guide information could not load. Reload to retry.','تعذّر تحميل معلومات الدليل. حدّث الصفحة للمحاولة.');});
+  Promise.all([import(new URL('core.mjs?v=20261009-pg2',asset)),fetch(new URL('knowledge.json?v=20261009-pg2',asset)).then(r=>{if(!r.ok)throw new Error();return r.json();})]).then(([module,data])=>{core=module;cards=data;render();}).catch(()=>{status.textContent=tr('Guide information could not load. Reload to retry.','تعذّر تحميل معلومات الدليل. حدّث الصفحة للمحاولة.');});
   // Only an explicitly configured endpoint can be queried. No provider key belongs here.
   if(endpoint)fetch(endpoint+'/status',{signal:AbortSignal.timeout(4000)}).then(r=>r.ok?r.json():null).then(value=>{configured=value?.configured===true;consentLabel.hidden=!configured;render();}).catch(()=>{});
 })();
