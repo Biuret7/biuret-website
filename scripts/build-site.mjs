@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const output = path.join(root, 'dist');
+const preview = process.argv.includes('--preview');
 
 // Only browser-safe portfolio files belong in the GitHub Pages artifact.
 // Commerce sources remain in the repository for a future launch, but licensing
@@ -30,6 +31,7 @@ const publicFiles = [
   'index.html',
   'osint_icon.ico',
   'privacy.html',
+  'playground.html',
   'reaper_icon.ico',
   'recovery.js',
   'reset-password.html',
@@ -47,7 +49,7 @@ const publicFiles = [
   'verify.js'
 ];
 
-const publicDirectories = ['.well-known', 'assets', 'sites'];
+const publicDirectories = ['.well-known', 'assets', 'sites', 'guide'];
 const forbiddenExtensions = new Set(['.md', '.zip', '.gz']);
 const commerceFiles = new Set(['licenses.html', 'paddle-checkout.js', 'paddle-config.js']);
 
@@ -75,9 +77,15 @@ await mkdir(output, { recursive: true });
 await Promise.all([...publicFiles, ...publicDirectories].map(copyFromRoot));
 for (const file of (await walk(output)).filter((name) => name.endsWith('.html'))) {
   const destination = path.join(output, file);
-  const html = await readFile(destination, 'utf8');
+  let html = await readFile(destination, 'utf8');
   const source = file.startsWith(`sites${path.sep}`) ? '../analytics.js' : 'analytics.js';
-  await writeFile(destination, html.replace('</body>', `  <script defer src="${source}?v=20261004-1"></script>\n</body>`), 'utf8');
+  if (preview) {
+    html = html.replace(/<script[^>]+src="https:\/\/cdn.jsdelivr.net\/npm\/appwrite[^>]*><\/script>/g, '')
+      .replace('</head>', '<meta name="robots" content="noindex">\n</head>');
+  } else {
+    html = html.replace('</body>', `  <script defer src="${source}?v=20261004-1"></script>\n</body>`);
+  }
+  await writeFile(destination, html, 'utf8');
 }
 await writeFile(path.join(output, '.nojekyll'), '', 'utf8');
 

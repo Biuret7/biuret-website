@@ -1,0 +1,590 @@
+[
+  {
+    "id": "projects",
+    "site": "portfolio",
+    "path": "index.html#projects",
+    "title": {
+      "en": "Project concepts",
+      "ar": "أفكار المشاريع"
+    },
+    "body": {
+      "en": "The six featured projects are future concepts. Their repositories may contain experiments, not finished products. Each detail page explains the intended user, proposed workflow and next implementation steps. The Academy has a smaller working web pilot.",
+      "ar": "المشاريع الستة أفكار مستقبلية. قد تحتوي مستودعاتها تجارب وليست منتجات مكتملة. تشرح صفحة كل مشروع المستفيد وطريقة الاستخدام المقترحة وخطوات التنفيذ. للأكاديمية نسخة ويب مصغرة تعمل حالياً."
+    },
+    "keywords": [
+      "projects",
+      "project",
+      "concepts",
+      "future",
+      "مشاريع",
+      "المشاريع",
+      "مشروع",
+      "افكار",
+      "الأفكار"
+    ]
+  },
+  {
+    "id": "credentials",
+    "site": "portfolio",
+    "path": "certifications.html",
+    "title": {
+      "en": "View training certificates",
+      "ar": "عرض شهادات التدريب"
+    },
+    "body": {
+      "en": "Use the filters or search to find a training record. Select a certificate to enlarge the original, then use Previous and Next to browse. Course completion and attendance records document learning; they are not a claim of external professional accreditation.",
+      "ar": "استخدم التصنيفات والبحث للعثور على شهادة. اضغط عليها لعرض الأصل بحجم أكبر وتنقّل بالسابق والتالي. شهادات الإكمال والحضور توثّق التعلم ولا تعني اعتماداً مهنياً خارجياً."
+    },
+    "keywords": [
+      "certificate",
+      "certificates",
+      "credentials",
+      "training",
+      "شهادة",
+      "الشهادات",
+      "شهادات",
+      "التدريب"
+    ]
+  },
+  {
+    "id": "contact",
+    "site": "portfolio",
+    "path": "index.html#contact",
+    "title": {
+      "en": "Contact Adam",
+      "ar": "التواصل مع آدم"
+    },
+    "body": {
+      "en": "The Contact section offers the email address and a copy control, plus GitHub. You choose whether to open an external service. This guide cannot send messages on your behalf.",
+      "ar": "يعرض قسم التواصل البريد وزر نسخه ورابط GitHub. أنت تختار فتح الخدمة الخارجية؛ لا يرسل الدليل رسائل بالنيابة عنك."
+    },
+    "keywords": [
+      "contact",
+      "email",
+      "reach",
+      "تواصل",
+      "التواصل",
+      "البريد",
+      "ايميل"
+    ]
+  },
+  {
+    "id": "account-portfolio",
+    "site": "portfolio",
+    "path": "account.html",
+    "title": {
+      "en": "Your Biuret account",
+      "ar": "حسابك في Biuret"
+    },
+    "body": {
+      "en": "Sign in using the account controls to view your profile. Settings lets you update account details and your photo. This guide does not read your profile or session and cannot reset passwords or change permissions.",
+      "ar": "سجّل الدخول من زر الحساب لعرض ملفك. تتيح الإعدادات تعديل بيانات الحساب والصورة. لا يقرأ الدليل ملفك أو جلستك ولا يعيد تعيين كلمات المرور أو يغيّر الصلاحيات."
+    },
+    "keywords": [
+      "account",
+      "login",
+      "profile",
+      "password",
+      "settings",
+      "حساب",
+      "حسابي",
+      "الحساب",
+      "دخول",
+      "تسجيل",
+      "كلمة المرور",
+      "الاعدادات"
+    ]
+  },
+  {
+    "id": "learning-portfolio",
+    "site": "portfolio",
+    "path": "index.html",
+    "title": {
+      "en": "Learn with Biuret Academy",
+      "ar": "تعلّم مع Biuret Academy"
+    },
+    "body": {
+      "en": "The Academy web pilot offers free Foundations, guided practice and specialty roadmaps. Open the Academy to start. Sign in to learn and save verified progress.",
+      "ar": "تقدّم نسخة الأكاديمية المصغرة أساسيات مجانية وتطبيقاً موجهاً وخرائط تخصصات. افتح الأكاديمية لتبدأ وسجّل دخولك للتعلم وحفظ التقدم الموثّق."
+    },
+    "keywords": [
+      "learn",
+      "learning",
+      "academy",
+      "free",
+      "start",
+      "beginner",
+      "تعلم",
+      "التعلم",
+      "اتعلم",
+      "الاكاديمية",
+      "مجاني",
+      "مبتدئ",
+      "ابدا"
+    ],
+    "targetSite": "academy"
+  },
+  {
+    "id": "playground-link",
+    "site": "portfolio",
+    "path": "playground.html",
+    "title": {
+      "en": "Explore Biuret Playground",
+      "ar": "استكشف Biuret Playground"
+    },
+    "body": {
+      "en": "Playground brings together four working browser tools: StudyFlow planning, Focus Room, JSON Studio and File Fingerprint. Open the collection and choose a tool; no account is required.",
+      "ar": "تجمع Playground أربع أدوات تعمل في المتصفح: تخطيط StudyFlow ومساحة التركيز واستوديو JSON وبصمة الملفات. افتح المجموعة واختر أداة؛ لا تحتاج حساباً."
+    },
+    "keywords": [
+      "playground",
+      "demos",
+      "demo",
+      "تجربة",
+      "التطبيقات",
+      "تطبيقات"
+    ]
+  },
+  {
+    "id": "start",
+    "site": "academy",
+    "path": "free-studio.html",
+    "title": {
+      "en": "Start with free Foundations",
+      "ar": "ابدأ بالأساسيات المجانية"
+    },
+    "body": {
+      "en": "Sign in, open the free learning studio and follow the Foundations credential route: verified lessons, a practical assessment and the final exam. Optional library lessons and local practice deepen your understanding without automatically counting as verified completion.",
+      "ar": "سجّل الدخول وافتح المساحة المجانية واتبع طريق شهادة الأساسيات: الدروس الموثقة ثم التقييم العملي والامتحان. دروس المكتبة والتدريب المحلي توسّع فهمك لكنها لا تحتسب تلقائياً كإكمال موثّق."
+    },
+    "keywords": [
+      "start",
+      "beginner",
+      "free",
+      "foundations",
+      "learn",
+      "ابدأ",
+      "البداية",
+      "مبتدئ",
+      "مجاني",
+      "المجانية",
+      "الاساسيات",
+      "اتعلم",
+      "تعلم",
+      "التعلم"
+    ]
+  },
+  {
+    "id": "paths",
+    "site": "academy",
+    "path": "paths.html",
+    "title": {
+      "en": "Choose your learning path",
+      "ar": "اختر مسارك التعليمي"
+    },
+    "body": {
+      "en": "Complete Foundations before specializing. The paths page combines the specialty catalog; a path page brings its courses, practice quizzes, labs, challenges, relevant operations scenarios and assessment requirements together. Purchasing is currently closed; consult Access and purchases for the current availability.",
+      "ar": "أكمل الأساسيات قبل التخصص. تجمع صفحة المسارات التخصصات، وتعرض صفحة كل مسار دوراته وكويزاته ومختبراته وتحدياته وغرف العمليات المناسبة ومتطلبات التقييم. الشراء مغلق حالياً؛ راجع صفحة الوصول والمشتريات لمعرفة المتاح."
+    },
+    "keywords": [
+      "path",
+      "paths",
+      "specialty",
+      "specialization",
+      "courses",
+      "مسار",
+      "المسارات",
+      "تخصص",
+      "تخصصات",
+      "الدورات",
+      "كورسات",
+      "دورة"
+    ]
+  },
+  {
+    "id": "assessments",
+    "site": "academy",
+    "path": "quizzes.html",
+    "title": {
+      "en": "Practice quizzes and final exams",
+      "ar": "الكويزات والامتحانات النهائية"
+    },
+    "body": {
+      "en": "Practice quizzes help you check understanding and are separate from course and path completion exams. Knowledge checks accompany lessons. The path exam has prerequisites and a practical assessment; review your path page for the exact requirements. This guide does not supply exam answers or submit work.",
+      "ar": "الكويزات تدريب لفهمك وتختلف عن امتحانات إكمال الدورات والمسارات. ترافق الدروس ميزة تحقق من فهمك. لامتحان المسار متطلبات وتقييم عملي؛ راجع صفحة المسار لمعرفة المطلوب. لا يقدّم الدليل إجابات الامتحانات ولا يسلّم أعمالك."
+    },
+    "keywords": [
+      "quiz",
+      "quizzes",
+      "exam",
+      "exams",
+      "assessment",
+      "answer",
+      "كويز",
+      "كويزات",
+      "اختبار",
+      "اختبارات",
+      "امتحان",
+      "الامتحان",
+      "اجابات",
+      "إجابات",
+      "تحقق"
+    ]
+  },
+  {
+    "id": "practice",
+    "site": "academy",
+    "path": "labs.html",
+    "title": {
+      "en": "Labs and operations rooms",
+      "ar": "المختبرات وغرف العمليات"
+    },
+    "body": {
+      "en": "Labs let you apply lessons in a controlled educational environment. Operations rooms organize scenario evidence and decisions. Open your path to find the matching exercises. Work only in authorized training environments; never use lesson techniques on systems without permission.",
+      "ar": "تطبّق المختبرات الدروس في بيئة تعليمية مضبوطة. تنظّم غرف العمليات أدلة السيناريو وقراراته. افتح مسارك للوصول للتدريبات المناسبة، والتزم بالبيئات التدريبية المصرّح بها."
+    },
+    "keywords": [
+      "lab",
+      "labs",
+      "practice",
+      "operations",
+      "challenge",
+      "challenges",
+      "مختبر",
+      "مختبرات",
+      "المختبرات",
+      "تحدي",
+      "تحديات",
+      "غرف",
+      "عمليات"
+    ]
+  },
+  {
+    "id": "credentials-academy",
+    "site": "academy",
+    "path": "certificate.html",
+    "title": {
+      "en": "Earn and share your achievement",
+      "ar": "الحصول على إثبات الإنجاز ومشاركته"
+    },
+    "body": {
+      "en": "Use your real two- or three-part name. Complete the verified requirements and pass the relevant exam to earn an achievement credential. Your certificate page offers downloads and opt-in public verification. A Biuret achievement documents platform learning; it is not external professional accreditation.",
+      "ar": "استخدم اسمك الحقيقي الثنائي أو الثلاثي، وأكمل المتطلبات الموثقة واجتز الامتحان المطلوب. تعرض صفحة الشهادة أدوات التنزيل وتفعيل التحقق العام اختيارياً. يثبت إنجاز Biuret تعلّمك داخل المنصة ولا يعني اعتماداً مهنياً خارجياً."
+    },
+    "keywords": [
+      "certificate",
+      "certificates",
+      "credential",
+      "download",
+      "name",
+      "verify",
+      "شهادة",
+      "الشهادة",
+      "شهادات",
+      "تنزيل",
+      "اسمي",
+      "اسم",
+      "تحقق عام"
+    ]
+  },
+  {
+    "id": "access",
+    "site": "academy",
+    "path": "membership.html",
+    "title": {
+      "en": "Access and purchases",
+      "ar": "الوصول والمشتريات"
+    },
+    "body": {
+      "en": "Foundations are free. Specialty paths are planned as individual learning bundles rather than an all-content monthly subscription. Purchasing is not enabled yet. The guide cannot unlock paid material or grant admin permissions; your account and server access rules determine availability.",
+      "ar": "الأساسيات مجانية. مخطط التخصصات هو شراء كل مسار كحزمة تعلم منفصلة. الشراء لم يُفعّل بعد. لا يفتح الدليل المحتوى المقفل ولا يمنح صلاحيات الإدارة؛ تحدّد قواعد الحساب والخادم ما يمكن الوصول إليه."
+    },
+    "keywords": [
+      "buy",
+      "price",
+      "paid",
+      "purchase",
+      "subscription",
+      "pro",
+      "plus",
+      "pay",
+      "اشتراك",
+      "شراء",
+      "اشتراكات",
+      "السعر",
+      "دفع",
+      "مدفوع"
+    ]
+  },
+  {
+    "id": "account-academy",
+    "site": "academy",
+    "path": "profile.html",
+    "title": {
+      "en": "Account and learning progress",
+      "ar": "الحساب والتقدم التعليمي"
+    },
+    "body": {
+      "en": "Sign in before learning or submitting assessments. Your profile and progress pages show account and learning information. Some notes and practice records are local to this browser; save exports before clearing browser storage. The guide has no access to these records.",
+      "ar": "سجّل الدخول قبل التعلم وتسليم التقييمات. يعرض ملفك وصفحة التقدم بيانات الحساب والتعلم. بعض الملاحظات والتطبيقات محلية للمتصفح؛ صدّرها قبل مسح التخزين. لا يطّلع الدليل عليها."
+    },
+    "keywords": [
+      "account",
+      "login",
+      "profile",
+      "progress",
+      "xp",
+      "level",
+      "حساب",
+      "حسابي",
+      "الحساب",
+      "دخول",
+      "تسجيل",
+      "تقدم",
+      "تقدمي",
+      "المستوى",
+      "صورة"
+    ]
+  },
+  {
+    "id": "coins",
+    "site": "academy",
+    "path": "shop.html",
+    "title": {
+      "en": "Biuret Coins and the shop",
+      "ar": "عملات Biuret والمتجر"
+    },
+    "body": {
+      "en": "Biuret Coins are an internal learning balance. The shop and subscription discounts are planned uses, not cash withdrawal or external money. Consult the coin ledger and access page for your current balance and eligibility. This guide cannot add or spend coins.",
+      "ar": "Biuret Coins رصيد داخلي للتعلم. المتجر وخصم الاشتراك استخدامات مخططة، وليست سحباً نقدياً أو مالاً خارج المنصة. راجع سجل الرصيد والوصول لمعرفة الرصيد والاستحقاق الحالي. لا يضيف الدليل العملات ولا ينفقها."
+    },
+    "keywords": [
+      "coins",
+      "shop",
+      "store",
+      "wallet",
+      "متجر",
+      "المتجر",
+      "عملات",
+      "العملات",
+      "رصيد"
+    ]
+  },
+  {
+    "id": "studyflow",
+    "site": "playground",
+    "path": "studyflow.html",
+    "title": {
+      "en": "Try StudyFlow",
+      "ar": "جرّب StudyFlow"
+    },
+    "body": {
+      "en": "StudyFlow is a Python learning planner with a bilingual PyQt6 desktop interface and English-only CLI. The browser preview uses a portable edition of the same scheduling rules. It does not launch the desktop app or an AI model. Desktop executable downloads are not offered here yet.",
+      "ar": "StudyFlow منظّم تعلم ببايثون، بواجهة PyQt6 عربية وإنجليزية وCLI بالإنجليزية فقط. تستخدم المعاينة نسخة للمتصفح من قواعد الجدولة نفسها؛ لا تشغّل التطبيق المكتبي أو نموذجاً ذكياً. تنزيل ملفات البرنامج التنفيذي غير متاح هنا بعد."
+    },
+    "keywords": [
+      "studyflow",
+      "desktop",
+      "cli",
+      "app",
+      "application",
+      "تطبيق",
+      "برنامج",
+      "بايثون",
+      "سطح المكتب"
+    ]
+  },
+  {
+    "id": "planning",
+    "site": "playground",
+    "path": "studyflow.html#planner",
+    "title": {
+      "en": "Build a learning plan",
+      "ar": "إنشاء خطة تعلم"
+    },
+    "body": {
+      "en": "Choose one of six introductory templates, a skill level, a 15–120 minute budget, study days and start date. The planner preserves prerequisites, splits longer work and places practice and spaced reviews before the final project. Durations are estimates, not a promise of mastery.",
+      "ar": "اختر قالباً تمهيدياً من ستة قوالب ومستوى ووقتاً يومياً بين 15 و120 دقيقة وأيام الدراسة وتاريخ البداية. يحافظ المحرّك على المتطلبات ويقسّم العمل ويوزع التطبيق والمراجعة المتباعدة قبل المشروع النهائي. المدد تقديرات وليست ضماناً للإتقان."
+    },
+    "keywords": [
+      "plan",
+      "planning",
+      "schedule",
+      "template",
+      "templates",
+      "minutes",
+      "خطة",
+      "خطط",
+      "تخطيط",
+      "جدول",
+      "وقت",
+      "قالب",
+      "القوالب"
+    ]
+  },
+  {
+    "id": "data",
+    "site": "playground",
+    "path": "studyflow.html#planner",
+    "title": {
+      "en": "Your preview data",
+      "ar": "بيانات المعاينة"
+    },
+    "body": {
+      "en": "Tools process their inputs inside your browser. No file, JSON input, task or study plan is uploaded. Download a result if you need it; closing or reloading the page clears unsaved tool input. StudyFlow exports are previews, not desktop backups. Language preference alone is stored locally.",
+      "ar": "تعالج الأدوات مدخلاتها داخل متصفحك. لا تُرفع ملفاتك أو JSON أو مهامك أو خطة التعلم. نزّل النتيجة إن احتجتها؛ الإغلاق أو تحديث الصفحة يمسح المدخلات غير المحفوظة. تصدير StudyFlow معاينة وليس نسخة احتياطية للتطبيق. تفضيل اللغة فقط يُحفظ محلياً."
+    },
+    "keywords": [
+      "data",
+      "privacy",
+      "save",
+      "download",
+      "export",
+      "بيانات",
+      "خصوصية",
+      "حفظ",
+      "تنزيل",
+      "تصدير"
+    ]
+  },
+  {
+    "id": "availability",
+    "site": "playground",
+    "path": "index.html",
+    "title": {
+      "en": "What is available?",
+      "ar": "ما المتاح الآن؟"
+    },
+    "body": {
+      "en": "Four tools are available: StudyFlow planning, Focus Room, JSON Studio and SHA-256 File Fingerprint. Each has its own page, Arabic and English, and no account requirement. The StudyFlow desktop and CLI are variants of one project; public executable downloads are not offered yet.",
+      "ar": "تتوفر أربع أدوات: تخطيط StudyFlow ومساحة التركيز واستوديو JSON وبصمة الملفات SHA-256. لكل أداة صفحة مستقلة بالعربية والإنجليزية دون حساب. Desktop وCLI نسختان من مشروع StudyFlow نفسه؛ تنزيل ملفاته التنفيذية غير متاح بعد."
+    },
+    "keywords": [
+      "available",
+      "projects",
+      "ready",
+      "release",
+      "domain",
+      "مشاريع",
+      "المشاريع",
+      "متاح",
+      "جاهز",
+      "نطاق",
+      "نشر"
+    ]
+  },
+  {
+    "id": "portfolio-academy",
+    "site": "academy",
+    "path": "index.html",
+    "title": {
+      "en": "About Biuret and Adam",
+      "ar": "عن Biuret وآدم"
+    },
+    "body": {
+      "en": "The portfolio introduces Adam, six future project concepts and his training certificates. Use this link to visit it; your learning route remains in the Academy.",
+      "ar": "يعرّف موقع الأعمال بآدم وبأفكار المشاريع الستة وشهادات التدريب. افتحه من الرابط؛ يبقى طريق تعلمك داخل الأكاديمية."
+    },
+    "keywords": [
+      "portfolio",
+      "adam",
+      "contact",
+      "بورتفوليو",
+      "آدم",
+      "ادم",
+      "تواصل",
+      "موقع الاعمال"
+    ],
+    "targetSite": "portfolio"
+  },
+  {
+    "id": "playground-academy",
+    "site": "academy",
+    "path": "index.html",
+    "title": {
+      "en": "Try Biuret applications",
+      "ar": "جرّب تطبيقات Biuret"
+    },
+    "body": {
+      "en": "Playground offers four practical browser tools: a learning planner, focus timer, JSON formatter and file fingerprint checker. It is separate from Academy assessments and cannot award XP or certificates.",
+      "ar": "تقدّم Playground أدوات عملية للمتصفح: منظّم تعلم ومؤقّت تركيز ومنسّق JSON وفاحص بصمة ملفات. هي منفصلة عن تقييمات الأكاديمية ولا تمنح XP أو شهادات."
+    },
+    "keywords": [
+      "playground",
+      "demos",
+      "studyflow",
+      "تطبيقات",
+      "التطبيقات",
+      "منظم التعلم"
+    ],
+    "targetSite": "playground"
+  },
+  {
+    "id": "focus",
+    "site": "playground",
+    "path": "focus.html",
+    "title": {
+      "en": "Use Focus Room",
+      "ar": "استخدام مساحة التركيز"
+    },
+    "body": {
+      "en": "Choose one task and a 1–120 minute session. Start, pause or reset. Choose Break after finishing. Keep the tab open: reloading resets the timer. No notifications or microphone access are needed.",
+      "ar": "اختر مهمة وجلسة من 1 إلى 120 دقيقة. ابدأ أو أوقف مؤقتاً أو أعد الضبط. اختر الاستراحة عند الانتهاء. أبقِ التبويب مفتوحاً؛ تحديثه يمسح المؤقّت. لا تحتاج إشعارات أو ميكروفون."
+    },
+    "keywords": [
+      "focus",
+      "timer",
+      "break",
+      "pomodoro",
+      "تركيز",
+      "مؤقت",
+      "مؤقّت",
+      "استراحة"
+    ]
+  },
+  {
+    "id": "json",
+    "site": "playground",
+    "path": "json.html",
+    "title": {
+      "en": "Format JSON",
+      "ar": "تنسيق JSON"
+    },
+    "body": {
+      "en": "Paste up to 1 MiB, then validate and format or compact. Copy or download the result. Parsing follows JavaScript rules: duplicate keys and large numbers can change representation. This checks syntax, not a schema.",
+      "ar": "ألصق حتى 1 MiB ثم افحص ونسّق أو اضغط. انسخ النتيجة أو نزّلها. تتبع المعالجة قواعد JavaScript؛ قد يتغيّر تمثيل المفاتيح المكررة والأعداد الكبيرة. الفحص للصياغة وليس لمخطط البيانات."
+    },
+    "keywords": [
+      "json",
+      "format",
+      "formatter",
+      "تنسيق",
+      "منسق",
+      "بيانات"
+    ]
+  },
+  {
+    "id": "hash",
+    "site": "playground",
+    "path": "hash.html",
+    "title": {
+      "en": "Check a file fingerprint",
+      "ar": "فحص بصمة ملف"
+    },
+    "body": {
+      "en": "Choose a file up to 100 MiB. The browser computes SHA-256 without upload. Paste a trusted publisher digest to compare. A match proves matching bytes, not that the file is malware-free.",
+      "ar": "اختر ملفاً حتى 100 MiB. يحسب المتصفح SHA-256 دون رفعه. ألصق بصمة من الناشر الموثوق للمقارنة. التطابق يثبت تطابق البايتات ولا يثبت خلو الملف من البرمجيات الخبيثة."
+    },
+    "keywords": [
+      "hash",
+      "sha256",
+      "sha",
+      "fingerprint",
+      "file",
+      "بصمة",
+      "ملف",
+      "ملفات",
+      "هاش"
+    ]
+  }
+]

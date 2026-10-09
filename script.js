@@ -19,7 +19,11 @@ const arabicTranslations = {
   'Choose a photo': 'اختر صورة',
   'JPG, PNG or WebP · up to 5 MB. Cropped to a square and compressed before upload.': 'JPG أو PNG أو WebP · حتى 5 ميغابايت. تُقص إلى مربع وتُضغط قبل الرفع.',
   'Save photo': 'حفظ الصورة', 'Cancel preview': 'إلغاء المعاينة', 'Remove photo': 'إزالة الصورة',
-  'Home': 'الرئيسية', 'Projects': 'المشاريع', 'Licenses': 'التراخيص', 'About': 'عن بيوريت', 'Now': 'حالياً', 'Contact': 'تواصل',
+  "Plan a learning routine with StudyFlow, try Focus Room, format JSON or check a file fingerprint. Four practical tools, free to use in your browser.": "نظّم تعلمك مع StudyFlow وجرّب مساحة التركيز ونسّق JSON أو افحص بصمة ملف. أربع أدوات عملية مجانية تعمل داخل متصفحك.",
+    "Explore Playground ↗": "استكشف Playground ↗",
+    "No account needed. Tool inputs stay in your browser.": "دون حساب. مدخلات الأدوات تبقى داخل متصفحك.",
+    "Working tools, ready to explore.": "أدوات تعمل، جاهزة للتجربة.",
+'Home': 'الرئيسية', 'Projects': 'المشاريع', 'Licenses': 'التراخيص', 'About': 'عن بيوريت', 'Now': 'حالياً', 'Contact': 'تواصل',
   'Sign in': 'تسجيل الدخول', 'Create account': 'إنشاء حساب', 'Buy': 'شراء', 'GitHub ↗': 'جيت هب ↗', 'Academy ↗': 'الأكاديمية ↗', 'CYBERSECURITY · DEVELOPMENT · RESEARCH': 'الأمن السيبراني · التطوير · البحث',
   'Building tools.': 'بناء أدوات.', 'Learning by creating.': 'التعلّم عبر البناء.',
   'A focused collection of cybersecurity tools, learning platforms, and software experiments. Each project is a practical step in a continuing process of research and building.': 'مجموعة مركّزة من أدوات الأمن السيبراني ومنصات التعلّم والتجارب البرمجية. كل مشروع هو خطوة عملية ضمن رحلة مستمرة من البحث والبناء.',
@@ -406,7 +410,85 @@ Object.assign(arabicTranslations, {
   '16 records shown': 'عرض 16 شهادة'
 });
 
+/* Local concept detail translations */
+Object.assign(arabicTranslations, {
+  "Overview": "الفكرة",
+  "Planned capabilities": "المزايا المخططة",
+  "The user journey": "رحلة المستخدم",
+  "Next implementation steps": "خطوات التنفيذ القادمة",
+  "THE USER JOURNEY": "رحلة المستخدم",
+  "A useful problem comes first.": "المشكلة المفيدة تأتي أولاً.",
+  "Who would use it?": "لمن صُممت الفكرة؟",
+  "People who want private records organized on their own device, with a recovery process they can understand.": "لمن يريد تنظيم بياناته الخاصة على جهازه مع طريقة استعادة يفهمها.",
+  "The problem to solve": "المشكلة المراد حلها",
+  "Scattered records and unclear backups make everyday storage and recovery difficult. A useful vault must make its state and failure cases visible.": "البيانات المتفرقة والنسخ الاحتياطية غير الواضحة تصعّب الحفظ والاستعادة. يجب أن يوضح الخزن حالته وحالات فشله.",
+  "A proposed everyday flow": "طريقة الاستخدام المقترحة",
+  "Add a record, organize it, create a backup and test restoration. Mobile access would follow only after the local workflow has been validated.": "أضف سجلاً ونظمه وأنشئ نسخة احتياطية واختبر استعادتها. يأتي الوصول المحمول بعد التحقق من التجربة المحلية.",
+  "NEXT IMPLEMENTATION STEPS": "خطوات التنفيذ القادمة",
+  "A plan to validate, then build.": "خطة نتحقق منها ثم نبنيها.",
+  "Proposed milestones, not completed deliverables.": "مراحل مقترحة وليست إنجازات مكتملة.",
+  "Validate the local vault workflow": "تحقق من طريقة استخدام الخزن المحلي",
+  "Map creation, editing, backup and recovery before implementing companion access.": "ارسم خطوات الإنشاء والتحرير والنسخ والاستعادة قبل تنفيذ الوصول من جهاز آخر.",
+  "Prototype with established cryptography": "ابنِ نموذجاً بتشفير معروف",
+  "Define a threat model and use reviewed libraries. Existing experimental code is not evidence of secure storage.": "حدّد نموذج التهديد واستخدم مكتبات معروفة. الشيفرة التجريبية ليست دليلاً على أمان التخزين.",
+  "Test recovery and failure states": "اختبر الاستعادة وحالات الفشل",
+  "Exercise wrong passwords, damaged files and interrupted writes before any release decision.": "اختبر كلمة المرور الخاطئة وتلف الملفات وانقطاع الكتابة قبل اتخاذ قرار الإصدار.",
+  "Students and authorized researchers who need to keep public-source research organized around a defined case.": "الطلاب والباحثون المصرّح لهم الذين يحتاجون تنظيم البحث في المصادر العامة حول حالة محددة.",
+  "Links and observations lose their context when scattered across tabs. Source, date and uncertainty need to stay attached to each claim.": "تفقد الروابط والملاحظات سياقها بين التبويبات. يجب ربط كل ادعاء بالمصدر والتاريخ وحدود اليقين.",
+  "Define the scope, record public sources, distinguish observations from conclusions and assemble a traceable report.": "حدّد النطاق وسجّل المصادر العامة وافصل الملاحظات عن الاستنتاجات وابنِ تقريراً يمكن تتبعه.",
+  "Design the case and evidence model": "صمّم نموذج الحالة والأدلة",
+  "Describe scope, provenance, timestamps and confidence before adding collection tools.": "وضّح النطاق وأصل البيانات والتوقيت ودرجة الثقة قبل إضافة أدوات الجمع.",
+  "Build a local research workspace": "ابنِ مساحة بحث محلية",
+  "Start with manual evidence capture and a readable case timeline rather than unsupported automatic conclusions.": "ابدأ بتسجيل الأدلة يدوياً وخط زمني واضح للحالة مع بيان حدود الاستنتاج.",
+  "Review traceability and privacy": "راجع التتبع والخصوصية",
+  "Verify source links, export accuracy and data handling using consented sample cases.": "تحقق من روابط المصادر ودقة التصدير ومعالجة البيانات باستخدام حالات نموذجية مصرّح بها.",
+  "Cybersecurity beginners who need a clear sequence from foundations to guided practice and a specialty.": "مبتدئو الأمن السيبراني الذين يحتاجون تسلسلاً واضحاً من الأساسيات إلى التطبيق ثم التخصص.",
+  "A large content catalog can leave learners unsure where to begin. A coherent route should explain prerequisites, practice and assessment expectations.": "قد تحيّر مكتبة كبيرة المتعلم عند البداية. يجب أن يوضح الطريق المتطلبات والتطبيق وما يتوقعه التقييم.",
+  "Learn a concept, check understanding, practice in a controlled lab and review the evidence required by the path assessment. A smaller web pilot already supports this exploration.": "تعلّم مفهوماً وتحقق من فهمك وطبقه في مختبر مضبوط وراجع الأدلة المطلوبة لتقييم المسار. تدعم نسخة الويب المصغرة هذه التجربة حالياً.",
+  "Keep Foundations coherent": "حافظ على ترابط الأساسيات",
+  "Connect lessons, knowledge checks and safe practice around a visible beginner route.": "اربط الدروس وأسئلة الفهم والتطبيق الآمن في طريق واضح للمبتدئ.",
+  "Validate the web learning pilot": "تحقق من تجربة التعلم المصغرة",
+  "Review navigation, prerequisites and assessment quality with realistic learner tasks.": "راجع التنقل والمتطلبات وجودة التقييم باستخدام مهام تعلم واقعية.",
+  "Expand only after learning review": "توسّع بعد مراجعة جودة التعلم",
+  "Develop specialty bundles after checking educational depth and maintain clear credential and availability limits.": "طوّر حزم التخصص بعد التحقق من العمق التعليمي مع توضيح حدود الشهادات والإتاحة.",
+  "Learners and lab owners who want to understand network traffic from environments they are authorized to inspect.": "المتعلمون وأصحاب المختبرات الذين يريدون فهم حركة شبكات مصرح لهم بفحصها.",
+  "Packet detail is hard to connect to a useful question. A traffic view should explain protocol context and distinguish signals from proof of compromise.": "يصعب ربط تفاصيل الحزم بسؤال مفيد. يجب أن يشرح العرض سياق البروتوكول ويفصل المؤشرات عن دليل الاختراق.",
+  "Load an authorized sample capture, filter by a question, inspect protocol summaries and document observations without claiming an automatic security verdict.": "افتح عينة مصرحاً بها وصفّ حسب سؤالك وافحص ملخصات البروتوكولات ووثّق ملاحظاتك دون اعتبارها حكماً أمنياً تلقائياً.",
+  "Start with educational captures": "ابدأ بعينات تعليمية",
+  "Define bounded sample files and the questions each view should answer.": "حدّد ملفات عينات محدودة والأسئلة التي يجيب عنها كل عرض.",
+  "Prototype readable packet analysis": "ابنِ نموذجاً لتحليل حزم واضح",
+  "Develop protocol summaries and filters before considering live capture workflows.": "طوّر ملخصات البروتوكولات والمرشحات قبل التفكير في الالتقاط المباشر.",
+  "Review accuracy and sensitive fields": "راجع الدقة والحقول الحساسة",
+  "Check malformed captures, large files and redaction needs before release.": "اختبر العينات التالفة والملفات الكبيرة واحتياجات إخفاء البيانات قبل الإصدار.",
+  "People who need a clear file-protection workflow and an understandable way to restore their own data.": "لمن يحتاج طريقة واضحة لحماية الملفات واستعادة بياناته.",
+  "Encryption choices can hide recovery risks. A useful interface must explain the selected file, output location and consequences of losing access information.": "قد تخفي خيارات التشفير مخاطر الاستعادة. يجب توضيح الملف ومكان الناتج وعواقب فقدان معلومات الوصول.",
+  "Choose a file, confirm a safe output location, protect it and verify a restoration copy before removing the original.": "اختر ملفاً وحدّد مكاناً آمناً للناتج واحمه ثم تحقق من نسخة مستعادة قبل إزالة الأصل.",
+  "Define the file and recovery model": "حدّد نموذج الملف والاستعادة",
+  "Describe failure handling, metadata and the boundaries of the proposed protection.": "وضّح معالجة الفشل والبيانات الوصفية وحدود الحماية المقترحة.",
+  "Use established implementations": "استخدم تطبيقات معروفة",
+  "Prototype using maintained cryptographic libraries rather than inventing a new algorithm.": "ابنِ النموذج بمكتبات تشفير تُصان وتُراجع، مع تجنب ابتكار خوارزمية جديدة.",
+  "Validate round trips and interruptions": "تحقق من الاستعادة والانقطاع",
+  "Test corruption, wrong keys and interrupted writes while preserving originals.": "اختبر التلف والمفتاح الخاطئ وانقطاع الكتابة مع الحفاظ على الملفات الأصلية.",
+  "Owners of small authorized labs who need an understandable inventory of hosts and exposed services.": "أصحاب المختبرات الصغيرة المصرح بها الذين يحتاجون جرداً واضحاً للأجهزة والخدمات الظاهرة.",
+  "Raw discovery output does not explain scope or uncertainty. Results should show what was checked, what responded and what remains unknown.": "لا تشرح نتائج الاكتشاف الخام النطاق أو حدود اليقين. يجب عرض ما فُحص وما استجاب وما لا يزال مجهولاً.",
+  "Confirm an authorized range, run bounded discovery, review host and service observations and export a report. An open service is not proof of a vulnerability.": "أكد نطاقاً مصرحاً به ونفّذ اكتشافاً محدوداً وراجع الأجهزة والخدمات وصدّر تقريراً. الخدمة المفتوحة ليست إثباتاً لثغرة.",
+  "Define authorization and scope": "حدّد التصريح والنطاق",
+  "Make the target range and scan limits explicit before collecting data.": "اجعل نطاق الهدف وحدود الفحص واضحة قبل جمع البيانات.",
+  "Build a bounded lab prototype": "ابنِ نموذج مختبر محدوداً",
+  "Start with a small test network, cancellation controls and conservative rate limits.": "ابدأ بشبكة اختبار صغيرة وأزرار إلغاء وحدود سرعة محافظة.",
+  "Review reliability and reporting": "راجع الموثوقية والتقارير",
+  "Test timeouts, partial results and report clarity without overstating discovery accuracy.": "اختبر انتهاء المهلة والنتائج الجزئية ووضوح التقرير دون مبالغة في دقة الاكتشاف.",
+  "OCT 2026": "أكتوبر ٢٠٢٦",
+  "Playground": "مساحة التجارب",
+  "Working tools, ready to explore.": "أدوات عاملة قابلة للاستكشاف.",
+  "StudyFlow is our first small application. Try its learning planner in the local Playground prototype.": "StudyFlow أول تطبيق صغير. جرّب منظّم التعلم في نموذج Playground المحلي.",
+  "Explore the local preview ↗": "استكشف المعاينة المحلية ↗",
+  "Local review only. The demos.biuret.dev domain has not been activated.": "للمراجعة المحلية فقط. لم يُفعّل نطاق demos.biuret.dev."
+});
 const arabicTitles = {
+  'privacy.html': 'سياسة الخصوصية — Biuret',
+  'terms.html': 'شروط الاستخدام — Biuret',
+  'playground.html': 'Biuret Playground — معاينة محلية',
   'index.html': 'آدم حمدان (بيوريت) — ملف أعمال الأمن السيبراني', 'certifications.html': 'الشهادات والتعلّم — آدم حمدان', 'security.html': 'الأمن والاستخدام المسؤول — بيوريت', '404.html': 'الصفحة غير موجودة — بيوريت', 'auth.html': 'تسجيل الدخول — بيوريت', 'account.html': 'ملفي الشخصي — بيوريت', 'settings.html': 'إعدادات الملف الشخصي — بيوريت', 'forgot-password.html': 'استعادة كلمة المرور — بيوريت', 'reset-password.html': 'كلمة مرور جديدة — بيوريت', 'verify.html': 'توثيق البريد — بيوريت', 'licenses.html': 'تراخيص بيوريت',
   'biuret-academy.html': 'Biuret Academy — بيوريت', 'biulock.html': 'BiuLock — بيوريت', 'b-recon.html': 'B-Recon — بيوريت',
   'biusniff.html': 'BiuSniff — بيوريت', 'biucrypt.html': 'BiuCrypt — بيوريت', 'biuret-reaper.html': 'Biuret Reaper — بيوريت'
@@ -609,7 +691,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
   const translateTextNodes = () => {
-    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, { acceptNode: (node) => node.parentElement?.closest('script, style, [data-language-toggle], [translate="no"]') ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT });
+    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, { acceptNode: (node) => node.parentElement?.closest('script, style, article.legal-card[lang="en"], [data-language-toggle], [translate="no"]') ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT });
     const textNodes = [];
     while (walker.nextNode()) textNodes.push(walker.currentNode);
     textNodes.forEach((node) => {
@@ -650,6 +732,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.credential-filters')?.setAttribute('aria-label', isArabic ? 'تصنيف الشهادات' : 'Filter credentials');
     document.querySelector('.project-filter')?.setAttribute('aria-label', isArabic ? 'تصنيف المشاريع' : 'Filter projects');
     document.querySelector('.project-breadcrumb')?.setAttribute('aria-label', isArabic ? 'مسار الصفحة' : 'Breadcrumb');
+    document.querySelector('.project-toc')?.setAttribute('aria-label', isArabic ? 'في هذه الصفحة' : 'On this page');
     const copyStatus = document.querySelector('[data-copy-status]');
     if (copyStatus) copyStatus.textContent = '';
     const filename = window.location.pathname.split('/').pop() || 'index.html';
