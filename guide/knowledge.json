@@ -44,7 +44,21 @@
       "الشهادات",
       "شهادات",
       "التدريب"
-    ]
+    ],
+    "steps": {
+      "en": [
+        "Use search or filters to find a training record.",
+        "Select its thumbnail to enlarge the original.",
+        "Use Previous and Next to browse visible records.",
+        "Follow an available verification link to check its issuer or achievement status."
+      ],
+      "ar": [
+        "ابحث أو صنّف للعثور على شهادة.",
+        "اضغط الصورة المصغرة لعرض الأصل بحجم أكبر.",
+        "تنقّل بالسابق والتالي بين السجلات الظاهرة.",
+        "استخدم رابط التحقق المتاح لمراجعة الجهة أو حالة الإنجاز."
+      ]
+    }
   },
   {
     "id": "contact",
@@ -133,8 +147,8 @@
       "ar": "استكشف Biuret Playground"
     },
     "body": {
-      "en": "Playground brings together four working browser tools: StudyFlow planning, Focus Room, JSON Studio and File Fingerprint. Open the collection and choose a tool; no account is required.",
-      "ar": "تجمع Playground أربع أدوات تعمل في المتصفح: تخطيط StudyFlow ومساحة التركيز واستوديو JSON وبصمة الملفات. افتح المجموعة واختر أداة؛ لا تحتاج حساباً."
+      "en": "Playground includes five browser tools: StudyFlow, Focus Room, JSON Studio, File Fingerprint and Text Studio. My Work brings saved plans and favorites together. No account is required; device saving is optional.",
+      "ar": "تضم Playground خمس أدوات للمتصفح: StudyFlow ومساحة التركيز واستوديو JSON وبصمة الملفات واستوديو النصوص. تجمع أعمالي خططك ومفضلتك. لا تحتاج حساباً؛ الحفظ على الجهاز اختياري."
     },
     "keywords": [
       "playground",
@@ -172,7 +186,21 @@
       "اتعلم",
       "تعلم",
       "التعلم"
-    ]
+    ],
+    "steps": {
+      "en": [
+        "Sign in to the Academy.",
+        "Start with the free Foundations learning route.",
+        "Read each lesson and use Check your understanding.",
+        "Complete the required practice before the path assessment."
+      ],
+      "ar": [
+        "سجّل دخولك إلى الأكاديمية.",
+        "ابدأ بمسار الأساسيات المجاني.",
+        "اقرأ كل درس واستخدم تحقق من فهمك.",
+        "أكمل التطبيق المطلوب قبل تقييم المسار."
+      ]
+    }
   },
   {
     "id": "paths",
@@ -199,7 +227,21 @@
       "الدورات",
       "كورسات",
       "دورة"
-    ]
+    ],
+    "steps": {
+      "en": [
+        "Complete the foundational route first.",
+        "Open a specialty path to see its courses and practice.",
+        "Follow its requirements, practical assessment and final exam.",
+        "Purchases remain closed; current account access is shown in the Academy."
+      ],
+      "ar": [
+        "أكمل الأساسيات أولاً.",
+        "افتح مسار تخصص لمراجعة دوراته وتطبيقاته.",
+        "اتبع متطلباته وتقييمه العملي وامتحانه النهائي.",
+        "الشراء مغلق حالياً؛ وتعرض الأكاديمية الوصول المتاح لحسابك."
+      ]
+    }
   },
   {
     "id": "assessments",
@@ -375,23 +417,21 @@
     "site": "playground",
     "path": "studyflow.html",
     "title": {
-      "en": "Try StudyFlow",
-      "ar": "جرّب StudyFlow"
+      "en": "StudyFlow Web",
+      "ar": "منظّم التعلم للويب"
     },
     "body": {
-      "en": "StudyFlow is a Python learning planner with a bilingual PyQt6 desktop interface and English-only CLI. The browser preview uses a portable edition of the same scheduling rules. It does not launch the desktop app or an AI model. Desktop executable downloads are not offered here yet.",
-      "ar": "StudyFlow منظّم تعلم ببايثون، بواجهة PyQt6 عربية وإنجليزية وCLI بالإنجليزية فقط. تستخدم المعاينة نسخة للمتصفح من قواعد الجدولة نفسها؛ لا تشغّل التطبيق المكتبي أو نموذجاً ذكياً. تنزيل ملفات البرنامج التنفيذي غير متاح هنا بعد."
+      "en": "StudyFlow Web creates schedules in your browser: six templates, custom goals, target checks and progress-preserving rescheduling. Desktop and CLI interfaces are documented separately in Programs. Browser storage does not sync with the applications.",
+      "ar": "ينشئ StudyFlow للويب الجداول داخل متصفحك: ستة قوالب وأهداف مخصصة وفحص الموعد وإعادة جدولة تحفظ الإنجاز. تجد واجهتي Desktop وCLI في قسم البرامج بصورة مستقلة. لا توجد مزامنة بين حفظ المتصفح والبرامج."
     },
     "keywords": [
       "studyflow",
-      "desktop",
-      "cli",
-      "app",
-      "application",
-      "تطبيق",
-      "برنامج",
-      "بايثون",
-      "سطح المكتب"
+      "web planner",
+      "learning planner",
+      "منظم",
+      "منظّم",
+      "تعلم",
+      "تعلّم"
     ]
   },
   {
@@ -403,8 +443,8 @@
       "ar": "إنشاء خطة تعلم"
     },
     "body": {
-      "en": "Choose one of six introductory templates, a skill level, a 15–120 minute budget, study days and start date. The planner preserves prerequisites, splits longer work and places practice and spaced reviews before the final project. Durations are estimates, not a promise of mastery.",
-      "ar": "اختر قالباً تمهيدياً من ستة قوالب ومستوى ووقتاً يومياً بين 15 و120 دقيقة وأيام الدراسة وتاريخ البداية. يحافظ المحرّك على المتطلبات ويقسّم العمل ويوزع التطبيق والمراجعة المتباعدة قبل المشروع النهائي. المدد تقديرات وليست ضماناً للإتقان."
+      "en": "Choose a template or a custom goal with 1–8 topics in prerequisite order. Set a level, 15–120 daily minutes, study days and an optional target date. The planner checks the target without shortening work. Preview and apply a new schedule for unfinished sessions while keeping completion checks. Save optionally on this device. Durations are estimates; custom topics do not include generated lessons.",
+      "ar": "اختر قالباً أو هدفاً مخصصاً من 1 إلى 8 مواضيع بترتيب المتطلبات. حدّد المستوى ووقتاً يومياً من 15 إلى 120 دقيقة وأيام الدراسة وموعداً مستهدفاً اختيارياً. يفحص المنظّم الموعد دون اختصار العمل. عاين واعتمد جدولاً جديداً للجلسات غير المكتملة مع الحفاظ على علامات الإنجاز، واحفظه اختيارياً على الجهاز. المدد تقديرية والمواضيع المخصصة لا تتضمن دروساً مولدة."
     },
     "keywords": [
       "plan",
@@ -419,20 +459,51 @@
       "جدول",
       "وقت",
       "قالب",
-      "القوالب"
-    ]
+      "القوالب",
+      "custom",
+      "goal",
+      "deadline",
+      "reschedule",
+      "target",
+      "هدف",
+      "موعد",
+      "جدولة",
+      "مخصص",
+      "week",
+      "organize",
+      "انظم",
+      "انظّم",
+      "اسبوع",
+      "أسبوع",
+      "رتب",
+      "خطة تعلم"
+    ],
+    "steps": {
+      "en": [
+        "Choose a template or enter your goal and ordered topics.",
+        "Set your daily time, study days and optional target.",
+        "Preview the plan; optionally save it on this device.",
+        "Use Preview new schedule when you need to move unfinished work."
+      ],
+      "ar": [
+        "اختر قالباً أو أدخل هدفك ومواضيعك المرتبة.",
+        "حدّد وقتك وأيام الدراسة والموعد المستهدف إن رغبت.",
+        "عاين الخطة واحفظها اختيارياً على الجهاز.",
+        "استخدم معاينة الجدول الجديد لنقل الجلسات غير المكتملة."
+      ]
+    }
   },
   {
     "id": "data",
     "site": "playground",
-    "path": "studyflow.html#planner",
+    "path": "workspace.html#backup",
     "title": {
       "en": "Your preview data",
       "ar": "بيانات المعاينة"
     },
     "body": {
-      "en": "Tools process their inputs inside your browser. No file, JSON input, task or study plan is uploaded. Download a result if you need it; closing or reloading the page clears unsaved tool input. StudyFlow exports are previews, not desktop backups. Language preference alone is stored locally.",
-      "ar": "تعالج الأدوات مدخلاتها داخل متصفحك. لا تُرفع ملفاتك أو JSON أو مهامك أو خطة التعلم. نزّل النتيجة إن احتجتها؛ الإغلاق أو تحديث الصفحة يمسح المدخلات غير المحفوظة. تصدير StudyFlow معاينة وليس نسخة احتياطية للتطبيق. تفضيل اللغة فقط يُحفظ محلياً."
+      "en": "Tools process inputs inside your browser. Device saving is optional: explicitly save named plans, completed focus sessions and favorites. My Work shows the next study step and provides workspace backup and restore. Nothing is uploaded. JSON, text and file inputs are never persisted. There is no automatic sync; browser cleanup may erase saved work. Workspace backups are separate from desktop databases and preview exports.",
+      "ar": "تعالج الأدوات مدخلاتها في متصفحك. الحفظ اختياري: احفظ الخطط المسماة وجلسات التركيز المكتملة والمفضلة. تعرض أعمالي خطوة التعلم التالية والنسخ الاحتياطي والاستعادة. لا تُرفع البيانات، ولا تُحفظ مدخلات JSON والنصوص والملفات. لا توجد مزامنة تلقائية؛ قد يحذف مسح المتصفح أعمالك. نسخ أعمال Playground مختلفة عن قاعدة التطبيق المكتبي وتصدير المعاينة."
     },
     "keywords": [
       "data",
@@ -450,14 +521,14 @@
   {
     "id": "availability",
     "site": "playground",
-    "path": "index.html",
+    "path": "index.html#applications",
     "title": {
-      "en": "What is available?",
-      "ar": "ما المتاح الآن؟"
+      "en": "Find a web tool",
+      "ar": "اعثر على أداة ويب"
     },
     "body": {
-      "en": "Four tools are available: StudyFlow planning, Focus Room, JSON Studio and SHA-256 File Fingerprint. Each has its own page, Arabic and English, and no account requirement. The StudyFlow desktop and CLI are variants of one project; public executable downloads are not offered yet.",
-      "ar": "تتوفر أربع أدوات: تخطيط StudyFlow ومساحة التركيز واستوديو JSON وبصمة الملفات SHA-256. لكل أداة صفحة مستقلة بالعربية والإنجليزية دون حساب. Desktop وCLI نسختان من مشروع StudyFlow نفسه؛ تنزيل ملفاته التنفيذية غير متاح بعد."
+      "en": "Start with a task on the home page, or search five browser tools: StudyFlow Web, Focus Room, JSON Studio, File Fingerprint and Text Studio. Programs has a separate Desktop / CLI collection. My Work holds optional device-saved plans and favorites.",
+      "ar": "ابدأ بمهمة من الصفحة الرئيسية أو ابحث بين خمس أدوات للمتصفح: StudyFlow ومساحة التركيز واستوديو JSON وبصمة الملفات واستوديو النصوص. للبرامج قسم Desktop وCLI مستقل. تضم أعمالي الخطط والمفضلة المحفوظة اختيارياً على الجهاز."
     },
     "keywords": [
       "available",
@@ -528,8 +599,8 @@
       "ar": "استخدام مساحة التركيز"
     },
     "body": {
-      "en": "Choose one task and 1–120 minutes. Use quick presets, pause or reset, and choose a short or long break after finishing. Fully completed focus sessions count toward your daily goal and can be exported. Reloading clears the timer and log.",
-      "ar": "اختر مهمة ووقتاً من 1 إلى 120 دقيقة. استخدم المدد السريعة وأوقف مؤقتاً أو أعد الضبط، واختر استراحة قصيرة أو طويلة بعد الانتهاء. تُحسب جلسات التركيز المكتملة ضمن هدفك اليومي ويمكن تنزيل سجلّها. يمسح التحديث المؤقّت والسجل."
+      "en": "Choose one task and 1–120 minutes. Use quick presets, pause or reset, and choose a short or long break. Only completed focus sessions count. Enable device saving to keep future completed sessions and your daily goal; the log shows daily and last-seven-day summaries. The active task and timer reset on reload.",
+      "ar": "اختر مهمة ووقتاً بين 1 و120 دقيقة. استخدم المدد السريعة والإيقاف المؤقت وإعادة الضبط والاستراحات. تُحسب جلسات التركيز المكتملة فقط. فعّل الحفظ للاحتفاظ بالجلسات التالية والهدف اليومي؛ يعرض السجل ملخص اليوم وآخر سبعة أيام. إعادة التحميل تمسح المهمة والمؤقّت الجاري."
     },
     "keywords": [
       "focus",
@@ -539,8 +610,26 @@
       "تركيز",
       "مؤقت",
       "مؤقّت",
-      "استراحة"
-    ]
+      "استراحة",
+      "concentrate",
+      "اركز",
+      "ركز",
+      "بومودورو"
+    ],
+    "steps": {
+      "en": [
+        "Name one task and choose a focus duration.",
+        "Start the timer; pause if you need to step away.",
+        "Only fully elapsed focus sessions enter the completed log.",
+        "Enable device saving if you want to retain completed sessions after reload."
+      ],
+      "ar": [
+        "سمّ مهمة واحدة وحدّد مدة التركيز.",
+        "ابدأ المؤقّت وأوقفه مؤقتاً إذا احتجت للابتعاد.",
+        "تدخل جلسات التركيز المنقضية بالكامل فقط إلى سجل الإنجاز.",
+        "فعّل الحفظ على الجهاز للاحتفاظ بالجلسات المكتملة بعد تحديث الصفحة."
+      ]
+    }
   },
   {
     "id": "json",
@@ -560,8 +649,28 @@
       "formatter",
       "تنسيق",
       "منسق",
-      "بيانات"
-    ]
+      "بيانات",
+      "انسق",
+      "نسق",
+      "validate",
+      "validation",
+      "structured",
+      "تنظيم json"
+    ],
+    "steps": {
+      "en": [
+        "Paste JSON or import a local JSON file.",
+        "Choose indentation and optional key sorting.",
+        "Validate and format; review errors before exporting.",
+        "Copy or download the result. Native number precision and duplicate-key limitations still apply."
+      ],
+      "ar": [
+        "الصق JSON أو استورد ملفاً محلياً.",
+        "اختر المسافة البادئة وترتيب المفاتيح إن رغبت.",
+        "افحص ونسّق، وراجع الأخطاء قبل التصدير.",
+        "انسخ النتيجة أو نزّلها. تبقى حدود دقة الأرقام والمفاتيح المكررة في التحليل الأصلي."
+      ]
+    }
   },
   {
     "id": "hash",
@@ -585,7 +694,21 @@
       "ملف",
       "ملفات",
       "هاش"
-    ]
+    ],
+    "steps": {
+      "en": [
+        "Choose a file or exact UTF-8 text and a SHA algorithm.",
+        "Calculate its fingerprint locally.",
+        "Paste the digest provided by a trusted source to compare.",
+        "A match checks integrity; it is not an antivirus result."
+      ],
+      "ar": [
+        "اختر ملفاً أو نص UTF-8 كما هو وخوارزمية SHA.",
+        "احسب البصمة محلياً.",
+        "الصق البصمة التي يقدمها مصدر موثوق للمقارنة.",
+        "التطابق يفحص سلامة النسخة؛ ولا يعني فحصها من البرمجيات الخبيثة."
+      ]
+    }
   },
   {
     "id": "text-studio",
@@ -608,7 +731,145 @@
       "نصوص",
       "كلمات",
       "كتابة",
-      "قراءة"
-    ]
+      "قراءة",
+      "clean",
+      "cleanup",
+      "duplicate",
+      "انظف",
+      "نظف",
+      "تنظيف",
+      "الكتابة"
+    ],
+    "steps": {
+      "en": [
+        "Paste text and review the live counts.",
+        "Choose one cleanup action; review the changed text.",
+        "Undo the last change if needed.",
+        "Copy or export TXT. Reading time is an estimate."
+      ],
+      "ar": [
+        "الصق النص وراجع الإحصاءات المباشرة.",
+        "اختر عملية تنظيف وراجع النص المعدّل.",
+        "تراجع عن آخر تغيير عند الحاجة.",
+        "انسخ أو صدّر TXT. وقت القراءة تقديري."
+      ]
+    }
+  },
+  {
+    "id": "workspace",
+    "site": "playground",
+    "path": "workspace.html",
+    "title": {
+      "en": "My Work and today’s next step",
+      "ar": "أعمالي وخطوة اليوم التالية"
+    },
+    "body": {
+      "en": "Enable device saving, generate a StudyFlow plan, name and save it. Open My Work to continue your first unfinished session, view focus summaries and reach favorite tools. Progress is self-reported and does not award Academy certificates. Backups merge into existing work after validation.",
+      "ar": "فعّل الحفظ، ثم أنشئ خطة StudyFlow وسمّها واحفظها. افتح أعمالي لمتابعة أول جلسة غير مكتملة ومشاهدة ملخص التركيز وأدواتك المفضلة. التقدم ذاتي ولا يمنح شهادات الأكاديمية. تُدمج النسخ مع أعمالك بعد التحقق."
+    },
+    "keywords": [
+      "my work",
+      "today",
+      "backup",
+      "restore",
+      "favorites",
+      "أعمالي",
+      "اليوم",
+      "استعادة",
+      "نسخة احتياطية",
+      "مفضلة"
+    ],
+    "steps": {
+      "en": [
+        "Enable device saving explicitly.",
+        "Create and save a named StudyFlow plan.",
+        "Return here to resume a saved plan or open a favorite tool.",
+        "Download a workspace backup before clearing browser data; desktop backups are a different format."
+      ],
+      "ar": [
+        "فعّل الحفظ على الجهاز صراحةً.",
+        "أنشئ خطة StudyFlow وسمّها واحفظها.",
+        "عد هنا لمتابعة خطة أو فتح أداة مفضلة.",
+        "نزّل نسخة أعمال قبل مسح بيانات المتصفح؛ نسخ البرنامج المكتبي بصيغة مستقلة."
+      ]
+    }
+  },
+  {
+    "id": "software",
+    "site": "playground",
+    "path": "software.html",
+    "title": {
+      "en": "Desktop & CLI programs",
+      "ar": "البرامج المكتبية وCLI"
+    },
+    "body": {
+      "en": "StudyFlow exists as a bilingual Python / PyQt6 desktop application (1.1.0) and an English-only CLI (1.0.0). Programs shows the actual interface, capabilities and Windows x64 release status. Executable downloads are not published here yet; the browser planner is separate.",
+      "ar": "يتوفر StudyFlow كتطبيق Python / PyQt6 مكتبي باللغتين (1.1.0) وCLI بالإنجليزية فقط (1.0.0). يعرض قسم البرامج الواجهة الفعلية والمزايا وحالة إصدار Windows x64. ملفات التشغيل غير منشورة للتنزيل هنا بعد؛ ومنظّم المتصفح مستقل."
+    },
+    "keywords": [
+      "software",
+      "program",
+      "programs",
+      "desktop",
+      "cli",
+      "windows",
+      "download application",
+      "البرامج",
+      "برنامج",
+      "تطبيق",
+      "تطبيقات",
+      "المكتبي",
+      "سطح المكتب",
+      "تنزيل البرنامج"
+    ],
+    "steps": {
+      "en": [
+        "Explore the actual Desktop interface and its features.",
+        "Check CLI if you prefer an English terminal workflow.",
+        "Use the separate web planner to try scheduling immediately.",
+        "Browser workspace backups do not restore the desktop database."
+      ],
+      "ar": [
+        "استكشف الواجهة المكتبية الفعلية ومزاياها.",
+        "راجع CLI إذا كنت تفضل الطرفية باللغة الإنجليزية.",
+        "جرّب منظّم الويب المستقل للبدء بالجدولة فوراً.",
+        "نسخ أعمال المتصفح لا تستعيد قاعدة البرنامج المكتبي."
+      ]
+    }
+  },
+  {
+    "id": "biuret-sites",
+    "site": "portfolio",
+    "path": "index.html",
+    "title": {
+      "en": "Explore my Biuret websites",
+      "ar": "استكشف مواقع Biuret"
+    },
+    "body": {
+      "en": "The My sites button in the portfolio header opens a clear list: Portfolio for ideas and training records, Academy for cybersecurity learning, and Playground for browser tools and separate program previews.",
+      "ar": "يفتح زر مواقعي في أعلى موقع الأعمال قائمة واضحة: Portfolio للأفكار وشهادات التعلم، والأكاديمية لتعلم الأمن السيبراني، وPlayground لأدوات المتصفح ومعاينات البرامج المستقلة."
+    },
+    "keywords": [
+      "sites",
+      "websites",
+      "other sites",
+      "my sites",
+      "مواقع",
+      "مواقعي",
+      "مواقعك",
+      "اخرى"
+    ],
+    "steps": {
+      "en": [
+        "Open My sites in the header.",
+        "Choose Academy for learning or Playground for tools.",
+        "Use Escape to close the list and return to the header."
+      ],
+      "ar": [
+        "اضغط مواقعي في أعلى الصفحة.",
+        "اختر الأكاديمية للتعلم أو Playground للأدوات.",
+        "استخدم Escape لإغلاق القائمة والعودة للزر."
+      ]
+    }
   }
 ]

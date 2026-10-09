@@ -44,6 +44,8 @@ const publicFiles = [
   'sniff_icon.ico',
   'style.css',
   'experience.css',
+  'site-switcher.css',
+  'site-switcher.js',
   'terms.html',
   'verify.html',
   'verify.js'

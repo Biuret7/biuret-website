@@ -1,72 +1,57 @@
 (() => {
-  const script = document.currentScript;
-  const asset = new URL('./', script.src);
-  const site = script.dataset.site || 'portfolio';
-  const endpoint = script.dataset.api || '';
-  const root = document.createElement('div'); root.className = 'biuret-guide'; root.setAttribute('translate','no');
-  document.body.append(root);
-  const launcher = document.createElement('button'); launcher.className = 'bg-launch'; launcher.type = 'button'; launcher.setAttribute('aria-haspopup','dialog');launcher.setAttribute('aria-expanded','false');
-  const dialog = document.createElement('dialog'); dialog.className = 'bg-panel'; dialog.setAttribute('aria-labelledby','bg-title');
-  const header = document.createElement('header'); header.className = 'bg-header';
-  const title = document.createElement('h2'); title.id = 'bg-title'; title.textContent = 'Biuret Guide';
-  const close = document.createElement('button'); close.type = 'button'; close.className = 'bg-close'; close.textContent = '×';
-  header.append(title, close);
-  const intro = document.createElement('p'); intro.className = 'bg-intro';
-  const suggestions = document.createElement('div'); suggestions.className = 'bg-suggestions';
-  const conversation = document.createElement('div'); conversation.className = 'bg-conversation'; conversation.setAttribute('role','log'); conversation.setAttribute('aria-live','polite');
-  const consentLabel = document.createElement('label'); consentLabel.className = 'bg-consent'; consentLabel.hidden = true;
-  const consent = document.createElement('input'); consent.type='checkbox'; const consentCopy=document.createElement('span'); consentLabel.append(consent,consentCopy);
-  const form = document.createElement('form'); form.className='bg-form';
-  const label=document.createElement('label'); label.htmlFor='bg-question';
-  const input=document.createElement('input'); input.id='bg-question'; input.maxLength=500; input.required=true; input.minLength=2; input.autocomplete='off';
-  const send=document.createElement('button'); send.type='submit';
-  const status=document.createElement('p'); status.className='bg-status'; status.setAttribute('role','status');
-  const privacy=document.createElement('p'); privacy.className='bg-privacy';
-  form.append(label,input,send); dialog.append(header,intro,suggestions,conversation,consentLabel,form,status,privacy); root.append(launcher,dialog);
-  let cards=[], core, configured=false, busy=false, opened=false;
-  const exchanges=[];
-  const en=()=>document.documentElement.lang!=='ar';
-  const tr=(english,arabic)=>en()?english:arabic;
-  const starter={portfolio:['projects','credentials','playground-link'],academy:['start','assessments','credentials-academy'],playground:['availability','planning','data']};
-  function appendAnswer(parent, matches, remote) {
-    if(remote){const p=document.createElement('p');p.textContent=remote.answer;parent.append(p);}
-    for(const card of matches){
-      if(!remote){const h=document.createElement('h3');h.textContent=card.title[en()?'en':'ar'];const p=document.createElement('p');p.textContent=card.body[en()?'en':'ar'];parent.append(h,p);}
-      const link=document.createElement('a');link.href=core.sourceURL(card);link.textContent=card.title[en()?'en':'ar']+' ↗';parent.append(link);
-    }
-    if(!matches.length){const p=document.createElement('p');p.textContent=site==='playground'?tr('I could not match that to a tool topic. Ask about study plans, the focus timer, JSON or file fingerprints, or choose a suggestion above. General programming answers are not available yet.','لم أجد موضوعاً مطابقاً في معلومات الأدوات. اسأل عن خطط التعلم أو مؤقّت التركيز أو JSON أو بصمة الملفات، أو اختر اقتراحاً أعلاه. إجابات البرمجة العامة غير متاحة بعد.'):tr('I could not match that to a site topic. Ask about learning, certificates, projects or your account, or use one of the suggestions above. This guide does not answer general programming questions yet.','لم أجد موضوعاً مطابقاً في معلومات الموقع. اسأل عن التعلم أو الشهادات أو المشاريع أو الحساب، أو اختر اقتراحاً أعلاه. الدليل لا يجيب حالياً عن أسئلة البرمجة العامة.');parent.append(p);}
+  const script=document.currentScript,asset=new URL('./',script.src),site=script.dataset.site||'portfolio',endpoint=script.dataset.api||'';
+  const el=(tag,cls)=>{const n=document.createElement(tag);if(cls)n.className=cls;return n;};
+  const root=el('div','biuret-guide');root.setAttribute('translate','no');document.body.append(root);
+  const launcher=el('button','bg-launch');launcher.type='button';launcher.setAttribute('aria-haspopup','dialog');launcher.setAttribute('aria-expanded','false');
+  const dialog=el('dialog','bg-panel');dialog.setAttribute('aria-labelledby','bg-title');
+  const header=el('header','bg-header'),identity=el('div','bg-identity'),badge=el('span','bg-badge'),title=el('h2');title.id='bg-title';title.textContent='Biuret Guide';identity.append(badge,title);
+  const close=el('button','bg-close');close.type='button';close.textContent='×';header.append(identity,close);
+  const intro=el('p','bg-intro'),context=el('div','bg-context'),contextLabel=el('span'),contextName=el('strong');context.append(contextLabel,contextName);
+  const suggestions=el('div','bg-suggestions'),conversation=el('div','bg-conversation');conversation.setAttribute('role','log');conversation.setAttribute('aria-live','polite');conversation.setAttribute('aria-relevant','additions');
+  const consentLabel=el('label','bg-consent');consentLabel.hidden=true;const consent=el('input');consent.type='checkbox';const consentCopy=el('span');consentLabel.append(consent,consentCopy);
+  const form=el('form','bg-form'),label=el('label'),input=el('input'),send=el('button');label.htmlFor='bg-question';input.id='bg-question';input.maxLength=500;input.required=true;input.minLength=2;input.autocomplete='off';input.dir='auto';send.type='submit';form.append(label,input,send);
+  const status=el('p','bg-status');status.setAttribute('role','status');const retry=el('button','bg-retry');retry.type='button';retry.hidden=true;
+  const footer=el('div','bg-footer'),privacy=el('p','bg-privacy'),hint=el('span','bg-keyboard');footer.append(privacy,hint);
+  dialog.append(header,intro,context,suggestions,conversation,consentLabel,form,status,retry,footer);root.append(launcher,dialog);
+  let cards=[],core,configured=false,busy=false,attempt=0,state='',returnFocus=null,pendingTopic='';const exchanges=[];
+  const en=()=>document.documentElement.lang!=='ar',tr=(a,b)=>en()?a:b,locale=()=>en()?'en':'ar';
+  const starter={portfolio:['projects','credentials','playground-link'],academy:['start','paths','account-academy'],playground:['availability','software','workspace']};
+  const fallback={portfolio:['projects','credentials','contact'],academy:['start','paths','assessments'],playground:['planning','focus','json','hash','text-studio']};
+  const messages={loading:['Loading the site guide…','جارٍ تحميل دليل الموقع…'],search:['Finding your next step…','جارٍ البحث عن خطوتك القادمة…'],local:['From the site guide. No question was sent to an AI service.','من دليل الموقع. لم يُرسل السؤال لخدمة ذكاء اصطناعي.'],remote:['AI reply. Check the linked site sources.','إجابة النموذج. راجع مصادر الموقع المرتبطة.'],fallback:['AI is unavailable; showing the site guide.','النموذج غير متاح؛ نعرض دليل الموقع.'],error:['Guide information could not load. Your work is unaffected. Try again below.','تعذّر تحميل معلومات الدليل. أعمالك لم تتأثر. أعد المحاولة أدناه.']};
+  function pageTopics(){return core?.contextCards(cards,site,location.pathname)||[];}
+  function sourceLink(card){const a=el('a','bg-source');a.href=core.sourceURL(card,site);a.textContent=card.title[locale()]+' ↗';return a;}
+  function answer(parent,matches,remote){
+    if(remote){const p=el('p');p.textContent=remote.answer;parent.append(p);}
+    for(const c of matches){const section=el('section','bg-answer');if(!remote){const h=el('h3');h.textContent=c.title[locale()];const p=el('p');p.textContent=c.body[locale()];section.append(h,p);const steps=c.steps?.[locale()];if(Array.isArray(steps)){const list=el('ol','bg-steps');for(const text of steps.slice(0,5)){const li=el('li');li.textContent=text;list.append(li);}section.append(list);}}section.append(sourceLink(c));parent.append(section);}
+    if(!matches.length){const p=el('p');p.textContent=tr('I could not match that to a documented site topic. Try one of these starting points, or use a tool name. General programming answers are not connected yet.','لم أجد موضوعاً موثّقاً يطابق السؤال. جرّب إحدى هذه الخطوات أو اسم الأداة. إجابات البرمجة العامة غير متصلة بعد.');parent.append(p);const links=el('div','bg-fallback');for(const id of fallback[site]||[]){const c=cards.find(c=>c.id===id&&c.site===site);if(c)links.append(sourceLink(c));}parent.append(links);}
   }
+  function suggest(card){const b=el('button');b.type='button';b.textContent=card.title[locale()];b.disabled=busy||!core;b.addEventListener('click',()=>ask(card.title[locale()],[card]));return b;}
   function render(){
-    root.dir=en()?'ltr':'rtl';launcher.textContent='✦ Biuret Guide';launcher.setAttribute('aria-label',tr('Open Biuret Guide','افتح دليل Biuret'));close.setAttribute('aria-label',tr('Close guide','إغلاق الدليل'));
-    intro.textContent=tr('Find your next step. Answers come from curated site information; an AI model is not connected yet.','اعرف خطوتك القادمة. الإجابات من معلومات الموقع المعدّة مسبقاً؛ لم يُربط نموذج ذكاء اصطناعي بعد.');
-    if(configured) intro.textContent=tr('Use the site guide, or optionally enable the connected model below.','استخدم دليل الموقع، أو فعّل النموذج المتصل اختيارياً أدناه.');
-    label.textContent=tr('What would you like to find?','عن ماذا تبحث؟');input.placeholder=tr('How do I start learning?','كيف أبدأ التعلم؟');send.textContent=tr('Ask','اسأل');send.disabled=busy||!core;
-    privacy.textContent=tr('Guide history stays in memory until you reload. Do not enter passwords, payment details or private reports. It cannot change your account or complete assessments.','يبقى سجل الدليل مؤقتاً حتى تحديث الصفحة. لا تدخل كلمات مرور أو معلومات دفع أو تقارير خاصة. لا يمكنه تغيير حسابك أو إكمال التقييمات.');
-    consentCopy.textContent=tr('Send my question to the configured AI service for this reply.','أرسل سؤالي لخدمة الذكاء الاصطناعي المتصلة لهذه الإجابة.');
-    suggestions.replaceChildren();
-    for(const id of starter[site]||[]){const card=cards.find(c=>c.id===id);if(!card)continue;const button=document.createElement('button');button.type='button';button.textContent=card.title[en()?'en':'ar'];button.disabled=busy;button.addEventListener('click',()=>ask(button.textContent,[card]));suggestions.append(button);}
-    conversation.replaceChildren();
-    if(!exchanges.length){const welcome=document.createElement('p');welcome.className='bg-welcome';welcome.textContent=tr('Choose a topic above, or ask a question about this site below.','اختر موضوعاً أعلاه، أو اكتب سؤالك عن الموقع أدناه.');conversation.append(welcome);}
-    for(const exchange of exchanges){const block=document.createElement('article');block.className='bg-exchange';const q=document.createElement('p');q.className='bg-question';q.textContent=exchange.question;block.append(q);appendAnswer(block,exchange.matches,exchange.locale===(en()?'en':'ar')?exchange.remote:null);conversation.append(block);}
+    dialog.classList.toggle('bg-has-answer',exchanges.length>0);
+    root.dir=en()?'ltr':'rtl';launcher.textContent='✦ Biuret Guide';launcher.setAttribute('aria-label',tr('Open Biuret Guide · Ctrl or Command K','افتح دليل Biuret · Ctrl أو Command K'));close.setAttribute('aria-label',tr('Close guide','إغلاق الدليل'));
+    badge.textContent=tr('YOUR SITE COMPANION','دليلك في مواقع Biuret');intro.textContent=configured?tr('Find a clear next step. You can optionally enable the connected model below.','اعثر على خطوة واضحة. يمكنك تفعيل النموذج المتصل اختيارياً أدناه.'):tr('Find the right tool, understand this page and follow a clear next step. Curated site guidance; no AI model is connected.','اعثر على الأداة وافهم الصفحة واتبع خطوة واضحة. إرشادات معدّة للمواقع؛ دون نموذج ذكاء اصطناعي متصل.');
+    contextLabel.textContent=tr('YOU ARE HERE','أنت هنا');const pageHeading=document.querySelector('main h1');contextName.textContent=(pageHeading?Array.from(pageHeading.childNodes,n=>n.textContent||'').join(' '):document.title).replace(/\s+/g,' ').trim().slice(0,90);
+    label.textContent=tr('What would help you right now?','ما الذي يساعدك الآن؟');input.placeholder=site==='playground'?tr('Plan my week, format JSON, find the programs…','أنظّم أسبوعي، أنسّق JSON، أين البرامج…'):site==='academy'?tr('Where do I start? How do path exams work?','من أين أبدأ؟ كيف تعمل امتحانات المسارات؟'):tr('Find projects, certificates or another Biuret site…','أبحث عن المشاريع أو الشهادات أو مواقع Biuret…');send.textContent=tr('Find','ابحث');send.disabled=busy||!core;consentCopy.textContent=tr('Send this question to the configured AI service for this reply.','أرسل هذا السؤال لخدمة الذكاء الاصطناعي المتصلة لهذه الإجابة.');
+    suggestions.replaceChildren();const suggested=[...pageTopics(),...(starter[site]||[]).map(id=>cards.find(c=>c.id===id&&c.site===site)).filter(Boolean)];for(const c of [...new Map(suggested.map(c=>[c.id,c])).values()].slice(0,4))suggestions.append(suggest(c));
+    conversation.replaceChildren();if(!exchanges.length){const welcome=el('article','bg-welcome');const h=el('h3');h.textContent=tr('A useful first step.','خطوة أولى مفيدة.');const p=el('p');p.textContent=tr('Choose a page topic above or describe what you want to do. The guide gives steps and direct links, without changing your work.','اختر موضوعاً أعلاه أو صف ما تريد إنجازه. يعطيك الدليل خطوات وروابط مباشرة دون تعديل أعمالك.');welcome.append(h,p);conversation.append(welcome);}
+    for(const x of exchanges){const block=el('article','bg-exchange'),q=el('p','bg-question');q.dir='auto';q.textContent=x.question;block.append(q);answer(block,x.matches,x.locale===locale()?x.remote:null);conversation.append(block);}
+    status.textContent=messages[state]?tr(...messages[state]):'';retry.hidden=state!=='error';retry.textContent=tr('Reload guide information','أعد تحميل معلومات الدليل');privacy.textContent=tr('Guide history stays in this tab until reload. Do not enter passwords, payment details or private reports.','سجل الدليل مؤقت في هذا التبويب حتى تحديثه. لا تدخل كلمات مرور أو بيانات دفع أو تقارير خاصة.');hint.textContent=tr('Esc closes · Ctrl / ⌘ K opens','Esc للإغلاق · Ctrl / ⌘ K للفتح');
   }
-  async function ask(question, matches){
-    if(busy||!core||question.trim().length<2)return;
-    busy=true;status.textContent=tr('Finding site information…','جارٍ البحث في معلومات الموقع…');render();
-    const locale=en()?'en':'ar';let remote=null;
-    matches=matches||core.retrieve(question,cards,site);
-    if(configured&&consent.checked){
-      try { const response=await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question,locale,site}),signal:AbortSignal.timeout(15000)});if(!response.ok)throw new Error('unavailable');const value=await response.json();const sources=cards.filter(c=>c.site===site&&value.sourceIds?.includes(c.id));if(typeof value.answer!=='string'||value.answer.length>4000||!sources.length)throw new Error('invalid');remote=value;matches=sources; }
-      catch {status.textContent=tr('AI is unavailable. Showing the site guide instead.','النموذج غير متاح. نعرض معلومات دليل الموقع.');}
-    }else status.textContent=tr('Answered from the site guide.','إجابة من دليل الموقع.');
-    if(remote)status.textContent=tr('AI reply. Check the linked site sources.','إجابة النموذج. راجع مصادر الموقع المرفقة.');
-    exchanges.push({question,matches,remote,locale});if(exchanges.length>10)exchanges.shift();input.value='';busy=false;render();conversation.scrollTop=conversation.scrollHeight;input.focus();
+  async function ask(question,matches){
+    if(busy||!core||typeof question!=='string'||question.trim().length<2)return;
+    question=question.trim().slice(0,500);busy=true;state='search';render();const lang=locale();let remote=null;matches=matches||core.retrieve(question,cards,site,location.pathname);state='local';
+    if(configured&&consent.checked){try{const response=await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question,locale:lang,site}),signal:AbortSignal.timeout(15000)});if(!response.ok)throw Error('unavailable');const value=await response.json();const sources=cards.filter(c=>c.site===site&&Array.isArray(value.sourceIds)&&value.sourceIds.includes(c.id));if(typeof value.answer!=='string'||value.answer.length>4000||!sources.length)throw Error('invalid');remote=value;matches=sources;state='remote';}catch{state='fallback';}}
+    exchanges.push({question,matches,remote,locale:lang});if(exchanges.length>10)exchanges.shift();input.value='';busy=false;render();const latest=conversation.lastElementChild;if(latest)conversation.scrollTop+=latest.getBoundingClientRect().top-conversation.getBoundingClientRect().top;input.focus();
   }
-  launcher.addEventListener('click',()=>{dialog.showModal();opened=true;launcher.setAttribute('aria-expanded','true');input.focus();});
-  close.addEventListener('click',()=>dialog.close());dialog.addEventListener('close',()=>{opened=false;launcher.setAttribute('aria-expanded','false');launcher.focus();});
-  form.addEventListener('submit',event=>{event.preventDefault();ask(input.value.trim());});
-  new MutationObserver(()=>{render();status.textContent='';}).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});
-  render();
-  Promise.all([import(new URL('core.mjs?v=20261009-pg3',asset)),fetch(new URL('knowledge.json?v=20261009-pg3',asset)).then(r=>{if(!r.ok)throw new Error();return r.json();})]).then(([module,data])=>{core=module;cards=data;render();}).catch(()=>{status.textContent=tr('Guide information could not load. Reload to retry.','تعذّر تحميل معلومات الدليل. حدّث الصفحة للمحاولة.');});
-  // Only an explicitly configured endpoint can be queried. No provider key belongs here.
-  if(endpoint)fetch(endpoint+'/status',{signal:AbortSignal.timeout(4000)}).then(r=>r.ok?r.json():null).then(value=>{configured=value?.configured===true;consentLabel.hidden=!configured;render();}).catch(()=>{});
+  function open(topic){render();if(!dialog.open){returnFocus=document.activeElement;dialog.showModal();launcher.setAttribute('aria-expanded','true');}input.focus();if(topic&&!core)pendingTopic=topic;if(topic&&core){const card=cards.find(c=>c.id===topic&&c.site===site);if(card)ask(card.title[locale()],[card]);}}
+  launcher.addEventListener('click',()=>open());close.addEventListener('click',()=>dialog.close());dialog.addEventListener('close',()=>{launcher.setAttribute('aria-expanded','false');(returnFocus?.isConnected?returnFocus:launcher).focus();});
+  dialog.addEventListener('click',e=>{if(e.target!==dialog)return;const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close();});
+  form.addEventListener('submit',e=>{e.preventDefault();ask(input.value);});
+  document.addEventListener('biuret:guide-open',e=>open(typeof e.detail?.topic==='string'?e.detail.topic:''));
+  document.addEventListener('keydown',e=>{if(e.defaultPrevented||e.altKey||e.shiftKey||!(e.ctrlKey||e.metaKey)||e.key.toLowerCase()!=='k')return;if(document.querySelector('dialog[open]')&&!dialog.open)return;e.preventDefault();open();});
+  new MutationObserver(render).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});
+  async function load(){busy=true;state='loading';render();try{const suffix='?v=20261009-guide3'+(attempt++?'&retry='+attempt:'');const [module,data]=await Promise.all([import(new URL('core.mjs'+suffix,asset)),fetch(new URL('knowledge.json'+suffix,asset)).then(r=>{if(!r.ok)throw Error();return r.json();})]);if(!Array.isArray(data)||data.some(c=>!c.title?.en||!c.title?.ar||!c.body?.en||!c.body?.ar))throw Error('invalid');core=module;cards=data;state='';}catch{state='error';}busy=false;render();if(core&&pendingTopic){const topic=pendingTopic;pendingTopic='';if(dialog.open)open(topic);}}
+  retry.addEventListener('click',load);load();
+  // A provider is contacted only through an explicitly configured endpoint and per-question consent.
+  if(endpoint)fetch(endpoint+'/status',{signal:AbortSignal.timeout(4000)}).then(r=>r.ok?r.json():null).then(v=>{configured=v?.configured===true;consentLabel.hidden=!configured;render();}).catch(()=>{});
 })();
