@@ -15,8 +15,8 @@
   <link rel="canonical" href="https://biuret.dev/certifications.html">
   <title>Credentials & Learning — Adam Hamdan (Biuret)</title>
   <link rel="icon" type="image/png" href="/assets/biuret-logo-20261005.png" sizes="any">
-<link rel="stylesheet" href="style.css?v=20261007-stable1">
-<link rel="stylesheet" href="experience.css?v=20261004-1">
+<link rel="stylesheet" href="style.css?v=20261009-ux2">
+<link rel="stylesheet" href="experience.css?v=20261009-ux2">
   <link rel="preload" as="image" href="/assets/biuret-logo-20261005.png" fetchpriority="high">
 </head>
 <body class="credentials-page">
@@ -24,7 +24,7 @@
   <header class="navbar">
     <a class="logo" href="index.html" aria-label="Adam Hamdan portfolio home"><span class="logo-mark" aria-hidden="true"><img src="/assets/biuret-logo-20261005.png" alt="" width="28" height="28" loading="eager" decoding="sync" fetchpriority="high"></span><span>Biuret</span></a>
     <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
-      <a href="index.html#home">Home</a><a href="index.html#projects">Projects</a><a href="index.html#skills">Skills</a><a href="index.html#journey">Journey</a><a href="certifications.html" class="active">Credentials</a><a href="mailto:support@biuret.dev?subject=Biuret%20credential%20inquiry">Contact</a>
+      <a href="index.html#home">Home</a><a href="index.html#projects">Projects</a><a href="index.html#skills">Skills</a><a href="index.html#journey">Journey</a><a href="certifications.html" class="active">Credentials</a><a href="index.html#contact">Contact</a>
     </nav>
     <div class="nav-actions">
       <button class="language-toggle" type="button" data-language-toggle aria-label="Switch language to Arabic" aria-pressed="false"><span class="language-code" aria-hidden="true">ع</span><span class="language-copy"><span class="language-kicker">Language</span><span class="language-label">العربية</span></span><span class="language-switch" aria-hidden="true">⇄</span></button>
@@ -35,12 +35,26 @@
 
   <main class="credentials-main" id="main-content" tabindex="-1">
     <section class="credentials-hero">
-      <div><span class="badge">LEARNING · PRACTICE · PROOF</span><h1>Credentials with<br><span>real context.</span></h1><p class="hero-text">This page documents Adam Hamdan’s technical learning, leadership experience, and personal development through sixteen original certificate records. Select any certificate to inspect it closely.</p><div class="hero-actions"><a class="button-primary" href="#credential-records">Explore credentials ↓</a><a class="button-secondary" href="#learning-map">View applied learning</a></div></div>
-      <aside class="credential-hero-card" aria-label="Credential archive status"><span class="account-signal" aria-hidden="true">✓</span><span class="eyebrow">DOCUMENTATION STANDARD</span><h2>Evidence before badges.</h2><p>Every entry reflects the original certificate, names its issuer and date when shown, and avoids claiming skills or external verification that the document does not provide.</p><span class="credential-status"><i aria-hidden="true"></i> 16 credential records documented</span></aside>
+      <div><span class="badge">LEARNING · PRACTICE · PROOF</span><h1>Credentials with<br><span>real context.</span></h1><p class="hero-text">16 original records across cybersecurity, programming, AI and personal development. Open a certificate for its full details.</p><div class="hero-actions"><a class="button-primary" href="#credential-records">Explore credentials ↓</a><a class="button-secondary" href="#learning-map">View applied learning</a></div></div>
+      <details class="credential-hero-card credential-context"><summary>How these records are documented</summary><h2>Evidence before badges.</h2><p>Every entry reflects the original certificate, names its issuer and date when shown, and avoids claiming skills or external verification that the document does not provide.</p><span class="credential-status"><i aria-hidden="true"></i> 16 credential records documented</span></details>
     </section>
 
     <section id="credential-records" class="section credential-records reveal" aria-labelledby="credential-records-title">
       <div class="section-heading"><div><span class="eyebrow">DOCUMENTED CREDENTIALS</span><h2 id="credential-records-title">A complete record, organized by purpose.</h2></div><p>Technical training appears first, followed by leadership and diplomacy, then the discipline and progression represented by karate.</p></div>
+
+      <div class="credential-discovery" aria-label="Find a credential">
+        <label class="discovery-search"><span class="search-icon" aria-hidden="true">⌕</span><span class="sr-only" data-certificate-search-label>Search credentials</span><input type="search" data-certificate-search aria-label="Search credentials" placeholder="Search by course, issuer or topic" maxlength="100"></label>
+        <div class="credential-filters" aria-label="Filter credentials">
+          <button type="button" class="filter-button" data-certificate-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="filter-button" data-certificate-filter="cyber" aria-pressed="false">Cybersecurity</button>
+          <button type="button" class="filter-button" data-certificate-filter="programming" aria-pressed="false">Programming</button>
+          <button type="button" class="filter-button" data-certificate-filter="ai" aria-pressed="false">AI</button>
+          <button type="button" class="filter-button" data-certificate-filter="leadership" aria-pressed="false">Leadership</button>
+          <button type="button" class="filter-button" data-certificate-filter="discipline" aria-pressed="false">Discipline</button>
+        </div>
+        <p class="discovery-count" data-certificate-count role="status" aria-live="polite" aria-atomic="true">16 records shown</p>
+      </div>
+      <div class="discovery-empty" data-certificate-empty hidden><strong>No credentials match this search.</strong><p>Try a course title, issuer or another category.</p><button type="button" class="button-secondary" data-certificate-reset>Clear search and filters</button></div>
 
       <section class="credential-group" aria-labelledby="technical-credentials-title">
         <div class="credential-group-heading"><span>01</span><div><p>TECHNICAL LEARNING</p><h3 id="technical-credentials-title">Cybersecurity, programming, AI &amp; robotics.</h3></div></div>
@@ -159,7 +173,7 @@
   <script src="appwrite-config.js?v=20260912-23"></script>
   <script src="appwrite-client.js?v=20261004-1"></script>
 <script src="profile-photo.js?v=20260923-2"></script>
-<script src="script.js?v=20261007-stable1"></script>
-  <script src="certificates.js?v=20261003-1"></script>
+<script src="script.js?v=20261009-ux2"></script>
+  <script src="certificates.js?v=20261009-ux2"></script>
 </body>
 </html>

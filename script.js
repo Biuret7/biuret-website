@@ -1,4 +1,9 @@
 const arabicTranslations = {
+  '16 original records across cybersecurity, programming, AI and personal development. Open a certificate for its full details.': '16 شهادة أصلية في الأمن السيبراني والبرمجة والذكاء الاصطناعي والتطوير الشخصي. افتح أي شهادة للاطلاع على تفاصيلها كاملة.',
+  'How these records are documented': 'كيف نوثّق هذه الشهادات',
+  'Cybersecurity': 'الأمن السيبراني',
+  'Access control': 'التحكم بالوصول', 'Curriculum': 'المناهج',
+  'Security & responsible use': 'الأمن والاستخدام المسؤول', 'Privacy': 'الخصوصية', 'Terms': 'شروط الاستخدام',
   'EXPLORE THE CONCEPTS': 'استكشف الأفكار',
   'Six ideas. A future roadmap.': 'ست أفكار وخطة للمستقبل.',
   'Read the problem, proposed approach and current experimental status of each project.': 'تعرّف على المشكلة والحل المقترح والحالة التجريبية لكل مشروع.',
@@ -381,6 +386,26 @@ Object.assign(arabicTranslations, {
   'The full Biuret Academy is a future platform concept. A smaller web pilot is available today; the desktop repository contains experiments and planning material.': 'أكاديمية Biuret الكاملة فكرة لمنصة مستقبلية. تتوفر اليوم نسخة ويب مصغّرة، بينما يحتوي مستودع سطح المكتب على تجارب ومواد تخطيطية.'
 });
 
+Object.assign(arabicTranslations, {
+  'Adam Hamdan.': 'آدم حمدان.',
+  'Security ideas with purpose.': 'أفكار أمنية لها هدف.',
+  'I’m the developer behind Biuret. I explore cybersecurity through Python, practical learning and six original project concepts.': 'أنا المطوّر خلف Biuret. أستكشف الأمن السيبراني عبر Python والتعلّم العملي وست أفكار أصلية لمشاريع مستقبلية.',
+  'View credentials': 'استعرض الشهادات',
+  'LEARNING RECORDS': 'سجلات تعلّم',
+  'Concepts & experimental code. Full products are future work.': 'أفكار وشيفرة تجريبية. المنتجات الكاملة عمل مستقبلي.',
+  'Search project concepts': 'ابحث في أفكار المشاريع',
+  'Search credentials': 'ابحث في الشهادات',
+  'Programming': 'البرمجة', 'AI': 'الذكاء الاصطناعي', 'Leadership': 'القيادة', 'Discipline': 'الانضباط',
+  'Project concepts': 'أفكار المشاريع',
+  'No concepts match this search.': 'لا توجد أفكار تطابق هذا البحث.',
+  'Try a broader term or show all concepts.': 'جرّب كلمة أشمل أو اعرض جميع الأفكار.',
+  'No credentials match this search.': 'لا توجد شهادات تطابق هذا البحث.',
+  'Try a course title, issuer or another category.': 'جرّب اسم دورة أو جهة إصدار أو تصنيفاً آخر.',
+  'Clear search and filters': 'مسح البحث والتصنيفات',
+  'Copy email': 'نسخ البريد',
+  '16 records shown': 'عرض 16 شهادة'
+});
+
 const arabicTitles = {
   'index.html': 'آدم حمدان (بيوريت) — ملف أعمال الأمن السيبراني', 'certifications.html': 'الشهادات والتعلّم — آدم حمدان', 'security.html': 'الأمن والاستخدام المسؤول — بيوريت', '404.html': 'الصفحة غير موجودة — بيوريت', 'auth.html': 'تسجيل الدخول — بيوريت', 'account.html': 'ملفي الشخصي — بيوريت', 'settings.html': 'إعدادات الملف الشخصي — بيوريت', 'forgot-password.html': 'استعادة كلمة المرور — بيوريت', 'reset-password.html': 'كلمة مرور جديدة — بيوريت', 'verify.html': 'توثيق البريد — بيوريت', 'licenses.html': 'تراخيص بيوريت',
   'biuret-academy.html': 'Biuret Academy — بيوريت', 'biulock.html': 'BiuLock — بيوريت', 'b-recon.html': 'B-Recon — بيوريت',
@@ -417,6 +442,12 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileAccountLink.textContent = 'Sign in';
     siteNav.append(mobileAccountLink);
   }
+  const githubLink = document.querySelector('.nav-actions > .github-btn');
+  if (siteNav && githubLink && !siteNav.querySelector('.mobile-github-link')) {
+    const mobileGithubLink = githubLink.cloneNode(true);
+    mobileGithubLink.className = 'mobile-github-link';
+    siteNav.append(mobileGithubLink);
+  }
   const accountLinks = [...document.querySelectorAll('.account-btn, [data-mobile-account-link]')];
   const toAccountHref = (href) => String(href || 'auth.html').replace(/auth\.html(?=([?#]|$))/, 'account.html');
   const toAuthHref = (href) => String(href || 'auth.html').replace(/account\.html(?=([?#]|$))/, 'auth.html');
@@ -448,18 +479,26 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeMenu = () => { navbar?.classList.remove('menu-open'); menuToggle?.setAttribute('aria-expanded', 'false'); };
   menuToggle?.addEventListener('click', () => { const isOpen = navbar?.classList.toggle('menu-open'); menuToggle.setAttribute('aria-expanded', String(Boolean(isOpen))); });
   siteNav?.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
-  window.addEventListener('keydown', (event) => { if (event.key === 'Escape') closeMenu(); });
-  window.addEventListener('resize', () => { if (window.innerWidth > 720) closeMenu(); });
+  window.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && navbar?.classList.contains('menu-open')) { closeMenu(); menuToggle?.focus(); }
+  });
+  document.addEventListener('click', (event) => { if (!navbar?.contains(event.target)) closeMenu(); });
+  document.addEventListener('focusin', (event) => { if (!navbar?.contains(event.target)) closeMenu(); });
+  window.addEventListener('resize', () => { if (window.innerWidth > 1500) closeMenu(); });
   document.querySelectorAll('a[href^="#"]').forEach((link) => link.addEventListener('click', (event) => {
     if (link.classList.contains('skip-link')) return;
-    const target = document.querySelector(link.getAttribute('href'));
+    const target = document.getElementById(link.getAttribute('href').slice(1));
     if (!target) return;
     event.preventDefault();
-    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    const reduced = document.documentElement.classList.contains('reduce-motion') || window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    target.scrollIntoView({ behavior: reduced ? 'instant' : 'smooth', block: 'start' });
+    if (!target.hasAttribute('tabindex')) target.setAttribute('tabindex', '-1');
+    target.focus({ preventScroll: true });
+    history.pushState(null, '', link.getAttribute('href'));
   }));
   const revealItems = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window) {
-    const revealObserver = new IntersectionObserver((entries, observer) => entries.forEach((entry) => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } }), { threshold: 0.1, rootMargin: '0px 0px -24px 0px' });
+    const revealObserver = new IntersectionObserver((entries, observer) => entries.forEach((entry) => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } }), { threshold: 0.01, rootMargin: '0px 0px -24px 0px' });
     revealItems.forEach((item) => revealObserver.observe(item));
   } else revealItems.forEach((item) => item.classList.add('visible'));
   const updateChrome = () => {
@@ -472,22 +511,91 @@ document.addEventListener('DOMContentLoaded', () => {
   const sections = [...document.querySelectorAll('main section[id]')];
   const navLinks = [...document.querySelectorAll('.site-nav a[href^="#"]')];
   if ('IntersectionObserver' in window && sections.length && navLinks.length) {
-    const activeObserver = new IntersectionObserver((entries) => entries.forEach((entry) => { if (entry.isIntersecting) navLinks.forEach((link) => link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`)); }), { rootMargin: '-36% 0px -55% 0px' });
+    const activeObserver = new IntersectionObserver((entries) => entries.forEach((entry) => { if (entry.isIntersecting) navLinks.forEach((link) => {
+      const active = link.getAttribute('href') === `#${entry.target.id}`;
+      link.classList.toggle('active', active);
+      if (active) link.setAttribute('aria-current', 'location'); else link.removeAttribute('aria-current');
+    }); }), { rootMargin: '-36% 0px -55% 0px' });
     sections.forEach((section) => activeObserver.observe(section));
   }
   const cards = [...document.querySelectorAll('.project-card[data-category]')];
   const filters = [...document.querySelectorAll('.filter-button[data-filter]')];
   const projectCount = document.querySelector('[data-project-count]');
+  const projectSearch = document.querySelector('[data-project-search]');
+  const projectSources = new Map(cards.map((card) => [card, card.textContent]));
+  const normalizeSearch = (value) => String(value).normalize('NFKD').replace(/\p{M}/gu, '').replace(/[أإآ]/g, 'ا').replace(/ى/g, 'ي').toLocaleLowerCase().trim();
+  let projectFilter = 'all';
   const renderProjectCount = (shown) => {
     if (projectCount) projectCount.textContent = language === 'ar' ? `عرض ${shown} ${shown === 1 ? 'مشروع' : 'مشاريع'}` : `${shown} ${shown === 1 ? 'project' : 'projects'} shown`;
   };
-  filters.forEach((button) => button.addEventListener('click', () => {
-    const filter = button.dataset.filter;
+  const filterProjects = () => {
+    const query = normalizeSearch(projectSearch?.value || '');
     let shown = 0;
-    cards.forEach((card) => { const matches = filter === 'all' || card.dataset.category.split(' ').includes(filter); card.hidden = !matches; if (matches) shown += 1; });
-    filters.forEach((item) => item.setAttribute('aria-pressed', String(item === button)));
+    cards.forEach((card) => {
+      const matches = (projectFilter === 'all' || card.dataset.category.split(' ').includes(projectFilter)) &&
+        normalizeSearch(projectSources.get(card) + ' ' + card.textContent).includes(query);
+      card.hidden = !matches;
+      if (matches) shown += 1;
+    });
+    filters.forEach((item) => item.setAttribute('aria-pressed', String(item.dataset.filter === projectFilter)));
     renderProjectCount(shown);
+    const empty = document.querySelector('[data-project-empty]');
+    if (empty) empty.hidden = shown !== 0;
+  };
+  filters.forEach((button) => button.addEventListener('click', () => { projectFilter = button.dataset.filter; filterProjects(); }));
+  projectSearch?.addEventListener('input', filterProjects);
+  document.querySelector('[data-project-reset]')?.addEventListener('click', () => {
+    if (projectSearch) projectSearch.value = '';
+    projectFilter = 'all'; filterProjects(); projectSearch?.focus();
+  });
+
+  const certificateCards = [...document.querySelectorAll('.certificate-card')];
+  const certificateSearch = document.querySelector('[data-certificate-search]');
+  const certificateFilters = [...document.querySelectorAll('[data-certificate-filter]')];
+  const certificateSources = new Map(certificateCards.map((card) => [card, card.textContent]));
+  const certificateTopics = new Map(certificateCards.map((card) => {
+    const source = card.textContent;
+    const topics = [];
+    if (/cybersecurity|ethical hacker|peh v2/i.test(source)) topics.push('cyber');
+    if (/programming|python|kotlin|robotics|android/i.test(source)) topics.push('programming');
+    if (/\bAI\b|aixplore|artificial intelligence/i.test(source)) topics.push('ai');
+    if (card.classList.contains('certificate-leadership')) topics.push('leadership');
+    if (card.classList.contains('certificate-discipline')) topics.push('discipline');
+    return [card, topics];
   }));
+  let certificateFilter = 'all';
+  const filterCertificates = () => {
+    const query = normalizeSearch(certificateSearch?.value || '');
+    let shown = 0;
+    certificateCards.forEach((card) => {
+      const matches = (certificateFilter === 'all' || certificateTopics.get(card).includes(certificateFilter)) &&
+        normalizeSearch(certificateSources.get(card) + ' ' + card.textContent).includes(query);
+      card.hidden = !matches;
+      if (matches) shown += 1;
+    });
+    document.querySelectorAll('.credential-group').forEach((group) => { group.hidden = ![...group.querySelectorAll('.certificate-card')].some((card) => !card.hidden); });
+    certificateFilters.forEach((button) => button.setAttribute('aria-pressed', String(button.dataset.certificateFilter === certificateFilter)));
+    const count = document.querySelector('[data-certificate-count]');
+    if (count) count.textContent = language === 'ar' ? `عرض ${shown} من ${certificateCards.length} شهادة` : `${shown} of ${certificateCards.length} records shown`;
+    const empty = document.querySelector('[data-certificate-empty]');
+    if (empty) empty.hidden = shown !== 0;
+  };
+  certificateSearch?.addEventListener('input', filterCertificates);
+  certificateFilters.forEach((button) => button.addEventListener('click', () => { certificateFilter = button.dataset.certificateFilter; filterCertificates(); }));
+  document.querySelector('[data-certificate-reset]')?.addEventListener('click', () => {
+    if (certificateSearch) certificateSearch.value = '';
+    certificateFilter = 'all'; filterCertificates(); certificateSearch?.focus();
+  });
+  document.querySelector('[data-copy-email]')?.addEventListener('click', async (event) => {
+    const button = event.currentTarget;
+    const status = document.querySelector('[data-copy-status]');
+    try {
+      await navigator.clipboard.writeText(button.dataset.copyEmail);
+      if (status) status.textContent = language === 'ar' ? 'تم نسخ البريد الإلكتروني.' : 'Email copied.';
+    } catch {
+      if (status) status.textContent = language === 'ar' ? 'تعذّر النسخ. يمكنك تحديد عنوان البريد ونسخه.' : 'Copy unavailable. Select and copy the email address above.';
+    }
+  });
   const translateTextNodes = () => {
     const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, { acceptNode: (node) => node.parentElement?.closest('script, style, [data-language-toggle], [translate="no"]') ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT });
     const textNodes = [];
@@ -518,9 +626,24 @@ document.addEventListener('DOMContentLoaded', () => {
     if (languageLabel) languageLabel.textContent = isArabic ? 'English' : 'العربية';
     if (menuToggle) menuToggle.setAttribute('aria-label', isArabic ? 'تبديل التنقل' : 'Toggle navigation');
     if (siteNav) siteNav.setAttribute('aria-label', isArabic ? 'التنقل الرئيسي' : 'Primary navigation');
+    if (projectSearch) {
+      projectSearch.placeholder = isArabic ? 'ابحث في الأفكار أو المواضيع' : 'Search concepts or topics';
+      projectSearch.setAttribute('aria-label', isArabic ? 'ابحث في أفكار المشاريع' : 'Search project concepts');
+    }
+    if (certificateSearch) {
+      certificateSearch.placeholder = isArabic ? 'ابحث باسم الدورة أو الجهة أو الموضوع' : 'Search by course, issuer or topic';
+      certificateSearch.setAttribute('aria-label', isArabic ? 'ابحث في الشهادات' : 'Search credentials');
+    }
+    document.querySelector('.credential-discovery')?.setAttribute('aria-label', isArabic ? 'ابحث عن شهادة' : 'Find a credential');
+    document.querySelector('.credential-filters')?.setAttribute('aria-label', isArabic ? 'تصنيف الشهادات' : 'Filter credentials');
+    document.querySelector('.project-filter')?.setAttribute('aria-label', isArabic ? 'تصنيف المشاريع' : 'Filter projects');
+    document.querySelector('.project-breadcrumb')?.setAttribute('aria-label', isArabic ? 'مسار الصفحة' : 'Breadcrumb');
+    const copyStatus = document.querySelector('[data-copy-status]');
+    if (copyStatus) copyStatus.textContent = '';
     const filename = window.location.pathname.split('/').pop() || 'index.html';
     document.title = isArabic ? (arabicTitles[filename] || englishTitle) : englishTitle;
-    renderProjectCount(cards.filter((card) => !card.hidden).length);
+    filterProjects();
+    filterCertificates();
     renderAccountLinks();
   };
   const authForm = document.querySelector('[data-auth-form]');
