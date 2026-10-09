@@ -484,14 +484,15 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   document.addEventListener('click', (event) => { if (!navbar?.contains(event.target)) closeMenu(); });
   document.addEventListener('focusin', (event) => { if (!navbar?.contains(event.target)) closeMenu(); });
-  window.addEventListener('resize', () => { if (window.innerWidth > 1500) closeMenu(); });
+  window.addEventListener('resize', () => { if (window.innerWidth >= 1800) closeMenu(); });
   document.querySelectorAll('a[href^="#"]').forEach((link) => link.addEventListener('click', (event) => {
     if (link.classList.contains('skip-link')) return;
     const target = document.getElementById(link.getAttribute('href').slice(1));
     if (!target) return;
     event.preventDefault();
     const reduced = document.documentElement.classList.contains('reduce-motion') || window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    target.scrollIntoView({ behavior: reduced ? 'instant' : 'smooth', block: 'start' });
+    if (target.id === 'home') window.scrollTo({ top: 0, behavior: reduced ? 'instant' : 'smooth' });
+    else target.scrollIntoView({ behavior: reduced ? 'instant' : 'smooth', block: 'start' });
     if (!target.hasAttribute('tabindex')) target.setAttribute('tabindex', '-1');
     target.focus({ preventScroll: true });
     history.pushState(null, '', link.getAttribute('href'));
@@ -503,11 +504,22 @@ document.addEventListener('DOMContentLoaded', () => {
   } else revealItems.forEach((item) => item.classList.add('visible'));
   const updateChrome = () => {
     navbar?.classList.toggle('scrolled', window.scrollY > 24);
-    const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
-    scrollProgress.style.transform = `scaleX(${scrollableHeight > 0 ? Math.min(window.scrollY / scrollableHeight, 1) : 0})`;
+    const page = document.scrollingElement || document.documentElement;
+    const scrollableHeight = page.scrollHeight - page.clientHeight;
+    const progress = scrollableHeight > 0 ? Math.max(0, Math.min(page.scrollTop / scrollableHeight, 1)) : 0;
+    scrollProgress.style.transform = `scaleX(${progress})`;
+  };
+  let chromeFrame = 0;
+  const scheduleChrome = () => {
+    if (chromeFrame) return;
+    chromeFrame = requestAnimationFrame(() => { chromeFrame = 0; updateChrome(); });
   };
   updateChrome();
-  window.addEventListener('scroll', updateChrome, { passive: true });
+  window.addEventListener('scroll', scheduleChrome, { passive: true });
+  window.addEventListener('resize', scheduleChrome, { passive: true });
+  window.addEventListener('load', scheduleChrome, { once: true });
+  if ('ResizeObserver' in window) new ResizeObserver(scheduleChrome).observe(document.documentElement);
+  document.fonts?.ready.then(scheduleChrome);
   const sections = [...document.querySelectorAll('main section[id]')];
   const navLinks = [...document.querySelectorAll('.site-nav a[href^="#"]')];
   if ('IntersectionObserver' in window && sections.length && navLinks.length) {
@@ -645,6 +657,7 @@ document.addEventListener('DOMContentLoaded', () => {
     filterProjects();
     filterCertificates();
     renderAccountLinks();
+    scheduleChrome();
   };
   const authForm = document.querySelector('[data-auth-form]');
   const authTabs = [...document.querySelectorAll('[data-auth-mode]')];
