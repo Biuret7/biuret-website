@@ -66,7 +66,7 @@
   form.addEventListener('submit',event=>{event.preventDefault();ask(input.value.trim());});
   new MutationObserver(()=>{render();status.textContent='';}).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});
   render();
-  Promise.all([import(new URL('core.mjs?v=20261009-pg2',asset)),fetch(new URL('knowledge.json?v=20261009-pg2',asset)).then(r=>{if(!r.ok)throw new Error();return r.json();})]).then(([module,data])=>{core=module;cards=data;render();}).catch(()=>{status.textContent=tr('Guide information could not load. Reload to retry.','تعذّر تحميل معلومات الدليل. حدّث الصفحة للمحاولة.');});
+  Promise.all([import(new URL('core.mjs?v=20261009-pg3',asset)),fetch(new URL('knowledge.json?v=20261009-pg3',asset)).then(r=>{if(!r.ok)throw new Error();return r.json();})]).then(([module,data])=>{core=module;cards=data;render();}).catch(()=>{status.textContent=tr('Guide information could not load. Reload to retry.','تعذّر تحميل معلومات الدليل. حدّث الصفحة للمحاولة.');});
   // Only an explicitly configured endpoint can be queried. No provider key belongs here.
   if(endpoint)fetch(endpoint+'/status',{signal:AbortSignal.timeout(4000)}).then(r=>r.ok?r.json():null).then(value=>{configured=value?.configured===true;consentLabel.hidden=!configured;render();}).catch(()=>{});
 })();

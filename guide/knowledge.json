@@ -506,7 +506,7 @@
       "ar": "جرّب تطبيقات Biuret"
     },
     "body": {
-      "en": "Playground offers four practical browser tools: a learning planner, focus timer, JSON formatter and file fingerprint checker. It is separate from Academy assessments and cannot award XP or certificates.",
+      "en": "Playground offers five practical browser tools: a learning planner, focus timer, JSON formatter, text workbench and file fingerprint checker. It is separate from Academy assessments and cannot award XP or certificates.",
       "ar": "تقدّم Playground أدوات عملية للمتصفح: منظّم تعلم ومؤقّت تركيز ومنسّق JSON وفاحص بصمة ملفات. هي منفصلة عن تقييمات الأكاديمية ولا تمنح XP أو شهادات."
     },
     "keywords": [
@@ -528,8 +528,8 @@
       "ar": "استخدام مساحة التركيز"
     },
     "body": {
-      "en": "Choose one task and a 1–120 minute session. Start, pause or reset. Choose Break after finishing. Keep the tab open: reloading resets the timer. No notifications or microphone access are needed.",
-      "ar": "اختر مهمة وجلسة من 1 إلى 120 دقيقة. ابدأ أو أوقف مؤقتاً أو أعد الضبط. اختر الاستراحة عند الانتهاء. أبقِ التبويب مفتوحاً؛ تحديثه يمسح المؤقّت. لا تحتاج إشعارات أو ميكروفون."
+      "en": "Choose one task and 1–120 minutes. Use quick presets, pause or reset, and choose a short or long break after finishing. Fully completed focus sessions count toward your daily goal and can be exported. Reloading clears the timer and log.",
+      "ar": "اختر مهمة ووقتاً من 1 إلى 120 دقيقة. استخدم المدد السريعة وأوقف مؤقتاً أو أعد الضبط، واختر استراحة قصيرة أو طويلة بعد الانتهاء. تُحسب جلسات التركيز المكتملة ضمن هدفك اليومي ويمكن تنزيل سجلّها. يمسح التحديث المؤقّت والسجل."
     },
     "keywords": [
       "focus",
@@ -551,8 +551,8 @@
       "ar": "تنسيق JSON"
     },
     "body": {
-      "en": "Paste up to 1 MiB, then validate and format or compact. Copy or download the result. Parsing follows JavaScript rules: duplicate keys and large numbers can change representation. This checks syntax, not a schema.",
-      "ar": "ألصق حتى 1 MiB ثم افحص ونسّق أو اضغط. انسخ النتيجة أو نزّلها. تتبع المعالجة قواعد JavaScript؛ قد يتغيّر تمثيل المفاتيح المكررة والأعداد الكبيرة. الفحص للصياغة وليس لمخطط البيانات."
+      "en": "Paste or import a JSON file up to 1 MiB. Validate, choose indentation, sort object keys without reordering arrays, and view structural counts. Copy or download the result. Native parsing can affect duplicate keys and large numbers; this is not schema validation.",
+      "ar": "ألصق JSON أو استورد ملفاً حتى 1 MiB. افحص الصياغة واختر المسافات البادئة ورتّب مفاتيح الكائنات دون تغيير ترتيب المصفوفات وشاهد إحصاءات البنية. انسخ النتيجة أو نزّلها. قد تتأثر المفاتيح المكررة والأعداد الكبيرة؛ هذا ليس فحصاً لمخطط البيانات."
     },
     "keywords": [
       "json",
@@ -572,8 +572,8 @@
       "ar": "فحص بصمة ملف"
     },
     "body": {
-      "en": "Choose a file up to 100 MiB. The browser computes SHA-256 without upload. Paste a trusted publisher digest to compare. A match proves matching bytes, not that the file is malware-free.",
-      "ar": "اختر ملفاً حتى 100 MiB. يحسب المتصفح SHA-256 دون رفعه. ألصق بصمة من الناشر الموثوق للمقارنة. التطابق يثبت تطابق البايتات ولا يثبت خلو الملف من البرمجيات الخبيثة."
+      "en": "Choose a file up to 100 MiB or enter exact UTF-8 text. Compute SHA-256, SHA-384 or SHA-512 locally, compare with a trusted expected digest and export a report. A match proves matching bytes, not safety. Original input is excluded from reports.",
+      "ar": "اختر ملفاً حتى 100 MiB أو أدخل نص UTF-8 كما هو. احسب SHA-256 أو SHA-384 أو SHA-512 محلياً وقارن ببصمة موثوقة ونزّل تقريراً. التطابق يثبت تطابق البايتات ولا يثبت الأمان. لا يتضمن التقرير المدخلات الأصلية."
     },
     "keywords": [
       "hash",
@@ -585,6 +585,30 @@
       "ملف",
       "ملفات",
       "هاش"
+    ]
+  },
+  {
+    "id": "text-studio",
+    "site": "playground",
+    "path": "text.html",
+    "title": {
+      "en": "Work with text",
+      "ar": "تنظيم النصوص"
+    },
+    "body": {
+      "en": "Text Studio counts words, characters and reading time, cleans whitespace, removes exact duplicate lines and exports TXT. Transformations support undo. Everything stays in this tab. Reading time is an estimate, not a comprehension score.",
+      "ar": "يحسب استوديو النصوص الكلمات والمحارف ووقت القراءة وينظّف المسافات ويحذف الأسطر المتطابقة ويصدّر TXT. يمكنك التراجع عن التحويل. تبقى البيانات في التبويب. وقت القراءة تقديري وليس تقييماً للفهم."
+    },
+    "keywords": [
+      "text",
+      "words",
+      "writing",
+      "read",
+      "نص",
+      "نصوص",
+      "كلمات",
+      "كتابة",
+      "قراءة"
     ]
   }
 ]

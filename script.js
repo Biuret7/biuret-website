@@ -1,4 +1,21 @@
 const arabicTranslations = {
+  "Playground ↗": "Playground ↗",
+  "Try the tools ↗": "جرّب الأدوات ↗",
+  "Less friction. More making.": "خطوات أقل. وإنجاز أكثر.",
+  "Five free tools for planning, focus, code and everyday work. Open a tool and start immediately.": "خمس أدوات مجانية للتخطيط والتركيز والبرمجة والعمل اليومي. افتح الأداة وابدأ فوراً.",
+  "Open Playground ↗": "افتح Playground ↗",
+  "No account. No uploads. Arabic & English.": "دون حساب أو رفع بيانات. بالعربية والإنجليزية.",
+  "Plan, practice and track your next step.": "خطط وطبّق وتابع خطوتك القادمة.",
+  "One task. A clear session. Real progress.": "مهمة واحدة وجلسة واضحة وتقدم ملموس.",
+  "Import, validate and organize your data.": "استورد بياناتك وافحصها ونظّمها.",
+  "Count, clean and export your writing.": "احسب كلماتك ونظّم نصوصك وصدّرها.",
+  "Compare file or text fingerprints locally.": "قارن بصمات الملفات أو النصوص محلياً.",
+  "Focus Room": "مساحة التركيز",
+  "Text Studio": "استوديو النصوص",
+  "JSON Studio": "استوديو JSON",
+  "File Fingerprint": "بصمة الملفات",
+  "Plan a learning routine with StudyFlow, try Focus Room, format JSON clean up text or check a file fingerprint. Five practical tools, free to use in your browser.": "نظّم تعلمك مع StudyFlow وجرّب مساحة التركيز ونسّق JSON ونظّف النصوص أو افحص بصمة ملف. خمس أدوات عملية مجانية تعمل داخل متصفحك.",
+
   '16 original records across cybersecurity, programming, AI and personal development. Open a certificate for its full details.': '16 شهادة أصلية في الأمن السيبراني والبرمجة والذكاء الاصطناعي والتطوير الشخصي. افتح أي شهادة للاطلاع على تفاصيلها كاملة.',
   'How these records are documented': 'كيف نوثّق هذه الشهادات',
   'Cybersecurity': 'الأمن السيبراني',
@@ -488,7 +505,7 @@ Object.assign(arabicTranslations, {
 const arabicTitles = {
   'privacy.html': 'سياسة الخصوصية — Biuret',
   'terms.html': 'شروط الاستخدام — Biuret',
-  'playground.html': 'Biuret Playground — معاينة محلية',
+  'playground.html': 'Biuret Playground — أدوات وتطبيقات',
   'index.html': 'آدم حمدان (بيوريت) — ملف أعمال الأمن السيبراني', 'certifications.html': 'الشهادات والتعلّم — آدم حمدان', 'security.html': 'الأمن والاستخدام المسؤول — بيوريت', '404.html': 'الصفحة غير موجودة — بيوريت', 'auth.html': 'تسجيل الدخول — بيوريت', 'account.html': 'ملفي الشخصي — بيوريت', 'settings.html': 'إعدادات الملف الشخصي — بيوريت', 'forgot-password.html': 'استعادة كلمة المرور — بيوريت', 'reset-password.html': 'كلمة مرور جديدة — بيوريت', 'verify.html': 'توثيق البريد — بيوريت', 'licenses.html': 'تراخيص بيوريت',
   'biuret-academy.html': 'Biuret Academy — بيوريت', 'biulock.html': 'BiuLock — بيوريت', 'b-recon.html': 'B-Recon — بيوريت',
   'biusniff.html': 'BiuSniff — بيوريت', 'biucrypt.html': 'BiuCrypt — بيوريت', 'biuret-reaper.html': 'Biuret Reaper — بيوريت'
