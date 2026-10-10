@@ -2,7 +2,9 @@
 
 ## Current state
 
-Prepared locally and tested; not deployed or enabled. No Gemini key was read or sent. No real model response has been verified.
+Deployed as a private administrator pilot on 2026-10-10 after owner approval. The owner entered the Gemini key directly in Appwrite as a secret; the assistant did not read or copy its value. `GUIDE_ENABLED=true` is live on deployment `6ac9f7f24e6e36efab2d`. The public Guide widgets remain curated.
+
+Eight live checks confirmed server-approved administrator access and useful Arabic/English guidance for each of Portfolio, Academy and Playground. The six factual replies took 1.0–1.6 seconds and cited validated public source links. The two boundary checks abstained from supplying final-exam answers and from reading account information or inventing a Biu Lock release link; documented site guidance appeared instead. These samples verify the connection and selected behavior; they are not a guarantee that every model reply is correct.
 
 The Biuret Appwrite Free project currently allows two functions and both slots are used. This update adds an isolated `guide/` module to the existing **Biuret Licensing** function `6aa5abef002dd368d5cc`. Academy Progress and its private lesson/assessment libraries are not included or modified. Existing licensing/analytics routes remain in `index.js`; the new `guide:status` and `guide:ask` routes run before licensing service initialization and reject anonymous/non-admin calls.
 
@@ -25,7 +27,7 @@ Status request: `{action:"guide:status"}`. Question request: `{action:"guide:ask
 
 33 tests passed: provider request isolation, header-only credential, streamed response size, malformed/blocked/truncated/quota results, source validation, unknown-topic abstention, session/admin/consent enforcement, context injection rejection, kill switch, warm-runtime throttling, routing and current analytics/licensing/profile regressions. Provider tests use fake replies; they do **not** prove live model quality.
 
-Local UI review: Arabic/English, correct RTL/LTR, 320px without horizontal overflow, site selection and suggested questions without sending. Local preview intentionally excludes the auth SDK; unavailable connection is the expected state.
+Local UI review: Arabic/English, correct RTL/LTR, 320px without horizontal overflow, site selection and suggested questions without sending. Initial local layout preview excluded the auth SDK; production uses the SDK and administrator access was verified there.
 
 ## Privacy and release boundary
 
