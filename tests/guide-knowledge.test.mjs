@@ -5,11 +5,22 @@ import {selectContext} from '../appwrite-functions/biuret-licensing/guide/contex
 import {sourceURL} from '../guide/core.mjs';
 const root=new URL('../',import.meta.url);
 const cards=JSON.parse(readFileSync(new URL('guide/knowledge.json',root)));
+// Deployment checks run from this repository alone. Cross-site routes were
+// reviewed against their source repositories; verify those files too when present.
+const routes={
+ academy:new Set('index free-studio paths quizzes labs certificate membership profile shop search courses certifications progress notes operations professional path course lab challenges operation practice-quiz library-course practice-lab practice-challenge soc-investigation'.split(' ').map(s=>`${s}.html`)),
+ playground:new Set('studyflow workspace index focus json hash text software'.split(' ').map(s=>`${s}.html`))
+};
 
 test('expanded knowledge is bilingual, synchronized and cites real public pages only',()=>{
  assert.ok(cards.length>100);const ids=new Set();
  const roots={portfolio:root,academy:new URL('../../Biuret_Academy_Web/',import.meta.url),playground:new URL('../../Biuret_Playground/',import.meta.url)};
- for(const c of cards){assert.ok(!ids.has(c.id),c.id);ids.add(c.id);assert.ok(c.body.en&&c.body.ar&&c.title.en&&c.title.ar,c.id);assert.doesNotThrow(()=>sourceURL(c));assert.ok(existsSync(new URL(c.path.split(/[?#]/)[0],roots[c.targetSite||c.site])),c.path);}
+ for(const c of cards){
+  assert.ok(!ids.has(c.id),c.id);ids.add(c.id);assert.ok(c.body.en&&c.body.ar&&c.title.en&&c.title.ar,c.id);assert.doesNotThrow(()=>sourceURL(c));
+  const site=c.targetSite||c.site, page=c.path.split(/[?#]/)[0];assert.ok(roots[site],site);
+  if(site!=='portfolio')assert.ok(routes[site].has(page),c.path);
+  if(site==='portfolio'||existsSync(roots[site]))assert.ok(existsSync(new URL(page,roots[site])),c.path);
+ }
  assert.deepEqual(cards,JSON.parse(readFileSync(new URL('appwrite-functions/biuret-licensing/guide/knowledge.json',root))));
  assert.equal(cards.filter(c=>c.id.startsWith('path-')).length,10);
  assert.equal(cards.filter(c=>c.id.startsWith('concept-')).length,6);
