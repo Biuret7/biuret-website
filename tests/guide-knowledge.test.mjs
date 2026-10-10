@@ -31,6 +31,7 @@ test('retrieval supports specialties, informal Arabic, file formats and cross-si
  for(const [question,site,ids]of cases){const selected=selectContext(cards,{question,site,locale:'ar'});for(const id of ids)assert.ok(selected.some(c=>c.id===id),`${question}: missing ${id}`);}
  const comparison=selectContext(cards,{question:'قارن بين SOC وDFIR داخل الأكاديمية: شو بتعلم بكل واحد وأيهم أختار بعد الأساسيات؟',site:'all',locale:'ar'});
  for(const id of ['path-path_soc','path-path_dfir'])assert.ok(comparison.slice(0,3).some(c=>c.id===id),id);
+ for(const site of ['all','portfolio','academy','playground'])for(const question of ['مين صاحب هذا الموقع؟','Who built this website?','من هو مؤسس Biuret؟'])assert.ok(selectContext(cards,{question,site,locale:'ar'}).some(c=>c.id==='site-owner'),`${site}: ${question}`);
 });
 
 test('context remains bounded, includes referent facts and never carries arbitrary data',()=>{

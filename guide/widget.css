@@ -9,3 +9,6 @@
 @media(max-height:520px){.biuret-guide .bg-panel,.biuret-guide[dir=rtl] .bg-panel{inset-block:10px;height:calc(100dvh - 20px);padding:15px}.bg-intro,.bg-context,.bg-footer{display:none}.bg-conversation{min-height:40px}.bg-header{margin-bottom:8px}}
 @media(prefers-reduced-motion:reduce){.bg-launch{transition:none}.biuret-guide .bg-panel[open]{animation:none}}
 .biuret-guide .bg-panel.bg-has-answer .bg-intro{display:none}
+
+.bg-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap;flex-shrink:0;margin-top:6px}.bg-actions .bg-retry{margin:0;min-height:32px;padding:5px 9px}.bg-pilot{color:#dcff94;font-size:10px;text-decoration:underline;text-underline-offset:3px}.bg-response-label{font-size:10px;color:#dcff94}.bg-read-topic{display:block;margin-top:8px;width:100%;border:1px solid #465f3e;background:#20311e;border-radius:8px;padding:7px 10px;color:#d5e8b8;text-align:start;font-size:11px;cursor:pointer}.bg-consent{align-items:flex-start;font-size:10px;line-height:1.6}.bg-consent input{flex:0 0 auto;margin-top:4px}.bg-source{margin-block:8px;overflow-wrap:anywhere}.bg-exchange .bg-suggestions{margin-top:12px}
+.biuret-guide .bg-panel.bg-has-answer>.bg-context,.biuret-guide .bg-panel.bg-has-answer>.bg-suggestions{display:none}.bg-suggestions button{max-width:100%;overflow-wrap:anywhere;text-align:start}

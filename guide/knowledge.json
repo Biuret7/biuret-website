@@ -881,8 +881,8 @@
       "ar": "بماذا يساعدك Biuret Guide؟"
     },
     "body": {
-      "en": "Biuret Guide explains the three Biuret websites, documented features, learning routes, tools, account workflows and common navigation problems. It can compare documented choices and ask a clarification question. Gemini access is currently a private administrator pilot; public Guide widgets use the site guide. It cannot inspect your account, modify data or solve assessed work. Answers link to public source pages.",
-      "ar": "يشرح Biuret Guide مواقع Biuret الثلاثة والميزات الموثّقة وخطوات التعلم والأدوات وإجراءات الحساب ومشاكل التنقل الشائعة. يستطيع مقارنة الخيارات الموثقة وطلب توضيح. Gemini متاح حالياً كتجربة خاصة للإدارة؛ الدليل العام يستخدم إرشادات الموقع. لا يقرأ حسابك ولا يعدّل بياناتك ولا يحل التقييمات. ترتبط الإجابات بصفحات المصادر العامة."
+      "en": "Biuret Guide explains the three Biuret websites, documented features, learning routes, tools, account workflows and common navigation problems. It can compare documented choices and ask a clarification question. Gemini access is currently a private administrator pilot; the connected Gemini mode inside the Guide uses the same administrator restriction. It composes a new answer for each submitted question using maintained public facts, rather than playing a saved reply. Page topic cards are a separate reading aid, not model answers. It cannot inspect your account, modify data or solve assessed work. Answers link to public source pages.",
+      "ar": "يشرح Biuret Guide مواقع Biuret الثلاثة والميزات الموثّقة وخطوات التعلم والأدوات وإجراءات الحساب ومشاكل التنقل الشائعة. يستطيع مقارنة الخيارات الموثقة وطلب توضيح. Gemini متاح حالياً كتجربة خاصة للإدارة؛ وضع Gemini المتصل داخل الدليل يخضع لقيد الإدارة نفسه. يصيغ إجابة جديدة لكل سؤال مرسل من معلومات المواقع العامة بدلاً من تشغيل رد محفوظ. بطاقات مواضيع الصفحات وسيلة قراءة منفصلة وليست إجابات النموذج. لا يقرأ حسابك ولا يعدّل بياناتك ولا يحل التقييمات. ترتبط الإجابات بصفحات المصادر العامة."
     },
     "keywords": [
       "guide",
@@ -1564,6 +1564,98 @@
       "ذكاء",
       "رفع",
       "سرية"
+    ]
+  },
+  {
+    "id": "site-owner",
+    "site": "portfolio",
+    "path": "index.html#about",
+    "title": {
+      "en": "Who created Biuret?",
+      "ar": "صاحب مواقع Biuret"
+    },
+    "body": {
+      "en": "Adam Hamdan is the developer behind Biuret and the owner presented by this personal portfolio. He is a cybersecurity-focused developer based in Ramallah, Palestine. Biuret is his identity for security engineering, programming, applied research and technical education. The Portfolio, Academy and Playground are part of this Biuret ecosystem. The public GitHub account is Biuret7. These facts are published in the portfolio About section and footer. No additional private biography is documented.",
+      "ar": "آدم حمدان (Adam Hamdan) هو المطوّر خلف Biuret وصاحب ملف الأعمال الشخصي. يعرّف نفسه في قسم نبذة عنه كمطوّر يركّز على الأمن السيبراني من رام الله، فلسطين. Biuret هي هويته لهندسة الأمن والبرمجة والبحث التطبيقي والتعليم التقني، وتشمل موقع الأعمال والأكاديمية وPlayground. حساب GitHub العام هو Biuret7. هذه المعلومات منشورة في قسم نبذة عنه وتذييل الموقع؛ لا تتوفر سيرة شخصية خاصة إضافية."
+    },
+    "keywords": [
+      "owner",
+      "creator",
+      "founder",
+      "author",
+      "developer",
+      "who",
+      "Adam",
+      "Hamdan",
+      "Biuret7",
+      "made",
+      "built",
+      "صاحب",
+      "صاحبه",
+      "مالك",
+      "مؤسس",
+      "مطوّر",
+      "مطور",
+      "آدم",
+      "ادم",
+      "حمدان",
+      "مين",
+      "عمله",
+      "انشأ",
+      "أنشأ"
+    ]
+  },
+  {
+    "id": "owner-skills",
+    "site": "portfolio",
+    "path": "index.html#skills",
+    "title": {
+      "en": "Adam’s technical interests",
+      "ar": "اهتمامات آدم التقنية"
+    },
+    "body": {
+      "en": "The portfolio presents six areas Adam is developing: secure software design (local-first architecture, authentication, recovery and access control); applied cryptography (key derivation, authenticated encryption and validation); network visibility (packets, protocols, discovery and reporting); OSINT workflows (authorized scope, evidence integrity and research reports); Python desktop systems (PyQt6, worker threads and local data); and technical education (Arabic learning paths, safe labs, assessments and progress). These are learning and project interests, not claims of completed products or external professional accreditation.",
+      "ar": "يعرض الموقع ستة مجالات يطور آدم معرفته فيها: تصميم البرمجيات الآمنة، والتشفير التطبيقي، وتحليل الشبكات، ومسارات بحث OSINT، وبرامج Python المكتبية باستخدام PyQt6، والتعليم التقني. تشمل تصميم الدخول والاستعادة والتحكم بالوصول، واشتقاق المفاتيح والتشفير الموثق، وتحليل الحزم والبروتوكولات، ونطاق البحث المصرح وسلامة الأدلة، وخيوط العمل والبيانات المحلية، والمسارات العربية والمختبرات والتقييمات. هذه اهتمامات تعلم وتخطيط وليست ادعاء اكتمال المنتجات أو اعتماد مهني خارجي."
+    },
+    "keywords": [
+      "skills",
+      "python",
+      "pyqt6",
+      "cryptography",
+      "experience",
+      "expertise",
+      "مهارات",
+      "خبرة",
+      "بايثون",
+      "اهتمامات",
+      "تشفير"
+    ]
+  },
+  {
+    "id": "owner-journey",
+    "site": "portfolio",
+    "path": "index.html#journey",
+    "title": {
+      "en": "Biuret’s learning and development direction",
+      "ar": "اتجاه التعلم والتطوير في Biuret"
+    },
+    "body": {
+      "en": "The public journey is a learning plan: foundations in systems, Linux, networking and Python; controlled experiments using cryptography, packet analysis, OSINT and secure data handling; future complete desktop experiences; and deeper practice with verifiable training records. Adam’s current focus is cybersecurity engineering with Python, OSINT and network analysis, using project-driven learning. The working method is to understand a need, plan, prototype, test, explain and improve. The six featured complete products remain future concepts with experimental code.",
+      "ar": "الرحلة المعروضة خطة تعلم: أساسيات الأنظمة وLinux والشبكات وPython، ثم تجارب مضبوطة في التشفير وتحليل الحزم وOSINT وحماية البيانات، ثم التخطيط لبرامج مكتبية متكاملة، ثم تعميق التطبيق وتوثيق التدريب. يركز آدم على هندسة الأمن السيبراني باستخدام Python وبحث OSINT وتحليل الشبكات والتعلم بالمشاريع. طريقة العمل فهم الحاجة والتخطيط والنمذجة والاختبار والشرح والتحسين. المنتجات الستة الكاملة تبقى أفكاراً مستقبلية بشيفرة تجريبية."
+    },
+    "keywords": [
+      "journey",
+      "method",
+      "roadmap",
+      "direction",
+      "future",
+      "history",
+      "رحلة",
+      "تاريخ",
+      "خطة",
+      "مستقبل",
+      "توجه",
+      "طريقة"
     ]
   },
   {

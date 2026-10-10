@@ -1,29 +1,788 @@
 [
- {"id":"guide-scope","site":"portfolio","path":"guide-pilot.html","title":{"en":"What Biuret Guide can help with","ar":"بماذا يساعدك Biuret Guide؟"},"body":{"en":"Biuret Guide explains the three Biuret websites, documented features, learning routes, tools, account workflows and common navigation problems. It can compare documented choices and ask a clarification question. Gemini access is currently a private administrator pilot; public Guide widgets use the site guide. It cannot inspect your account, modify data or solve assessed work. Answers link to public source pages.","ar":"يشرح Biuret Guide مواقع Biuret الثلاثة والميزات الموثّقة وخطوات التعلم والأدوات وإجراءات الحساب ومشاكل التنقل الشائعة. يستطيع مقارنة الخيارات الموثقة وطلب توضيح. Gemini متاح حالياً كتجربة خاصة للإدارة؛ الدليل العام يستخدم إرشادات الموقع. لا يقرأ حسابك ولا يعدّل بياناتك ولا يحل التقييمات. ترتبط الإجابات بصفحات المصادر العامة."},"keywords":["guide","assistant","help","مساعد","دليل","بيوريت","مساعدة","تقدر","تستطيع"]},
- {"id":"sign-in-help","site":"portfolio","path":"auth.html","title":{"en":"Sign in or create an account","ar":"تسجيل الدخول وإنشاء حساب"},"body":{"en":"Use Sign in or Create account on the account page. Email/password and Google/GitHub controls are available. Use the same sign-in method and account when returning to your existing records; a different account can show different achievements. Never send your password, API key or verification code to Guide.","ar":"استخدم تسجيل الدخول أو إنشاء حساب في صفحة الحساب. تتوفر خيارات البريد وكلمة المرور وGoogle وGitHub. ارجع بنفس طريقة الدخول والحساب للوصول إلى سجلاتك؛ قد يظهر حساب آخر بإنجازات مختلفة. لا ترسل كلمة المرور أو مفتاح API أو رمز التحقق إلى الدليل."},"keywords":["login","sign in","google","github","register","signup","تسجيل","دخول","حساب","جوجل","غوغل","جيت هب","مسجل"]},
- {"id":"password-help","site":"portfolio","path":"forgot-password.html","title":{"en":"Forgotten password","ar":"نسيت كلمة المرور"},"body":{"en":"The sign-in page has Forgot password. Request a recovery message for your account email and follow its link. Guide cannot view codes or reset credentials. If you use Google/GitHub, return through that provider; its own account recovery is separate from Biuret email/password recovery.","ar":"تحتوي صفحة الدخول على نسيت كلمة المرور. اطلب رسالة استعادة لبريد الحساب واتبع رابطها. لا يرى الدليل الرموز ولا يعيد تعيين بيانات الدخول. إذا كنت تدخل عبر Google أو GitHub، استخدم المزوّد نفسه؛ استعادة حساب المزوّد تختلف عن استعادة كلمة مرور Biuret."},"keywords":["forgot","recover","reset","password","نسيت","استعادة","كلمة المرور","باسورد"]},
- {"id":"profile-settings","site":"portfolio","path":"settings.html","title":{"en":"Account photo and settings","ar":"صورة الحساب والإعدادات"},"body":{"en":"Account Settings provides profile photo, display name, email verification, email/password security and interface preferences. Some interface preferences stay on this device; the private account photo is attached to the account. Security changes require the protected steps shown in the form. Guide can direct you there but cannot apply changes.","ar":"تتيح إعدادات الحساب الصورة والاسم وتوثيق البريد وإعدادات الأمان للبريد وكلمة المرور وتفضيلات الواجهة. تبقى بعض تفضيلات الواجهة على الجهاز؛ ترتبط صورة الحساب الخاصة بالحساب. تحتاج تغييرات الأمان إلى خطوات الحماية الموضحة في النموذج. يوجّهك الدليل ولا ينفّذ التغييرات."},"keywords":["photo","avatar","name","settings","email","صورة","صورتي","اسمي","اعدادات","الاسم","البريد"]},
- {"id":"portfolio-navigation","site":"portfolio","path":"index.html","title":{"en":"Find your way around the portfolio","ar":"التنقل في موقع الأعمال"},"body":{"en":"The main navigation leads to Home, Projects, Skills, Journey, Credentials and Contact. Project filters and search narrow the six concepts; open a concept for its own roadmap. My sites opens Portfolio, Academy and Playground. Language controls switch Arabic/English.","ar":"توصلك القائمة إلى الرئيسية والمشاريع والمهارات والرحلة والشهادات والتواصل. استخدم تصنيف المشاريع والبحث لتحديد الأفكار الستة، وافتح الفكرة لمراجعة خارطتها. تعرض قائمة مواقعي Portfolio والأكاديمية وPlayground. يبدّل زر اللغة بين العربية والإنجليزية."},"keywords":["navigation","menu","skills","journey","filter","search","القائمة","مهارات","رحلة","فلتر","بحث","لغة"]},
- {"id":"security-report","site":"portfolio","path":"security.html","title":{"en":"Report a website problem responsibly","ar":"الإبلاغ عن مشكلة بالموقع"},"body":{"en":"Use the Security page and the portfolio Contact section for reporting. Provide the affected public page, steps to reproduce, expected result and observed result. Do not send passwords, private keys, personal data or destructive proof. Guide does not submit a report on your behalf.","ar":"راجع صفحة الأمن وقسم التواصل للإبلاغ. اذكر الصفحة العامة المتأثرة وخطوات إعادة المشكلة والنتيجة المتوقعة والفعلية. لا ترسل كلمات مرور أو مفاتيح خاصة أو بيانات شخصية أو إثباتاً تخريبياً. لا يرسل الدليل بلاغاً نيابة عنك."},"keywords":["bug","issue","error","report","support","خطأ","مشكلة","عطل","ابلاغ","دعم"]},
- {"id":"academy-navigation","site":"academy","path":"index.html","title":{"en":"The Academy learning route","ar":"طريق التعلم في الأكاديمية"},"body":{"en":"Start with the free learning studio and Foundations. Then use Paths to choose a specialty; its page groups courses, practice quizzes, labs, challenges and related operations rooms. Progress and Profile show your account learning records. The sidebar groups learning, practice, achievements and benefits. Arabic uses RTL and English LTR.","ar":"ابدأ بالمساحة المجانية والأساسيات، ثم اختر تخصصاً من المسارات؛ تجمع صفحة المسار دوراته وكويزاته ومختبراته وتحدياته وغرف العمليات المرتبطة. تعرض صفحتا التقدم والملف الشخصي سجلات تعلم الحساب. تجمع القائمة الجانبية التعلم والتطبيق والإنجازات والمزايا. العربية من اليمين والإنجليزية من اليسار."},"keywords":["lost","roadmap","route","menu","beginner","تائه","ضايع","طريق","خطة","قائمة","يمين","يسار","بداية"]},
- {"id":"academy-search","site":"academy","path":"search.html","title":{"en":"Search learning content","ar":"البحث في المحتوى التعليمي"},"body":{"en":"Use Academy Search to find content across the learning catalog, and Courses for the course collection. Search a topic or course name, open the matching item and inspect its related path. Some content needs account access; finding it in search does not unlock it.","ar":"استخدم البحث في الأكاديمية للعثور على المحتوى، وصفحة الدورات للفهرس. ابحث بموضوع أو اسم دورة وافتح العنصر المناسب وراجع مساره المرتبط. قد يتطلب المحتوى صلاحية للحساب؛ ظهوره في البحث لا يفتحه تلقائياً."},"keywords":["find","search","course","بحث","ابحث","اقي","دورة","كورسات"]},
- {"id":"lesson-workflow","site":"academy","path":"courses.html","title":{"en":"Study and complete a lesson","ar":"التعلم وإكمال الدرس"},"body":{"en":"Open a course and follow its ordered lessons. Read the detailed explanation, examples and practice, then use Check your understanding. Follow the page's verified completion control and sign in to save server progress. Reading alone or completing a local note is not automatically verified completion. Access and prerequisites are displayed by the learning page.","ar":"افتح دورة واتبع دروسها بالترتيب. اقرأ الشرح المفصل والأمثلة والتطبيق ثم استخدم تحقق من فهمك. اتبع زر الإكمال الموثق في الصفحة وسجّل دخولك لحفظ تقدم الخادم. القراءة وحدها أو إكمال ملاحظة محلية لا تعني إكمالاً موثقاً تلقائياً. توضح صفحة التعلم الوصول والمتطلبات."},"keywords":["lesson","complete","understanding","study","finish","درس","دروس","اكمل","انهي","فهمك","شرح","قراءة"]},
- {"id":"course-path-difference","site":"academy","path":"paths.html","title":{"en":"Course, path and practice differences","ar":"الفرق بين الدورة والمسار والتدريب"},"body":{"en":"A course is an ordered set of lessons about a subject. A path groups relevant courses and practice toward a specialty achievement. Practice quizzes differ from course exams; course results contribute to their related path requirements. A path also has a practical assessment and final exam. Follow the specific path page instead of treating every catalog exercise as a required credential step.","ar":"الدورة مجموعة دروس مرتبة عن موضوع، والمسار يجمع الدورات والتطبيق المناسب لتخصص وإثبات إنجازه. الكويزات تدريب وتختلف عن امتحان الدورة؛ تدخل نتائج الدورات في متطلبات مساراتها. للمسار تقييم عملي وامتحان نهائي أيضاً. اتبع صفحة المسار بدل اعتبار كل تدريب في الفهرس شرطاً للشهادة."},"keywords":["difference","course","path","quiz","exam","فرق","دورة","مسار","كويز","امتحان","اختبار"]},
- {"id":"exam-locked","site":"academy","path":"paths.html","title":{"en":"An exam is locked or a result is missing","ar":"الامتحان مقفل أو النتيجة لا تظهر"},"body":{"en":"Open the exact path to inspect incomplete lessons, course exams and practical assessment requirements. Confirm the same signed-in account was used. Refresh after a server connection problem and review the displayed error. A failed course exam allows retry after review as shown in its page. Guide cannot inspect grades, bypass prerequisites or provide answers.","ar":"افتح المسار المقصود وراجع الدروس وامتحانات الدورات والتقييم العملي غير المكتمل. تأكد من استخدام الحساب نفسه، وحدّث الصفحة بعد مشكلة اتصال بالخادم وراجع رسالة الخطأ. يمكن إعادة امتحان الدورة بعد المراجعة كما توضح صفحته. لا يقرأ الدليل الدرجات ولا يتجاوز المتطلبات ولا يعطي الإجابات."},"keywords":["locked","blocked","retry","failed","result","prerequisite","مقفل","مغلق","محاولة","فشلت","نتيجة","متطلبات","مش راضي"]},
- {"id":"certificate-downloads","site":"academy","path":"certifications.html","title":{"en":"Download and verify an Academy certificate","ar":"تنزيل شهادة الأكاديمية والتحقق منها"},"body":{"en":"Find your credential in the Academy certificate pages or its path assessment. Download controls support PDF, PNG and JPEG. The credential includes real holder name, path/course details, lessons, exam information and issue/verification data. Public verification requires the holder to enable sharing. If no credential appears, check the same account and path requirements. Guide cannot issue or edit a credential.","ar":"ابحث عن إنجازك في صفحات شهادات الأكاديمية أو تقييم مساره. تدعم أزرار التنزيل PDF وPNG وJPEG. تتضمن الشهادة الاسم الحقيقي وتفاصيل المسار والدورات والدروس والامتحان ومعلومات الإصدار والتحقق. يحتاج التحقق العام إلى تفعيل المشاركة من صاحب الشهادة. إذا لم تظهر، راجع الحساب نفسه ومتطلبات المسار. لا يصدر الدليل شهادة ولا يعدّلها."},"keywords":["download","pdf","png","jpeg","verify","certificate","تنزيل","تحميل","شهادة","تحقق","مشاركة"]},
- {"id":"certificate-name-value","site":"academy","path":"profile.html","title":{"en":"Real name and credential meaning","ar":"الاسم الحقيقي وقيمة الشهادة"},"body":{"en":"Use your real two- or three-part name for Academy achievements. A Biuret credential documents completion of platform requirements and can be included in a portfolio with accurate issuer and course details. It is not external professional accreditation or a job guarantee. Check your name before earning a new credential; Guide cannot rename an existing issued record.","ar":"استخدم اسمك الحقيقي الثنائي أو الثلاثي لشهادات الأكاديمية. توثق شهادة Biuret إكمال متطلبات المنصة ويمكن إضافتها لملف الأعمال مع وصف دقيق للجهة والدورة. ليست اعتماداً مهنياً خارجياً ولا ضمان وظيفة. راجع اسمك قبل إنجاز شهادة جديدة؛ لا يغيّر الدليل اسم سجل صادر."},"keywords":["real name","accredited","value","portfolio","name","اسم حقيقي","اسمي","قيمة","معتمدة","اعتماد","شهادة"]},
- {"id":"progress-help","site":"academy","path":"progress.html","title":{"en":"XP, levels and verified progress","ar":"XP والمستويات والتقدم الموثق"},"body":{"en":"Progress displays verified learning progress, XP, level and coin history for the signed-in account. XP remains available to all plans; new Biuret Coins are earned only with Plus/Pro eligibility, while prior balances remain preserved. Local notes, favorites and browser practice do not automatically award XP or certificates. Guide can explain the difference but cannot read or change your balance.","ar":"تعرض صفحة تقدمك التعلم الموثق وXP والمستوى وسجل العملات للحساب المسجل. XP متاح لجميع الخطط؛ كسب عملات جديدة يتطلب أهلية Plus أو Pro، والأرصدة السابقة محفوظة. لا تمنح الملاحظات والمفضلة والتدريبات المحلية XP أو شهادات تلقائياً. يشرح الدليل الفرق ولا يقرأ الرصيد أو يعدّله."},"keywords":["xp","level","progress","coins","balance","نقاط","مستوى","تقدم","رصيد","عملات"]},
- {"id":"notes-favorites","site":"academy","path":"notes.html","title":{"en":"Notes, favorites and local data","ar":"الملاحظات والمفضلة والبيانات المحلية"},"body":{"en":"Use lesson notes and the Notes page for study records, and Favorites to return to saved content. Local study records belong to this browser and are separate from server-verified progress. Keep available exports before clearing browser storage or changing devices. Guide cannot recover erased local records.","ar":"استخدم ملاحظات الدرس وصفحة الملاحظات لسجلات الدراسة، والمفضلة للرجوع للمحتوى المحفوظ. السجلات المحلية تخص هذا المتصفح وتختلف عن التقدم الموثق على الخادم. احفظ التصديرات المتاحة قبل مسح التخزين أو تغيير الجهاز. لا يستعيد الدليل سجلات محلية محذوفة."},"keywords":["notes","favorite","local","lost","backup","ملاحظات","مفضلة","محلي","ضاعت","حفظ"]},
- {"id":"academy-operations","site":"academy","path":"operations.html","title":{"en":"Operations rooms and educational labs","ar":"غرف العمليات والمختبرات التعليمية"},"body":{"en":"Operations rooms organize scenario evidence and investigation decisions; open the rooms related to your chosen path. Labs apply a narrower skill, while challenges test a task. Read the scenario and scope, inspect evidence, record your reasoning and review feedback. These are safe educational simulations, not permission to test unrelated real systems.","ar":"تنظم غرف العمليات أدلة السيناريو وقرارات التحقيق؛ افتح غرف المسار المناسب. يطبق المختبر مهارة محددة، ويختبر التحدي مهمة. اقرأ السيناريو والنطاق، وافحص الدليل وسجّل سبب قرارك وراجع التغذية الراجعة. هذه محاكاة تعليمية آمنة ولا تسمح باختبار أنظمة حقيقية غير مرتبطة."},"keywords":["operation","room","lab","challenge","scenario","غرفة","غرف","عمليات","مختبر","تحدي","سيناريو"]},
- {"id":"practical-reports","site":"academy","path":"professional.html","title":{"en":"Practical reports and reviewer feedback","ar":"التقارير العملية وملاحظات المراجع"},"body":{"en":"The professional workbench supports practical report drafts and downloads. Submitted reports enter a separate review workflow with reviewer feedback and resubmission. Follow the submission consent and current status in the report page. Administrative review is restricted to the current administrators. Accepting a report does not automatically replace path exam or credential eligibility requirements.","ar":"تدعم مساحة العمل المهنية مسودات التقارير العملية وتنزيلها. تدخل التقارير المسلّمة في سير مراجعة مستقل مع ملاحظات المراجع وإعادة الإرسال. اتبع موافقة التسليم وحالته الحالية في صفحة التقرير. المراجعة الإدارية للإدارة الحالية فقط. قبول التقرير لا يلغي متطلبات امتحان المسار أو أهلية الشهادة تلقائياً."},"keywords":["report","review","resubmit","practical","تقرير","تقارير","مراجعة","مراجع","اعادة ارسال","عملي"]},
- {"id":"free-depth","site":"academy","path":"free-studio.html","title":{"en":"What the free learning experience includes","ar":"ماذا تشمل تجربة التعلم المجانية؟"},"body":{"en":"The free studio offers a guided Foundations credential route plus optional learning and browser practice. Follow verified lessons, apply skills and complete the practical/final requirements for the Foundations achievement. Optional exploration is useful but separate from verified completion. Specialties are cataloged as planned individual path purchases; buying is not active.","ar":"توفر المساحة المجانية طريقاً موجهاً لشهادة الأساسيات مع تعلم اختياري وتدريب في المتصفح. اتبع الدروس الموثقة وطبق المهارات وأكمل المتطلبات العملية والنهائية لإنجاز الأساسيات. الاستكشاف الاختياري مفيد ويختلف عن الإكمال الموثق. تُعرض التخصصات كمسارات مخططة للشراء الفردي؛ الشراء غير مفعّل."},"keywords":["free","foundation","included","مجاني","فري","اساسيات","يشمل","محتوى"]},
- {"id":"shop-status","site":"academy","path":"shop.html","title":{"en":"Shop, coins and pricing status","ar":"حالة المتجر والعملات والأسعار"},"body":{"en":"The shop lists planned challenge hints, advanced notes and future educational discounts. Spending, redemption and purchases are inactive. Coins cannot be withdrawn as cash. The earlier 200 coins/$1 subscription proposal has no active conversion; terms after the switch to path purchases are not approved. No active path price or all-content monthly subscription should be promised.","ar":"يعرض المتجر مساعدات تحديات وملاحظات متقدمة وخصومات تعليمية مخططة. الصرف والاستبدال والشراء غير مفعّلة. لا تُسحب العملات نقداً. اقتراح 200 عملة مقابل دولار خصم اشتراك ليس تحويلاً نشطاً؛ لم تُعتمد شروطه بعد الانتقال لشراء المسارات. لا يجوز وعد المستخدم بسعر مسار أو اشتراك شهري يفتح كل المحتوى حالياً."},"keywords":["shop","price","purchase","discount","200","subscription","متجر","سعر","شراء","خصم","اشتراك","دولار"]},
- {"id":"playground-tool-choice","site":"playground","path":"index.html#applications","title":{"en":"Choose a tool for your task","ar":"اختر الأداة المناسبة لمهمتك"},"body":{"en":"Use StudyFlow for learning schedules, Focus Room for timed work, JSON Studio for validating/formatting JSON, File Fingerprint for digest comparison, and Text Studio for text cleanup/counts. My Work collects optional saved plans and favorites. These browser tools are separate from installed Desktop/CLI programs and do not award Academy progress.","ar":"استخدم StudyFlow لجدول التعلم، ومساحة التركيز للعمل المؤقت، واستوديو JSON للفحص والتنسيق، وبصمة الملفات لمقارنة البصمات، واستوديو النصوص للتنظيف والإحصاءات. تجمع أعمالي الخطط والمفضلة المحفوظة اختيارياً. أدوات المتصفح تختلف عن Desktop وCLI ولا تمنح تقدم الأكاديمية."},"keywords":["which tool","compare","task","choose","اداة","اختار","اختيار","مهمة","اي","فرق"]},
- {"id":"planner-troubleshooting","site":"playground","path":"studyflow.html#planner","title":{"en":"An unrealistic deadline or missed study day","ar":"موعد غير واقعي أو يوم دراسة فائت"},"body":{"en":"StudyFlow checks a target date without shortening required work. If the target does not fit, allow more days/time or reduce the learning scope. Preview rescheduling for unfinished sessions and apply it while retaining completed checks. Custom topics must be in prerequisite order and do not create new lesson content.","ar":"يفحص StudyFlow الموعد دون تقليص العمل المطلوب. إذا لم يناسب، زد الأيام أو الوقت أو قلل نطاق التعلم. عاين إعادة جدولة الجلسات غير المكتملة وطبّقها مع حفظ علامات الإكمال. رتّب المواضيع المخصصة حسب المتطلبات؛ إدخالها لا ينشئ محتوى دروس جديداً."},"keywords":["deadline","missed","reschedule","late","date","موعد","فاتني","جدولة","متأخر","تاريخ","وقت"]},
- {"id":"focus-saving","site":"playground","path":"focus.html","title":{"en":"Focus timer, breaks and saving","ar":"مؤقت التركيز والاستراحة والحفظ"},"body":{"en":"Set a task and duration, start/pause/reset as needed, and use short/long breaks. Only completed focus sessions count. Optional device saving retains future completed sessions and daily goal summaries; the current task and running timer reset on reload. Timer totals measure sessions, not learning mastery or Academy credit.","ar":"حدد مهمة ومدة وابدأ أو أوقف أو أعد ضبط المؤقت، مع استراحة قصيرة أو طويلة. تُحتسب الجلسات المكتملة فقط. يحفظ خيار الجهاز الجلسات المستقبلية المكتملة وملخصات الهدف اليومي؛ تتصفّر المهمة الحالية والمؤقت عند إعادة التحميل. تقيس الإحصاءات الجلسات ولا تثبت إتقان التعلم أو تمنح رصيد الأكاديمية."},"keywords":["focus","timer","break","pomodoro","reset","تركيز","مؤقت","استراحة","بومودورو","جلسة"]},
- {"id":"workspace-backups","site":"playground","path":"workspace.html#backup","title":{"en":"Save, restore and change devices","ar":"الحفظ والاستعادة وتغيير الجهاز"},"body":{"en":"Turn on device saving before saving named plans, favorites and completed sessions. My Work offers a validated workspace backup/restore workflow; imports merge with existing work. Export before clearing browser data or moving devices. There is no cloud or automatic app/browser sync. Workspace backups differ from planner previews and Desktop SQLite/JSON backups.","ar":"فعّل الحفظ على الجهاز قبل حفظ الخطط المسماة والمفضلة والجلسات المكتملة. توفر أعمالي نسخة مساحة عمل واستعادة مع فحص؛ تدمج الاستيرادات بالمحتوى الموجود. صدّر قبل مسح بيانات المتصفح أو تغيير الجهاز. لا توجد مزامنة سحابية أو تلقائية مع التطبيق. تختلف نسخة مساحة العمل عن معاينة الخطة ونسخ Desktop بصيغ SQLite وJSON."},"keywords":["backup","restore","export","import","sync","saved","حفظ","استعادة","نسخة","تصدير","استيراد","مزامنة","جهاز"]},
- {"id":"json-limitations","site":"playground","path":"json.html","title":{"en":"JSON errors and limits","ar":"أخطاء JSON وحدود الأداة"},"body":{"en":"JSON Studio accepts pasted JSON or a file up to 1 MiB. Validate before formatting, sorting keys, copying or exporting. Arrays keep their order. Parsing can change duplicate keys or large-number representation; this is not schema validation. Do not paste secrets, and keep your original before transforming it.","ar":"يقبل استوديو JSON نصاً ملصقاً أو ملفاً حتى 1 MiB. افحصه قبل التنسيق وترتيب المفاتيح والنسخ أو التصدير. يبقى ترتيب المصفوفات. قد تؤثر القراءة في المفاتيح المكررة أو تمثيل الأرقام الكبيرة؛ هذا ليس تحققاً من schema. لا تلصق أسراراً واحتفظ بالأصل قبل تحويله."},"keywords":["json","invalid","format","schema","size","خطأ","تنسيق","حجم","ملف","اقواس"]},
- {"id":"hash-meaning","site":"playground","path":"hash.html","title":{"en":"What a matching file hash proves","ar":"ماذا يثبت تطابق بصمة الملف؟"},"body":{"en":"File Fingerprint compares SHA-256/384/512 digests for files up to 100 MiB or exact UTF-8 text. Compare to a digest from a trusted source. A match shows identical bytes; it does not prove malware absence or issuer trust. Text whitespace/encoding changes can change a digest. Reports exclude the original input.","ar":"تقارن بصمة الملفات SHA-256 و384 و512 لملفات حتى 100 MiB أو نص UTF-8 حرفي. قارن ببصمة من مصدر موثوق. يثبت التطابق تطابق البايتات ولا يثبت خلو الملف من البرمجيات الخبيثة أو ثقة الجهة. قد تغير المسافات والترميز البصمة. لا يحتوي التقرير المدخل الأصلي."},"keywords":["hash","sha256","sha-256","safe","virus","digest","بصمة","تطابق","آمن","فيروس","هاش"]},
- {"id":"text-transformations","site":"playground","path":"text.html","title":{"en":"Clean text without losing the original","ar":"تنظيف النص مع الحفاظ على الأصل"},"body":{"en":"Text Studio counts words/characters and estimates reading time; it can clean whitespace and remove exact duplicate lines. Use Undo to reverse transformations and export TXT. Results stay in this tab; inputs are not saved automatically. Reading time is an estimate, not a comprehension grade.","ar":"يحسب استوديو النصوص الكلمات والأحرف ويقدّر وقت القراءة وينظف المسافات ويحذف السطور المتطابقة حرفياً. استخدم التراجع لعكس التحويل ثم صدّر TXT. تبقى النتائج في التبويب ولا تحفظ المدخلات تلقائياً. زمن القراءة تقدير وليس درجة فهم."},"keywords":["text","undo","duplicates","words","reading","نص","تراجع","مكرر","كلمات","قراءة"]},
- {"id":"privacy-boundaries","site":"portfolio","path":"privacy.html","title":{"en":"Privacy of tools, accounts and the AI pilot","ar":"خصوصية الأدوات والحسابات وتجربة الذكاء الاصطناعي"},"body":{"en":"Playground inputs are processed locally and device saving is optional. Account and verified learning services use Appwrite. Gemini receives a consented question, up to three recent successful questions, and public site facts; the private pilot does not read account records or tool inputs. Unpaid Gemini may use submitted content/responses for model improvement; Appwrite may retain execution records. Never send confidential material to Guide.","ar":"تُعالج مدخلات Playground محلياً والحفظ على الجهاز اختياري. تستخدم الحسابات وخدمات التعلم الموثق Appwrite. يستقبل Gemini السؤال الموافق عليه وما يصل إلى ثلاثة أسئلة سابقة ناجحة ومعلومات المواقع العامة؛ لا تقرأ التجربة سجلات الحساب أو مدخلات الأدوات. قد تستخدم خدمة Gemini المجانية الأسئلة والردود لتحسين النموذج، وقد يحتفظ Appwrite بسجلات التنفيذ. لا ترسل محتوى سرياً إلى الدليل."},"keywords":["privacy","data","ai","gemini","local","upload","خصوصية","بيانات","ذكاء","رفع","سرية"]}
+  {
+    "id": "guide-scope",
+    "site": "portfolio",
+    "path": "guide-pilot.html",
+    "title": {
+      "en": "What Biuret Guide can help with",
+      "ar": "بماذا يساعدك Biuret Guide؟"
+    },
+    "body": {
+      "en": "Biuret Guide explains the three Biuret websites, documented features, learning routes, tools, account workflows and common navigation problems. It can compare documented choices and ask a clarification question. Gemini access is currently a private administrator pilot; the connected Gemini mode inside the Guide uses the same administrator restriction. It composes a new answer for each submitted question using maintained public facts, rather than playing a saved reply. Page topic cards are a separate reading aid, not model answers. It cannot inspect your account, modify data or solve assessed work. Answers link to public source pages.",
+      "ar": "يشرح Biuret Guide مواقع Biuret الثلاثة والميزات الموثّقة وخطوات التعلم والأدوات وإجراءات الحساب ومشاكل التنقل الشائعة. يستطيع مقارنة الخيارات الموثقة وطلب توضيح. Gemini متاح حالياً كتجربة خاصة للإدارة؛ وضع Gemini المتصل داخل الدليل يخضع لقيد الإدارة نفسه. يصيغ إجابة جديدة لكل سؤال مرسل من معلومات المواقع العامة بدلاً من تشغيل رد محفوظ. بطاقات مواضيع الصفحات وسيلة قراءة منفصلة وليست إجابات النموذج. لا يقرأ حسابك ولا يعدّل بياناتك ولا يحل التقييمات. ترتبط الإجابات بصفحات المصادر العامة."
+    },
+    "keywords": [
+      "guide",
+      "assistant",
+      "help",
+      "مساعد",
+      "دليل",
+      "بيوريت",
+      "مساعدة",
+      "تقدر",
+      "تستطيع"
+    ]
+  },
+  {
+    "id": "sign-in-help",
+    "site": "portfolio",
+    "path": "auth.html",
+    "title": {
+      "en": "Sign in or create an account",
+      "ar": "تسجيل الدخول وإنشاء حساب"
+    },
+    "body": {
+      "en": "Use Sign in or Create account on the account page. Email/password and Google/GitHub controls are available. Use the same sign-in method and account when returning to your existing records; a different account can show different achievements. Never send your password, API key or verification code to Guide.",
+      "ar": "استخدم تسجيل الدخول أو إنشاء حساب في صفحة الحساب. تتوفر خيارات البريد وكلمة المرور وGoogle وGitHub. ارجع بنفس طريقة الدخول والحساب للوصول إلى سجلاتك؛ قد يظهر حساب آخر بإنجازات مختلفة. لا ترسل كلمة المرور أو مفتاح API أو رمز التحقق إلى الدليل."
+    },
+    "keywords": [
+      "login",
+      "sign in",
+      "google",
+      "github",
+      "register",
+      "signup",
+      "تسجيل",
+      "دخول",
+      "حساب",
+      "جوجل",
+      "غوغل",
+      "جيت هب",
+      "مسجل"
+    ]
+  },
+  {
+    "id": "password-help",
+    "site": "portfolio",
+    "path": "forgot-password.html",
+    "title": {
+      "en": "Forgotten password",
+      "ar": "نسيت كلمة المرور"
+    },
+    "body": {
+      "en": "The sign-in page has Forgot password. Request a recovery message for your account email and follow its link. Guide cannot view codes or reset credentials. If you use Google/GitHub, return through that provider; its own account recovery is separate from Biuret email/password recovery.",
+      "ar": "تحتوي صفحة الدخول على نسيت كلمة المرور. اطلب رسالة استعادة لبريد الحساب واتبع رابطها. لا يرى الدليل الرموز ولا يعيد تعيين بيانات الدخول. إذا كنت تدخل عبر Google أو GitHub، استخدم المزوّد نفسه؛ استعادة حساب المزوّد تختلف عن استعادة كلمة مرور Biuret."
+    },
+    "keywords": [
+      "forgot",
+      "recover",
+      "reset",
+      "password",
+      "نسيت",
+      "استعادة",
+      "كلمة المرور",
+      "باسورد"
+    ]
+  },
+  {
+    "id": "profile-settings",
+    "site": "portfolio",
+    "path": "settings.html",
+    "title": {
+      "en": "Account photo and settings",
+      "ar": "صورة الحساب والإعدادات"
+    },
+    "body": {
+      "en": "Account Settings provides profile photo, display name, email verification, email/password security and interface preferences. Some interface preferences stay on this device; the private account photo is attached to the account. Security changes require the protected steps shown in the form. Guide can direct you there but cannot apply changes.",
+      "ar": "تتيح إعدادات الحساب الصورة والاسم وتوثيق البريد وإعدادات الأمان للبريد وكلمة المرور وتفضيلات الواجهة. تبقى بعض تفضيلات الواجهة على الجهاز؛ ترتبط صورة الحساب الخاصة بالحساب. تحتاج تغييرات الأمان إلى خطوات الحماية الموضحة في النموذج. يوجّهك الدليل ولا ينفّذ التغييرات."
+    },
+    "keywords": [
+      "photo",
+      "avatar",
+      "name",
+      "settings",
+      "email",
+      "صورة",
+      "صورتي",
+      "اسمي",
+      "اعدادات",
+      "الاسم",
+      "البريد"
+    ]
+  },
+  {
+    "id": "portfolio-navigation",
+    "site": "portfolio",
+    "path": "index.html",
+    "title": {
+      "en": "Find your way around the portfolio",
+      "ar": "التنقل في موقع الأعمال"
+    },
+    "body": {
+      "en": "The main navigation leads to Home, Projects, Skills, Journey, Credentials and Contact. Project filters and search narrow the six concepts; open a concept for its own roadmap. My sites opens Portfolio, Academy and Playground. Language controls switch Arabic/English.",
+      "ar": "توصلك القائمة إلى الرئيسية والمشاريع والمهارات والرحلة والشهادات والتواصل. استخدم تصنيف المشاريع والبحث لتحديد الأفكار الستة، وافتح الفكرة لمراجعة خارطتها. تعرض قائمة مواقعي Portfolio والأكاديمية وPlayground. يبدّل زر اللغة بين العربية والإنجليزية."
+    },
+    "keywords": [
+      "navigation",
+      "menu",
+      "skills",
+      "journey",
+      "filter",
+      "search",
+      "القائمة",
+      "مهارات",
+      "رحلة",
+      "فلتر",
+      "بحث",
+      "لغة"
+    ]
+  },
+  {
+    "id": "security-report",
+    "site": "portfolio",
+    "path": "security.html",
+    "title": {
+      "en": "Report a website problem responsibly",
+      "ar": "الإبلاغ عن مشكلة بالموقع"
+    },
+    "body": {
+      "en": "Use the Security page and the portfolio Contact section for reporting. Provide the affected public page, steps to reproduce, expected result and observed result. Do not send passwords, private keys, personal data or destructive proof. Guide does not submit a report on your behalf.",
+      "ar": "راجع صفحة الأمن وقسم التواصل للإبلاغ. اذكر الصفحة العامة المتأثرة وخطوات إعادة المشكلة والنتيجة المتوقعة والفعلية. لا ترسل كلمات مرور أو مفاتيح خاصة أو بيانات شخصية أو إثباتاً تخريبياً. لا يرسل الدليل بلاغاً نيابة عنك."
+    },
+    "keywords": [
+      "bug",
+      "issue",
+      "error",
+      "report",
+      "support",
+      "خطأ",
+      "مشكلة",
+      "عطل",
+      "ابلاغ",
+      "دعم"
+    ]
+  },
+  {
+    "id": "academy-navigation",
+    "site": "academy",
+    "path": "index.html",
+    "title": {
+      "en": "The Academy learning route",
+      "ar": "طريق التعلم في الأكاديمية"
+    },
+    "body": {
+      "en": "Start with the free learning studio and Foundations. Then use Paths to choose a specialty; its page groups courses, practice quizzes, labs, challenges and related operations rooms. Progress and Profile show your account learning records. The sidebar groups learning, practice, achievements and benefits. Arabic uses RTL and English LTR.",
+      "ar": "ابدأ بالمساحة المجانية والأساسيات، ثم اختر تخصصاً من المسارات؛ تجمع صفحة المسار دوراته وكويزاته ومختبراته وتحدياته وغرف العمليات المرتبطة. تعرض صفحتا التقدم والملف الشخصي سجلات تعلم الحساب. تجمع القائمة الجانبية التعلم والتطبيق والإنجازات والمزايا. العربية من اليمين والإنجليزية من اليسار."
+    },
+    "keywords": [
+      "lost",
+      "roadmap",
+      "route",
+      "menu",
+      "beginner",
+      "تائه",
+      "ضايع",
+      "طريق",
+      "خطة",
+      "قائمة",
+      "يمين",
+      "يسار",
+      "بداية"
+    ]
+  },
+  {
+    "id": "academy-search",
+    "site": "academy",
+    "path": "search.html",
+    "title": {
+      "en": "Search learning content",
+      "ar": "البحث في المحتوى التعليمي"
+    },
+    "body": {
+      "en": "Use Academy Search to find content across the learning catalog, and Courses for the course collection. Search a topic or course name, open the matching item and inspect its related path. Some content needs account access; finding it in search does not unlock it.",
+      "ar": "استخدم البحث في الأكاديمية للعثور على المحتوى، وصفحة الدورات للفهرس. ابحث بموضوع أو اسم دورة وافتح العنصر المناسب وراجع مساره المرتبط. قد يتطلب المحتوى صلاحية للحساب؛ ظهوره في البحث لا يفتحه تلقائياً."
+    },
+    "keywords": [
+      "find",
+      "search",
+      "course",
+      "بحث",
+      "ابحث",
+      "اقي",
+      "دورة",
+      "كورسات"
+    ]
+  },
+  {
+    "id": "lesson-workflow",
+    "site": "academy",
+    "path": "courses.html",
+    "title": {
+      "en": "Study and complete a lesson",
+      "ar": "التعلم وإكمال الدرس"
+    },
+    "body": {
+      "en": "Open a course and follow its ordered lessons. Read the detailed explanation, examples and practice, then use Check your understanding. Follow the page's verified completion control and sign in to save server progress. Reading alone or completing a local note is not automatically verified completion. Access and prerequisites are displayed by the learning page.",
+      "ar": "افتح دورة واتبع دروسها بالترتيب. اقرأ الشرح المفصل والأمثلة والتطبيق ثم استخدم تحقق من فهمك. اتبع زر الإكمال الموثق في الصفحة وسجّل دخولك لحفظ تقدم الخادم. القراءة وحدها أو إكمال ملاحظة محلية لا تعني إكمالاً موثقاً تلقائياً. توضح صفحة التعلم الوصول والمتطلبات."
+    },
+    "keywords": [
+      "lesson",
+      "complete",
+      "understanding",
+      "study",
+      "finish",
+      "درس",
+      "دروس",
+      "اكمل",
+      "انهي",
+      "فهمك",
+      "شرح",
+      "قراءة"
+    ]
+  },
+  {
+    "id": "course-path-difference",
+    "site": "academy",
+    "path": "paths.html",
+    "title": {
+      "en": "Course, path and practice differences",
+      "ar": "الفرق بين الدورة والمسار والتدريب"
+    },
+    "body": {
+      "en": "A course is an ordered set of lessons about a subject. A path groups relevant courses and practice toward a specialty achievement. Practice quizzes differ from course exams; course results contribute to their related path requirements. A path also has a practical assessment and final exam. Follow the specific path page instead of treating every catalog exercise as a required credential step.",
+      "ar": "الدورة مجموعة دروس مرتبة عن موضوع، والمسار يجمع الدورات والتطبيق المناسب لتخصص وإثبات إنجازه. الكويزات تدريب وتختلف عن امتحان الدورة؛ تدخل نتائج الدورات في متطلبات مساراتها. للمسار تقييم عملي وامتحان نهائي أيضاً. اتبع صفحة المسار بدل اعتبار كل تدريب في الفهرس شرطاً للشهادة."
+    },
+    "keywords": [
+      "difference",
+      "course",
+      "path",
+      "quiz",
+      "exam",
+      "فرق",
+      "دورة",
+      "مسار",
+      "كويز",
+      "امتحان",
+      "اختبار"
+    ]
+  },
+  {
+    "id": "exam-locked",
+    "site": "academy",
+    "path": "paths.html",
+    "title": {
+      "en": "An exam is locked or a result is missing",
+      "ar": "الامتحان مقفل أو النتيجة لا تظهر"
+    },
+    "body": {
+      "en": "Open the exact path to inspect incomplete lessons, course exams and practical assessment requirements. Confirm the same signed-in account was used. Refresh after a server connection problem and review the displayed error. A failed course exam allows retry after review as shown in its page. Guide cannot inspect grades, bypass prerequisites or provide answers.",
+      "ar": "افتح المسار المقصود وراجع الدروس وامتحانات الدورات والتقييم العملي غير المكتمل. تأكد من استخدام الحساب نفسه، وحدّث الصفحة بعد مشكلة اتصال بالخادم وراجع رسالة الخطأ. يمكن إعادة امتحان الدورة بعد المراجعة كما توضح صفحته. لا يقرأ الدليل الدرجات ولا يتجاوز المتطلبات ولا يعطي الإجابات."
+    },
+    "keywords": [
+      "locked",
+      "blocked",
+      "retry",
+      "failed",
+      "result",
+      "prerequisite",
+      "مقفل",
+      "مغلق",
+      "محاولة",
+      "فشلت",
+      "نتيجة",
+      "متطلبات",
+      "مش راضي"
+    ]
+  },
+  {
+    "id": "certificate-downloads",
+    "site": "academy",
+    "path": "certifications.html",
+    "title": {
+      "en": "Download and verify an Academy certificate",
+      "ar": "تنزيل شهادة الأكاديمية والتحقق منها"
+    },
+    "body": {
+      "en": "Find your credential in the Academy certificate pages or its path assessment. Download controls support PDF, PNG and JPEG. The credential includes real holder name, path/course details, lessons, exam information and issue/verification data. Public verification requires the holder to enable sharing. If no credential appears, check the same account and path requirements. Guide cannot issue or edit a credential.",
+      "ar": "ابحث عن إنجازك في صفحات شهادات الأكاديمية أو تقييم مساره. تدعم أزرار التنزيل PDF وPNG وJPEG. تتضمن الشهادة الاسم الحقيقي وتفاصيل المسار والدورات والدروس والامتحان ومعلومات الإصدار والتحقق. يحتاج التحقق العام إلى تفعيل المشاركة من صاحب الشهادة. إذا لم تظهر، راجع الحساب نفسه ومتطلبات المسار. لا يصدر الدليل شهادة ولا يعدّلها."
+    },
+    "keywords": [
+      "download",
+      "pdf",
+      "png",
+      "jpeg",
+      "verify",
+      "certificate",
+      "تنزيل",
+      "تحميل",
+      "شهادة",
+      "تحقق",
+      "مشاركة"
+    ]
+  },
+  {
+    "id": "certificate-name-value",
+    "site": "academy",
+    "path": "profile.html",
+    "title": {
+      "en": "Real name and credential meaning",
+      "ar": "الاسم الحقيقي وقيمة الشهادة"
+    },
+    "body": {
+      "en": "Use your real two- or three-part name for Academy achievements. A Biuret credential documents completion of platform requirements and can be included in a portfolio with accurate issuer and course details. It is not external professional accreditation or a job guarantee. Check your name before earning a new credential; Guide cannot rename an existing issued record.",
+      "ar": "استخدم اسمك الحقيقي الثنائي أو الثلاثي لشهادات الأكاديمية. توثق شهادة Biuret إكمال متطلبات المنصة ويمكن إضافتها لملف الأعمال مع وصف دقيق للجهة والدورة. ليست اعتماداً مهنياً خارجياً ولا ضمان وظيفة. راجع اسمك قبل إنجاز شهادة جديدة؛ لا يغيّر الدليل اسم سجل صادر."
+    },
+    "keywords": [
+      "real name",
+      "accredited",
+      "value",
+      "portfolio",
+      "name",
+      "اسم حقيقي",
+      "اسمي",
+      "قيمة",
+      "معتمدة",
+      "اعتماد",
+      "شهادة"
+    ]
+  },
+  {
+    "id": "progress-help",
+    "site": "academy",
+    "path": "progress.html",
+    "title": {
+      "en": "XP, levels and verified progress",
+      "ar": "XP والمستويات والتقدم الموثق"
+    },
+    "body": {
+      "en": "Progress displays verified learning progress, XP, level and coin history for the signed-in account. XP remains available to all plans; new Biuret Coins are earned only with Plus/Pro eligibility, while prior balances remain preserved. Local notes, favorites and browser practice do not automatically award XP or certificates. Guide can explain the difference but cannot read or change your balance.",
+      "ar": "تعرض صفحة تقدمك التعلم الموثق وXP والمستوى وسجل العملات للحساب المسجل. XP متاح لجميع الخطط؛ كسب عملات جديدة يتطلب أهلية Plus أو Pro، والأرصدة السابقة محفوظة. لا تمنح الملاحظات والمفضلة والتدريبات المحلية XP أو شهادات تلقائياً. يشرح الدليل الفرق ولا يقرأ الرصيد أو يعدّله."
+    },
+    "keywords": [
+      "xp",
+      "level",
+      "progress",
+      "coins",
+      "balance",
+      "نقاط",
+      "مستوى",
+      "تقدم",
+      "رصيد",
+      "عملات"
+    ]
+  },
+  {
+    "id": "notes-favorites",
+    "site": "academy",
+    "path": "notes.html",
+    "title": {
+      "en": "Notes, favorites and local data",
+      "ar": "الملاحظات والمفضلة والبيانات المحلية"
+    },
+    "body": {
+      "en": "Use lesson notes and the Notes page for study records, and Favorites to return to saved content. Local study records belong to this browser and are separate from server-verified progress. Keep available exports before clearing browser storage or changing devices. Guide cannot recover erased local records.",
+      "ar": "استخدم ملاحظات الدرس وصفحة الملاحظات لسجلات الدراسة، والمفضلة للرجوع للمحتوى المحفوظ. السجلات المحلية تخص هذا المتصفح وتختلف عن التقدم الموثق على الخادم. احفظ التصديرات المتاحة قبل مسح التخزين أو تغيير الجهاز. لا يستعيد الدليل سجلات محلية محذوفة."
+    },
+    "keywords": [
+      "notes",
+      "favorite",
+      "local",
+      "lost",
+      "backup",
+      "ملاحظات",
+      "مفضلة",
+      "محلي",
+      "ضاعت",
+      "حفظ"
+    ]
+  },
+  {
+    "id": "academy-operations",
+    "site": "academy",
+    "path": "operations.html",
+    "title": {
+      "en": "Operations rooms and educational labs",
+      "ar": "غرف العمليات والمختبرات التعليمية"
+    },
+    "body": {
+      "en": "Operations rooms organize scenario evidence and investigation decisions; open the rooms related to your chosen path. Labs apply a narrower skill, while challenges test a task. Read the scenario and scope, inspect evidence, record your reasoning and review feedback. These are safe educational simulations, not permission to test unrelated real systems.",
+      "ar": "تنظم غرف العمليات أدلة السيناريو وقرارات التحقيق؛ افتح غرف المسار المناسب. يطبق المختبر مهارة محددة، ويختبر التحدي مهمة. اقرأ السيناريو والنطاق، وافحص الدليل وسجّل سبب قرارك وراجع التغذية الراجعة. هذه محاكاة تعليمية آمنة ولا تسمح باختبار أنظمة حقيقية غير مرتبطة."
+    },
+    "keywords": [
+      "operation",
+      "room",
+      "lab",
+      "challenge",
+      "scenario",
+      "غرفة",
+      "غرف",
+      "عمليات",
+      "مختبر",
+      "تحدي",
+      "سيناريو"
+    ]
+  },
+  {
+    "id": "practical-reports",
+    "site": "academy",
+    "path": "professional.html",
+    "title": {
+      "en": "Practical reports and reviewer feedback",
+      "ar": "التقارير العملية وملاحظات المراجع"
+    },
+    "body": {
+      "en": "The professional workbench supports practical report drafts and downloads. Submitted reports enter a separate review workflow with reviewer feedback and resubmission. Follow the submission consent and current status in the report page. Administrative review is restricted to the current administrators. Accepting a report does not automatically replace path exam or credential eligibility requirements.",
+      "ar": "تدعم مساحة العمل المهنية مسودات التقارير العملية وتنزيلها. تدخل التقارير المسلّمة في سير مراجعة مستقل مع ملاحظات المراجع وإعادة الإرسال. اتبع موافقة التسليم وحالته الحالية في صفحة التقرير. المراجعة الإدارية للإدارة الحالية فقط. قبول التقرير لا يلغي متطلبات امتحان المسار أو أهلية الشهادة تلقائياً."
+    },
+    "keywords": [
+      "report",
+      "review",
+      "resubmit",
+      "practical",
+      "تقرير",
+      "تقارير",
+      "مراجعة",
+      "مراجع",
+      "اعادة ارسال",
+      "عملي"
+    ]
+  },
+  {
+    "id": "free-depth",
+    "site": "academy",
+    "path": "free-studio.html",
+    "title": {
+      "en": "What the free learning experience includes",
+      "ar": "ماذا تشمل تجربة التعلم المجانية؟"
+    },
+    "body": {
+      "en": "The free studio offers a guided Foundations credential route plus optional learning and browser practice. Follow verified lessons, apply skills and complete the practical/final requirements for the Foundations achievement. Optional exploration is useful but separate from verified completion. Specialties are cataloged as planned individual path purchases; buying is not active.",
+      "ar": "توفر المساحة المجانية طريقاً موجهاً لشهادة الأساسيات مع تعلم اختياري وتدريب في المتصفح. اتبع الدروس الموثقة وطبق المهارات وأكمل المتطلبات العملية والنهائية لإنجاز الأساسيات. الاستكشاف الاختياري مفيد ويختلف عن الإكمال الموثق. تُعرض التخصصات كمسارات مخططة للشراء الفردي؛ الشراء غير مفعّل."
+    },
+    "keywords": [
+      "free",
+      "foundation",
+      "included",
+      "مجاني",
+      "فري",
+      "اساسيات",
+      "يشمل",
+      "محتوى"
+    ]
+  },
+  {
+    "id": "shop-status",
+    "site": "academy",
+    "path": "shop.html",
+    "title": {
+      "en": "Shop, coins and pricing status",
+      "ar": "حالة المتجر والعملات والأسعار"
+    },
+    "body": {
+      "en": "The shop lists planned challenge hints, advanced notes and future educational discounts. Spending, redemption and purchases are inactive. Coins cannot be withdrawn as cash. The earlier 200 coins/$1 subscription proposal has no active conversion; terms after the switch to path purchases are not approved. No active path price or all-content monthly subscription should be promised.",
+      "ar": "يعرض المتجر مساعدات تحديات وملاحظات متقدمة وخصومات تعليمية مخططة. الصرف والاستبدال والشراء غير مفعّلة. لا تُسحب العملات نقداً. اقتراح 200 عملة مقابل دولار خصم اشتراك ليس تحويلاً نشطاً؛ لم تُعتمد شروطه بعد الانتقال لشراء المسارات. لا يجوز وعد المستخدم بسعر مسار أو اشتراك شهري يفتح كل المحتوى حالياً."
+    },
+    "keywords": [
+      "shop",
+      "price",
+      "purchase",
+      "discount",
+      "200",
+      "subscription",
+      "متجر",
+      "سعر",
+      "شراء",
+      "خصم",
+      "اشتراك",
+      "دولار"
+    ]
+  },
+  {
+    "id": "playground-tool-choice",
+    "site": "playground",
+    "path": "index.html#applications",
+    "title": {
+      "en": "Choose a tool for your task",
+      "ar": "اختر الأداة المناسبة لمهمتك"
+    },
+    "body": {
+      "en": "Use StudyFlow for learning schedules, Focus Room for timed work, JSON Studio for validating/formatting JSON, File Fingerprint for digest comparison, and Text Studio for text cleanup/counts. My Work collects optional saved plans and favorites. These browser tools are separate from installed Desktop/CLI programs and do not award Academy progress.",
+      "ar": "استخدم StudyFlow لجدول التعلم، ومساحة التركيز للعمل المؤقت، واستوديو JSON للفحص والتنسيق، وبصمة الملفات لمقارنة البصمات، واستوديو النصوص للتنظيف والإحصاءات. تجمع أعمالي الخطط والمفضلة المحفوظة اختيارياً. أدوات المتصفح تختلف عن Desktop وCLI ولا تمنح تقدم الأكاديمية."
+    },
+    "keywords": [
+      "which tool",
+      "compare",
+      "task",
+      "choose",
+      "اداة",
+      "اختار",
+      "اختيار",
+      "مهمة",
+      "اي",
+      "فرق"
+    ]
+  },
+  {
+    "id": "planner-troubleshooting",
+    "site": "playground",
+    "path": "studyflow.html#planner",
+    "title": {
+      "en": "An unrealistic deadline or missed study day",
+      "ar": "موعد غير واقعي أو يوم دراسة فائت"
+    },
+    "body": {
+      "en": "StudyFlow checks a target date without shortening required work. If the target does not fit, allow more days/time or reduce the learning scope. Preview rescheduling for unfinished sessions and apply it while retaining completed checks. Custom topics must be in prerequisite order and do not create new lesson content.",
+      "ar": "يفحص StudyFlow الموعد دون تقليص العمل المطلوب. إذا لم يناسب، زد الأيام أو الوقت أو قلل نطاق التعلم. عاين إعادة جدولة الجلسات غير المكتملة وطبّقها مع حفظ علامات الإكمال. رتّب المواضيع المخصصة حسب المتطلبات؛ إدخالها لا ينشئ محتوى دروس جديداً."
+    },
+    "keywords": [
+      "deadline",
+      "missed",
+      "reschedule",
+      "late",
+      "date",
+      "موعد",
+      "فاتني",
+      "جدولة",
+      "متأخر",
+      "تاريخ",
+      "وقت"
+    ]
+  },
+  {
+    "id": "focus-saving",
+    "site": "playground",
+    "path": "focus.html",
+    "title": {
+      "en": "Focus timer, breaks and saving",
+      "ar": "مؤقت التركيز والاستراحة والحفظ"
+    },
+    "body": {
+      "en": "Set a task and duration, start/pause/reset as needed, and use short/long breaks. Only completed focus sessions count. Optional device saving retains future completed sessions and daily goal summaries; the current task and running timer reset on reload. Timer totals measure sessions, not learning mastery or Academy credit.",
+      "ar": "حدد مهمة ومدة وابدأ أو أوقف أو أعد ضبط المؤقت، مع استراحة قصيرة أو طويلة. تُحتسب الجلسات المكتملة فقط. يحفظ خيار الجهاز الجلسات المستقبلية المكتملة وملخصات الهدف اليومي؛ تتصفّر المهمة الحالية والمؤقت عند إعادة التحميل. تقيس الإحصاءات الجلسات ولا تثبت إتقان التعلم أو تمنح رصيد الأكاديمية."
+    },
+    "keywords": [
+      "focus",
+      "timer",
+      "break",
+      "pomodoro",
+      "reset",
+      "تركيز",
+      "مؤقت",
+      "استراحة",
+      "بومودورو",
+      "جلسة"
+    ]
+  },
+  {
+    "id": "workspace-backups",
+    "site": "playground",
+    "path": "workspace.html#backup",
+    "title": {
+      "en": "Save, restore and change devices",
+      "ar": "الحفظ والاستعادة وتغيير الجهاز"
+    },
+    "body": {
+      "en": "Turn on device saving before saving named plans, favorites and completed sessions. My Work offers a validated workspace backup/restore workflow; imports merge with existing work. Export before clearing browser data or moving devices. There is no cloud or automatic app/browser sync. Workspace backups differ from planner previews and Desktop SQLite/JSON backups.",
+      "ar": "فعّل الحفظ على الجهاز قبل حفظ الخطط المسماة والمفضلة والجلسات المكتملة. توفر أعمالي نسخة مساحة عمل واستعادة مع فحص؛ تدمج الاستيرادات بالمحتوى الموجود. صدّر قبل مسح بيانات المتصفح أو تغيير الجهاز. لا توجد مزامنة سحابية أو تلقائية مع التطبيق. تختلف نسخة مساحة العمل عن معاينة الخطة ونسخ Desktop بصيغ SQLite وJSON."
+    },
+    "keywords": [
+      "backup",
+      "restore",
+      "export",
+      "import",
+      "sync",
+      "saved",
+      "حفظ",
+      "استعادة",
+      "نسخة",
+      "تصدير",
+      "استيراد",
+      "مزامنة",
+      "جهاز"
+    ]
+  },
+  {
+    "id": "json-limitations",
+    "site": "playground",
+    "path": "json.html",
+    "title": {
+      "en": "JSON errors and limits",
+      "ar": "أخطاء JSON وحدود الأداة"
+    },
+    "body": {
+      "en": "JSON Studio accepts pasted JSON or a file up to 1 MiB. Validate before formatting, sorting keys, copying or exporting. Arrays keep their order. Parsing can change duplicate keys or large-number representation; this is not schema validation. Do not paste secrets, and keep your original before transforming it.",
+      "ar": "يقبل استوديو JSON نصاً ملصقاً أو ملفاً حتى 1 MiB. افحصه قبل التنسيق وترتيب المفاتيح والنسخ أو التصدير. يبقى ترتيب المصفوفات. قد تؤثر القراءة في المفاتيح المكررة أو تمثيل الأرقام الكبيرة؛ هذا ليس تحققاً من schema. لا تلصق أسراراً واحتفظ بالأصل قبل تحويله."
+    },
+    "keywords": [
+      "json",
+      "invalid",
+      "format",
+      "schema",
+      "size",
+      "خطأ",
+      "تنسيق",
+      "حجم",
+      "ملف",
+      "اقواس"
+    ]
+  },
+  {
+    "id": "hash-meaning",
+    "site": "playground",
+    "path": "hash.html",
+    "title": {
+      "en": "What a matching file hash proves",
+      "ar": "ماذا يثبت تطابق بصمة الملف؟"
+    },
+    "body": {
+      "en": "File Fingerprint compares SHA-256/384/512 digests for files up to 100 MiB or exact UTF-8 text. Compare to a digest from a trusted source. A match shows identical bytes; it does not prove malware absence or issuer trust. Text whitespace/encoding changes can change a digest. Reports exclude the original input.",
+      "ar": "تقارن بصمة الملفات SHA-256 و384 و512 لملفات حتى 100 MiB أو نص UTF-8 حرفي. قارن ببصمة من مصدر موثوق. يثبت التطابق تطابق البايتات ولا يثبت خلو الملف من البرمجيات الخبيثة أو ثقة الجهة. قد تغير المسافات والترميز البصمة. لا يحتوي التقرير المدخل الأصلي."
+    },
+    "keywords": [
+      "hash",
+      "sha256",
+      "sha-256",
+      "safe",
+      "virus",
+      "digest",
+      "بصمة",
+      "تطابق",
+      "آمن",
+      "فيروس",
+      "هاش"
+    ]
+  },
+  {
+    "id": "text-transformations",
+    "site": "playground",
+    "path": "text.html",
+    "title": {
+      "en": "Clean text without losing the original",
+      "ar": "تنظيف النص مع الحفاظ على الأصل"
+    },
+    "body": {
+      "en": "Text Studio counts words/characters and estimates reading time; it can clean whitespace and remove exact duplicate lines. Use Undo to reverse transformations and export TXT. Results stay in this tab; inputs are not saved automatically. Reading time is an estimate, not a comprehension grade.",
+      "ar": "يحسب استوديو النصوص الكلمات والأحرف ويقدّر وقت القراءة وينظف المسافات ويحذف السطور المتطابقة حرفياً. استخدم التراجع لعكس التحويل ثم صدّر TXT. تبقى النتائج في التبويب ولا تحفظ المدخلات تلقائياً. زمن القراءة تقدير وليس درجة فهم."
+    },
+    "keywords": [
+      "text",
+      "undo",
+      "duplicates",
+      "words",
+      "reading",
+      "نص",
+      "تراجع",
+      "مكرر",
+      "كلمات",
+      "قراءة"
+    ]
+  },
+  {
+    "id": "privacy-boundaries",
+    "site": "portfolio",
+    "path": "privacy.html",
+    "title": {
+      "en": "Privacy of tools, accounts and the AI pilot",
+      "ar": "خصوصية الأدوات والحسابات وتجربة الذكاء الاصطناعي"
+    },
+    "body": {
+      "en": "Playground inputs are processed locally and device saving is optional. Account and verified learning services use Appwrite. Gemini receives a consented question, up to three recent successful questions, and public site facts; the private pilot does not read account records or tool inputs. Unpaid Gemini may use submitted content/responses for model improvement; Appwrite may retain execution records. Never send confidential material to Guide.",
+      "ar": "تُعالج مدخلات Playground محلياً والحفظ على الجهاز اختياري. تستخدم الحسابات وخدمات التعلم الموثق Appwrite. يستقبل Gemini السؤال الموافق عليه وما يصل إلى ثلاثة أسئلة سابقة ناجحة ومعلومات المواقع العامة؛ لا تقرأ التجربة سجلات الحساب أو مدخلات الأدوات. قد تستخدم خدمة Gemini المجانية الأسئلة والردود لتحسين النموذج، وقد يحتفظ Appwrite بسجلات التنفيذ. لا ترسل محتوى سرياً إلى الدليل."
+    },
+    "keywords": [
+      "privacy",
+      "data",
+      "ai",
+      "gemini",
+      "local",
+      "upload",
+      "خصوصية",
+      "بيانات",
+      "ذكاء",
+      "رفع",
+      "سرية"
+    ]
+  },
+  {
+    "id": "site-owner",
+    "site": "portfolio",
+    "path": "index.html#about",
+    "title": {
+      "en": "Who created Biuret?",
+      "ar": "صاحب مواقع Biuret"
+    },
+    "body": {
+      "en": "Adam Hamdan is the developer behind Biuret and the owner presented by this personal portfolio. He is a cybersecurity-focused developer based in Ramallah, Palestine. Biuret is his identity for security engineering, programming, applied research and technical education. The Portfolio, Academy and Playground are part of this Biuret ecosystem. The public GitHub account is Biuret7. These facts are published in the portfolio About section and footer. No additional private biography is documented.",
+      "ar": "آدم حمدان (Adam Hamdan) هو المطوّر خلف Biuret وصاحب ملف الأعمال الشخصي. يعرّف نفسه في قسم نبذة عنه كمطوّر يركّز على الأمن السيبراني من رام الله، فلسطين. Biuret هي هويته لهندسة الأمن والبرمجة والبحث التطبيقي والتعليم التقني، وتشمل موقع الأعمال والأكاديمية وPlayground. حساب GitHub العام هو Biuret7. هذه المعلومات منشورة في قسم نبذة عنه وتذييل الموقع؛ لا تتوفر سيرة شخصية خاصة إضافية."
+    },
+    "keywords": [
+      "owner",
+      "creator",
+      "founder",
+      "author",
+      "developer",
+      "who",
+      "Adam",
+      "Hamdan",
+      "Biuret7",
+      "made",
+      "built",
+      "صاحب",
+      "صاحبه",
+      "مالك",
+      "مؤسس",
+      "مطوّر",
+      "مطور",
+      "آدم",
+      "ادم",
+      "حمدان",
+      "مين",
+      "عمله",
+      "انشأ",
+      "أنشأ"
+    ]
+  },
+  {
+    "id": "owner-skills",
+    "site": "portfolio",
+    "path": "index.html#skills",
+    "title": {
+      "en": "Adam’s technical interests",
+      "ar": "اهتمامات آدم التقنية"
+    },
+    "body": {
+      "en": "The portfolio presents six areas Adam is developing: secure software design (local-first architecture, authentication, recovery and access control); applied cryptography (key derivation, authenticated encryption and validation); network visibility (packets, protocols, discovery and reporting); OSINT workflows (authorized scope, evidence integrity and research reports); Python desktop systems (PyQt6, worker threads and local data); and technical education (Arabic learning paths, safe labs, assessments and progress). These are learning and project interests, not claims of completed products or external professional accreditation.",
+      "ar": "يعرض الموقع ستة مجالات يطور آدم معرفته فيها: تصميم البرمجيات الآمنة، والتشفير التطبيقي، وتحليل الشبكات، ومسارات بحث OSINT، وبرامج Python المكتبية باستخدام PyQt6، والتعليم التقني. تشمل تصميم الدخول والاستعادة والتحكم بالوصول، واشتقاق المفاتيح والتشفير الموثق، وتحليل الحزم والبروتوكولات، ونطاق البحث المصرح وسلامة الأدلة، وخيوط العمل والبيانات المحلية، والمسارات العربية والمختبرات والتقييمات. هذه اهتمامات تعلم وتخطيط وليست ادعاء اكتمال المنتجات أو اعتماد مهني خارجي."
+    },
+    "keywords": [
+      "skills",
+      "python",
+      "pyqt6",
+      "cryptography",
+      "experience",
+      "expertise",
+      "مهارات",
+      "خبرة",
+      "بايثون",
+      "اهتمامات",
+      "تشفير"
+    ]
+  },
+  {
+    "id": "owner-journey",
+    "site": "portfolio",
+    "path": "index.html#journey",
+    "title": {
+      "en": "Biuret’s learning and development direction",
+      "ar": "اتجاه التعلم والتطوير في Biuret"
+    },
+    "body": {
+      "en": "The public journey is a learning plan: foundations in systems, Linux, networking and Python; controlled experiments using cryptography, packet analysis, OSINT and secure data handling; future complete desktop experiences; and deeper practice with verifiable training records. Adam’s current focus is cybersecurity engineering with Python, OSINT and network analysis, using project-driven learning. The working method is to understand a need, plan, prototype, test, explain and improve. The six featured complete products remain future concepts with experimental code.",
+      "ar": "الرحلة المعروضة خطة تعلم: أساسيات الأنظمة وLinux والشبكات وPython، ثم تجارب مضبوطة في التشفير وتحليل الحزم وOSINT وحماية البيانات، ثم التخطيط لبرامج مكتبية متكاملة، ثم تعميق التطبيق وتوثيق التدريب. يركز آدم على هندسة الأمن السيبراني باستخدام Python وبحث OSINT وتحليل الشبكات والتعلم بالمشاريع. طريقة العمل فهم الحاجة والتخطيط والنمذجة والاختبار والشرح والتحسين. المنتجات الستة الكاملة تبقى أفكاراً مستقبلية بشيفرة تجريبية."
+    },
+    "keywords": [
+      "journey",
+      "method",
+      "roadmap",
+      "direction",
+      "future",
+      "history",
+      "رحلة",
+      "تاريخ",
+      "خطة",
+      "مستقبل",
+      "توجه",
+      "طريقة"
+    ]
+  }
 ]

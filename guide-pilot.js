@@ -1,4 +1,5 @@
-import { retrieve, sourceURL } from './guide/core.mjs?v=20261009-guide3';
+import { sourceURL } from './guide/core.mjs?v=20261010-guide6';
+import { readReply } from './guide/gateway.mjs?v=20261010-guide6';
 
 const $ = id => document.getElementById(id);
 const config = window.BIURET_APPWRITE_CONFIG, sdk = window.Appwrite;
@@ -15,7 +16,7 @@ const statuses = {
   unavailable: ['Pilot connection is unavailable. Try again after setup.', 'اتصال التجربة غير متاح. أعد المحاولة بعد إكمال الإعداد.']
 };
 const starters = {
-  all: [['How do the three Biuret sites differ?', 'شو الفرق بين مواقع Biuret الثلاثة؟'], ['Help me choose a learning path.', 'ساعدني أختار مسار تعلم.'], ['How do I download my certificate?', 'كيف أنزّل شهادتي؟']],
+  all: [['Who owns this website?', 'مين صاحب هذا الموقع؟'], ['Help me choose a learning path.', 'ساعدني أختار مسار تعلم.'], ['How do I download my certificate?', 'كيف أنزّل شهادتي؟']],
   portfolio: [['What can I try now?', 'ما الذي يمكنني تجربته الآن؟'], ['Where are the certificates?', 'أين أجد الشهادات؟']],
   academy: [['Compare SOC and DFIR for a beginner.', 'قارن بين SOC وDFIR للمبتدئ.'], ['How do I download and verify my certificate?', 'كيف أنزّل شهادتي وأتحقق منها؟'], ['Why is my path exam locked?', 'ليش امتحان المسار مقفل؟']],
   playground: [['Which tool helps me organize my week?', 'أي أداة تساعدني على تنظيم أسبوعي؟'], ['Are the Desktop and CLI downloads available?', 'هل تنزيل برامج Desktop وCLI متاح؟']]
@@ -59,7 +60,7 @@ function render() {
   if (!current) { $('result').textContent = tr('Choose a site and ask a question. No request is sent until you check consent and submit.', 'اختر الموقع واكتب سؤالك. لا يُرسل طلب قبل الموافقة والضغط على زر الإرسال.'); return; }
   const p = document.createElement('p'); p.dir = 'auto';
   if (current.remote) { p.textContent = current.remote.answer; $('mode').textContent = 'Gemini'; }
-  else { p.textContent = current.matches.map(c => c.body[locale()]).join('\n\n') || tr('No documented topic matches this question. Try a site feature or one of the suggestions.', 'لا يطابق هذا السؤال موضوعاً موثقاً. جرّب ميزة من الموقع أو أحد الاقتراحات.'); $('mode').textContent = tr('Site guide', 'دليل الموقع'); }
+  else { p.textContent = tr(...current.status); $('mode').textContent = tr('No AI answer', 'لا توجد إجابة نموذج'); }
   $('result').append(p);
   for (const card of current.matches) { const link = document.createElement('a'); link.href = sourceURL(card, 'portfolio'); link.textContent = card.title[locale()] + ' ↗'; $('result').append(link); }
 }
@@ -81,27 +82,25 @@ $('pilot-form').addEventListener('submit', async event => {
   if (question.length < 2 || question.length > 500) return;
   busy = true; current = null; render(); const start = performance.now();
   $('copy-status').textContent='';
-  let matches = site==='all' ? [...new Map(['portfolio','academy','playground'].flatMap(s=>retrieve(question,cards,s)).map(c=>[c.id,c])).values()].slice(0,4) : retrieve(question, cards, site), remote = null, status;
+  let matches = [], remote = null, status;
   try {
       const value = await execute('ask', { question, site, locale: lang, consent: true, history });
-    if (value.outcome === 'unknown' && Array.isArray(value.sourceIds) && !value.sourceIds.length) {
-      status = ['Gemini abstained; showing documented site guidance.', 'لم يجد Gemini إجابة موثقة؛ نعرض دليل الموقع.'];
+    const reply=readReply(value,cards);
+    if (!reply) {
+      status = ['Gemini has no documented answer yet. Try identifying the page or feature. No saved answer was substituted.', 'لا يملك Gemini إجابة موثقة بعد. جرّب تحديد الصفحة أو الميزة. لم نستبدل الرد بإجابة محفوظة.'];
     } else {
-      if (!['answer','clarify'].includes(value.outcome) || typeof value.answer !== 'string' || !value.answer.trim() || value.answer.length > 4000 || !Array.isArray(value.sourceIds) || (value.outcome==='answer' && !value.sourceIds.length) || value.sourceIds.length>5 ||
-          value.sourceIds.some(id => !cards.some(c => c.id === id)) ||
-          (value.followups !== undefined && (!Array.isArray(value.followups)||value.followups.length>3||value.followups.some(q=>typeof q!=='string'||q.length>160)))) throw Error('invalid');
-      remote = value; matches = cards.filter(c => value.sourceIds.includes(c.id));
+      remote = reply.remote; matches = reply.matches;
       history = [...history,{question,sourceIds:value.sourceIds}].slice(-3);
       const seconds = ((performance.now() - start) / 1000).toFixed(1);
       status = value.outcome==='clarify' ? ['A quick clarification will help.','توضيح بسيط يساعدني على إرشادك.'] : [`AI reply · ${seconds}s · check the sources.`, `إجابة النموذج · ${seconds} ثانية · راجع المصادر.`];
     }
   } catch (failure) {
     status = failure.message === 'model_quota_exceeded' || failure.code === 429
-      ? ['Usage limit reached; showing the site guide.', 'وصلنا إلى حد الاستخدام؛ نعرض دليل الموقع.']
-      : ['AI is unavailable; showing the site guide.', 'النموذج غير متاح؛ نعرض دليل الموقع.'];
+      ? ['Usage limit reached. Wait a minute and try again. No saved answer was substituted.', 'بلغت حد الاستخدام. انتظر دقيقة وحاول مجدداً. لم نستبدل الإجابة برد محفوظ.']
+      : ['Gemini could not answer. Check connection and retry. No saved answer was substituted.', 'تعذّر رد Gemini. افحص الاتصال وأعد المحاولة. لم نستبدل الإجابة برد محفوظ.'];
     if ([401, 403].includes(failure.code)) { ready = false; connection = 'restricted'; }
   } finally { current = { remote, matches, status }; busy = false; render(); }
 });
 render();
-fetch('guide/knowledge.json?v=20261010-guide4').then(r => { if (!r.ok) throw Error(); return r.json(); }).then(value => { cards = value; render(); }).catch(() => { connection = 'unavailable'; ready = false; render(); });
+fetch('guide/knowledge.json?v=20261010-guide6').then(r => { if (!r.ok) throw Error(); return r.json(); }).then(value => { cards = value; render(); }).catch(() => { connection = 'unavailable'; ready = false; render(); });
 check();
