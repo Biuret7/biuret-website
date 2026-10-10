@@ -46,3 +46,13 @@ Sign in as the approved administrator, confirm status, test all three site conte
 Rollback: disable `GUIDE_ENABLED`; if needed reactivate the previously active Appwrite deployment **6ac5445872339f047a5a** observed in Console. The source-download attempt timed out, so it was not claimed as a verified local backup.
 
 Sources: [Google model](https://ai.google.dev/gemini-api/docs/models/gemini-3.5-flash-lite), [pricing](https://ai.google.dev/gemini-api/docs/pricing), [API](https://ai.google.dev/api/generate-content), [key handling](https://ai.google.dev/gemini-api/docs/api-key), [terms](https://ai.google.dev/gemini-api/terms), [Appwrite function context](https://appwrite.io/docs/products/functions/develop).
+
+## Expanded pilot acceptance — 2026-10-10
+
+- Final active deployment: `6aca061380cfbb16ac48`, 1-second build, 1.13 MB. Same administrator, secret and permission boundary.
+- Final archive: 47,073 bytes; SHA256 `18115fb6405dcf93e81ebc918166df1e4fa3d4db76e36d629586886fa27ccab0`.
+- 136 public bilingual knowledge cards; 39 automated tests passed. After acceptance fixes, all 21 Guide tests and then 18 provider/auth tests passed again.
+- Live verification: Arabic SOC/DFIR comparison cites distinct paths; DFIR course facts are correct; a follow-up without repeating the path name names DFIR and links to it; an unidentified broken-button report asks for the page/button using clarify; English PDF/PNG/JPEG and opt-in verification reply states no external accreditation. Successful final answers took 1.4–2.0 seconds; one comparison took 6.1 seconds. This is sample latency, not a service guarantee.
+- Suggestions fill the input without submitting. New conversation cleared context, answer, input and consent. RTL/LTR at 320px had no horizontal overflow.
+- First Pages run failed on a test dependency on sibling repositories. Portable reviewed route validation fixed the gate. Public Guide widgets remain curated; Gemini stays in the private administrator pilot.
+- Knowledge expansion is a local maintenance script that needs the Academy public source checkout; committed generated JSON lets the standalone Pages build run without sibling repositories.
