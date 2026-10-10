@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow"><title>Biuret Guide · Private pilot</title>
+  <link rel="icon" href="assets/biuret-logo-20261005.png">
+  <link rel="stylesheet" href="guide-pilot.css?v=20261010-1">
+  <script defer src="https://cdn.jsdelivr.net/npm/appwrite@23.0.0"></script>
+  <script defer src="appwrite-config.js?v=20260912-23"></script>
+  <script type="module" src="guide-pilot.js?v=20261010-1"></script>
+</head>
+<body>
+  <header><a class="brand" href="index.html"><img src="assets/biuret-logo-20261005.png" alt=""> Biuret <small>/ Guide</small></a><button id="language" type="button">English</button></header>
+  <main>
+    <section class="intro"><span class="eyebrow" data-en="PRIVATE AI PILOT" data-ar="تجربة ذكاء اصطناعي خاصة">تجربة ذكاء اصطناعي خاصة</span>
+      <h1 data-en="A clear answer. A useful next step." data-ar="إجابة واضحة. وخطوة مفيدة.">إجابة واضحة. وخطوة مفيدة.</h1>
+      <p data-en="Review Gemini’s guidance for each Biuret site before enabling it for visitors. Server access is restricted to the approved administrator." data-ar="راجع إرشادات Gemini لكل موقع من مواقع Biuret قبل إتاحته للزوار. الوصول من الخادم محصور بحساب الإدارة المعتمد.">راجع إرشادات Gemini لكل موقع من مواقع Biuret قبل إتاحته للزوار. الوصول من الخادم محصور بحساب الإدارة المعتمد.</p>
+      <div class="connection"><span class="dot" aria-hidden="true"></span><p id="connection" role="status"></p><button id="refresh" type="button" data-en="Check connection" data-ar="فحص الاتصال">فحص الاتصال</button><a id="signin" href="auth.html" hidden data-en="Sign in" data-ar="تسجيل الدخول">تسجيل الدخول</a></div>
+    </section>
+    <div class="workspace">
+      <section class="panel"><h2 data-en="Ask about a Biuret site" data-ar="اسأل عن أحد مواقع Biuret">اسأل عن أحد مواقع Biuret</h2>
+        <form id="pilot-form">
+          <label for="site" data-en="Site to review" data-ar="الموقع الذي تراجعه">الموقع الذي تراجعه</label>
+          <select id="site"><option value="portfolio">Portfolio</option><option value="academy">Academy</option><option value="playground">Playground</option></select>
+          <label for="question" data-en="Your question" data-ar="سؤالك">سؤالك</label>
+          <textarea id="question" rows="4" minlength="2" maxlength="500" required dir="auto"></textarea>
+          <div id="suggestions" class="suggestions"></div>
+          <label class="consent" for="consent"><input id="consent" type="checkbox" required><span data-en="Send this question and public site facts to Google Gemini. This free project may use inputs and responses to improve its models. Do not enter personal or confidential information." data-ar="أوافق على إرسال هذا السؤال ومعلومات الموقع العامة إلى Google Gemini. قد يستخدم المشروع المجاني الأسئلة والردود لتحسين نماذجه. لا تُدخل معلومات شخصية أو سرية.">أوافق على إرسال هذا السؤال ومعلومات الموقع العامة إلى Google Gemini. قد يستخدم المشروع المجاني الأسئلة والردود لتحسين نماذجه. لا تُدخل معلومات شخصية أو سرية.</span></label>
+          <a class="policy" href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener" data-en="Gemini data policy ↗" data-ar="سياسة بيانات Gemini ↗">سياسة بيانات Gemini ↗</a>
+          <button id="send" class="primary" type="submit" disabled data-en="Ask Gemini" data-ar="اسأل Gemini">اسأل Gemini</button>
+        </form>
+      </section>
+      <section class="panel result-panel" aria-labelledby="result-heading"><div class="result-heading"><h2 id="result-heading" data-en="Answer and sources" data-ar="الإجابة والمصادر">الإجابة والمصادر</h2><span id="mode"></span></div>
+        <p id="answer-status" role="status"></p><div id="result" aria-live="polite"></div>
+        <p class="note" data-en="AI can make mistakes. Check the linked sources. It cannot read your account, perform actions or provide exam answers. History is not saved in this page; Appwrite may retain execution records." data-ar="قد يخطئ النموذج؛ راجع المصادر المرتبطة. لا يمكنه قراءة حسابك أو تنفيذ إجراءات أو إعطاء إجابات الامتحانات. لا تحفظ هذه الصفحة سجل المحادثة؛ قد يحتفظ Appwrite بسجلات التنفيذ.">قد يخطئ النموذج؛ راجع المصادر المرتبطة. لا يمكنه قراءة حسابك أو تنفيذ إجراءات أو إعطاء إجابات الامتحانات. لا تحفظ هذه الصفحة سجل المحادثة؛ قد يحتفظ Appwrite بسجلات التنفيذ.</p>
+      </section>
+    </div>
+  </main>
+  <footer data-en="Private review · Gemini has not been enabled in the public Guide." data-ar="مراجعة خاصة · لم يُفعّل Gemini في الدليل العام.">مراجعة خاصة · لم يُفعّل Gemini في الدليل العام.</footer>
+</body>
+</html>

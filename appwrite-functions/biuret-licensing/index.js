@@ -1,5 +1,6 @@
 import crypto from 'node:crypto';
 import analytics from './analytics.js';
+import guide from './guide/main.js';
 import {
   Client,
   ID,
@@ -446,6 +447,10 @@ async function paddleWebhook(request, res, config, tables, log) {
 export default async ({ req, res, log, error }) => {
   try {
     const analyticsInput = jsonBodyOf(req);
+    if (!headersOf(req)['paddle-signature'] && ['guide:status', 'guide:ask'].includes(analyticsInput?.action)) {
+      const guideInput = { ...analyticsInput, action: analyticsInput.action.slice(6) };
+      return guide({ req: { ...req, bodyText: JSON.stringify(guideInput), bodyJson: guideInput }, res });
+    }
     if (!headersOf(req)['paddle-signature'] && typeof analyticsInput?.action === 'string' && analyticsInput.action.startsWith('analytics:')) {
       return analytics({ req: { ...req, bodyJson: { ...analyticsInput, action: analyticsInput.action.slice(10) } }, res, error });
     }

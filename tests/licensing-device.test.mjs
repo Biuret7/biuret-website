@@ -40,11 +40,15 @@ async function harness(sourcePath) {
   const analytics = new vm.SyntheticModule(['default'], function () {
     this.setExport('default', ({ res }) => res.json({ ok: true, analytics: true }, 200));
   });
+  const guide = new vm.SyntheticModule(['default'], function () {
+    this.setExport('default', ({ req, res }) => res.json({ guide: true, action: req.bodyJson.action }, 200));
+  });
   const module = new vm.SourceTextModule(await fs.readFile(sourcePath, 'utf8'));
   await module.link(specifier => {
     if (specifier === 'node-appwrite') return sdk;
     if (specifier === 'node:crypto') return cryptoModule;
     if (specifier === './analytics.js') return analytics;
+    if (specifier === './guide/main.js') return guide;
     throw new Error(`Unexpected dependency: ${specifier}`);
   });
   await module.evaluate();
@@ -126,4 +130,14 @@ test('analytics routing, account access and unknown-action response remain avail
   assert.equal((await invoke({ action: 'analytics:totals' }, '')).body.analytics, true);
   assert.equal((await invoke({ action: 'account-access' })).status, 200);
   assert.equal((await invoke({ action: 'unsupported' })).status, 404);
+});
+
+test('Guide requests route to the isolated guard before licensing services', async () => {
+  const { state, invoke } = await harness(sourcePath);
+  for (const action of ['status', 'ask']) {
+    const result = await invoke({ action: `guide:${action}` }, '', 'bodyText');
+    assert.deepEqual(result.body, { guide: true, action });
+  }
+  assert.equal((await invoke({ action: 'guide:unknown' }, '')).status, 404);
+  assert.equal(state.updates.length, 0);
 });
