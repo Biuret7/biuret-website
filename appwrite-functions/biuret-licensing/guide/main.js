@@ -1,5 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { configuration, geminiAnswer, GuideUnavailable } from './provider.js';
+import { selectContext, checkedHistory } from './context.js';
 
 const cards = JSON.parse(readFileSync(new URL('./knowledge.json', import.meta.url), 'utf8'));
 const ENDPOINT = 'https://fra.cloud.appwrite.io/v1';
@@ -42,22 +43,21 @@ export function makeHandler({ env = process.env, fetchImpl = fetch, limits = lim
       const account = await response.json();
       if (!admins.has(account.$id)) return json({ error: 'private_pilot_only', configured: false }, 403);
       const raw = req.bodyText || JSON.stringify(req.bodyJson || {});
-      if (Buffer.byteLength(raw, 'utf8') > 4096) return json({ error: 'invalid_request' }, 400);
+      if (Buffer.byteLength(raw, 'utf8') > 8192) return json({ error: 'invalid_request' }, 400);
       const value = JSON.parse(raw);
       if (!value || typeof value !== 'object' || Array.isArray(value)) return json({ error: 'invalid_request' }, 400);
       if (value.action === 'status') return json({ configured: Boolean(enabled), provider: 'Gemini', mode: 'private-pilot', dataPolicy: 'unpaid' });
       if (!enabled) return json({ error: 'model_not_configured' }, 503);
       if (value.consent !== true) return json({ error: 'consent_required' }, 400);
-      if (!['portfolio', 'academy', 'playground'].includes(value.site) || !['en', 'ar'].includes(value.locale) ||
+      if (!['all', 'portfolio', 'academy', 'playground'].includes(value.site) || !['en', 'ar'].includes(value.locale) ||
           typeof value.question !== 'string' || value.question.trim().length < 2 || value.question.length > 500) {
         return json({ error: 'invalid_request' }, 400);
       }
-      const context = cards.filter(c => c.site === value.site).map(c => ({
-        id: c.id, title: c.title[value.locale], body: c.body[value.locale], steps: c.steps?.[value.locale] || []
-      }));
+      const history = checkedHistory(value.history, cards);
+      const context = selectContext(cards, {question:value.question,locale:value.locale,site:value.site,history});
       release = limits.reserve();
       if (!release) return json({ error: 'pilot_limit_reached' }, 429);
-      const result = await answer({ question: value.question.trim(), locale: value.locale, context, env, fetchImpl });
+      const result = await answer({ question: value.question.trim(), locale: value.locale, context, history, env, fetchImpl });
       return json(result);
     } catch (error) {
       if (error instanceof SyntaxError) return json({ error: 'invalid_request' }, 400);

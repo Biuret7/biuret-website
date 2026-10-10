@@ -14,18 +14,20 @@ The existing function has database/account scopes for its other services. Guide 
 
 - Keep the existing Node.js 22 runtime, `index.js` entrypoint, permissions, scopes and webhook configuration.
 - Keep the existing 15-second function timeout. Identity verification has a 4-second deadline and Gemini a 9-second deadline, leaving time for validation and the response.
-- Upload the reviewed archive containing only `index.js`, `analytics.js`, `package.json`, `guide/main.js`, `guide/provider.js` and `guide/knowledge.json`.
+- Upload the reviewed archive containing only `index.js`, `analytics.js`, `package.json`, `guide/main.js`, `guide/provider.js`, `guide/context.js` and `guide/knowledge.json`.
+- The expanded update also includes `guide/context.js`: 136 public bilingual cards, query-based context selection (14 cards/18,000 characters maximum), all-site questions, validated recent-question context, clarification and suggested follow-ups. The generator reads only public path metadata; it never imports private lesson or assessment libraries.
+- Follow-up requests may include at most three recent successful questions and validated public source IDs. The server drops caller-supplied answers, profiles and roles. The consent notice explicitly covers this context; clearing the conversation removes the page's in-memory context. It does not delete Appwrite/Google records.
 - Add `GUIDE_ADMIN_USER_IDS` for the previously approved Academy administrator only.
 - `GUIDE_GEMINI_MODEL=gemini-3.5-flash-lite` (stable, free tier documented by Google on review date; actual project quota/availability remains to be tested).
 - Create **secret** variable `GEMINI_API_KEY`: the owner enters it directly in Appwrite; no chat, Git, screenshot or archive should contain it.
 - Keep `GUIDE_ENABLED=false` until the key is saved and private testing is ready. `true` permits only the verified administrator. `false` stops model requests.
 - New frontend page `/guide-pilot.html` is noindex and unlinked from navigation. Its source is public; its AI requests require server-verified administrator access. The normal Guide on all three sites remains curated.
 
-Status request: `{action:"guide:status"}`. Question request: `{action:"guide:ask",question,locale,site,consent:true}` through authenticated Appwrite SDK executions. No direct Gemini credentials are sent from the browser. Response citations are validated against the selected site's public cards. Only plain text and our own validated source links are rendered. Unknown/unavailable replies fall back to the curated guide.
+Status request: `{action:"guide:status"}`. Question request: `{action:"guide:ask",question,locale,site,consent:true,history}` through authenticated Appwrite SDK executions. No direct Gemini credentials are sent from the browser. Response citations are validated against the maintained public cards. Only plain text and our own validated source links are rendered. Unknown/unavailable replies fall back to the curated guide.
 
 ## Tests
 
-33 tests passed: provider request isolation, header-only credential, streamed response size, malformed/blocked/truncated/quota results, source validation, unknown-topic abstention, session/admin/consent enforcement, context injection rejection, kill switch, warm-runtime throttling, routing and current analytics/licensing/profile regressions. Provider tests use fake replies; they do **not** prove live model quality.
+39 tests passed: provider request isolation, header-only credential, streamed response size, malformed/blocked/truncated/quota results, source validation, unknown-topic abstention, session/admin/consent enforcement, context injection rejection, kill switch, warm-runtime throttling, routing and current analytics/licensing/profile regressions. Provider tests use fake replies; they do **not** prove live model quality.
 
 Local UI review: Arabic/English, correct RTL/LTR, 320px without horizontal overflow, site selection and suggested questions without sending. Initial local layout preview excluded the auth SDK; production uses the SDK and administrator access was verified there.
 

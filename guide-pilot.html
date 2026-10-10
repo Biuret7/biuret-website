@@ -4,10 +4,10 @@
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex,nofollow"><title>Biuret Guide · Private pilot</title>
   <link rel="icon" href="assets/biuret-logo-20261005.png">
-  <link rel="stylesheet" href="guide-pilot.css?v=20261010-1">
+  <link rel="stylesheet" href="guide-pilot.css?v=20261010-2">
   <script defer src="https://cdn.jsdelivr.net/npm/appwrite@23.0.0"></script>
   <script defer src="appwrite-config.js?v=20260912-23"></script>
-  <script type="module" src="guide-pilot.js?v=20261010-1"></script>
+  <script type="module" src="guide-pilot.js?v=20261010-2"></script>
 </head>
 <body>
   <header><a class="brand" href="index.html"><img src="assets/biuret-logo-20261005.png" alt=""> Biuret <small>/ Guide</small></a><button id="language" type="button">English</button></header>
@@ -21,17 +21,21 @@
       <section class="panel"><h2 data-en="Ask about a Biuret site" data-ar="اسأل عن أحد مواقع Biuret">اسأل عن أحد مواقع Biuret</h2>
         <form id="pilot-form">
           <label for="site" data-en="Site to review" data-ar="الموقع الذي تراجعه">الموقع الذي تراجعه</label>
-          <select id="site"><option value="portfolio">Portfolio</option><option value="academy">Academy</option><option value="playground">Playground</option></select>
+          <select id="site"><option value="all" data-en="All Biuret sites" data-ar="جميع مواقع Biuret">جميع مواقع Biuret</option><option value="portfolio">Portfolio</option><option value="academy">Academy</option><option value="playground">Playground</option></select>
           <label for="question" data-en="Your question" data-ar="سؤالك">سؤالك</label>
           <textarea id="question" rows="4" minlength="2" maxlength="500" required dir="auto"></textarea>
           <div id="suggestions" class="suggestions"></div>
-          <label class="consent" for="consent"><input id="consent" type="checkbox" required><span data-en="Send this question and public site facts to Google Gemini. This free project may use inputs and responses to improve its models. Do not enter personal or confidential information." data-ar="أوافق على إرسال هذا السؤال ومعلومات الموقع العامة إلى Google Gemini. قد يستخدم المشروع المجاني الأسئلة والردود لتحسين نماذجه. لا تُدخل معلومات شخصية أو سرية.">أوافق على إرسال هذا السؤال ومعلومات الموقع العامة إلى Google Gemini. قد يستخدم المشروع المجاني الأسئلة والردود لتحسين نماذجه. لا تُدخل معلومات شخصية أو سرية.</span></label>
+          <p class="scope-note" data-en="Ask in your own words: compare options, find a course, understand a feature or troubleshoot a page. Follow-up questions use the last three successful questions while this page remains open." data-ar="اسأل بطريقتك: قارن الخيارات، ابحث عن دورة، افهم ميزة أو حل مشكلة في صفحة. تستخدم أسئلة المتابعة آخر ثلاثة أسئلة ناجحة ما دامت الصفحة مفتوحة.">اسأل بطريقتك: قارن الخيارات، ابحث عن دورة، افهم ميزة أو حل مشكلة في صفحة. تستخدم أسئلة المتابعة آخر ثلاثة أسئلة ناجحة ما دامت الصفحة مفتوحة.</p>
+          <label class="consent" for="consent"><input id="consent" type="checkbox" required><span data-en="Send this question, up to three recent successful questions and public site facts to Google Gemini. This free project may use inputs and responses to improve its models. Do not enter personal or confidential information." data-ar="أوافق على إرسال السؤال وحتى ثلاثة أسئلة ناجحة سابقة ومعلومات المواقع العامة إلى Google Gemini. قد يستخدم المشروع المجاني الأسئلة والردود لتحسين نماذجه. لا تُدخل معلومات شخصية أو سرية.">أوافق على إرسال السؤال وحتى ثلاثة أسئلة ناجحة سابقة ومعلومات المواقع العامة إلى Google Gemini. قد يستخدم المشروع المجاني الأسئلة والردود لتحسين نماذجه. لا تُدخل معلومات شخصية أو سرية.</span></label>
           <a class="policy" href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener" data-en="Gemini data policy ↗" data-ar="سياسة بيانات Gemini ↗">سياسة بيانات Gemini ↗</a>
           <button id="send" class="primary" type="submit" disabled data-en="Ask Gemini" data-ar="اسأل Gemini">اسأل Gemini</button>
         </form>
       </section>
       <section class="panel result-panel" aria-labelledby="result-heading"><div class="result-heading"><h2 id="result-heading" data-en="Answer and sources" data-ar="الإجابة والمصادر">الإجابة والمصادر</h2><span id="mode"></span></div>
         <p id="answer-status" role="status"></p><div id="result" aria-live="polite"></div>
+        <div id="followups" class="suggestions" aria-label="Follow-up questions"></div>
+        <div class="answer-actions"><button id="copy-answer" type="button" hidden data-en="Copy answer" data-ar="نسخ الإجابة">نسخ الإجابة</button><button id="clear-chat" type="button" data-en="New conversation" data-ar="محادثة جديدة">محادثة جديدة</button><span id="copy-status" role="status"></span></div>
+        <div id="recent" class="recent"></div>
         <p class="note" data-en="AI can make mistakes. Check the linked sources. It cannot read your account, perform actions or provide exam answers. History is not saved in this page; Appwrite may retain execution records." data-ar="قد يخطئ النموذج؛ راجع المصادر المرتبطة. لا يمكنه قراءة حسابك أو تنفيذ إجراءات أو إعطاء إجابات الامتحانات. لا تحفظ هذه الصفحة سجل المحادثة؛ قد يحتفظ Appwrite بسجلات التنفيذ.">قد يخطئ النموذج؛ راجع المصادر المرتبطة. لا يمكنه قراءة حسابك أو تنفيذ إجراءات أو إعطاء إجابات الامتحانات. لا تحفظ هذه الصفحة سجل المحادثة؛ قد يحتفظ Appwrite بسجلات التنفيذ.</p>
       </section>
     </div>

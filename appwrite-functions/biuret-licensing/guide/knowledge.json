@@ -871,5 +871,2428 @@
         "استخدم Escape لإغلاق القائمة والعودة للزر."
       ]
     }
+  },
+  {
+    "id": "guide-scope",
+    "site": "portfolio",
+    "path": "guide-pilot.html",
+    "title": {
+      "en": "What Biuret Guide can help with",
+      "ar": "بماذا يساعدك Biuret Guide؟"
+    },
+    "body": {
+      "en": "Biuret Guide explains the three Biuret websites, documented features, learning routes, tools, account workflows and common navigation problems. It can compare documented choices and ask a clarification question. Gemini access is currently a private administrator pilot; public Guide widgets use the site guide. It cannot inspect your account, modify data or solve assessed work. Answers link to public source pages.",
+      "ar": "يشرح Biuret Guide مواقع Biuret الثلاثة والميزات الموثّقة وخطوات التعلم والأدوات وإجراءات الحساب ومشاكل التنقل الشائعة. يستطيع مقارنة الخيارات الموثقة وطلب توضيح. Gemini متاح حالياً كتجربة خاصة للإدارة؛ الدليل العام يستخدم إرشادات الموقع. لا يقرأ حسابك ولا يعدّل بياناتك ولا يحل التقييمات. ترتبط الإجابات بصفحات المصادر العامة."
+    },
+    "keywords": [
+      "guide",
+      "assistant",
+      "help",
+      "مساعد",
+      "دليل",
+      "بيوريت",
+      "مساعدة",
+      "تقدر",
+      "تستطيع"
+    ]
+  },
+  {
+    "id": "sign-in-help",
+    "site": "portfolio",
+    "path": "auth.html",
+    "title": {
+      "en": "Sign in or create an account",
+      "ar": "تسجيل الدخول وإنشاء حساب"
+    },
+    "body": {
+      "en": "Use Sign in or Create account on the account page. Email/password and Google/GitHub controls are available. Use the same sign-in method and account when returning to your existing records; a different account can show different achievements. Never send your password, API key or verification code to Guide.",
+      "ar": "استخدم تسجيل الدخول أو إنشاء حساب في صفحة الحساب. تتوفر خيارات البريد وكلمة المرور وGoogle وGitHub. ارجع بنفس طريقة الدخول والحساب للوصول إلى سجلاتك؛ قد يظهر حساب آخر بإنجازات مختلفة. لا ترسل كلمة المرور أو مفتاح API أو رمز التحقق إلى الدليل."
+    },
+    "keywords": [
+      "login",
+      "sign in",
+      "google",
+      "github",
+      "register",
+      "signup",
+      "تسجيل",
+      "دخول",
+      "حساب",
+      "جوجل",
+      "غوغل",
+      "جيت هب",
+      "مسجل"
+    ]
+  },
+  {
+    "id": "password-help",
+    "site": "portfolio",
+    "path": "forgot-password.html",
+    "title": {
+      "en": "Forgotten password",
+      "ar": "نسيت كلمة المرور"
+    },
+    "body": {
+      "en": "The sign-in page has Forgot password. Request a recovery message for your account email and follow its link. Guide cannot view codes or reset credentials. If you use Google/GitHub, return through that provider; its own account recovery is separate from Biuret email/password recovery.",
+      "ar": "تحتوي صفحة الدخول على نسيت كلمة المرور. اطلب رسالة استعادة لبريد الحساب واتبع رابطها. لا يرى الدليل الرموز ولا يعيد تعيين بيانات الدخول. إذا كنت تدخل عبر Google أو GitHub، استخدم المزوّد نفسه؛ استعادة حساب المزوّد تختلف عن استعادة كلمة مرور Biuret."
+    },
+    "keywords": [
+      "forgot",
+      "recover",
+      "reset",
+      "password",
+      "نسيت",
+      "استعادة",
+      "كلمة المرور",
+      "باسورد"
+    ]
+  },
+  {
+    "id": "profile-settings",
+    "site": "portfolio",
+    "path": "settings.html",
+    "title": {
+      "en": "Account photo and settings",
+      "ar": "صورة الحساب والإعدادات"
+    },
+    "body": {
+      "en": "Account Settings provides profile photo, display name, email verification, email/password security and interface preferences. Some interface preferences stay on this device; the private account photo is attached to the account. Security changes require the protected steps shown in the form. Guide can direct you there but cannot apply changes.",
+      "ar": "تتيح إعدادات الحساب الصورة والاسم وتوثيق البريد وإعدادات الأمان للبريد وكلمة المرور وتفضيلات الواجهة. تبقى بعض تفضيلات الواجهة على الجهاز؛ ترتبط صورة الحساب الخاصة بالحساب. تحتاج تغييرات الأمان إلى خطوات الحماية الموضحة في النموذج. يوجّهك الدليل ولا ينفّذ التغييرات."
+    },
+    "keywords": [
+      "photo",
+      "avatar",
+      "name",
+      "settings",
+      "email",
+      "صورة",
+      "صورتي",
+      "اسمي",
+      "اعدادات",
+      "الاسم",
+      "البريد"
+    ]
+  },
+  {
+    "id": "portfolio-navigation",
+    "site": "portfolio",
+    "path": "index.html",
+    "title": {
+      "en": "Find your way around the portfolio",
+      "ar": "التنقل في موقع الأعمال"
+    },
+    "body": {
+      "en": "The main navigation leads to Home, Projects, Skills, Journey, Credentials and Contact. Project filters and search narrow the six concepts; open a concept for its own roadmap. My sites opens Portfolio, Academy and Playground. Language controls switch Arabic/English.",
+      "ar": "توصلك القائمة إلى الرئيسية والمشاريع والمهارات والرحلة والشهادات والتواصل. استخدم تصنيف المشاريع والبحث لتحديد الأفكار الستة، وافتح الفكرة لمراجعة خارطتها. تعرض قائمة مواقعي Portfolio والأكاديمية وPlayground. يبدّل زر اللغة بين العربية والإنجليزية."
+    },
+    "keywords": [
+      "navigation",
+      "menu",
+      "skills",
+      "journey",
+      "filter",
+      "search",
+      "القائمة",
+      "مهارات",
+      "رحلة",
+      "فلتر",
+      "بحث",
+      "لغة"
+    ]
+  },
+  {
+    "id": "security-report",
+    "site": "portfolio",
+    "path": "security.html",
+    "title": {
+      "en": "Report a website problem responsibly",
+      "ar": "الإبلاغ عن مشكلة بالموقع"
+    },
+    "body": {
+      "en": "Use the Security page and the portfolio Contact section for reporting. Provide the affected public page, steps to reproduce, expected result and observed result. Do not send passwords, private keys, personal data or destructive proof. Guide does not submit a report on your behalf.",
+      "ar": "راجع صفحة الأمن وقسم التواصل للإبلاغ. اذكر الصفحة العامة المتأثرة وخطوات إعادة المشكلة والنتيجة المتوقعة والفعلية. لا ترسل كلمات مرور أو مفاتيح خاصة أو بيانات شخصية أو إثباتاً تخريبياً. لا يرسل الدليل بلاغاً نيابة عنك."
+    },
+    "keywords": [
+      "bug",
+      "issue",
+      "error",
+      "report",
+      "support",
+      "خطأ",
+      "مشكلة",
+      "عطل",
+      "ابلاغ",
+      "دعم"
+    ]
+  },
+  {
+    "id": "academy-navigation",
+    "site": "academy",
+    "path": "index.html",
+    "title": {
+      "en": "The Academy learning route",
+      "ar": "طريق التعلم في الأكاديمية"
+    },
+    "body": {
+      "en": "Start with the free learning studio and Foundations. Then use Paths to choose a specialty; its page groups courses, practice quizzes, labs, challenges and related operations rooms. Progress and Profile show your account learning records. The sidebar groups learning, practice, achievements and benefits. Arabic uses RTL and English LTR.",
+      "ar": "ابدأ بالمساحة المجانية والأساسيات، ثم اختر تخصصاً من المسارات؛ تجمع صفحة المسار دوراته وكويزاته ومختبراته وتحدياته وغرف العمليات المرتبطة. تعرض صفحتا التقدم والملف الشخصي سجلات تعلم الحساب. تجمع القائمة الجانبية التعلم والتطبيق والإنجازات والمزايا. العربية من اليمين والإنجليزية من اليسار."
+    },
+    "keywords": [
+      "lost",
+      "roadmap",
+      "route",
+      "menu",
+      "beginner",
+      "تائه",
+      "ضايع",
+      "طريق",
+      "خطة",
+      "قائمة",
+      "يمين",
+      "يسار",
+      "بداية"
+    ]
+  },
+  {
+    "id": "academy-search",
+    "site": "academy",
+    "path": "search.html",
+    "title": {
+      "en": "Search learning content",
+      "ar": "البحث في المحتوى التعليمي"
+    },
+    "body": {
+      "en": "Use Academy Search to find content across the learning catalog, and Courses for the course collection. Search a topic or course name, open the matching item and inspect its related path. Some content needs account access; finding it in search does not unlock it.",
+      "ar": "استخدم البحث في الأكاديمية للعثور على المحتوى، وصفحة الدورات للفهرس. ابحث بموضوع أو اسم دورة وافتح العنصر المناسب وراجع مساره المرتبط. قد يتطلب المحتوى صلاحية للحساب؛ ظهوره في البحث لا يفتحه تلقائياً."
+    },
+    "keywords": [
+      "find",
+      "search",
+      "course",
+      "بحث",
+      "ابحث",
+      "اقي",
+      "دورة",
+      "كورسات"
+    ]
+  },
+  {
+    "id": "lesson-workflow",
+    "site": "academy",
+    "path": "courses.html",
+    "title": {
+      "en": "Study and complete a lesson",
+      "ar": "التعلم وإكمال الدرس"
+    },
+    "body": {
+      "en": "Open a course and follow its ordered lessons. Read the detailed explanation, examples and practice, then use Check your understanding. Follow the page's verified completion control and sign in to save server progress. Reading alone or completing a local note is not automatically verified completion. Access and prerequisites are displayed by the learning page.",
+      "ar": "افتح دورة واتبع دروسها بالترتيب. اقرأ الشرح المفصل والأمثلة والتطبيق ثم استخدم تحقق من فهمك. اتبع زر الإكمال الموثق في الصفحة وسجّل دخولك لحفظ تقدم الخادم. القراءة وحدها أو إكمال ملاحظة محلية لا تعني إكمالاً موثقاً تلقائياً. توضح صفحة التعلم الوصول والمتطلبات."
+    },
+    "keywords": [
+      "lesson",
+      "complete",
+      "understanding",
+      "study",
+      "finish",
+      "درس",
+      "دروس",
+      "اكمل",
+      "انهي",
+      "فهمك",
+      "شرح",
+      "قراءة"
+    ]
+  },
+  {
+    "id": "course-path-difference",
+    "site": "academy",
+    "path": "paths.html",
+    "title": {
+      "en": "Course, path and practice differences",
+      "ar": "الفرق بين الدورة والمسار والتدريب"
+    },
+    "body": {
+      "en": "A course is an ordered set of lessons about a subject. A path groups relevant courses and practice toward a specialty achievement. Practice quizzes differ from course exams; course results contribute to their related path requirements. A path also has a practical assessment and final exam. Follow the specific path page instead of treating every catalog exercise as a required credential step.",
+      "ar": "الدورة مجموعة دروس مرتبة عن موضوع، والمسار يجمع الدورات والتطبيق المناسب لتخصص وإثبات إنجازه. الكويزات تدريب وتختلف عن امتحان الدورة؛ تدخل نتائج الدورات في متطلبات مساراتها. للمسار تقييم عملي وامتحان نهائي أيضاً. اتبع صفحة المسار بدل اعتبار كل تدريب في الفهرس شرطاً للشهادة."
+    },
+    "keywords": [
+      "difference",
+      "course",
+      "path",
+      "quiz",
+      "exam",
+      "فرق",
+      "دورة",
+      "مسار",
+      "كويز",
+      "امتحان",
+      "اختبار"
+    ]
+  },
+  {
+    "id": "exam-locked",
+    "site": "academy",
+    "path": "paths.html",
+    "title": {
+      "en": "An exam is locked or a result is missing",
+      "ar": "الامتحان مقفل أو النتيجة لا تظهر"
+    },
+    "body": {
+      "en": "Open the exact path to inspect incomplete lessons, course exams and practical assessment requirements. Confirm the same signed-in account was used. Refresh after a server connection problem and review the displayed error. A failed course exam allows retry after review as shown in its page. Guide cannot inspect grades, bypass prerequisites or provide answers.",
+      "ar": "افتح المسار المقصود وراجع الدروس وامتحانات الدورات والتقييم العملي غير المكتمل. تأكد من استخدام الحساب نفسه، وحدّث الصفحة بعد مشكلة اتصال بالخادم وراجع رسالة الخطأ. يمكن إعادة امتحان الدورة بعد المراجعة كما توضح صفحته. لا يقرأ الدليل الدرجات ولا يتجاوز المتطلبات ولا يعطي الإجابات."
+    },
+    "keywords": [
+      "locked",
+      "blocked",
+      "retry",
+      "failed",
+      "result",
+      "prerequisite",
+      "مقفل",
+      "مغلق",
+      "محاولة",
+      "فشلت",
+      "نتيجة",
+      "متطلبات",
+      "مش راضي"
+    ]
+  },
+  {
+    "id": "certificate-downloads",
+    "site": "academy",
+    "path": "certifications.html",
+    "title": {
+      "en": "Download and verify an Academy certificate",
+      "ar": "تنزيل شهادة الأكاديمية والتحقق منها"
+    },
+    "body": {
+      "en": "Find your credential in the Academy certificate pages or its path assessment. Download controls support PDF, PNG and JPEG. The credential includes real holder name, path/course details, lessons, exam information and issue/verification data. Public verification requires the holder to enable sharing. If no credential appears, check the same account and path requirements. Guide cannot issue or edit a credential.",
+      "ar": "ابحث عن إنجازك في صفحات شهادات الأكاديمية أو تقييم مساره. تدعم أزرار التنزيل PDF وPNG وJPEG. تتضمن الشهادة الاسم الحقيقي وتفاصيل المسار والدورات والدروس والامتحان ومعلومات الإصدار والتحقق. يحتاج التحقق العام إلى تفعيل المشاركة من صاحب الشهادة. إذا لم تظهر، راجع الحساب نفسه ومتطلبات المسار. لا يصدر الدليل شهادة ولا يعدّلها."
+    },
+    "keywords": [
+      "download",
+      "pdf",
+      "png",
+      "jpeg",
+      "verify",
+      "certificate",
+      "تنزيل",
+      "تحميل",
+      "شهادة",
+      "تحقق",
+      "مشاركة"
+    ]
+  },
+  {
+    "id": "certificate-name-value",
+    "site": "academy",
+    "path": "profile.html",
+    "title": {
+      "en": "Real name and credential meaning",
+      "ar": "الاسم الحقيقي وقيمة الشهادة"
+    },
+    "body": {
+      "en": "Use your real two- or three-part name for Academy achievements. A Biuret credential documents completion of platform requirements and can be included in a portfolio with accurate issuer and course details. It is not external professional accreditation or a job guarantee. Check your name before earning a new credential; Guide cannot rename an existing issued record.",
+      "ar": "استخدم اسمك الحقيقي الثنائي أو الثلاثي لشهادات الأكاديمية. توثق شهادة Biuret إكمال متطلبات المنصة ويمكن إضافتها لملف الأعمال مع وصف دقيق للجهة والدورة. ليست اعتماداً مهنياً خارجياً ولا ضمان وظيفة. راجع اسمك قبل إنجاز شهادة جديدة؛ لا يغيّر الدليل اسم سجل صادر."
+    },
+    "keywords": [
+      "real name",
+      "accredited",
+      "value",
+      "portfolio",
+      "name",
+      "اسم حقيقي",
+      "اسمي",
+      "قيمة",
+      "معتمدة",
+      "اعتماد",
+      "شهادة"
+    ]
+  },
+  {
+    "id": "progress-help",
+    "site": "academy",
+    "path": "progress.html",
+    "title": {
+      "en": "XP, levels and verified progress",
+      "ar": "XP والمستويات والتقدم الموثق"
+    },
+    "body": {
+      "en": "Progress displays verified learning progress, XP, level and coin history for the signed-in account. XP remains available to all plans; new Biuret Coins are earned only with Plus/Pro eligibility, while prior balances remain preserved. Local notes, favorites and browser practice do not automatically award XP or certificates. Guide can explain the difference but cannot read or change your balance.",
+      "ar": "تعرض صفحة تقدمك التعلم الموثق وXP والمستوى وسجل العملات للحساب المسجل. XP متاح لجميع الخطط؛ كسب عملات جديدة يتطلب أهلية Plus أو Pro، والأرصدة السابقة محفوظة. لا تمنح الملاحظات والمفضلة والتدريبات المحلية XP أو شهادات تلقائياً. يشرح الدليل الفرق ولا يقرأ الرصيد أو يعدّله."
+    },
+    "keywords": [
+      "xp",
+      "level",
+      "progress",
+      "coins",
+      "balance",
+      "نقاط",
+      "مستوى",
+      "تقدم",
+      "رصيد",
+      "عملات"
+    ]
+  },
+  {
+    "id": "notes-favorites",
+    "site": "academy",
+    "path": "notes.html",
+    "title": {
+      "en": "Notes, favorites and local data",
+      "ar": "الملاحظات والمفضلة والبيانات المحلية"
+    },
+    "body": {
+      "en": "Use lesson notes and the Notes page for study records, and Favorites to return to saved content. Local study records belong to this browser and are separate from server-verified progress. Keep available exports before clearing browser storage or changing devices. Guide cannot recover erased local records.",
+      "ar": "استخدم ملاحظات الدرس وصفحة الملاحظات لسجلات الدراسة، والمفضلة للرجوع للمحتوى المحفوظ. السجلات المحلية تخص هذا المتصفح وتختلف عن التقدم الموثق على الخادم. احفظ التصديرات المتاحة قبل مسح التخزين أو تغيير الجهاز. لا يستعيد الدليل سجلات محلية محذوفة."
+    },
+    "keywords": [
+      "notes",
+      "favorite",
+      "local",
+      "lost",
+      "backup",
+      "ملاحظات",
+      "مفضلة",
+      "محلي",
+      "ضاعت",
+      "حفظ"
+    ]
+  },
+  {
+    "id": "academy-operations",
+    "site": "academy",
+    "path": "operations.html",
+    "title": {
+      "en": "Operations rooms and educational labs",
+      "ar": "غرف العمليات والمختبرات التعليمية"
+    },
+    "body": {
+      "en": "Operations rooms organize scenario evidence and investigation decisions; open the rooms related to your chosen path. Labs apply a narrower skill, while challenges test a task. Read the scenario and scope, inspect evidence, record your reasoning and review feedback. These are safe educational simulations, not permission to test unrelated real systems.",
+      "ar": "تنظم غرف العمليات أدلة السيناريو وقرارات التحقيق؛ افتح غرف المسار المناسب. يطبق المختبر مهارة محددة، ويختبر التحدي مهمة. اقرأ السيناريو والنطاق، وافحص الدليل وسجّل سبب قرارك وراجع التغذية الراجعة. هذه محاكاة تعليمية آمنة ولا تسمح باختبار أنظمة حقيقية غير مرتبطة."
+    },
+    "keywords": [
+      "operation",
+      "room",
+      "lab",
+      "challenge",
+      "scenario",
+      "غرفة",
+      "غرف",
+      "عمليات",
+      "مختبر",
+      "تحدي",
+      "سيناريو"
+    ]
+  },
+  {
+    "id": "practical-reports",
+    "site": "academy",
+    "path": "professional.html",
+    "title": {
+      "en": "Practical reports and reviewer feedback",
+      "ar": "التقارير العملية وملاحظات المراجع"
+    },
+    "body": {
+      "en": "The professional workbench supports practical report drafts and downloads. Submitted reports enter a separate review workflow with reviewer feedback and resubmission. Follow the submission consent and current status in the report page. Administrative review is restricted to the current administrators. Accepting a report does not automatically replace path exam or credential eligibility requirements.",
+      "ar": "تدعم مساحة العمل المهنية مسودات التقارير العملية وتنزيلها. تدخل التقارير المسلّمة في سير مراجعة مستقل مع ملاحظات المراجع وإعادة الإرسال. اتبع موافقة التسليم وحالته الحالية في صفحة التقرير. المراجعة الإدارية للإدارة الحالية فقط. قبول التقرير لا يلغي متطلبات امتحان المسار أو أهلية الشهادة تلقائياً."
+    },
+    "keywords": [
+      "report",
+      "review",
+      "resubmit",
+      "practical",
+      "تقرير",
+      "تقارير",
+      "مراجعة",
+      "مراجع",
+      "اعادة ارسال",
+      "عملي"
+    ]
+  },
+  {
+    "id": "free-depth",
+    "site": "academy",
+    "path": "free-studio.html",
+    "title": {
+      "en": "What the free learning experience includes",
+      "ar": "ماذا تشمل تجربة التعلم المجانية؟"
+    },
+    "body": {
+      "en": "The free studio offers a guided Foundations credential route plus optional learning and browser practice. Follow verified lessons, apply skills and complete the practical/final requirements for the Foundations achievement. Optional exploration is useful but separate from verified completion. Specialties are cataloged as planned individual path purchases; buying is not active.",
+      "ar": "توفر المساحة المجانية طريقاً موجهاً لشهادة الأساسيات مع تعلم اختياري وتدريب في المتصفح. اتبع الدروس الموثقة وطبق المهارات وأكمل المتطلبات العملية والنهائية لإنجاز الأساسيات. الاستكشاف الاختياري مفيد ويختلف عن الإكمال الموثق. تُعرض التخصصات كمسارات مخططة للشراء الفردي؛ الشراء غير مفعّل."
+    },
+    "keywords": [
+      "free",
+      "foundation",
+      "included",
+      "مجاني",
+      "فري",
+      "اساسيات",
+      "يشمل",
+      "محتوى"
+    ]
+  },
+  {
+    "id": "shop-status",
+    "site": "academy",
+    "path": "shop.html",
+    "title": {
+      "en": "Shop, coins and pricing status",
+      "ar": "حالة المتجر والعملات والأسعار"
+    },
+    "body": {
+      "en": "The shop lists planned challenge hints, advanced notes and future educational discounts. Spending, redemption and purchases are inactive. Coins cannot be withdrawn as cash. The earlier 200 coins/$1 subscription proposal has no active conversion; terms after the switch to path purchases are not approved. No active path price or all-content monthly subscription should be promised.",
+      "ar": "يعرض المتجر مساعدات تحديات وملاحظات متقدمة وخصومات تعليمية مخططة. الصرف والاستبدال والشراء غير مفعّلة. لا تُسحب العملات نقداً. اقتراح 200 عملة مقابل دولار خصم اشتراك ليس تحويلاً نشطاً؛ لم تُعتمد شروطه بعد الانتقال لشراء المسارات. لا يجوز وعد المستخدم بسعر مسار أو اشتراك شهري يفتح كل المحتوى حالياً."
+    },
+    "keywords": [
+      "shop",
+      "price",
+      "purchase",
+      "discount",
+      "200",
+      "subscription",
+      "متجر",
+      "سعر",
+      "شراء",
+      "خصم",
+      "اشتراك",
+      "دولار"
+    ]
+  },
+  {
+    "id": "playground-tool-choice",
+    "site": "playground",
+    "path": "index.html#applications",
+    "title": {
+      "en": "Choose a tool for your task",
+      "ar": "اختر الأداة المناسبة لمهمتك"
+    },
+    "body": {
+      "en": "Use StudyFlow for learning schedules, Focus Room for timed work, JSON Studio for validating/formatting JSON, File Fingerprint for digest comparison, and Text Studio for text cleanup/counts. My Work collects optional saved plans and favorites. These browser tools are separate from installed Desktop/CLI programs and do not award Academy progress.",
+      "ar": "استخدم StudyFlow لجدول التعلم، ومساحة التركيز للعمل المؤقت، واستوديو JSON للفحص والتنسيق، وبصمة الملفات لمقارنة البصمات، واستوديو النصوص للتنظيف والإحصاءات. تجمع أعمالي الخطط والمفضلة المحفوظة اختيارياً. أدوات المتصفح تختلف عن Desktop وCLI ولا تمنح تقدم الأكاديمية."
+    },
+    "keywords": [
+      "which tool",
+      "compare",
+      "task",
+      "choose",
+      "اداة",
+      "اختار",
+      "اختيار",
+      "مهمة",
+      "اي",
+      "فرق"
+    ]
+  },
+  {
+    "id": "planner-troubleshooting",
+    "site": "playground",
+    "path": "studyflow.html#planner",
+    "title": {
+      "en": "An unrealistic deadline or missed study day",
+      "ar": "موعد غير واقعي أو يوم دراسة فائت"
+    },
+    "body": {
+      "en": "StudyFlow checks a target date without shortening required work. If the target does not fit, allow more days/time or reduce the learning scope. Preview rescheduling for unfinished sessions and apply it while retaining completed checks. Custom topics must be in prerequisite order and do not create new lesson content.",
+      "ar": "يفحص StudyFlow الموعد دون تقليص العمل المطلوب. إذا لم يناسب، زد الأيام أو الوقت أو قلل نطاق التعلم. عاين إعادة جدولة الجلسات غير المكتملة وطبّقها مع حفظ علامات الإكمال. رتّب المواضيع المخصصة حسب المتطلبات؛ إدخالها لا ينشئ محتوى دروس جديداً."
+    },
+    "keywords": [
+      "deadline",
+      "missed",
+      "reschedule",
+      "late",
+      "date",
+      "موعد",
+      "فاتني",
+      "جدولة",
+      "متأخر",
+      "تاريخ",
+      "وقت"
+    ]
+  },
+  {
+    "id": "focus-saving",
+    "site": "playground",
+    "path": "focus.html",
+    "title": {
+      "en": "Focus timer, breaks and saving",
+      "ar": "مؤقت التركيز والاستراحة والحفظ"
+    },
+    "body": {
+      "en": "Set a task and duration, start/pause/reset as needed, and use short/long breaks. Only completed focus sessions count. Optional device saving retains future completed sessions and daily goal summaries; the current task and running timer reset on reload. Timer totals measure sessions, not learning mastery or Academy credit.",
+      "ar": "حدد مهمة ومدة وابدأ أو أوقف أو أعد ضبط المؤقت، مع استراحة قصيرة أو طويلة. تُحتسب الجلسات المكتملة فقط. يحفظ خيار الجهاز الجلسات المستقبلية المكتملة وملخصات الهدف اليومي؛ تتصفّر المهمة الحالية والمؤقت عند إعادة التحميل. تقيس الإحصاءات الجلسات ولا تثبت إتقان التعلم أو تمنح رصيد الأكاديمية."
+    },
+    "keywords": [
+      "focus",
+      "timer",
+      "break",
+      "pomodoro",
+      "reset",
+      "تركيز",
+      "مؤقت",
+      "استراحة",
+      "بومودورو",
+      "جلسة"
+    ]
+  },
+  {
+    "id": "workspace-backups",
+    "site": "playground",
+    "path": "workspace.html#backup",
+    "title": {
+      "en": "Save, restore and change devices",
+      "ar": "الحفظ والاستعادة وتغيير الجهاز"
+    },
+    "body": {
+      "en": "Turn on device saving before saving named plans, favorites and completed sessions. My Work offers a validated workspace backup/restore workflow; imports merge with existing work. Export before clearing browser data or moving devices. There is no cloud or automatic app/browser sync. Workspace backups differ from planner previews and Desktop SQLite/JSON backups.",
+      "ar": "فعّل الحفظ على الجهاز قبل حفظ الخطط المسماة والمفضلة والجلسات المكتملة. توفر أعمالي نسخة مساحة عمل واستعادة مع فحص؛ تدمج الاستيرادات بالمحتوى الموجود. صدّر قبل مسح بيانات المتصفح أو تغيير الجهاز. لا توجد مزامنة سحابية أو تلقائية مع التطبيق. تختلف نسخة مساحة العمل عن معاينة الخطة ونسخ Desktop بصيغ SQLite وJSON."
+    },
+    "keywords": [
+      "backup",
+      "restore",
+      "export",
+      "import",
+      "sync",
+      "saved",
+      "حفظ",
+      "استعادة",
+      "نسخة",
+      "تصدير",
+      "استيراد",
+      "مزامنة",
+      "جهاز"
+    ]
+  },
+  {
+    "id": "json-limitations",
+    "site": "playground",
+    "path": "json.html",
+    "title": {
+      "en": "JSON errors and limits",
+      "ar": "أخطاء JSON وحدود الأداة"
+    },
+    "body": {
+      "en": "JSON Studio accepts pasted JSON or a file up to 1 MiB. Validate before formatting, sorting keys, copying or exporting. Arrays keep their order. Parsing can change duplicate keys or large-number representation; this is not schema validation. Do not paste secrets, and keep your original before transforming it.",
+      "ar": "يقبل استوديو JSON نصاً ملصقاً أو ملفاً حتى 1 MiB. افحصه قبل التنسيق وترتيب المفاتيح والنسخ أو التصدير. يبقى ترتيب المصفوفات. قد تؤثر القراءة في المفاتيح المكررة أو تمثيل الأرقام الكبيرة؛ هذا ليس تحققاً من schema. لا تلصق أسراراً واحتفظ بالأصل قبل تحويله."
+    },
+    "keywords": [
+      "json",
+      "invalid",
+      "format",
+      "schema",
+      "size",
+      "خطأ",
+      "تنسيق",
+      "حجم",
+      "ملف",
+      "اقواس"
+    ]
+  },
+  {
+    "id": "hash-meaning",
+    "site": "playground",
+    "path": "hash.html",
+    "title": {
+      "en": "What a matching file hash proves",
+      "ar": "ماذا يثبت تطابق بصمة الملف؟"
+    },
+    "body": {
+      "en": "File Fingerprint compares SHA-256/384/512 digests for files up to 100 MiB or exact UTF-8 text. Compare to a digest from a trusted source. A match shows identical bytes; it does not prove malware absence or issuer trust. Text whitespace/encoding changes can change a digest. Reports exclude the original input.",
+      "ar": "تقارن بصمة الملفات SHA-256 و384 و512 لملفات حتى 100 MiB أو نص UTF-8 حرفي. قارن ببصمة من مصدر موثوق. يثبت التطابق تطابق البايتات ولا يثبت خلو الملف من البرمجيات الخبيثة أو ثقة الجهة. قد تغير المسافات والترميز البصمة. لا يحتوي التقرير المدخل الأصلي."
+    },
+    "keywords": [
+      "hash",
+      "sha256",
+      "sha-256",
+      "safe",
+      "virus",
+      "digest",
+      "بصمة",
+      "تطابق",
+      "آمن",
+      "فيروس",
+      "هاش"
+    ]
+  },
+  {
+    "id": "text-transformations",
+    "site": "playground",
+    "path": "text.html",
+    "title": {
+      "en": "Clean text without losing the original",
+      "ar": "تنظيف النص مع الحفاظ على الأصل"
+    },
+    "body": {
+      "en": "Text Studio counts words/characters and estimates reading time; it can clean whitespace and remove exact duplicate lines. Use Undo to reverse transformations and export TXT. Results stay in this tab; inputs are not saved automatically. Reading time is an estimate, not a comprehension grade.",
+      "ar": "يحسب استوديو النصوص الكلمات والأحرف ويقدّر وقت القراءة وينظف المسافات ويحذف السطور المتطابقة حرفياً. استخدم التراجع لعكس التحويل ثم صدّر TXT. تبقى النتائج في التبويب ولا تحفظ المدخلات تلقائياً. زمن القراءة تقدير وليس درجة فهم."
+    },
+    "keywords": [
+      "text",
+      "undo",
+      "duplicates",
+      "words",
+      "reading",
+      "نص",
+      "تراجع",
+      "مكرر",
+      "كلمات",
+      "قراءة"
+    ]
+  },
+  {
+    "id": "privacy-boundaries",
+    "site": "portfolio",
+    "path": "privacy.html",
+    "title": {
+      "en": "Privacy of tools, accounts and the AI pilot",
+      "ar": "خصوصية الأدوات والحسابات وتجربة الذكاء الاصطناعي"
+    },
+    "body": {
+      "en": "Playground inputs are processed locally and device saving is optional. Account and verified learning services use Appwrite. Gemini receives a consented question, up to three recent successful questions, and public site facts; the private pilot does not read account records or tool inputs. Unpaid Gemini may use submitted content/responses for model improvement; Appwrite may retain execution records. Never send confidential material to Guide.",
+      "ar": "تُعالج مدخلات Playground محلياً والحفظ على الجهاز اختياري. تستخدم الحسابات وخدمات التعلم الموثق Appwrite. يستقبل Gemini السؤال الموافق عليه وما يصل إلى ثلاثة أسئلة سابقة ناجحة ومعلومات المواقع العامة؛ لا تقرأ التجربة سجلات الحساب أو مدخلات الأدوات. قد تستخدم خدمة Gemini المجانية الأسئلة والردود لتحسين النموذج، وقد يحتفظ Appwrite بسجلات التنفيذ. لا ترسل محتوى سرياً إلى الدليل."
+    },
+    "keywords": [
+      "privacy",
+      "data",
+      "ai",
+      "gemini",
+      "local",
+      "upload",
+      "خصوصية",
+      "بيانات",
+      "ذكاء",
+      "رفع",
+      "سرية"
+    ]
+  },
+  {
+    "id": "all-learning-paths",
+    "site": "academy",
+    "path": "paths.html",
+    "title": {
+      "en": "All available learning paths",
+      "ar": "جميع المسارات التعليمية"
+    },
+    "body": {
+      "en": "Cybersecurity Foundations: From reading a URL to making a security decision based on evidence.\nAuthorized penetration testing: From scope to evidence and remediation in authorized training environments.\nSecurity operations and response: Start with logs and alerts, then build a hypothesis and containment decision.\nDigital forensics: Preserve evidence, build a timeline and separate observations from conclusions.\nCloud security: Learn shared responsibility, least privilege and secure delivery controls.\nGovernance, risk and compliance: Connect policy to risk assessment, continuity and audit.\nApplication security and DevSecOps: Understand HTTP, sessions and authorization, then inspect a training app.\nMobile application security: Protect storage, permissions, transport and APIs in mobile apps.\nThreat intelligence and OSINT: Collect authorized leads, assess confidence and connect them to evidence and defense.\nMalware analysis and reverse engineering: Start with safe static file analysis before isolated behavior analysis.\nFoundations are free. Complete them before specializing, then open a path for its courses, practice and requirements. Purchasing is currently closed.",
+      "ar": "أساسيات الأمن السيبراني: من قراءة الرابط إلى اتخاذ قرار أمني مبني على دليل.\nاختبار الاختراق المصرّح: من تحديد النطاق إلى التوثيق والإصلاح داخل بيئات تدريبية.\nالعمليات الأمنية والاستجابة: ابدأ من السجلات والتنبيهات، ثم كوّن فرضية وقرار احتواء.\nالأدلة الرقمية: احفظ سلامة الدليل، ابنِ خطاً زمنياً، وافصل الملاحظة عن الاستنتاج.\nأمن السحابة: تعلّم المسؤولية المشتركة وأقل صلاحية وضوابط البناء والنشر.\nالحوكمة والمخاطر والامتثال: اربط السياسات بتقييم المخاطر والاستمرارية والتدقيق.\nأمن التطبيقات وDevSecOps: افهم HTTP والجلسات والصلاحيات، ثم حلّل تطبيقاً تدريبياً.\nأمن تطبيقات الهاتف: احمِ التخزين والصلاحيات والاتصال وواجهات API في تطبيقات الهاتف.\nاستخبارات التهديدات وOSINT: اجمع إشارات مصرّحاً بها، قيّم الثقة، واربطها بالدليل والدفاع.\nتحليل البرمجيات والهندسة العكسية: تحليل ساكن وآمن للملفات قبل الانتقال إلى سلوكها في بيئة معزولة.\nالأساسيات مجانية. أكملها قبل التخصص، ثم افتح المسار لمراجعة دوراته وتطبيقاته ومتطلباته. الشراء مغلق حالياً."
+    },
+    "keywords": [
+      "all paths",
+      "available paths",
+      "specialties",
+      "specializations",
+      "مسارات",
+      "تخصصات",
+      "متاحة",
+      "جميع المسارات",
+      "كل المسارات"
+    ]
+  },
+  {
+    "id": "all-learning-courses",
+    "site": "academy",
+    "path": "courses.html",
+    "title": {
+      "en": "Browse the course catalog",
+      "ar": "تصفح فهرس الدورات"
+    },
+    "body": {
+      "en": "Understand URLs before you trust them · Identity and access · Evidence and response · Networks and protocols · Penetration testing · Web application security · Active Directory · Cryptography and data protection · Digital forensics · Malware analysis · Cloud security · Cybersecurity fundamentals · Applied governance, risk and compliance · Career pathways · Linux for cybersecurity · Software security and DevSecOps · Mobile security · OSINT and source intelligence · Advanced defense operations · Reverse engineering\nOpen a course from its path to review ordered lessons and account access. A catalog entry does not mean every account can access it.",
+      "ar": "افهم الروابط قبل أن تثق بها · الهوية والصلاحيات · الأدلة والاستجابة · الشبكات والبروتوكولات · اختبار الاختراق · أمن تطبيقات الويب · Active Directory · التشفير وحماية البيانات · الطب الشرعي الرقمي · تحليل البرمجيات الخبيثة · أمن الحوسبة السحابية · المفاهيم الأساسية · الحوكمة والمخاطر والامتثال العملي · مسارات الاحتراف · لينكس للأمن السيبراني · أمن البرمجيات وDevSecOps · أمن الهواتف المحمولة · OSINT واستخبارات المصادر · عمليات الدفاع المتقدم · الهندسة العكسية\nافتح الدورة من مسارها وراجع ترتيب الدروس ووصول حسابك. الدورات الظاهرة في الفهرس ليست كلها مفتوحة لكل حساب."
+    },
+    "keywords": [
+      "all courses",
+      "course catalog",
+      "دورات",
+      "كورسات",
+      "كل الدورات",
+      "جميع الكورسات"
+    ]
+  },
+  {
+    "id": "path-foundations",
+    "site": "academy",
+    "path": "path.html?id=foundations",
+    "title": {
+      "ar": "أساسيات الأمن السيبراني",
+      "en": "Cybersecurity Foundations"
+    },
+    "body": {
+      "en": "From reading a URL to making a security decision based on evidence.\nLearning outcomes: Analyze URLs and redirects · Protect identity and permissions · Preserve evidence and make security decisions\nCourses: Understand URLs before you trust them · Identity and access · Evidence and response\nquizzes: Cybersecurity fundamentals\nlabs: Lab: read the request before deciding · Lab: investigate a sign-in signal\nchallenges: Read the URL · File permissions · File fingerprint · Response language · Display name or evidence?\noperations: Suspicious document\nThe path page shows lesson, course exam, practical assessment, final exam and credential requirements. Purchases are closed; catalog listing does not imply account access.",
+      "ar": "من قراءة الرابط إلى اتخاذ قرار أمني مبني على دليل.\nالنتائج التعليمية: تحليل الروابط والتحويلات · حماية الهوية والصلاحيات · حفظ الأدلة واتخاذ قرار أمني\nالدورات: افهم الروابط قبل أن تثق بها · الهوية والصلاحيات · الأدلة والاستجابة\nكويزات التدريب: المفاهيم الأساسية\nالمختبرات: مختبر: افهم الطلب قبل القرار · مختبر: حقّق في إشارة دخول\nالتحديات: اقرأ الرابط جيداً · أذونات الملف · بصمة الملف · لغة الاستجابة · اسم مرسل أم دليل؟\nغرف العمليات: الوثيقة المشبوهة\nراجع صفحة المسار لمتطلبات الدروس وامتحانات الدورات والتقييم العملي والامتحان النهائي والشهادة. الشراء مغلق؛ وجود المورد في الفهرس لا يعني أنه مفتوح لحسابك."
+    },
+    "keywords": [
+      "foundations",
+      "أساسيات الأمن السيبراني",
+      "Cybersecurity Foundations",
+      "تحليل الروابط والتحويلات",
+      "حماية الهوية والصلاحيات",
+      "حفظ الأدلة واتخاذ قرار أمني",
+      "Analyze URLs and redirects",
+      "Protect identity and permissions",
+      "Preserve evidence and make security decisions"
+    ]
+  },
+  {
+    "id": "course-url-safety",
+    "site": "academy",
+    "path": "course.html?id=url-safety",
+    "title": {
+      "ar": "افهم الروابط قبل أن تثق بها",
+      "en": "Understand URLs before you trust them"
+    },
+    "body": {
+      "en": "Learn the structure of a web address, find the real destination, then apply it to a suspicious link. Contains 3 lessons. Related path: Cybersecurity Foundations. Open the course for its ordered lessons and current access; complete verified requirements before its exam.",
+      "ar": "تعلّم تركيب عنوان الويب، وحدد الموقع الحقيقي، ثم طبّق ما تعلمته على رابط مشبوه. تضم 3 دروس. المسار المرتبط: أساسيات الأمن السيبراني. افتح الدورة لترتيب الدروس والوصول الحالي، وأكمل المتطلبات الموثّقة قبل الامتحان."
+    },
+    "keywords": [
+      "url-safety",
+      "افهم الروابط قبل أن تثق بها",
+      "Understand URLs before you trust them",
+      "course",
+      "دورة",
+      "كورس"
+    ]
+  },
+  {
+    "id": "course-identity-access",
+    "site": "academy",
+    "path": "course.html?id=identity-access",
+    "title": {
+      "ar": "الهوية والصلاحيات",
+      "en": "Identity and access"
+    },
+    "body": {
+      "en": "Protect identities, understand session lifecycles, and grant only the access each account needs. Contains 3 lessons. Related path: Cybersecurity Foundations. Open the course for its ordered lessons and current access; complete verified requirements before its exam.",
+      "ar": "احمِ الهوية، افهم دورة الجلسة، وامنح كل حساب الحد الأدنى اللازم من الصلاحيات. تضم 3 دروس. المسار المرتبط: أساسيات الأمن السيبراني. افتح الدورة لترتيب الدروس والوصول الحالي، وأكمل المتطلبات الموثّقة قبل الامتحان."
+    },
+    "keywords": [
+      "identity-access",
+      "الهوية والصلاحيات",
+      "Identity and access",
+      "course",
+      "دورة",
+      "كورس"
+    ]
+  },
+  {
+    "id": "course-evidence-response",
+    "site": "academy",
+    "path": "course.html?id=evidence-response",
+    "title": {
+      "ar": "الأدلة والاستجابة",
+      "en": "Evidence and response"
+    },
+    "body": {
+      "en": "Read a security signal in a log, preserve evidence, and choose a proportionate response. Contains 3 lessons. Related path: Cybersecurity Foundations. Open the course for its ordered lessons and current access; complete verified requirements before its exam.",
+      "ar": "اقرأ إشارة أمنية في سجل، احفظ الدليل، واتخذ خطوة استجابة متناسبة. تضم 3 دروس. المسار المرتبط: أساسيات الأمن السيبراني. افتح الدورة لترتيب الدروس والوصول الحالي، وأكمل المتطلبات الموثّقة قبل الامتحان."
+    },
+    "keywords": [
+      "evidence-response",
+      "الأدلة والاستجابة",
+      "Evidence and response",
+      "course",
+      "دورة",
+      "كورس"
+    ]
+  },
+  {
+    "id": "resource-labs-http-basics",
+    "site": "academy",
+    "path": "lab.html?id=http-basics",
+    "title": {
+      "ar": "مختبر: افهم الطلب قبل القرار",
+      "en": "Lab: read the request before deciding"
+    },
+    "body": {
+      "en": "An educational labs resource linked to Cybersecurity Foundations. Open it from the path page and read its instructions and account access requirements. It is distinct from the path final exam. Related paths: Cybersecurity Foundations",
+      "ar": "مورد تطبيقي تعليمي مرتبط بمسار أساسيات الأمن السيبراني. افتحه من صفحة المسار واقرأ التعليمات ومتطلبات الوصول لحسابك. هذا المورد يختلف عن الامتحان النهائي للمسار. المسارات المرتبطة: أساسيات الأمن السيبراني"
+    },
+    "keywords": [
+      "http-basics",
+      "مختبر: افهم الطلب قبل القرار",
+      "Lab: read the request before deciding",
+      "labs",
+      "مختبر"
+    ]
+  },
+  {
+    "id": "resource-labs-log-triage",
+    "site": "academy",
+    "path": "lab.html?id=log-triage",
+    "title": {
+      "ar": "مختبر: حقّق في إشارة دخول",
+      "en": "Lab: investigate a sign-in signal"
+    },
+    "body": {
+      "en": "An educational labs resource linked to Cybersecurity Foundations. Open it from the path page and read its instructions and account access requirements. It is distinct from the path final exam. Related paths: Cybersecurity Foundations",
+      "ar": "مورد تطبيقي تعليمي مرتبط بمسار أساسيات الأمن السيبراني. افتحه من صفحة المسار واقرأ التعليمات ومتطلبات الوصول لحسابك. هذا المورد يختلف عن الامتحان النهائي للمسار. المسارات المرتبطة: أساسيات الأمن السيبراني"
+    },
+    "keywords": [
+      "log-triage",
+      "مختبر: حقّق في إشارة دخول",
+      "Lab: investigate a sign-in signal",
+      "labs",
+      "مختبر"
+    ]
+  },
+  {
+    "id": "resource-challenges-f-domain",
+    "site": "academy",
+    "path": "challenges.html?challenge=f-domain",
+    "title": {
+      "ar": "اقرأ الرابط جيداً",
+      "en": "Read the URL"
+    },
+    "body": {
+      "en": "An educational challenges resource linked to Cybersecurity Foundations. Open it from the path page and read its instructions and account access requirements. It is distinct from the path final exam. Related paths: Cybersecurity Foundations",
+      "ar": "مورد تطبيقي تعليمي مرتبط بمسار أساسيات الأمن السيبراني. افتحه من صفحة المسار واقرأ التعليمات ومتطلبات الوصول لحسابك. هذا المورد يختلف عن الامتحان النهائي للمسار. المسارات المرتبطة: أساسيات الأمن السيبراني"
+    },
+    "keywords": [
+      "f-domain",
+      "اقرأ الرابط جيداً",
+      "Read the URL",
+      "challenges",
+      "تحدي"
+    ]
+  },
+  {
+    "id": "resource-challenges-f-permissions",
+    "site": "academy",
+    "path": "challenges.html?challenge=f-permissions",
+    "title": {
+      "ar": "أذونات الملف",
+      "en": "File permissions"
+    },
+    "body": {
+      "en": "An educational challenges resource linked to Cybersecurity Foundations. Open it from the path page and read its instructions and account access requirements. It is distinct from the path final exam. Related paths: Cybersecurity Foundations · Governance, risk and compliance",
+      "ar": "مورد تطبيقي تعليمي مرتبط بمسار أساسيات الأمن السيبراني. افتحه من صفحة المسار واقرأ التعليمات ومتطلبات الوصول لحسابك. هذا المورد يختلف عن الامتحان النهائي للمسار. المسارات المرتبطة: أساسيات الأمن السيبراني · الحوكمة والمخاطر والامتثال"
+    },
+    "keywords": [
+      "f-permissions",
+      "أذونات الملف",
+      "File permissions",
+      "challenges",
+      "تحدي"
+    ]
+  },
+  {
+    "id": "resource-challenges-f-hash",
+    "site": "academy",
+    "path": "challenges.html?challenge=f-hash",
+    "title": {
+      "ar": "بصمة الملف",
+      "en": "File fingerprint"
+    },
+    "body": {
+      "en": "An educational challenges resource linked to Cybersecurity Foundations. Open it from the path page and read its instructions and account access requirements. It is distinct from the path final exam. Related paths: Cybersecurity Foundations",
+      "ar": "مورد تطبيقي تعليمي مرتبط بمسار أساسيات الأمن السيبراني. افتحه من صفحة المسار واقرأ التعليمات ومتطلبات الوصول لحسابك. هذا المورد يختلف عن الامتحان النهائي للمسار. المسارات المرتبطة: أساسيات الأمن السيبراني"
+    },
+    "keywords": [
+      "f-hash",
+      "بصمة الملف",
+      "File fingerprint",
+      "challenges",
+      "تحدي"
+    ]
+  },
+  {
+    "id": "resource-challenges-f-redirect",
+    "site": "academy",
+    "path": "challenges.html?challenge=f-redirect",
+    "title": {
+      "ar": "لغة الاستجابة",
+      "en": "Response language"
+    },
+    "body": {
+      "en": "An educational challenges resource linked to Cybersecurity Foundations. Open it from the path page and read its instructions and account access requirements. It is distinct from the path final exam. Related paths: Cybersecurity Foundations",
+      "ar": "مورد تطبيقي تعليمي مرتبط بمسار أساسيات الأمن السيبراني. افتحه من صفحة المسار واقرأ التعليمات ومتطلبات الوصول لحسابك. هذا المورد يختلف عن الامتحان النهائي للمسار. المسارات المرتبطة: أساسيات الأمن السيبراني"
+    },
+    "keywords": [
+      "f-redirect",
+      "لغة الاستجابة",
+      "Response language",
+      "challenges",
+      "تحدي"
+    ]
+  },
+  {
+    "id": "resource-challenges-f-sender",
+    "site": "academy",
+    "path": "challenges.html?challenge=f-sender",
+    "title": {
+      "ar": "اسم مرسل أم دليل؟",
+      "en": "Display name or evidence?"
+    },
+    "body": {
+      "en": "An educational challenges resource linked to Cybersecurity Foundations. Open it from the path page and read its instructions and account access requirements. It is distinct from the path final exam. Related paths: Cybersecurity Foundations · Governance, risk and compliance",
+      "ar": "مورد تطبيقي تعليمي مرتبط بمسار أساسيات الأمن السيبراني. افتحه من صفحة المسار واقرأ التعليمات ومتطلبات الوصول لحسابك. هذا المورد يختلف عن الامتحان النهائي للمسار. المسارات المرتبطة: أساسيات الأمن السيبراني · الحوكمة والمخاطر والامتثال"
+    },
+    "keywords": [
+      "f-sender",
+      "اسم مرسل أم دليل؟",
+      "Display name or evidence?",
+      "challenges",
+      "تحدي"
+    ]
+  },
+  {
+    "id": "resource-operations-red_phantom",
+    "site": "academy",
+    "path": "operation.html?id=0",
+    "title": {
+      "ar": "الوثيقة المشبوهة",
+      "en": "Suspicious document"
+    },
+    "body": {
+      "en": "An educational operations resource linked to Cybersecurity Foundations. Open it from the path page and read its instructions and account access requirements. It is distinct from the path final exam. Related paths: Cybersecurity Foundations · Security operations and response · Digital forensics · Threat intelligence and OSINT · Malware analysis and reverse engineering",
+      "ar": "مورد تطبيقي تعليمي مرتبط بمسار أساسيات الأمن السيبراني. افتحه من صفحة المسار واقرأ التعليمات ومتطلبات الوصول لحسابك. هذا المورد يختلف عن الامتحان النهائي للمسار. المسارات المرتبطة: أساسيات الأمن السيبراني · العمليات الأمنية والاستجابة · الأدلة الرقمية · استخبارات التهديدات وOSINT · تحليل البرمجيات والهندسة العكسية"
+    },
+    "keywords": [
+      "red_phantom",
+      "الوثيقة المشبوهة",
+      "Suspicious document",
+      "operations",
+      "غرفة عمليات"
+    ]
+  },
+  {
+    "id": "resource-quizzes-quiz-0",
+    "site": "academy",
+    "path": "practice-quiz.html?id=0",
+    "title": {
+      "ar": "المفاهيم الأساسية",
+      "en": "Cybersecurity fundamentals"
+    },
+    "body": {
+      "en": "An educational quizzes resource linked to Cybersecurity Foundations. Open it from the path page and read its instructions and account access requirements. It is distinct from the path final exam. Related paths: Cybersecurity Foundations",
+      "ar": "مورد تطبيقي تعليمي مرتبط بمسار أساسيات الأمن السيبراني. افتحه من صفحة المسار واقرأ التعليمات ومتطلبات الوصول لحسابك. هذا المورد يختلف عن الامتحان النهائي للمسار. المسارات المرتبطة: أساسيات الأمن السيبراني"
+    },
+    "keywords": [
+      "quiz-0",
+      "المفاهيم الأساسية",
+      "Cybersecurity fundamentals",
+      "quizzes",
+      "كويز"
+    ]
+  },
+  {
+    "id": "path-path_pentest",
+    "site": "academy",
+    "path": "path.html?id=path_pentest",
+    "title": {
+      "ar": "اختبار الاختراق المصرّح",
+      "en": "Authorized penetration testing"
+    },
+    "body": {
+      "en": "From scope to evidence and remediation in authorized training environments.\nLearning outcomes: Scope and methodology · Networks and tools · Training app assessment · Reporting and remediation\nCourses: Networks and protocols · Penetration testing · Web application security · Active Directory\nquizzes: Networks and protocols · Penetration testing · Linux for cybersecurity · Web application security\nlabs: Service inventory and evidence limits · Object authorization in an API · Effective Linux permissions\nchallenges: Challenge 01: Network discovery · Challenge 03: SQL injection · Challenge 04: Cross-site scripting · Safe script arguments · Challenge 08: Active Directory compromise\noperations: Tenant gateway · Identity echo\nThe path page shows lesson, course exam, practical assessment, final exam and credential requirements. Purchases are closed; catalog listing does not imply account access.",
+      "ar": "من تحديد النطاق إلى التوثيق والإصلاح داخل بيئات تدريبية.\nالنتائج التعليمية: النطاق والمنهجية · الشبكات والأدوات · اختبار تطبيق تدريبي · التقرير والإصلاح\nالدورات: الشبكات والبروتوكولات · اختبار الاختراق · أمن تطبيقات الويب · Active Directory\nكويزات التدريب: الشبكات والبروتوكولات · اختبار الاختراق · لينكس للأمن السيبراني · أمن تطبيقات الويب المتقدم\nالمختبرات: جرد الخدمات وحدود الاستنتاج · تفويض الكائنات في API · صلاحيات Linux الفعلية\nالتحديات: تحدي 01 — المبتدئ الأول · تحدي 03 — حقن SQL · تحدي 04 — XSS المخفي · معاملات سكربت آمنة · تحدي 08 — اختراق Active Directory\nغرف العمليات: بوابة المستأجر · صدى الهوية\nراجع صفحة المسار لمتطلبات الدروس وامتحانات الدورات والتقييم العملي والامتحان النهائي والشهادة. الشراء مغلق؛ وجود المورد في الفهرس لا يعني أنه مفتوح لحسابك."
+    },
+    "keywords": [
+      "path_pentest",
+      "اختبار الاختراق المصرّح",
+      "Authorized penetration testing",
+      "النطاق والمنهجية",
+      "الشبكات والأدوات",
+      "اختبار تطبيق تدريبي",
+      "التقرير والإصلاح",
+      "Scope and methodology",
+      "Networks and tools",
+      "Training app assessment",
+      "Reporting and remediation"
+    ]
+  },
+  {
+    "id": "course-desktop-2",
+    "site": "academy",
+    "path": "library-course.html?id=desktop-2",
+    "title": {
+      "ar": "الشبكات والبروتوكولات",
+      "en": "Networks and protocols"
+    },
+    "body": {
+      "en": "Understand how data moves, then design segmented networks that you can monitor. Contains 7 lessons. Related path: Authorized penetration testing. Open the course for its ordered lessons and current access; complete verified requirements before its exam.",
+      "ar": "فهم حركة البيانات ثم تصميم شبكات مقسّمة وقابلة للرصد تضم 7 دروس. المسار المرتبط: اختبار الاختراق المصرّح. افتح الدورة لترتيب الدروس والوصول الحالي، وأكمل المتطلبات الموثّقة قبل الامتحان."
+    },
+    "keywords": [
+      "desktop-2",
+      "الشبكات والبروتوكولات",
+      "Networks and protocols",
+      "course",
+      "دورة",
+      "كورس"
+    ]
+  },
+  {
+    "id": "course-desktop-3",
+    "site": "academy",
+    "path": "library-course.html?id=desktop-3",
+    "title": {
+      "ar": "اختبار الاختراق",
+      "en": "Penetration testing"
+    },
+    "body": {
+      "en": "Plan authorized, evidence-based tests from scope definition to remediation checks. Contains 8 lessons. Related path: Authorized penetration testing. Open the course for its ordered lessons and current access; complete verified requirements before its exam.",
+      "ar": "اختبار مصرح قائم على الأدلة، من تحديد النطاق إلى التحقق من الإصلاح تضم 8 دروس. المسار المرتبط: اختبار الاختراق المصرّح. افتح الدورة لترتيب الدروس والوصول الحالي، وأكمل المتطلبات الموثّقة قبل الامتحان."
+    },
+    "keywords": [
+      "desktop-3",
+      "اختبار الاختراق",
+      "Penetration testing",
+      "course",
+      "دورة",
+      "كورس"
+    ]
+  },
+  {
+    "id": "course-desktop-10",
+    "site": "academy",
+    "path": "library-course.html?id=desktop-10",
+    "title": {
+      "ar": "أمن تطبيقات الويب",
+      "en": "Web application security"
+    },
+    "body": {
+      "en": "Move from vulnerability classes to verifiable controls for identity and sessions. Contains 5 lessons. Related path: Authorized penetration testing. Open the course for its ordered lessons and current access; complete verified requirements before its exam.",
+      "ar": "من فئات الثغرات إلى تصميم هوية وجلسات وضوابط قابلة للتحقق تضم 5 دروس. المسار المرتبط: اختبار الاختراق المصرّح. افتح الدورة لترتيب الدروس والوصول الحالي، وأكمل المتطلبات الموثّقة قبل الامتحان."
+    },
+    "keywords": [
+      "desktop-10",
+      "أمن تطبيقات الويب",
+      "Web application security",
+      "course",
+      "دورة",
+      "كورس"
+    ]
+  },
+  {
+    "id": "course-desktop-11",
+    "site": "academy",
+    "path": "library-course.html?id=desktop-11",
+    "title": {
+      "ar": "Active Directory",
+      "en": "Active Directory"
+    },
+    "body": {
+      "en": "Understand enterprise identity, harden it and monitor privilege paths. Contains 5 lessons. Related path: Authorized penetration testing. Open the course for its ordered lessons and current access; complete verified requirements before its exam.",
+      "ar": "فهم الهوية المؤسسية ثم تقويتها ومراقبة مسارات الامتياز تضم 5 دروس. المسار المرتبط: اختبار الاختراق المصرّح. افتح الدورة لترتيب الدروس والوصول الحالي، وأكمل المتطلبات الموثّقة قبل الامتحان."
+    },
+    "keywords": [
+      "desktop-11",
+      "Active Directory",
+      "Active Directory",
+      "course",
+      "دورة",
+      "كورس"
+    ]
+  },
+  {
+    "id": "resource-labs-lab-0",
+    "site": "academy",
+    "path": "practice-lab.html?id=0",
+    "title": {
+      "ar": "جرد الخدمات وحدود الاستنتاج",
+      "en": "Service inventory and evidence limits"
+    },
+    "body": {
+      "en": "An educational labs resource linked to Authorized penetration testing. Open it from the path page and read its instructions and account access requirements. It is distinct from the path final exam. Related paths: Authorized penetration testing",
+      "ar": "مورد تطبيقي تعليمي مرتبط بمسار اختبار الاختراق المصرّح. افتحه من صفحة المسار واقرأ التعليمات ومتطلبات الوصول لحسابك. هذا المورد يختلف عن الامتحان النهائي للمسار. المسارات المرتبطة: اختبار الاختراق المصرّح"
+    },
+    "keywords": [
+      "lab-0",
+      "جرد الخدمات وحدود الاستنتاج",
+      "Service inventory and evidence limits",
+      "labs",
+      "مختبر"
+    ]
+  },
+  {
+    "id": "resource-labs-lab-2",
+    "site": "academy",
+    "path": "practice-lab.html?id=2",
+    "title": {
+      "ar": "تفويض الكائنات في API",
+      "en": "Object authorization in an API"
+    },
+    "body": {
+      "en": "An educational labs resource linked to Authorized penetration testing. Open it from the path page and read its instructions and account access requirements. It is distinct from the path final exam. Related paths: Authorized penetration testing · Application security and DevSecOps · Mobile application security",
+      "ar": "مورد تطبيقي تعليمي مرتبط بمسار اختبار الاختراق المصرّح. افتحه من صفحة المسار واقرأ التعليمات ومتطلبات الوصول لحسابك. هذا المورد يختلف عن الامتحان النهائي للمسار. المسارات المرتبطة: اختبار الاختراق المصرّح · أمن التطبيقات وDevSecOps · أمن تطبيقات الهاتف"
+    },
+    "keywords": [
+      "lab-2",
+      "تفويض الكائنات في API",
+      "Object authorization in an API",
+      "labs",
+      "مختبر"
+    ]
+  },
+  {
+    "id": "resource-labs-lab-5",
+    "site": "academy",
+    "path": "practice-lab.html?id=5",
+    "title": {
+      "ar": "صلاحيات Linux الفعلية",
+      "en": "Effective Linux permissions"
+    },
+    "body": {
+      "en": "An educational labs resource linked to Authorized penetration testing. Open it from the path page and read its instructions and account access requirements. It is distinct from the path final exam. Related paths: Authorized penetration testing · Application security and DevSecOps",
+      "ar": "مورد تطبيقي تعليمي مرتبط بمسار اختبار الاختراق المصرّح. افتحه من صفحة المسار واقرأ التعليمات ومتطلبات الوصول لحسابك. هذا المورد يختلف عن الامتحان النهائي للمسار. المسارات المرتبطة: اختبار الاختراق المصرّح · أمن التطبيقات وDevSecOps"
+    },
+    "keywords": [
+      "lab-5",
+      "صلاحيات Linux الفعلية",
+      "Effective Linux permissions",
+      "labs",
+      "مختبر"
+    ]
+  },
+  {
+    "id": "resource-challenges-challenge-0",
+    "site": "academy",
+    "path": "practice-challenge.html?id=0",
+    "title": {
+      "ar": "تحدي 01 — المبتدئ الأول",
+      "en": "Challenge 01: Network discovery"
+    },
+    "body": {
+      "en": "An educational challenges resource linked to Authorized penetration testing. Open it from the path page and read its instructions and account access requirements. It is distinct from the path final exam. Related paths: Authorized penetration testing",
+      "ar": "مورد تطبيقي تعليمي مرتبط بمسار اختبار الاختراق المصرّح. افتحه من صفحة المسار واقرأ التعليمات ومتطلبات الوصول لحسابك. هذا المورد يختلف عن الامتحان النهائي للمسار. المسارات المرتبطة: اختبار الاختراق المصرّح"
+    },
+    "keywords": [
+      "challenge-0",
+      "تحدي 01 — المبتدئ الأول",
+      "Challenge 01: Network discovery",
+      "challenges",
+      "تحدي"
+    ]
+  },
+  {
+    "id": "resource-challenges-challenge-2",
+    "site": "academy",
+    "path": "practice-challenge.html?id=2",
+    "title": {
+      "ar": "تحدي 03 — حقن SQL",
+      "en": "Challenge 03: SQL injection"
+    },
+    "body": {
+      "en": "An educational challenges resource linked to Authorized penetration testing. Open it from the path page and read its instructions and account access requirements. It is distinct from the path final exam. Related paths: Authorized penetration testing · Application security and DevSecOps",
+      "ar": "مورد تطبيقي تعليمي مرتبط بمسار اختبار الاختراق المصرّح. افتحه من صفحة المسار واقرأ التعليمات ومتطلبات الوصول لحسابك. هذا المورد يختلف عن الامتحان النهائي للمسار. المسارات المرتبطة: اختبار الاختراق المصرّح · أمن التطبيقات وDevSecOps"
+    },
+    "keywords": [
+      "challenge-2",
+      "تحدي 03 — حقن SQL",
+      "Challenge 03: SQL injection",
+      "challenges",
+      "تحدي"
+    ]
+  },
+  {
+    "id": "resource-challenges-challenge-3",
+    "site": "academy",
+    "path": "practice-challenge.html?id=3",
+    "title": {
+      "ar": "تحدي 04 — XSS المخفي",
+      "en": "Challenge 04: Cross-site scripting"
+    },
+    "body": {
+      "en": "An educational challenges resource linked to Authorized penetration testing. Open it from the path page and read its instructions and account access requirements. It is distinct from the path final exam. Related paths: Authorized penetration testing · Application security and DevSecOps",
+      "ar": "مورد تطبيقي تعليمي مرتبط بمسار اختبار الاختراق المصرّح. افتحه من صفحة المسار واقرأ التعليمات ومتطلبات الوصول لحسابك. هذا المورد يختلف عن الامتحان النهائي للمسار. المسارات المرتبطة: اختبار الاختراق المصرّح · أمن التطبيقات وDevSecOps"
+    },
+    "keywords": [
+      "challenge-3",
+      "تحدي 04 — XSS المخفي",
+      "Challenge 04: Cross-site scripting",
+      "challenges",
+      "تحدي"
+    ]
+  },
+  {
+    "id": "resource-challenges-challenge-5",
+    "site": "academy",
+    "path": "practice-challenge.html?id=5",
+    "title": {
+      "ar": "معاملات سكربت آمنة",
+      "en": "Safe script arguments"
+    },
+    "body": {
+      "en": "An educational challenges resource linked to Authorized penetration testing. Open it from the path page and read its instructions and account access requirements. It is distinct from the path final exam. Related paths: Authorized penetration testing",
+      "ar": "مورد تطبيقي تعليمي مرتبط بمسار اختبار الاختراق المصرّح. افتحه من صفحة المسار واقرأ التعليمات ومتطلبات الوصول لحسابك. هذا المورد يختلف عن الامتحان النهائي للمسار. المسارات المرتبطة: اختبار الاختراق المصرّح"
+    },
+    "keywords": [
+      "challenge-5",
+      "معاملات سكربت آمنة",
+      "Safe script arguments",
+      "challenges",
+      "تحدي"
+    ]
+  },
+  {
+    "id": "resource-challenges-challenge-7",
+    "site": "academy",
+    "path": "practice-challenge.html?id=7",
+    "title": {
+      "ar": "تحدي 08 — اختراق Active Directory",
+      "en": "Challenge 08: Active Directory compromise"
+    },
+    "body": {
+      "en": "An educational challenges resource linked to Authorized penetration testing. Open it from the path page and read its instructions and account access requirements. It is distinct from the path final exam. Related paths: Authorized penetration testing",
+      "ar": "مورد تطبيقي تعليمي مرتبط بمسار اختبار الاختراق المصرّح. افتحه من صفحة المسار واقرأ التعليمات ومتطلبات الوصول لحسابك. هذا المورد يختلف عن الامتحان النهائي للمسار. المسارات المرتبطة: اختبار الاختراق المصرّح"
+    },
+    "keywords": [
+      "challenge-7",
+      "تحدي 08 — اختراق Active Directory",
+      "Challenge 08: Active Directory compromise",
+      "challenges",
+      "تحدي"
+    ]
+  },
+  {
+    "id": "resource-operations-glass_harbor",
+    "site": "academy",
+    "path": "operation.html?id=2",
+    "title": {
+      "ar": "بوابة المستأجر",
+      "en": "Tenant gateway"
+    },
+    "body": {
+      "en": "An educational operations resource linked to Authorized penetration testing. Open it from the path page and read its instructions and account access requirements. It is distinct from the path final exam. Related paths: Authorized penetration testing · Application security and DevSecOps · Mobile application security",
+      "ar": "مورد تطبيقي تعليمي مرتبط بمسار اختبار الاختراق المصرّح. افتحه من صفحة المسار واقرأ التعليمات ومتطلبات الوصول لحسابك. هذا المورد يختلف عن الامتحان النهائي للمسار. المسارات المرتبطة: اختبار الاختراق المصرّح · أمن التطبيقات وDevSecOps · أمن تطبيقات الهاتف"
+    },
+    "keywords": [
+      "glass_harbor",
+      "بوابة المستأجر",
+      "Tenant gateway",
+      "operations",
+      "غرفة عمليات"
+    ]
+  },
+  {
+    "id": "resource-operations-identity_echo",
+    "site": "academy",
+    "path": "operation.html?id=1",
+    "title": {
+      "ar": "صدى الهوية",
+      "en": "Identity echo"
+    },
+    "body": {
+      "en": "An educational operations resource linked to Authorized penetration testing. Open it from the path page and read its instructions and account access requirements. It is distinct from the path final exam. Related paths: Authorized penetration testing · Cloud security · Governance, risk and compliance · Mobile application security",
+      "ar": "مورد تطبيقي تعليمي مرتبط بمسار اختبار الاختراق المصرّح. افتحه من صفحة المسار واقرأ التعليمات ومتطلبات الوصول لحسابك. هذا المورد يختلف عن الامتحان النهائي للمسار. المسارات المرتبطة: اختبار الاختراق المصرّح · أمن السحابة · الحوكمة والمخاطر والامتثال · أمن تطبيقات الهاتف"
+    },
+    "keywords": [
+      "identity_echo",
+      "صدى الهوية",
+      "Identity echo",
+      "operations",
+      "غرفة عمليات"
+    ]
+  },
+  {
+    "id": "resource-quizzes-quiz-1",
+    "site": "academy",
+    "path": "practice-quiz.html?id=1",
+    "title": {
+      "ar": "الشبكات والبروتوكولات",
+      "en": "Networks and protocols"
+    },
+    "body": {
+      "en": "An educational quizzes resource linked to Authorized penetration testing. Open it from the path page and read its instructions and account access requirements. It is distinct from the path final exam. Related paths: Authorized penetration testing · Security operations and response · Cloud security",
+      "ar": "مورد تطبيقي تعليمي مرتبط بمسار اختبار الاختراق المصرّح. افتحه من صفحة المسار واقرأ التعليمات ومتطلبات الوصول لحسابك. هذا المورد يختلف عن الامتحان النهائي للمسار. المسارات المرتبطة: اختبار الاختراق المصرّح · العمليات الأمنية والاستجابة · أمن السحابة"
+    },
+    "keywords": [
+      "quiz-1",
+      "الشبكات والبروتوكولات",
+      "Networks and protocols",
+      "quizzes",
+      "كويز"
+    ]
+  },
+  {
+    "id": "resource-quizzes-quiz-2",
+    "site": "academy",
+    "path": "practice-quiz.html?id=2",
+    "title": {
+      "ar": "اختبار الاختراق",
+      "en": "Penetration testing"
+    },
+    "body": {
+      "en": "An educational quizzes resource linked to Authorized penetration testing. Open it from the path page and read its instructions and account access requirements. It is distinct from the path final exam. Related paths: Authorized penetration testing",
+      "ar": "مورد تطبيقي تعليمي مرتبط بمسار اختبار الاختراق المصرّح. افتحه من صفحة المسار واقرأ التعليمات ومتطلبات الوصول لحسابك. هذا المورد يختلف عن الامتحان النهائي للمسار. المسارات المرتبطة: اختبار الاختراق المصرّح"
+    },
+    "keywords": [
+      "quiz-2",
+      "اختبار الاختراق",
+      "Penetration testing",
+      "quizzes",
+      "كويز"
+    ]
+  },
+  {
+    "id": "resource-quizzes-quiz-8",
+    "site": "academy",
+    "path": "practice-quiz.html?id=8",
+    "title": {
+      "ar": "لينكس للأمن السيبراني",
+      "en": "Linux for cybersecurity"
+    },
+    "body": {
+      "en": "An educational quizzes resource linked to Authorized penetration testing. Open it from the path page and read its instructions and account access requirements. It is distinct from the path final exam. Related paths: Authorized penetration testing · Application security and DevSecOps · Malware analysis and reverse engineering",
+      "ar": "مورد تطبيقي تعليمي مرتبط بمسار اختبار الاختراق المصرّح. افتحه من صفحة المسار واقرأ التعليمات ومتطلبات الوصول لحسابك. هذا المورد يختلف عن الامتحان النهائي للمسار. المسارات المرتبطة: اختبار الاختراق المصرّح · أمن التطبيقات وDevSecOps · تحليل البرمجيات والهندسة العكسية"
+    },
+    "keywords": [
+      "quiz-8",
+      "لينكس للأمن السيبراني",
+      "Linux for cybersecurity",
+      "quizzes",
+      "كويز"
+    ]
+  },
+  {
+    "id": "resource-quizzes-quiz-9",
+    "site": "academy",
+    "path": "practice-quiz.html?id=9",
+    "title": {
+      "ar": "أمن تطبيقات الويب المتقدم",
+      "en": "Web application security"
+    },
+    "body": {
+      "en": "An educational quizzes resource linked to Authorized penetration testing. Open it from the path page and read its instructions and account access requirements. It is distinct from the path final exam. Related paths: Authorized penetration testing · Application security and DevSecOps · Mobile application security",
+      "ar": "مورد تطبيقي تعليمي مرتبط بمسار اختبار الاختراق المصرّح. افتحه من صفحة المسار واقرأ التعليمات ومتطلبات الوصول لحسابك. هذا المورد يختلف عن الامتحان النهائي للمسار. المسارات المرتبطة: اختبار الاختراق المصرّح · أمن التطبيقات وDevSecOps · أمن تطبيقات الهاتف"
+    },
+    "keywords": [
+      "quiz-9",
+      "أمن تطبيقات الويب المتقدم",
+      "Web application security",
+      "quizzes",
+      "كويز"
+    ]
+  },
+  {
+    "id": "path-path_soc",
+    "site": "academy",
+    "path": "path.html?id=path_soc",
+    "title": {
+      "ar": "العمليات الأمنية والاستجابة",
+      "en": "Security operations and response"
+    },
+    "body": {
+      "en": "Start with logs and alerts, then build a hypothesis and containment decision.\nLearning outcomes: Networks and log sources · Alert triage · Incident response · Case investigation lab\nCourses: Networks and protocols · Cryptography and data protection · Digital forensics\nquizzes: Networks and protocols · Cryptography and data protection · Digital forensics\nlabs: SOC investigation: unusual export · Correlating packets and process identity · Coverage and response validation\nchallenges: Verify message provenance · Challenge 05: Network interception · Challenge 07: Memory forensics\noperations: Suspicious document · Recovery ledger · Expired exception · Delivery chain trace\nThe path page shows lesson, course exam, practical assessment, final exam and credential requirements. Purchases are closed; catalog listing does not imply account access.",
+      "ar": "ابدأ من السجلات والتنبيهات، ثم كوّن فرضية وقرار احتواء.\nالنتائج التعليمية: الشبكات ومصادر السجلات · فرز التنبيهات · الاستجابة للحوادث · مختبر حالة وتحقيق\nالدورات: الشبكات والبروتوكولات · التشفير وحماية البيانات · الطب الشرعي الرقمي\nكويزات التدريب: الشبكات والبروتوكولات · التشفير وحماية البيانات · الطب الشرعي الرقمي\nالمختبرات: تحقيق SOC: التصدير غير المعتاد · ربط الحزم بهوية العملية · قياس التغطية والاستجابة\nالتحديات: تحقق من مصدر الرسالة · تحدي 05 — MITM الشبكة · تحدي 07 — تحليل الذاكرة\nغرف العمليات: الوثيقة المشبوهة · دفتر الاستعادة · استثناء منتهي · أثر سلسلة التسليم\nراجع صفحة المسار لمتطلبات الدروس وامتحانات الدورات والتقييم العملي والامتحان النهائي والشهادة. الشراء مغلق؛ وجود المورد في الفهرس لا يعني أنه مفتوح لحسابك."
+    },
+    "keywords": [
+      "path_soc",
+      "العمليات الأمنية والاستجابة",
+      "Security operations and response",
+      "الشبكات ومصادر السجلات",
+      "فرز التنبيهات",
+      "الاستجابة للحوادث",
+      "مختبر حالة وتحقيق",
+      "Networks and log sources",
+      "Alert triage",
+      "Incident response",
+      "Case investigation lab"
+    ]
+  },
+  {
+    "id": "course-desktop-4",
+    "site": "academy",
+    "path": "library-course.html?id=desktop-4",
+    "title": {
+      "ar": "التشفير وحماية البيانات",
+      "en": "Cryptography and data protection"
+    },
+    "body": {
+      "en": "Choose appropriate encryption and manage keys and secrets throughout their lifecycle. Contains 6 lessons. Related path: Security operations and response. Open the course for its ordered lessons and current access; complete verified requirements before its exam.",
+      "ar": "اختيار التشفير الصحيح وإدارة المفاتيح والأسرار طوال دورة حياتها تضم 6 دروس. المسار المرتبط: العمليات الأمنية والاستجابة. افتح الدورة لترتيب الدروس والوصول الحالي، وأكمل المتطلبات الموثّقة قبل الامتحان."
+    },
+    "keywords": [
+      "desktop-4",
+      "التشفير وحماية البيانات",
+      "Cryptography and data protection",
+      "course",
+      "دورة",
+      "كورس"
+    ]
+  },
+  {
+    "id": "course-desktop-7",
+    "site": "academy",
+    "path": "library-course.html?id=desktop-7",
+    "title": {
+      "ar": "الطب الشرعي الرقمي",
+      "en": "Digital forensics"
+    },
+    "body": {
+      "en": "Preserve evidence, reconstruct timelines and conduct investigations that can be audited. Contains 5 lessons. Related path: Security operations and response. Open the course for its ordered lessons and current access; complete verified requirements before its exam.",
+      "ar": "حفظ الدليل، بناء الخط الزمني، والتحقيق القابل للتدقيق تضم 5 دروس. المسار المرتبط: العمليات الأمنية والاستجابة. افتح الدورة لترتيب الدروس والوصول الحالي، وأكمل المتطلبات الموثّقة قبل الامتحان."
+    },
+    "keywords": [
+      "desktop-7",
+      "الطب الشرعي الرقمي",
+      "Digital forensics",
+      "course",
+      "دورة",
+      "كورس"
+    ]
+  },
+  {
+    "id": "resource-labs-soc-investigation",
+    "site": "academy",
+    "path": "soc-investigation.html",
+    "title": {
+      "ar": "تحقيق SOC: التصدير غير المعتاد",
+      "en": "SOC investigation: unusual export"
+    },
+    "body": {
+      "en": "An educational labs resource linked to Security operations and response. Open it from the path page and read its instructions and account access requirements. It is distinct from the path final exam. Related paths: Security operations and response",
+      "ar": "مورد تطبيقي تعليمي مرتبط بمسار العمليات الأمنية والاستجابة. افتحه من صفحة المسار واقرأ التعليمات ومتطلبات الوصول لحسابك. هذا المورد يختلف عن الامتحان النهائي للمسار. المسارات المرتبطة: العمليات الأمنية والاستجابة"
+    },
+    "keywords": [
+      "soc-investigation",
+      "تحقيق SOC: التصدير غير المعتاد",
+      "SOC investigation: unusual export",
+      "labs",
+      "مختبر"
+    ]
+  },
+  {
+    "id": "resource-labs-lab-1",
+    "site": "academy",
+    "path": "practice-lab.html?id=1",
+    "title": {
+      "ar": "ربط الحزم بهوية العملية",
+      "en": "Correlating packets and process identity"
+    },
+    "body": {
+      "en": "An educational labs resource linked to Security operations and response. Open it from the path page and read its instructions and account access requirements. It is distinct from the path final exam. Related paths: Security operations and response · Cloud security",
+      "ar": "مورد تطبيقي تعليمي مرتبط بمسار العمليات الأمنية والاستجابة. افتحه من صفحة المسار واقرأ التعليمات ومتطلبات الوصول لحسابك. هذا المورد يختلف عن الامتحان النهائي للمسار. المسارات المرتبطة: العمليات الأمنية والاستجابة · أمن السحابة"
+    },
+    "keywords": [
+      "lab-1",
+      "ربط الحزم بهوية العملية",
+      "Correlating packets and process identity",
+      "labs",
+      "مختبر"
+    ]
+  },
+  {
+    "id": "resource-labs-lab-7",
+    "site": "academy",
+    "path": "practice-lab.html?id=7",
+    "title": {
+      "ar": "قياس التغطية والاستجابة",
+      "en": "Coverage and response validation"
+    },
+    "body": {
+      "en": "An educational labs resource linked to Security operations and response. Open it from the path page and read its instructions and account access requirements. It is distinct from the path final exam. Related paths: Security operations and response · Digital forensics · Cloud security · Governance, risk and compliance · Threat intelligence and OSINT",
+      "ar": "مورد تطبيقي تعليمي مرتبط بمسار العمليات الأمنية والاستجابة. افتحه من صفحة المسار واقرأ التعليمات ومتطلبات الوصول لحسابك. هذا المورد يختلف عن الامتحان النهائي للمسار. المسارات المرتبطة: العمليات الأمنية والاستجابة · الأدلة الرقمية · أمن السحابة · الحوكمة والمخاطر والامتثال · استخبارات التهديدات وOSINT"
+    },
+    "keywords": [
+      "lab-7",
+      "قياس التغطية والاستجابة",
+      "Coverage and response validation",
+      "labs",
+      "مختبر"
+    ]
+  },
+  {
+    "id": "resource-challenges-challenge-1",
+    "site": "academy",
+    "path": "practice-challenge.html?id=1",
+    "title": {
+      "ar": "تحقق من مصدر الرسالة",
+      "en": "Verify message provenance"
+    },
+    "body": {
+      "en": "An educational challenges resource linked to Security operations and response. Open it from the path page and read its instructions and account access requirements. It is distinct from the path final exam. Related paths: Security operations and response",
+      "ar": "مورد تطبيقي تعليمي مرتبط بمسار العمليات الأمنية والاستجابة. افتحه من صفحة المسار واقرأ التعليمات ومتطلبات الوصول لحسابك. هذا المورد يختلف عن الامتحان النهائي للمسار. المسارات المرتبطة: العمليات الأمنية والاستجابة"
+    },
+    "keywords": [
+      "challenge-1",
+      "تحقق من مصدر الرسالة",
+      "Verify message provenance",
+      "challenges",
+      "تحدي"
+    ]
+  },
+  {
+    "id": "resource-challenges-challenge-4",
+    "site": "academy",
+    "path": "practice-challenge.html?id=4",
+    "title": {
+      "ar": "تحدي 05 — MITM الشبكة",
+      "en": "Challenge 05: Network interception"
+    },
+    "body": {
+      "en": "An educational challenges resource linked to Security operations and response. Open it from the path page and read its instructions and account access requirements. It is distinct from the path final exam. Related paths: Security operations and response",
+      "ar": "مورد تطبيقي تعليمي مرتبط بمسار العمليات الأمنية والاستجابة. افتحه من صفحة المسار واقرأ التعليمات ومتطلبات الوصول لحسابك. هذا المورد يختلف عن الامتحان النهائي للمسار. المسارات المرتبطة: العمليات الأمنية والاستجابة"
+    },
+    "keywords": [
+      "challenge-4",
+      "تحدي 05 — MITM الشبكة",
+      "Challenge 05: Network interception",
+      "challenges",
+      "تحدي"
+    ]
+  },
+  {
+    "id": "resource-challenges-challenge-6",
+    "site": "academy",
+    "path": "practice-challenge.html?id=6",
+    "title": {
+      "ar": "تحدي 07 — تحليل الذاكرة",
+      "en": "Challenge 07: Memory forensics"
+    },
+    "body": {
+      "en": "An educational challenges resource linked to Security operations and response. Open it from the path page and read its instructions and account access requirements. It is distinct from the path final exam. Related paths: Security operations and response · Digital forensics · Threat intelligence and OSINT",
+      "ar": "مورد تطبيقي تعليمي مرتبط بمسار العمليات الأمنية والاستجابة. افتحه من صفحة المسار واقرأ التعليمات ومتطلبات الوصول لحسابك. هذا المورد يختلف عن الامتحان النهائي للمسار. المسارات المرتبطة: العمليات الأمنية والاستجابة · الأدلة الرقمية · استخبارات التهديدات وOSINT"
+    },
+    "keywords": [
+      "challenge-6",
+      "تحدي 07 — تحليل الذاكرة",
+      "Challenge 07: Memory forensics",
+      "challenges",
+      "تحدي"
+    ]
+  },
+  {
+    "id": "resource-operations-black_ledger",
+    "site": "academy",
+    "path": "operation.html?id=3",
+    "title": {
+      "ar": "دفتر الاستعادة",
+      "en": "Recovery ledger"
+    },
+    "body": {
+      "en": "An educational operations resource linked to Security operations and response. Open it from the path page and read its instructions and account access requirements. It is distinct from the path final exam. Related paths: Security operations and response · Digital forensics · Malware analysis and reverse engineering",
+      "ar": "مورد تطبيقي تعليمي مرتبط بمسار العمليات الأمنية والاستجابة. افتحه من صفحة المسار واقرأ التعليمات ومتطلبات الوصول لحسابك. هذا المورد يختلف عن الامتحان النهائي للمسار. المسارات المرتبطة: العمليات الأمنية والاستجابة · الأدلة الرقمية · تحليل البرمجيات والهندسة العكسية"
+    },
+    "keywords": [
+      "black_ledger",
+      "دفتر الاستعادة",
+      "Recovery ledger",
+      "operations",
+      "غرفة عمليات"
+    ]
+  },
+  {
+    "id": "resource-operations-insider_shade",
+    "site": "academy",
+    "path": "operation.html?id=4",
+    "title": {
+      "ar": "استثناء منتهي",
+      "en": "Expired exception"
+    },
+    "body": {
+      "en": "An educational operations resource linked to Security operations and response. Open it from the path page and read its instructions and account access requirements. It is distinct from the path final exam. Related paths: Security operations and response · Governance, risk and compliance",
+      "ar": "مورد تطبيقي تعليمي مرتبط بمسار العمليات الأمنية والاستجابة. افتحه من صفحة المسار واقرأ التعليمات ومتطلبات الوصول لحسابك. هذا المورد يختلف عن الامتحان النهائي للمسار. المسارات المرتبطة: العمليات الأمنية والاستجابة · الحوكمة والمخاطر والامتثال"
+    },
+    "keywords": [
+      "insider_shade",
+      "استثناء منتهي",
+      "Expired exception",
+      "operations",
+      "غرفة عمليات"
+    ]
+  },
+  {
+    "id": "resource-operations-frozen_beacon",
+    "site": "academy",
+    "path": "operation.html?id=5",
+    "title": {
+      "ar": "أثر سلسلة التسليم",
+      "en": "Delivery chain trace"
+    },
+    "body": {
+      "en": "An educational operations resource linked to Security operations and response. Open it from the path page and read its instructions and account access requirements. It is distinct from the path final exam. Related paths: Security operations and response · Cloud security · Application security and DevSecOps · Threat intelligence and OSINT · Malware analysis and reverse engineering",
+      "ar": "مورد تطبيقي تعليمي مرتبط بمسار العمليات الأمنية والاستجابة. افتحه من صفحة المسار واقرأ التعليمات ومتطلبات الوصول لحسابك. هذا المورد يختلف عن الامتحان النهائي للمسار. المسارات المرتبطة: العمليات الأمنية والاستجابة · أمن السحابة · أمن التطبيقات وDevSecOps · استخبارات التهديدات وOSINT · تحليل البرمجيات والهندسة العكسية"
+    },
+    "keywords": [
+      "frozen_beacon",
+      "أثر سلسلة التسليم",
+      "Delivery chain trace",
+      "operations",
+      "غرفة عمليات"
+    ]
+  },
+  {
+    "id": "resource-quizzes-quiz-3",
+    "site": "academy",
+    "path": "practice-quiz.html?id=3",
+    "title": {
+      "ar": "التشفير وحماية البيانات",
+      "en": "Cryptography and data protection"
+    },
+    "body": {
+      "en": "An educational quizzes resource linked to Security operations and response. Open it from the path page and read its instructions and account access requirements. It is distinct from the path final exam. Related paths: Security operations and response",
+      "ar": "مورد تطبيقي تعليمي مرتبط بمسار العمليات الأمنية والاستجابة. افتحه من صفحة المسار واقرأ التعليمات ومتطلبات الوصول لحسابك. هذا المورد يختلف عن الامتحان النهائي للمسار. المسارات المرتبطة: العمليات الأمنية والاستجابة"
+    },
+    "keywords": [
+      "quiz-3",
+      "التشفير وحماية البيانات",
+      "Cryptography and data protection",
+      "quizzes",
+      "كويز"
+    ]
+  },
+  {
+    "id": "resource-quizzes-quiz-6",
+    "site": "academy",
+    "path": "practice-quiz.html?id=6",
+    "title": {
+      "ar": "الطب الشرعي الرقمي",
+      "en": "Digital forensics"
+    },
+    "body": {
+      "en": "An educational quizzes resource linked to Security operations and response. Open it from the path page and read its instructions and account access requirements. It is distinct from the path final exam. Related paths: Security operations and response · Digital forensics · Threat intelligence and OSINT",
+      "ar": "مورد تطبيقي تعليمي مرتبط بمسار العمليات الأمنية والاستجابة. افتحه من صفحة المسار واقرأ التعليمات ومتطلبات الوصول لحسابك. هذا المورد يختلف عن الامتحان النهائي للمسار. المسارات المرتبطة: العمليات الأمنية والاستجابة · الأدلة الرقمية · استخبارات التهديدات وOSINT"
+    },
+    "keywords": [
+      "quiz-6",
+      "الطب الشرعي الرقمي",
+      "Digital forensics",
+      "quizzes",
+      "كويز"
+    ]
+  },
+  {
+    "id": "path-path_dfir",
+    "site": "academy",
+    "path": "path.html?id=path_dfir",
+    "title": {
+      "ar": "الأدلة الرقمية",
+      "en": "Digital forensics"
+    },
+    "body": {
+      "en": "Preserve evidence, build a timeline and separate observations from conclusions.\nLearning outcomes: Evidence collection and integrity · Timelines and logs · Memory analysis · Investigation report\nCourses: Digital forensics · Malware analysis\nquizzes: Digital forensics · Malware analysis\nlabs: Evidence copies and chain of custody · Coverage and response validation\nchallenges: Challenge 07: Memory forensics · Challenge 10: Malware analysis\noperations: Suspicious document · Recovery ledger\nThe path page shows lesson, course exam, practical assessment, final exam and credential requirements. Purchases are closed; catalog listing does not imply account access.",
+      "ar": "احفظ سلامة الدليل، ابنِ خطاً زمنياً، وافصل الملاحظة عن الاستنتاج.\nالنتائج التعليمية: جمع الدليل وسلامته · الخط الزمني والسجلات · تحليل الذاكرة · تقرير التحقيق\nالدورات: الطب الشرعي الرقمي · تحليل البرمجيات الخبيثة\nكويزات التدريب: الطب الشرعي الرقمي · تحليل البرمجيات الخبيثة\nالمختبرات: نسخة الأدلة وسلسلة الحيازة · قياس التغطية والاستجابة\nالتحديات: تحدي 07 — تحليل الذاكرة · تحدي 10 — تحليل برمجية خبيثة\nغرف العمليات: الوثيقة المشبوهة · دفتر الاستعادة\nراجع صفحة المسار لمتطلبات الدروس وامتحانات الدورات والتقييم العملي والامتحان النهائي والشهادة. الشراء مغلق؛ وجود المورد في الفهرس لا يعني أنه مفتوح لحسابك."
+    },
+    "keywords": [
+      "path_dfir",
+      "الأدلة الرقمية",
+      "Digital forensics",
+      "جمع الدليل وسلامته",
+      "الخط الزمني والسجلات",
+      "تحليل الذاكرة",
+      "تقرير التحقيق",
+      "Evidence collection and integrity",
+      "Timelines and logs",
+      "Memory analysis",
+      "Investigation report"
+    ]
+  },
+  {
+    "id": "course-desktop-12",
+    "site": "academy",
+    "path": "library-course.html?id=desktop-12",
+    "title": {
+      "ar": "تحليل البرمجيات الخبيثة",
+      "en": "Malware analysis"
+    },
+    "body": {
+      "en": "Analyze malware safely and turn indicators into defensible findings. Contains 5 lessons. Related path: Digital forensics. Open the course for its ordered lessons and current access; complete verified requirements before its exam.",
+      "ar": "تحليل آمن ومنهجي يحوّل المؤشرات إلى فرضيات وتقرير دفاعي تضم 5 دروس. المسار المرتبط: الأدلة الرقمية. افتح الدورة لترتيب الدروس والوصول الحالي، وأكمل المتطلبات الموثّقة قبل الامتحان."
+    },
+    "keywords": [
+      "desktop-12",
+      "تحليل البرمجيات الخبيثة",
+      "Malware analysis",
+      "course",
+      "دورة",
+      "كورس"
+    ]
+  },
+  {
+    "id": "resource-labs-lab-6",
+    "site": "academy",
+    "path": "practice-lab.html?id=6",
+    "title": {
+      "ar": "نسخة الأدلة وسلسلة الحيازة",
+      "en": "Evidence copies and chain of custody"
+    },
+    "body": {
+      "en": "An educational labs resource linked to Digital forensics. Open it from the path page and read its instructions and account access requirements. It is distinct from the path final exam. Related paths: Digital forensics · Threat intelligence and OSINT · Malware analysis and reverse engineering",
+      "ar": "مورد تطبيقي تعليمي مرتبط بمسار الأدلة الرقمية. افتحه من صفحة المسار واقرأ التعليمات ومتطلبات الوصول لحسابك. هذا المورد يختلف عن الامتحان النهائي للمسار. المسارات المرتبطة: الأدلة الرقمية · استخبارات التهديدات وOSINT · تحليل البرمجيات والهندسة العكسية"
+    },
+    "keywords": [
+      "lab-6",
+      "نسخة الأدلة وسلسلة الحيازة",
+      "Evidence copies and chain of custody",
+      "labs",
+      "مختبر"
+    ]
+  },
+  {
+    "id": "resource-challenges-challenge-9",
+    "site": "academy",
+    "path": "practice-challenge.html?id=9",
+    "title": {
+      "ar": "تحدي 10 — تحليل برمجية خبيثة",
+      "en": "Challenge 10: Malware analysis"
+    },
+    "body": {
+      "en": "An educational challenges resource linked to Digital forensics. Open it from the path page and read its instructions and account access requirements. It is distinct from the path final exam. Related paths: Digital forensics · Malware analysis and reverse engineering",
+      "ar": "مورد تطبيقي تعليمي مرتبط بمسار الأدلة الرقمية. افتحه من صفحة المسار واقرأ التعليمات ومتطلبات الوصول لحسابك. هذا المورد يختلف عن الامتحان النهائي للمسار. المسارات المرتبطة: الأدلة الرقمية · تحليل البرمجيات والهندسة العكسية"
+    },
+    "keywords": [
+      "challenge-9",
+      "تحدي 10 — تحليل برمجية خبيثة",
+      "Challenge 10: Malware analysis",
+      "challenges",
+      "تحدي"
+    ]
+  },
+  {
+    "id": "resource-quizzes-quiz-10",
+    "site": "academy",
+    "path": "practice-quiz.html?id=10",
+    "title": {
+      "ar": "تحليل البرمجيات الخبيثة",
+      "en": "Malware analysis"
+    },
+    "body": {
+      "en": "An educational quizzes resource linked to Digital forensics. Open it from the path page and read its instructions and account access requirements. It is distinct from the path final exam. Related paths: Digital forensics · Malware analysis and reverse engineering",
+      "ar": "مورد تطبيقي تعليمي مرتبط بمسار الأدلة الرقمية. افتحه من صفحة المسار واقرأ التعليمات ومتطلبات الوصول لحسابك. هذا المورد يختلف عن الامتحان النهائي للمسار. المسارات المرتبطة: الأدلة الرقمية · تحليل البرمجيات والهندسة العكسية"
+    },
+    "keywords": [
+      "quiz-10",
+      "تحليل البرمجيات الخبيثة",
+      "Malware analysis",
+      "quizzes",
+      "كويز"
+    ]
+  },
+  {
+    "id": "path-path_cloud",
+    "site": "academy",
+    "path": "path.html?id=path_cloud",
+    "title": {
+      "ar": "أمن السحابة",
+      "en": "Cloud security"
+    },
+    "body": {
+      "en": "Learn shared responsibility, least privilege and secure delivery controls.\nLearning outcomes: Cloud and identity basics · Configuration and permissions · Containers and supply chain · Configuration review lab\nCourses: Cloud security · Networks and protocols\nquizzes: Cloud security · Networks and protocols\nlabs: Correlating packets and process identity · Cloud access and drift evaluation\nchallenges: Challenge 11: Cloud security\noperations: Identity echo · Delivery chain trace\nThe path page shows lesson, course exam, practical assessment, final exam and credential requirements. Purchases are closed; catalog listing does not imply account access.",
+      "ar": "تعلّم المسؤولية المشتركة وأقل صلاحية وضوابط البناء والنشر.\nالنتائج التعليمية: مفاهيم السحابة والهوية · الإعدادات والصلاحيات · الحاويات وسلسلة التوريد · مختبر مراجعة إعدادات\nالدورات: أمن الحوسبة السحابية · الشبكات والبروتوكولات\nكويزات التدريب: أمن الحوسبة السحابية · الشبكات والبروتوكولات\nالمختبرات: ربط الحزم بهوية العملية · تقييم صلاحيات السحابة والانحراف\nالتحديات: تحدي 11 — اختراق سحابي\nغرف العمليات: صدى الهوية · أثر سلسلة التسليم\nراجع صفحة المسار لمتطلبات الدروس وامتحانات الدورات والتقييم العملي والامتحان النهائي والشهادة. الشراء مغلق؛ وجود المورد في الفهرس لا يعني أنه مفتوح لحسابك."
+    },
+    "keywords": [
+      "path_cloud",
+      "أمن السحابة",
+      "Cloud security",
+      "مفاهيم السحابة والهوية",
+      "الإعدادات والصلاحيات",
+      "الحاويات وسلسلة التوريد",
+      "مختبر مراجعة إعدادات",
+      "Cloud and identity basics",
+      "Configuration and permissions",
+      "Containers and supply chain",
+      "Configuration review lab"
+    ]
+  },
+  {
+    "id": "course-desktop-13",
+    "site": "academy",
+    "path": "library-course.html?id=desktop-13",
+    "title": {
+      "ar": "أمن الحوسبة السحابية",
+      "en": "Cloud security"
+    },
+    "body": {
+      "en": "Explore shared responsibility, IAM, infrastructure as code and container security. Contains 5 lessons. Related path: Cloud security. Open the course for its ordered lessons and current access; complete verified requirements before its exam.",
+      "ar": "المسؤولية المشتركة وIAM والبنية ككود وأمن الحاويات تضم 5 دروس. المسار المرتبط: أمن السحابة. افتح الدورة لترتيب الدروس والوصول الحالي، وأكمل المتطلبات الموثّقة قبل الامتحان."
+    },
+    "keywords": [
+      "desktop-13",
+      "أمن الحوسبة السحابية",
+      "Cloud security",
+      "course",
+      "دورة",
+      "كورس"
+    ]
+  },
+  {
+    "id": "resource-challenges-challenge-10",
+    "site": "academy",
+    "path": "practice-challenge.html?id=10",
+    "title": {
+      "ar": "تحدي 11 — اختراق سحابي",
+      "en": "Challenge 11: Cloud security"
+    },
+    "body": {
+      "en": "An educational challenges resource linked to Cloud security. Open it from the path page and read its instructions and account access requirements. It is distinct from the path final exam. Related paths: Cloud security",
+      "ar": "مورد تطبيقي تعليمي مرتبط بمسار أمن السحابة. افتحه من صفحة المسار واقرأ التعليمات ومتطلبات الوصول لحسابك. هذا المورد يختلف عن الامتحان النهائي للمسار. المسارات المرتبطة: أمن السحابة"
+    },
+    "keywords": [
+      "challenge-10",
+      "تحدي 11 — اختراق سحابي",
+      "Challenge 11: Cloud security",
+      "challenges",
+      "تحدي"
+    ]
+  },
+  {
+    "id": "resource-quizzes-quiz-11",
+    "site": "academy",
+    "path": "practice-quiz.html?id=11",
+    "title": {
+      "ar": "أمن الحوسبة السحابية",
+      "en": "Cloud security"
+    },
+    "body": {
+      "en": "An educational quizzes resource linked to Cloud security. Open it from the path page and read its instructions and account access requirements. It is distinct from the path final exam. Related paths: Cloud security",
+      "ar": "مورد تطبيقي تعليمي مرتبط بمسار أمن السحابة. افتحه من صفحة المسار واقرأ التعليمات ومتطلبات الوصول لحسابك. هذا المورد يختلف عن الامتحان النهائي للمسار. المسارات المرتبطة: أمن السحابة"
+    },
+    "keywords": [
+      "quiz-11",
+      "أمن الحوسبة السحابية",
+      "Cloud security",
+      "quizzes",
+      "كويز"
+    ]
+  },
+  {
+    "id": "path-path_grc",
+    "site": "academy",
+    "path": "path.html?id=path_grc",
+    "title": {
+      "ar": "الحوكمة والمخاطر والامتثال",
+      "en": "Governance, risk and compliance"
+    },
+    "body": {
+      "en": "Connect policy to risk assessment, continuity and audit.\nLearning outcomes: Security fundamentals · Risk assessment · Security policy · Audit and improvement\nCourses: Cybersecurity fundamentals · Applied governance, risk and compliance · Career pathways\nquizzes: Governance, risk and compliance practice\nlabs: Control evidence and risk decisions · Supplier review: scope, evidence and follow-up\nchallenges: File permissions · Display name or evidence?\noperations: Expired exception · Identity echo\nThe path page shows lesson, course exam, practical assessment, final exam and credential requirements. Purchases are closed; catalog listing does not imply account access.",
+      "ar": "اربط السياسات بتقييم المخاطر والاستمرارية والتدقيق.\nالنتائج التعليمية: المفاهيم الأساسية · تقييم المخاطر · سياسات الأمن · التدقيق والتحسين\nالدورات: المفاهيم الأساسية · الحوكمة والمخاطر والامتثال العملي · مسارات الاحتراف\nكويزات التدريب: تدريب الحوكمة والمخاطر والامتثال\nالمختبرات: أدلة الضوابط وقرارات المخاطر · مراجعة المورّد: النطاق والدليل وقرار المتابعة\nالتحديات: أذونات الملف · اسم مرسل أم دليل؟\nغرف العمليات: استثناء منتهي · صدى الهوية\nراجع صفحة المسار لمتطلبات الدروس وامتحانات الدورات والتقييم العملي والامتحان النهائي والشهادة. الشراء مغلق؛ وجود المورد في الفهرس لا يعني أنه مفتوح لحسابك."
+    },
+    "keywords": [
+      "path_grc",
+      "الحوكمة والمخاطر والامتثال",
+      "Governance, risk and compliance",
+      "المفاهيم الأساسية",
+      "تقييم المخاطر",
+      "سياسات الأمن",
+      "التدقيق والتحسين",
+      "Security fundamentals",
+      "Risk assessment",
+      "Security policy",
+      "Audit and improvement"
+    ]
+  },
+  {
+    "id": "course-desktop-1",
+    "site": "academy",
+    "path": "library-course.html?id=desktop-1",
+    "title": {
+      "ar": "المفاهيم الأساسية",
+      "en": "Cybersecurity fundamentals"
+    },
+    "body": {
+      "en": "Build a strong foundation in core concepts, risk management and attack surfaces. Contains 8 lessons. Related path: Governance, risk and compliance. Open the course for its ordered lessons and current access; complete verified requirements before its exam.",
+      "ar": "أساس متين يبدأ بالمفاهيم وينتهي بإدارة المخاطر وسطح الهجوم تضم 8 دروس. المسار المرتبط: الحوكمة والمخاطر والامتثال. افتح الدورة لترتيب الدروس والوصول الحالي، وأكمل المتطلبات الموثّقة قبل الامتحان."
+    },
+    "keywords": [
+      "desktop-1",
+      "المفاهيم الأساسية",
+      "Cybersecurity fundamentals",
+      "course",
+      "دورة",
+      "كورس"
+    ]
+  },
+  {
+    "id": "course-desktop-19",
+    "site": "academy",
+    "path": "library-course.html?id=desktop-19",
+    "title": {
+      "ar": "الحوكمة والمخاطر والامتثال العملي",
+      "en": "Applied governance, risk and compliance"
+    },
+    "body": {
+      "en": "From service scope to risk records, control evidence, supplier review, continuity and decision reports. Contains 6 lessons. Related path: Governance, risk and compliance. Open the course for its ordered lessons and current access; complete verified requirements before its exam.",
+      "ar": "من نطاق الخدمة إلى سجل المخاطر ودليل الضابط ومراجعة المورّد والاستمرارية وتقرير القرار. تضم 6 دروس. المسار المرتبط: الحوكمة والمخاطر والامتثال. افتح الدورة لترتيب الدروس والوصول الحالي، وأكمل المتطلبات الموثّقة قبل الامتحان."
+    },
+    "keywords": [
+      "desktop-19",
+      "الحوكمة والمخاطر والامتثال العملي",
+      "Applied governance, risk and compliance",
+      "course",
+      "دورة",
+      "كورس"
+    ]
+  },
+  {
+    "id": "course-desktop-8",
+    "site": "academy",
+    "path": "library-course.html?id=desktop-8",
+    "title": {
+      "ar": "مسارات الاحتراف",
+      "en": "Career pathways"
+    },
+    "body": {
+      "en": "Build a career plan that demonstrates skills through projects and evidence. Contains 6 lessons. Related path: Governance, risk and compliance. Open the course for its ordered lessons and current access; complete verified requirements before its exam.",
+      "ar": "خطة مهنية عملية تُثبت المهارة بالمشروعات والأدلة لا بالشهادات فقط تضم 6 دروس. المسار المرتبط: الحوكمة والمخاطر والامتثال. افتح الدورة لترتيب الدروس والوصول الحالي، وأكمل المتطلبات الموثّقة قبل الامتحان."
+    },
+    "keywords": [
+      "desktop-8",
+      "مسارات الاحتراف",
+      "Career pathways",
+      "course",
+      "دورة",
+      "كورس"
+    ]
+  },
+  {
+    "id": "resource-labs-lab-supplier-7",
+    "site": "academy",
+    "path": "practice-lab.html?id=7&context=supplier",
+    "title": {
+      "ar": "مراجعة المورّد: النطاق والدليل وقرار المتابعة",
+      "en": "Supplier review: scope, evidence and follow-up"
+    },
+    "body": {
+      "en": "An educational labs resource linked to Governance, risk and compliance. Open it from the path page and read its instructions and account access requirements. It is distinct from the path final exam. Related paths: Governance, risk and compliance",
+      "ar": "مورد تطبيقي تعليمي مرتبط بمسار الحوكمة والمخاطر والامتثال. افتحه من صفحة المسار واقرأ التعليمات ومتطلبات الوصول لحسابك. هذا المورد يختلف عن الامتحان النهائي للمسار. المسارات المرتبطة: الحوكمة والمخاطر والامتثال"
+    },
+    "keywords": [
+      "lab-supplier-7",
+      "مراجعة المورّد: النطاق والدليل وقرار المتابعة",
+      "Supplier review: scope, evidence and follow-up",
+      "labs",
+      "مختبر"
+    ]
+  },
+  {
+    "id": "resource-quizzes-quiz-12",
+    "site": "academy",
+    "path": "practice-quiz.html?id=12",
+    "title": {
+      "ar": "تدريب الحوكمة والمخاطر والامتثال",
+      "en": "Governance, risk and compliance practice"
+    },
+    "body": {
+      "en": "An educational quizzes resource linked to Governance, risk and compliance. Open it from the path page and read its instructions and account access requirements. It is distinct from the path final exam. Related paths: Governance, risk and compliance",
+      "ar": "مورد تطبيقي تعليمي مرتبط بمسار الحوكمة والمخاطر والامتثال. افتحه من صفحة المسار واقرأ التعليمات ومتطلبات الوصول لحسابك. هذا المورد يختلف عن الامتحان النهائي للمسار. المسارات المرتبطة: الحوكمة والمخاطر والامتثال"
+    },
+    "keywords": [
+      "quiz-12",
+      "تدريب الحوكمة والمخاطر والامتثال",
+      "Governance, risk and compliance practice",
+      "quizzes",
+      "كويز"
+    ]
+  },
+  {
+    "id": "path-path_appsec",
+    "site": "academy",
+    "path": "path.html?id=path_appsec",
+    "title": {
+      "ar": "أمن التطبيقات وDevSecOps",
+      "en": "Application security and DevSecOps"
+    },
+    "body": {
+      "en": "Understand HTTP, sessions and authorization, then inspect a training app.\nLearning outcomes: HTTP and web basics · Sessions and access control · OWASP vulnerability classes · Lab, analysis and remediation\nCourses: Linux for cybersecurity · Web application security · Software security and DevSecOps\nquizzes: Linux for cybersecurity · Web application security\nlabs: Object authorization in an API · Effective Linux permissions\nchallenges: Challenge 03: SQL injection · Challenge 04: Cross-site scripting\noperations: Tenant gateway · Delivery chain trace\nThe path page shows lesson, course exam, practical assessment, final exam and credential requirements. Purchases are closed; catalog listing does not imply account access.",
+      "ar": "افهم HTTP والجلسات والصلاحيات، ثم حلّل تطبيقاً تدريبياً.\nالنتائج التعليمية: HTTP وأساسيات الويب · الجلسات والتحكم بالوصول · فئات ثغرات OWASP · مختبر وتحليل وإصلاح\nالدورات: لينكس للأمن السيبراني · أمن تطبيقات الويب · أمن البرمجيات وDevSecOps\nكويزات التدريب: لينكس للأمن السيبراني · أمن تطبيقات الويب المتقدم\nالمختبرات: تفويض الكائنات في API · صلاحيات Linux الفعلية\nالتحديات: تحدي 03 — حقن SQL · تحدي 04 — XSS المخفي\nغرف العمليات: بوابة المستأجر · أثر سلسلة التسليم\nراجع صفحة المسار لمتطلبات الدروس وامتحانات الدورات والتقييم العملي والامتحان النهائي والشهادة. الشراء مغلق؛ وجود المورد في الفهرس لا يعني أنه مفتوح لحسابك."
+    },
+    "keywords": [
+      "path_appsec",
+      "أمن التطبيقات وDevSecOps",
+      "Application security and DevSecOps",
+      "HTTP وأساسيات الويب",
+      "الجلسات والتحكم بالوصول",
+      "فئات ثغرات OWASP",
+      "مختبر وتحليل وإصلاح",
+      "HTTP and web basics",
+      "Sessions and access control",
+      "OWASP vulnerability classes",
+      "Lab, analysis and remediation"
+    ]
+  },
+  {
+    "id": "course-desktop-9",
+    "site": "academy",
+    "path": "library-course.html?id=desktop-9",
+    "title": {
+      "ar": "لينكس للأمن السيبراني",
+      "en": "Linux for cybersecurity"
+    },
+    "body": {
+      "en": "Administer Linux with least privilege, harden systems and detect configuration drift. Contains 5 lessons. Related path: Application security and DevSecOps. Open the course for its ordered lessons and current access; complete verified requirements before its exam.",
+      "ar": "إدارة لينكس بأقل صلاحية وتقوية النظام واكتشاف الانحراف تضم 5 دروس. المسار المرتبط: أمن التطبيقات وDevSecOps. افتح الدورة لترتيب الدروس والوصول الحالي، وأكمل المتطلبات الموثّقة قبل الامتحان."
+    },
+    "keywords": [
+      "desktop-9",
+      "لينكس للأمن السيبراني",
+      "Linux for cybersecurity",
+      "course",
+      "دورة",
+      "كورس"
+    ]
+  },
+  {
+    "id": "course-desktop-v5-category-2",
+    "site": "academy",
+    "path": "library-course.html?id=desktop-v5-category-2",
+    "title": {
+      "ar": "أمن البرمجيات وDevSecOps",
+      "en": "Software security and DevSecOps"
+    },
+    "body": {
+      "en": "Build security into design, code, CI/CD pipelines and the software supply chain. Contains 4 lessons. Related path: Application security and DevSecOps. Open the course for its ordered lessons and current access; complete verified requirements before its exam.",
+      "ar": "بناء الأمن داخل التصميم والكود وخطوط CI/CD وسلسلة توريد البرمجيات تضم 4 دروس. المسار المرتبط: أمن التطبيقات وDevSecOps. افتح الدورة لترتيب الدروس والوصول الحالي، وأكمل المتطلبات الموثّقة قبل الامتحان."
+    },
+    "keywords": [
+      "desktop-v5-category-2",
+      "أمن البرمجيات وDevSecOps",
+      "Software security and DevSecOps",
+      "course",
+      "دورة",
+      "كورس"
+    ]
+  },
+  {
+    "id": "path-path_mobile",
+    "site": "academy",
+    "path": "path.html?id=path_mobile",
+    "title": {
+      "ar": "أمن تطبيقات الهاتف",
+      "en": "Mobile application security"
+    },
+    "body": {
+      "en": "Protect storage, permissions, transport and APIs in mobile apps.\nLearning outcomes: Mobile app architecture · Storage and permissions · Transport and APIs · Remediation report\nCourses: Mobile security · Web application security\nquizzes: Web application security\nlabs: Mobile boundaries and data authorization\nchallenges: Challenge 13: Mobile security\noperations: Identity echo · Tenant gateway\nThe path page shows lesson, course exam, practical assessment, final exam and credential requirements. Purchases are closed; catalog listing does not imply account access.",
+      "ar": "احمِ التخزين والصلاحيات والاتصال وواجهات API في تطبيقات الهاتف.\nالنتائج التعليمية: بنية تطبيق الهاتف · التخزين والصلاحيات · الاتصال وواجهات API · تقرير الإصلاح\nالدورات: أمن الهواتف المحمولة · أمن تطبيقات الويب\nكويزات التدريب: أمن تطبيقات الويب المتقدم\nالمختبرات: حدود تطبيق الهاتف وتفويض البيانات\nالتحديات: تحدي 13 — أمن الهواتف\nغرف العمليات: صدى الهوية · بوابة المستأجر\nراجع صفحة المسار لمتطلبات الدروس وامتحانات الدورات والتقييم العملي والامتحان النهائي والشهادة. الشراء مغلق؛ وجود المورد في الفهرس لا يعني أنه مفتوح لحسابك."
+    },
+    "keywords": [
+      "path_mobile",
+      "أمن تطبيقات الهاتف",
+      "Mobile application security",
+      "بنية تطبيق الهاتف",
+      "التخزين والصلاحيات",
+      "الاتصال وواجهات API",
+      "تقرير الإصلاح",
+      "Mobile app architecture",
+      "Storage and permissions",
+      "Transport and APIs",
+      "Remediation report"
+    ]
+  },
+  {
+    "id": "course-desktop-14",
+    "site": "academy",
+    "path": "library-course.html?id=desktop-14",
+    "title": {
+      "ar": "أمن الهواتف المحمولة",
+      "en": "Mobile security"
+    },
+    "body": {
+      "en": "Test privacy, permissions, storage and communications in mobile applications. Contains 5 lessons. Related path: Mobile application security. Open the course for its ordered lessons and current access; complete verified requirements before its exam.",
+      "ar": "اختبار الخصوصية والصلاحيات والتخزين والاتصال في تطبيقات الهاتف تضم 5 دروس. المسار المرتبط: أمن تطبيقات الهاتف. افتح الدورة لترتيب الدروس والوصول الحالي، وأكمل المتطلبات الموثّقة قبل الامتحان."
+    },
+    "keywords": [
+      "desktop-14",
+      "أمن الهواتف المحمولة",
+      "Mobile security",
+      "course",
+      "دورة",
+      "كورس"
+    ]
+  },
+  {
+    "id": "resource-challenges-challenge-12",
+    "site": "academy",
+    "path": "practice-challenge.html?id=12",
+    "title": {
+      "ar": "تحدي 13 — أمن الهواتف",
+      "en": "Challenge 13: Mobile security"
+    },
+    "body": {
+      "en": "An educational challenges resource linked to Mobile application security. Open it from the path page and read its instructions and account access requirements. It is distinct from the path final exam. Related paths: Mobile application security",
+      "ar": "مورد تطبيقي تعليمي مرتبط بمسار أمن تطبيقات الهاتف. افتحه من صفحة المسار واقرأ التعليمات ومتطلبات الوصول لحسابك. هذا المورد يختلف عن الامتحان النهائي للمسار. المسارات المرتبطة: أمن تطبيقات الهاتف"
+    },
+    "keywords": [
+      "challenge-12",
+      "تحدي 13 — أمن الهواتف",
+      "Challenge 13: Mobile security",
+      "challenges",
+      "تحدي"
+    ]
+  },
+  {
+    "id": "path-path_threat_intel",
+    "site": "academy",
+    "path": "path.html?id=path_threat_intel",
+    "title": {
+      "ar": "استخبارات التهديدات وOSINT",
+      "en": "Threat intelligence and OSINT"
+    },
+    "body": {
+      "en": "Collect authorized leads, assess confidence and connect them to evidence and defense.\nLearning outcomes: Research scope · Source assessment · Indicator analysis · Intelligence report\nCourses: OSINT and source intelligence · Digital forensics · Advanced defense operations\nquizzes: Digital forensics\nlabs: Source independence and attribution limits · Coverage and response validation\nchallenges: Challenge 09: OSINT investigation · Challenge 07: Memory forensics\noperations: Delivery chain trace · Suspicious document\nThe path page shows lesson, course exam, practical assessment, final exam and credential requirements. Purchases are closed; catalog listing does not imply account access.",
+      "ar": "اجمع إشارات مصرّحاً بها، قيّم الثقة، واربطها بالدليل والدفاع.\nالنتائج التعليمية: نطاق البحث · تقييم المصادر · تحليل المؤشرات · تقرير الاستخبارات\nالدورات: OSINT واستخبارات المصادر · الطب الشرعي الرقمي · عمليات الدفاع المتقدم\nكويزات التدريب: الطب الشرعي الرقمي\nالمختبرات: استقلال المصادر وحدود الإسناد · قياس التغطية والاستجابة\nالتحديات: تحدي 09 — استخبارات OSINT · تحدي 07 — تحليل الذاكرة\nغرف العمليات: أثر سلسلة التسليم · الوثيقة المشبوهة\nراجع صفحة المسار لمتطلبات الدروس وامتحانات الدورات والتقييم العملي والامتحان النهائي والشهادة. الشراء مغلق؛ وجود المورد في الفهرس لا يعني أنه مفتوح لحسابك."
+    },
+    "keywords": [
+      "path_threat_intel",
+      "استخبارات التهديدات وOSINT",
+      "Threat intelligence and OSINT",
+      "نطاق البحث",
+      "تقييم المصادر",
+      "تحليل المؤشرات",
+      "تقرير الاستخبارات",
+      "Research scope",
+      "Source assessment",
+      "Indicator analysis",
+      "Intelligence report"
+    ]
+  },
+  {
+    "id": "course-desktop-15",
+    "site": "academy",
+    "path": "library-course.html?id=desktop-15",
+    "title": {
+      "ar": "OSINT واستخبارات المصادر",
+      "en": "OSINT and source intelligence"
+    },
+    "body": {
+      "en": "Collect information lawfully, corroborate sources and state your confidence clearly. Contains 5 lessons. Related path: Threat intelligence and OSINT. Open the course for its ordered lessons and current access; complete verified requirements before its exam.",
+      "ar": "جمع قانوني، تحقق متعدد المصادر، وتقدير واضح للثقة تضم 5 دروس. المسار المرتبط: استخبارات التهديدات وOSINT. افتح الدورة لترتيب الدروس والوصول الحالي، وأكمل المتطلبات الموثّقة قبل الامتحان."
+    },
+    "keywords": [
+      "desktop-15",
+      "OSINT واستخبارات المصادر",
+      "OSINT and source intelligence",
+      "course",
+      "دورة",
+      "كورس"
+    ]
+  },
+  {
+    "id": "course-desktop-v5-category-1",
+    "site": "academy",
+    "path": "library-course.html?id=desktop-v5-category-1",
+    "title": {
+      "ar": "عمليات الدفاع المتقدم",
+      "en": "Advanced defense operations"
+    },
+    "body": {
+      "en": "Build log and SIEM pipelines, detection rules, threat hunts and response playbooks. Contains 4 lessons. Related path: Threat intelligence and OSINT. Open the course for its ordered lessons and current access; complete verified requirements before its exam.",
+      "ar": "من هندسة السجلات وSIEM إلى قواعد الكشف وThreat Hunting والاستجابة المنظّمة تضم 4 دروس. المسار المرتبط: استخبارات التهديدات وOSINT. افتح الدورة لترتيب الدروس والوصول الحالي، وأكمل المتطلبات الموثّقة قبل الامتحان."
+    },
+    "keywords": [
+      "desktop-v5-category-1",
+      "عمليات الدفاع المتقدم",
+      "Advanced defense operations",
+      "course",
+      "دورة",
+      "كورس"
+    ]
+  },
+  {
+    "id": "resource-challenges-challenge-8",
+    "site": "academy",
+    "path": "practice-challenge.html?id=8",
+    "title": {
+      "ar": "تحدي 09 — استخبارات OSINT",
+      "en": "Challenge 09: OSINT investigation"
+    },
+    "body": {
+      "en": "An educational challenges resource linked to Threat intelligence and OSINT. Open it from the path page and read its instructions and account access requirements. It is distinct from the path final exam. Related paths: Threat intelligence and OSINT",
+      "ar": "مورد تطبيقي تعليمي مرتبط بمسار استخبارات التهديدات وOSINT. افتحه من صفحة المسار واقرأ التعليمات ومتطلبات الوصول لحسابك. هذا المورد يختلف عن الامتحان النهائي للمسار. المسارات المرتبطة: استخبارات التهديدات وOSINT"
+    },
+    "keywords": [
+      "challenge-8",
+      "تحدي 09 — استخبارات OSINT",
+      "Challenge 09: OSINT investigation",
+      "challenges",
+      "تحدي"
+    ]
+  },
+  {
+    "id": "path-path_malware",
+    "site": "academy",
+    "path": "path.html?id=path_malware",
+    "title": {
+      "ar": "تحليل البرمجيات والهندسة العكسية",
+      "en": "Malware analysis and reverse engineering"
+    },
+    "body": {
+      "en": "Start with safe static file analysis before isolated behavior analysis.\nLearning outcomes: File structure · Static analysis · Reverse engineering concepts · Indicators report\nCourses: Linux for cybersecurity · Malware analysis · Reverse engineering\nquizzes: Linux for cybersecurity · Malware analysis\nlabs: Branch tracing: signed and unsigned interpretation\nchallenges: Challenge 10: Malware analysis · Challenge 12: Reverse engineering\noperations: Suspicious document · Recovery ledger · Delivery chain trace\nThe path page shows lesson, course exam, practical assessment, final exam and credential requirements. Purchases are closed; catalog listing does not imply account access.",
+      "ar": "تحليل ساكن وآمن للملفات قبل الانتقال إلى سلوكها في بيئة معزولة.\nالنتائج التعليمية: بنية الملفات · التحليل الثابت · مفاهيم الهندسة العكسية · تقرير المؤشرات\nالدورات: لينكس للأمن السيبراني · تحليل البرمجيات الخبيثة · الهندسة العكسية\nكويزات التدريب: لينكس للأمن السيبراني · تحليل البرمجيات الخبيثة\nالمختبرات: تتبع الفرع وتفسير signed وunsigned\nالتحديات: تحدي 10 — تحليل برمجية خبيثة · تحدي 12 — الهندسة العكسية\nغرف العمليات: الوثيقة المشبوهة · دفتر الاستعادة · أثر سلسلة التسليم\nراجع صفحة المسار لمتطلبات الدروس وامتحانات الدورات والتقييم العملي والامتحان النهائي والشهادة. الشراء مغلق؛ وجود المورد في الفهرس لا يعني أنه مفتوح لحسابك."
+    },
+    "keywords": [
+      "path_malware",
+      "تحليل البرمجيات والهندسة العكسية",
+      "Malware analysis and reverse engineering",
+      "بنية الملفات",
+      "التحليل الثابت",
+      "مفاهيم الهندسة العكسية",
+      "تقرير المؤشرات",
+      "File structure",
+      "Static analysis",
+      "Reverse engineering concepts",
+      "Indicators report"
+    ]
+  },
+  {
+    "id": "course-desktop-16",
+    "site": "academy",
+    "path": "library-course.html?id=desktop-16",
+    "title": {
+      "ar": "الهندسة العكسية",
+      "en": "Reverse engineering"
+    },
+    "body": {
+      "en": "Read program structure and assembly to understand execution flow safely. Contains 5 lessons. Related path: Malware analysis and reverse engineering. Open the course for its ordered lessons and current access; complete verified requirements before its exam.",
+      "ar": "قراءة بنية البرامج وAssembly وفهم تدفق التنفيذ بصورة آمنة تضم 5 دروس. المسار المرتبط: تحليل البرمجيات والهندسة العكسية. افتح الدورة لترتيب الدروس والوصول الحالي، وأكمل المتطلبات الموثّقة قبل الامتحان."
+    },
+    "keywords": [
+      "desktop-16",
+      "الهندسة العكسية",
+      "Reverse engineering",
+      "course",
+      "دورة",
+      "كورس"
+    ]
+  },
+  {
+    "id": "resource-challenges-challenge-11",
+    "site": "academy",
+    "path": "practice-challenge.html?id=11",
+    "title": {
+      "ar": "تحدي 12 — الهندسة العكسية",
+      "en": "Challenge 12: Reverse engineering"
+    },
+    "body": {
+      "en": "An educational challenges resource linked to Malware analysis and reverse engineering. Open it from the path page and read its instructions and account access requirements. It is distinct from the path final exam. Related paths: Malware analysis and reverse engineering",
+      "ar": "مورد تطبيقي تعليمي مرتبط بمسار تحليل البرمجيات والهندسة العكسية. افتحه من صفحة المسار واقرأ التعليمات ومتطلبات الوصول لحسابك. هذا المورد يختلف عن الامتحان النهائي للمسار. المسارات المرتبطة: تحليل البرمجيات والهندسة العكسية"
+    },
+    "keywords": [
+      "challenge-11",
+      "تحدي 12 — الهندسة العكسية",
+      "Challenge 12: Reverse engineering",
+      "challenges",
+      "تحدي"
+    ]
+  },
+  {
+    "id": "concept-biulock",
+    "site": "portfolio",
+    "path": "sites/biulock.html",
+    "title": {
+      "en": "BiuLock",
+      "ar": "BiuLock"
+    },
+    "body": {
+      "en": "BiuLock is a future concept for a local-first personal vault. Its existing code is experimental, not a completed release. The detail page explains its intended audience, proposed features and roadmap.",
+      "ar": "BiuLock فكرة مستقبلية لـخزنة شخصية محلية. الشيفرة الحالية تجريبية وليست إصداراً مكتملاً. تشرح صفحة المشروع المستفيد والميزات المقترحة وخارطة التنفيذ."
+    },
+    "keywords": [
+      "BiuLock",
+      "biulock",
+      "a local-first personal vault",
+      "خزنة شخصية محلية",
+      "project",
+      "مشروع"
+    ]
+  },
+  {
+    "id": "concept-b-recon",
+    "site": "portfolio",
+    "path": "sites/b-recon.html",
+    "title": {
+      "en": "B-Recon",
+      "ar": "B-Recon"
+    },
+    "body": {
+      "en": "B-Recon is a future concept for an authorized OSINT research workspace. Its existing code is experimental, not a completed release. The detail page explains its intended audience, proposed features and roadmap.",
+      "ar": "B-Recon فكرة مستقبلية لـمساحة بحث OSINT مصرح به. الشيفرة الحالية تجريبية وليست إصداراً مكتملاً. تشرح صفحة المشروع المستفيد والميزات المقترحة وخارطة التنفيذ."
+    },
+    "keywords": [
+      "B-Recon",
+      "b-recon",
+      "an authorized OSINT research workspace",
+      "مساحة بحث OSINT مصرح به",
+      "project",
+      "مشروع"
+    ]
+  },
+  {
+    "id": "concept-biucrypt",
+    "site": "portfolio",
+    "path": "sites/biucrypt.html",
+    "title": {
+      "en": "BiuCrypt",
+      "ar": "BiuCrypt"
+    },
+    "body": {
+      "en": "BiuCrypt is a future concept for a desktop file protection utility. Its existing code is experimental, not a completed release. The detail page explains its intended audience, proposed features and roadmap.",
+      "ar": "BiuCrypt فكرة مستقبلية لـأداة مكتبية لحماية الملفات. الشيفرة الحالية تجريبية وليست إصداراً مكتملاً. تشرح صفحة المشروع المستفيد والميزات المقترحة وخارطة التنفيذ."
+    },
+    "keywords": [
+      "BiuCrypt",
+      "biucrypt",
+      "a desktop file protection utility",
+      "أداة مكتبية لحماية الملفات",
+      "project",
+      "مشروع"
+    ]
+  },
+  {
+    "id": "concept-biusniff",
+    "site": "portfolio",
+    "path": "sites/biusniff.html",
+    "title": {
+      "en": "BiuSniff",
+      "ar": "BiuSniff"
+    },
+    "body": {
+      "en": "BiuSniff is a future concept for a network traffic analysis tool. Its existing code is experimental, not a completed release. The detail page explains its intended audience, proposed features and roadmap.",
+      "ar": "BiuSniff فكرة مستقبلية لـأداة لتحليل حركة الشبكة. الشيفرة الحالية تجريبية وليست إصداراً مكتملاً. تشرح صفحة المشروع المستفيد والميزات المقترحة وخارطة التنفيذ."
+    },
+    "keywords": [
+      "BiuSniff",
+      "biusniff",
+      "a network traffic analysis tool",
+      "أداة لتحليل حركة الشبكة",
+      "project",
+      "مشروع"
+    ]
+  },
+  {
+    "id": "concept-biuret-reaper",
+    "site": "portfolio",
+    "path": "sites/biuret-reaper.html",
+    "title": {
+      "en": "Biuret Reaper",
+      "ar": "Biuret Reaper"
+    },
+    "body": {
+      "en": "Biuret Reaper is a future concept for an authorized network discovery tool. Its existing code is experimental, not a completed release. The detail page explains its intended audience, proposed features and roadmap.",
+      "ar": "Biuret Reaper فكرة مستقبلية لـأداة لاكتشاف الشبكات المصرح بها. الشيفرة الحالية تجريبية وليست إصداراً مكتملاً. تشرح صفحة المشروع المستفيد والميزات المقترحة وخارطة التنفيذ."
+    },
+    "keywords": [
+      "Biuret Reaper",
+      "biuret-reaper",
+      "an authorized network discovery tool",
+      "أداة لاكتشاف الشبكات المصرح بها",
+      "project",
+      "مشروع"
+    ]
+  },
+  {
+    "id": "concept-biuret-academy",
+    "site": "portfolio",
+    "path": "sites/biuret-academy.html",
+    "title": {
+      "en": "Biuret Academy",
+      "ar": "Biuret Academy"
+    },
+    "body": {
+      "en": "Biuret Academy is a future concept for a complete cybersecurity learning platform. Its existing code is experimental, not a completed release. The detail page explains its intended audience, proposed features and roadmap. A separate, smaller Academy web pilot is live.",
+      "ar": "Biuret Academy فكرة مستقبلية لـمنصة متكاملة لتعلم الأمن السيبراني. الشيفرة الحالية تجريبية وليست إصداراً مكتملاً. تشرح صفحة المشروع المستفيد والميزات المقترحة وخارطة التنفيذ. تعمل نسخة ويب مصغّرة مستقلة من الأكاديمية حالياً."
+    },
+    "keywords": [
+      "Biuret Academy",
+      "biuret-academy",
+      "a complete cybersecurity learning platform",
+      "منصة متكاملة لتعلم الأمن السيبراني",
+      "project",
+      "مشروع"
+    ]
   }
 ]

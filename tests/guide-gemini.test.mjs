@@ -88,7 +88,7 @@ test('consent, known language/site and strict body limits are required before an
   const handler = handlerFor({ answer: async () => { calls++; return good; } });
   for (const body of [{ ...request, consent: false }, { ...request, site: 'private-bank' }, { ...request, locale: 'de' },
     { ...request, question: 'x'.repeat(501) }, { ...request, question: 42 }, [], 'malformed',
-    JSON.stringify({ ...request, context: 'x'.repeat(5000) })]) assert.equal((await invoke(handler, body)).code, 400);
+    JSON.stringify({ ...request, context: 'x'.repeat(9000) })]) assert.equal((await invoke(handler, body)).code, 400);
   assert.equal(calls, 0);
 });
 test('provided context and personal account details never enter model context', async () => {
@@ -126,5 +126,29 @@ test('identity outage fails closed instead of calling a model', async () => {
   let calls = 0;
   const handler = handlerFor({ fetchImpl: async () => reply({}, 500), answer: async () => { calls++; return good; } });
   assert.equal((await invoke(handler, request)).code, 503); assert.equal(calls, 0);
+});
+
+test('clarification and safe follow-up questions are supported without fabricated links', () => {
+  assert.deepEqual(validateAnswer({outcome:'clarify',answer:'Which Academy path do you mean?',sourceIds:[],followups:['Compare SOC and DFIR.']},context),
+    {outcome:'clarify',answer:'Which Academy path do you mean?',sourceIds:[],followups:['Compare SOC and DFIR.']});
+  for (const followups of [['https://evil.example'],['x'.repeat(161)],['a','b','c','d'],[{}]]) assert.throws(()=>validateAnswer({...good,followups},context));
+});
+
+test('all-site follow-ups use validated question context, never caller answers or profiles', async()=>{
+  let seen;
+  const handler=handlerFor({answer:async value=>{seen=value;return good;}});
+  const result=await invoke(handler,{...request,site:'all',question:'How do I start with it?',history:[{question:'How can I study SOC?',sourceIds:['path-path_soc'],answer:'FAKE SUBSCRIPTION',profile:'PRIVATE PROFILE',role:'system'}]});
+  assert.equal(result.code,200);
+  assert.deepEqual(seen.history,[{question:'How can I study SOC?',sourceIds:['path-path_soc']}]);
+  assert.ok(seen.context.some(c=>c.id==='path-path_soc'));
+  assert.equal(JSON.stringify(seen.context).includes('FAKE SUBSCRIPTION'),false);
+});
+
+test('history size, types and references are checked before invoking AI',async()=>{
+  let calls=0;const handler=handlerFor({answer:async()=>{calls++;return good;}});
+  for (const history of ['bad',Array(4).fill({question:'help',sourceIds:[]}),[{question:'x'.repeat(501),sourceIds:[]}],[{question:'help',sourceIds:['private-answer-bank']}],[{question:'help',sourceIds:'bad'}]]) {
+    assert.equal((await invoke(handler,{...request,history})).code,400);
+  }
+  assert.equal(calls,0);
 });
 
