@@ -12,13 +12,15 @@ add('all-learning-paths','paths.html',{en:'All available learning paths',ar:'ج�
 const uniqueCourses=[...new Map(academyPaths.flatMap(p=>p.courses).map(c=>[c.id,c])).values()];
 add('all-learning-courses','courses.html',{en:'Browse the course catalog',ar:'تصفح فهرس الدورات'},Object.fromEntries(['en','ar'].map(lang=>[lang,uniqueCourses.map(c=>c.title[lang]).join(' · ')+'\n'+(lang==='ar'?'افتح الدورة من مسارها وراجع ترتيب الدروس ووصول حسابك. الدورات الظاهرة في الفهرس ليست كلها مفتوحة لكل حساب.':'Open a course from its path to review ordered lessons and account access. A catalog entry does not mean every account can access it.')])),['all courses','course catalog','دورات','كورسات','كل الدورات','جميع الكورسات']);
 for (const p of academyPaths) {
+  const code=p.id.replace(/^path_/,'').toUpperCase();
   const body = Object.fromEntries(['en','ar'].map(lang => [lang, [p.summary[lang],
+    `${lang==='ar'?'معرّف المسار في الفهرس':'Catalog path code'}: ${code}`,
     `${lang === 'ar' ? 'النتائج التعليمية' : 'Learning outcomes'}: ${p.outcomes[lang].join(' · ')}`,
     `${lang === 'ar' ? 'الدورات' : 'Courses'}: ${p.courses.map(c => c.title[lang]).join(' · ')}`,
     ...['quizzes','labs','challenges','operations'].map(kind => `${lang==='ar'?{quizzes:'كويزات التدريب',labs:'المختبرات',challenges:'التحديات',operations:'غرف العمليات'}[kind]:kind}: ${(p[kind] || []).map(c => c.title[lang]).join(' · ')}`),
     lang === 'ar' ? 'راجع صفحة المسار لمتطلبات الدروس وامتحانات الدورات والتقييم العملي والامتحان النهائي والشهادة. الشراء مغلق؛ وجود المورد في الفهرس لا يعني أنه مفتوح لحسابك.' : 'The path page shows lesson, course exam, practical assessment, final exam and credential requirements. Purchases are closed; catalog listing does not imply account access.'
   ].join('\n')]));
-  add(`path-${p.id}`, `path.html?id=${p.id}`, p.title, body, [p.id,...Object.values(p.title),...Object.values(p.outcomes).flat()]);
+  add(`path-${p.id}`, `path.html?id=${p.id}`, p.title, body, [p.id,code,...Object.values(p.title),...Object.values(p.outcomes).flat()]);
   for (const c of p.courses) if (!cards.some(x => x.id === `course-${c.id}`)) {
     add(`course-${c.id}`, c.href, c.title, {
       en: `${c.summary.en} Contains ${c.lessonIds.length} lessons. Related path: ${p.title.en}. Open the course for its ordered lessons and current access; complete verified requirements before its exam.`,

@@ -1,5 +1,5 @@
 const normalize = value => String(value).normalize('NFKD').replace(/\p{M}/gu,'').replace(/[أإآٱ]/g,'ا').replace(/ى/g,'ي').toLowerCase();
-const words = value => (normalize(value).match(/[\p{L}\p{N}]+/gu)||[]).map(w => w.replace(/^(?:وال|بال|لل|ال)(?=[\u0600-\u06ff]{3})/,''));
+const words = value => (normalize(value).match(/[\p{L}\p{N}]+/gu)||[]).map(w => w.replace(/^(?:وال|بال|لل|ال)(?=[\u0600-\u06ff]{3})/,'').replace(/^(?:وال|ال|و|ب|ل|ف)(?=[a-z0-9])/i,''));
 const stop = new Set(['the','a','an','is','what','how','i','can','my','it','and','in','to','do','where','this','that','في','من','عن','ما','هل','كيف','انا','اي','شو','وين','بدي','هذا','هاي','طيب','هو','هي']);
 const anchors = {portfolio:['guide-scope','biuret-sites','projects'], academy:['academy-navigation','paths','access'], playground:['playground-tool-choice','software','data']};
 
@@ -14,6 +14,8 @@ export function selectContext(cards, {question, site, locale, history=[]}) {
     const title = words(`${card.title.en} ${card.title.ar}`), keys = words((card.keywords||[]).join(' '));
     const body = words(`${card.body.en} ${card.body.ar}`);
     let score = terms.reduce((n,w)=>n+(title.includes(w)?7:keys.includes(w)?5:body.includes(w)?1:0),0);
+    // Explicit specialty codes outweigh generic words in long comparisons.
+    if (card.id.startsWith('path-path_') && terms.includes(card.id.slice('path-path_'.length))) score += 40;
     if (Object.values(card.title).some(t=>questionText.includes(normalize(t)))) score += 30;
     if (recentIds.has(card.id)) score += 12;
     if (scope.includes(card.site) && score) score += 2;

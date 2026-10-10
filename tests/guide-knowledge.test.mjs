@@ -29,6 +29,8 @@ test('expanded knowledge is bilingual, synchronized and cites real public pages 
 test('retrieval supports specialties, informal Arabic, file formats and cross-site requests',()=>{
  const cases=[['قارن SOC مع DFIR','all',['path-path_soc','path-path_dfir']],['كيف انزل شهادتي pdf؟','all',['certificate-downloads']],['ليش امتحان المسار مقفل؟','academy',['exam-locked']],['BiuLock جاهز ولا فكرة؟','all',['concept-biulock']],['workspace backup restore','playground',['workspace-backups']],['Which tool formats JSON?','portfolio',['json']]];
  for(const [question,site,ids]of cases){const selected=selectContext(cards,{question,site,locale:'ar'});for(const id of ids)assert.ok(selected.some(c=>c.id===id),`${question}: missing ${id}`);}
+ const comparison=selectContext(cards,{question:'قارن بين SOC وDFIR داخل الأكاديمية: شو بتعلم بكل واحد وأيهم أختار بعد الأساسيات؟',site:'all',locale:'ar'});
+ for(const id of ['path-path_soc','path-path_dfir'])assert.ok(comparison.slice(0,3).some(c=>c.id===id),id);
 });
 
 test('context remains bounded, includes referent facts and never carries arbitrary data',()=>{
