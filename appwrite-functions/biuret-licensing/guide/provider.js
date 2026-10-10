@@ -68,7 +68,7 @@ PUBLIC SITE FACTS:\n${JSON.stringify(context)}`;
   };
   try {
     const response = await fetchImpl(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, {
-      method: 'POST', redirect: 'error', signal: AbortSignal.timeout(12000),
+      method: 'POST', redirect: 'error', signal: AbortSignal.timeout(9000),
       headers: { 'Content-Type': 'application/json', 'x-goog-api-key': key }, body: JSON.stringify(payload)
     });
     if (!response.ok) {

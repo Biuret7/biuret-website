@@ -11,6 +11,7 @@ The existing function has database/account scopes for its other services. Guide 
 ## Deployment and secret entry
 
 - Keep the existing Node.js 22 runtime, `index.js` entrypoint, permissions, scopes and webhook configuration.
+- Keep the existing 15-second function timeout. Identity verification has a 4-second deadline and Gemini a 9-second deadline, leaving time for validation and the response.
 - Upload the reviewed archive containing only `index.js`, `analytics.js`, `package.json`, `guide/main.js`, `guide/provider.js` and `guide/knowledge.json`.
 - Add `GUIDE_ADMIN_USER_IDS` for the previously approved Academy administrator only.
 - `GUIDE_GEMINI_MODEL=gemini-3.5-flash-lite` (stable, free tier documented by Google on review date; actual project quota/availability remains to be tested).
