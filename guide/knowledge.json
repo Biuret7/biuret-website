@@ -1663,12 +1663,12 @@
     "site": "academy",
     "path": "ctf.html",
     "title": {
-      "en": "Biuret CTF practice",
-      "ar": "تدريب Biuret CTF"
+      "ar": "مجموعة Biuret CTF",
+      "en": "Biuret CTF collection"
     },
     "body": {
-      "en": "Biuret CTF has six free evidence-analysis missions for signed-in accounts with their real full name. Topics cover hostname parsing, Base64 encoding, session correlation, Linux file permissions, transport protection and UTC timelines. Each mission asks for a flag and an explanation, with progressive hints and a learning explanation. This is inspectable local browser practice, not a protected competition, final exam or credential. Temporary tab progress is not synced and grants no verified XP or Coins. Start with Foundations and use the related path links to deepen your learning.",
-      "ar": "تضم Biuret CTF ست مهمات تحليل أدلة مجانية للحسابات المسجلة باسم حقيقي كامل: المضيف في الرابط وترميز Base64 وربط الجلسات وصلاحيات Linux وحماية النقل والخط الزمني UTC. تطلب كل مهمة علماً وشرحاً، مع تلميحات تدريجية وتفسير تعليمي. هذا تدريب محلي قابل لفحص شيفرته في المتصفح، وليس مسابقة محمية أو امتحاناً نهائياً أو شهادة. التقدم مؤقت في التبويب، لا يتزامن ولا يمنح XP موثقاً أو عملات. ابدأ بالأساسيات ثم تعمق عبر روابط المسارات المرتبطة."
+      "ar": "استبدلت مهمات Biuret CTF القديمة بمجموعة الأرشيف: 40 تحدياً في 13 تخصصاً وخمسة مستويات صعوبة. اثنان جاهزان للتنزيل: Biuret Vault (Python 3.9+) وBiuret CyberTrace (Python 3.10+، 60–120 دقيقة). تعمل الحزمتان محلياً دون مكتبات إضافية؛ ليستا تطبيقين يعملان في المتصفح. 38 تحدياً آخر وصف فكرة مخطط لها فقط، دون حزم أو أدلة جاهزة. اعرض الجاهز أو المجموعة كاملة وفلتر حسب التخصص والصعوبة وابحث بالعربية أو الإنجليزية. صفحة كل حزمة تعرض الأهداف والمتطلبات والأوامر والقواعد وحجم ZIP وSHA-256. التنزيلات تحتوي ملفات اللاعب فقط، ولا تتضمن حلول المنظم. المجموعة مجانية للحسابات المسجلة باسم حقيقي كامل. لا يوجد تقييم CTF موثق على المنصة أو تزامن إنجاز أو XP أو عملات أو شهادة CTF؛ شهادات المسارات وامتحاناتها منفصلة. لا يكشف الدليل أعلام الحلول أو خطوات الحل الخاصة.",
+      "en": "The previous Biuret CTF browser missions have been replaced by the archive collection: 40 challenges across 13 specialties and five difficulty levels. Two packages are ready to download: Biuret Vault (Python 3.9+) and Biuret CyberTrace (Python 3.10+, estimated 60–120 minutes). They run locally without third-party packages, not in the browser. The other 38 entries are planned concepts without ready packages or evidence. Browse ready or all entries; filter by specialty and difficulty and search in Arabic or English. Package pages include objectives, requirements, commands, rules, ZIP size and SHA-256. Downloads contain player files only, excluding organizer solutions. The collection is free for signed-in accounts with their real full name. There is no verified platform CTF grading, synced completion, XP, coins or CTF credential; path exams and certificates remain separate. Guide must not disclose final flags or private solution steps."
     },
     "keywords": [
       "CTF",
@@ -1678,7 +1678,13 @@
       "العلم",
       "تحديات ctf",
       "مسابقة",
-      "تحليل الأدلة"
+      "تحليل الأدلة",
+      "vault",
+      "cybertrace",
+      "download challenge",
+      "تحديات جاهزة",
+      "خزنة",
+      "تنزيل تحدي"
     ]
   },
   {
