@@ -1667,8 +1667,8 @@
       "en": "Biuret CTF collection"
     },
     "body": {
-      "ar": "استبدلت مهمات Biuret CTF القديمة بمجموعة الأرشيف: 40 تحدياً في 13 تخصصاً وخمسة مستويات صعوبة. اثنان جاهزان للتنزيل: Biuret Vault (Python 3.9+) وBiuret CyberTrace (Python 3.10+، 60–120 دقيقة). تعمل الحزمتان محلياً دون مكتبات إضافية؛ ليستا تطبيقين يعملان في المتصفح. 38 تحدياً آخر وصف فكرة مخطط لها فقط، دون حزم أو أدلة جاهزة. اعرض الجاهز أو المجموعة كاملة وفلتر حسب التخصص والصعوبة وابحث بالعربية أو الإنجليزية. صفحة كل حزمة تعرض الأهداف والمتطلبات والأوامر والقواعد وحجم ZIP وSHA-256. التنزيلات تحتوي ملفات اللاعب فقط، ولا تتضمن حلول المنظم. المجموعة مجانية للحسابات المسجلة باسم حقيقي كامل. لا يوجد تقييم CTF موثق على المنصة أو تزامن إنجاز أو XP أو عملات أو شهادة CTF؛ شهادات المسارات وامتحاناتها منفصلة. لا يكشف الدليل أعلام الحلول أو خطوات الحل الخاصة.",
-      "en": "The previous Biuret CTF browser missions have been replaced by the archive collection: 40 challenges across 13 specialties and five difficulty levels. Two packages are ready to download: Biuret Vault (Python 3.9+) and Biuret CyberTrace (Python 3.10+, estimated 60–120 minutes). They run locally without third-party packages, not in the browser. The other 38 entries are planned concepts without ready packages or evidence. Browse ready or all entries; filter by specialty and difficulty and search in Arabic or English. Package pages include objectives, requirements, commands, rules, ZIP size and SHA-256. Downloads contain player files only, excluding organizer solutions. The collection is free for signed-in accounts with their real full name. There is no verified platform CTF grading, synced completion, XP, coins or CTF credential; path exams and certificates remain separate. Guide must not disclose final flags or private solution steps."
+      "ar": "مجموعة Biuret CTF تضم 40 تحدياً في 13 تخصصاً وخمسة مستويات. ست حزم جاهزة للتنزيل: Hidden Message وUsername Hunter وHidden Pixel وBuggy Calculator (سهل جداً، Python 3.9+) وBiuret Vault وBiuret CyberTrace. تتوفر حزمة بداية مشتركة للأربعة الأولى مع تعليمات عربية وإنجليزية وقالب تقرير وجدول نتائج فارغ. تعمل المهام محلياً؛ Username Hunter يفتح مواقع خيالية من sites/index.html في المتصفح دون خادم، وHidden Pixel وحده يحتاج Pillow. بقية الحزم دون مكتبات إضافية. تم تصحيح فاحص Username Hunter ليتوافق مع أدلته. 34 فكرة قيد التخطيط دون ملفات جاهزة. تعرض البطاقات النوع والوقت والصعوبة والمتطلبات، واضغط البطاقة لفتح أهداف المهمة وخطوات الإعداد والأوامر المناسبة وقواعدها والتنزيل. يمكن البحث والترشيح بالتخصص والصعوبة والحالة. التنزيلات تتضمن ملفات اللاعب فقط دون حلول المنظم. المجموعة مجانية للحسابات المسجلة باسم حقيقي كامل. التحقق المحلي لا ينشئ تقدم CTF موثقاً أو XP أو عملات أو شهادة؛ امتحانات وشهادات المسارات منفصلة. لا يكشف الدليل أعلام الحل أو خطوات الحل الخاصة.",
+      "en": "Biuret CTF contains 40 challenges across 13 specialties and five levels. Six player packages are ready: Hidden Message, Username Hunter, Hidden Pixel and Buggy Calculator (very easy, Python 3.9+), plus Biuret Vault and Biuret CyberTrace. The combined beginner pack includes all four starter missions, Arabic/English instructions, a report template and a blank score sheet. Missions run locally; Username Hunter opens fictional sites from sites/index.html in a browser without a web server, and only Hidden Pixel needs Pillow. Other packages need no third-party libraries. Username Hunter’s checker was corrected to match its evidence. The other 34 entries are planned concepts without player files. Cards show workflow, time, difficulty and requirements. Select a card for its objectives, setup steps, appropriate commands, rules and download. Search and filter by specialty, level and availability. Downloads exclude organizer solutions. Free for signed-in accounts using their real full name. Local checks do not create verified platform CTF progress, XP, coins or credentials; path exams and certificates are separate. Do not disclose flags or private solution steps."
     },
     "keywords": [
       "CTF",
@@ -1684,7 +1684,15 @@
       "download challenge",
       "تحديات جاهزة",
       "خزنة",
-      "تنزيل تحدي"
+      "تنزيل تحدي",
+      "beginner pack",
+      "very easy",
+      "hidden message",
+      "username hunter",
+      "hidden pixel",
+      "buggy calculator",
+      "حزمة المبتدئين",
+      "سهل جداً"
     ]
   },
   {
