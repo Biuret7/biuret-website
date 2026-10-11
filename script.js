@@ -14,7 +14,7 @@ const arabicTranslations = {
   "Text Studio": "استوديو النصوص",
   "JSON Studio": "استوديو JSON",
   "File Fingerprint": "بصمة الملفات",
-  "Plan a learning routine with StudyFlow, try Focus Room, format JSON clean up text or check a file fingerprint. Five practical tools, free to use in your browser.": "نظّم تعلمك مع StudyFlow وجرّب مساحة التركيز ونسّق JSON ونظّف النصوص أو افحص بصمة ملف. خمس أدوات عملية مجانية تعمل داخل متصفحك.",
+  "Plan with StudyFlow, focus, format JSON, clean and compare text, inspect a link or check a file fingerprint. Seven practical tools, free to use in your browser.": "نظّم تعلمك مع StudyFlow وركّز ونسّق JSON ونظّف النصوص وقارنها وافحص الروابط وبصمات الملفات. سبع أدوات عملية مجانية تعمل داخل متصفحك.",
 
   '16 original records across cybersecurity, programming, AI and personal development. Open a certificate for its full details.': '16 شهادة أصلية في الأمن السيبراني والبرمجة والذكاء الاصطناعي والتطوير الشخصي. افتح أي شهادة للاطلاع على تفاصيلها كاملة.',
   'How these records are documented': 'كيف نوثّق هذه الشهادات',
