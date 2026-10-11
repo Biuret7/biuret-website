@@ -1,5 +1,5 @@
-import { sourceURL } from './guide/core.mjs?v=20261010-guide6';
-import { readReply } from './guide/gateway.mjs?v=20261010-guide6';
+import { sourceURL } from './guide/core.mjs?v=20261011-ux1';
+import { readReply } from './guide/gateway.mjs?v=20261011-ux1';
 
 const $ = id => document.getElementById(id);
 const config = window.BIURET_APPWRITE_CONFIG, sdk = window.Appwrite;
@@ -102,5 +102,5 @@ $('pilot-form').addEventListener('submit', async event => {
   } finally { current = { remote, matches, status }; busy = false; render(); }
 });
 render();
-fetch('guide/knowledge.json?v=20261010-guide6').then(r => { if (!r.ok) throw Error(); return r.json(); }).then(value => { cards = value; render(); }).catch(() => { connection = 'unavailable'; ready = false; render(); });
+fetch('guide/knowledge.json?v=20261011-ux1').then(r => { if (!r.ok) throw Error(); return r.json(); }).then(value => { cards = value; render(); }).catch(() => { connection = 'unavailable'; ready = false; render(); });
 check();

@@ -5,7 +5,7 @@ export function createGateway({sdkProvider=async()=>globalThis.Appwrite||await i
   let connection;
   async function execute(action,data={}) {
     connection ||= sdkProvider().then(sdk=>new sdk.Functions(new sdk.Client().setEndpoint(settings.endpoint).setProject(settings.project)));
-    const functions=await connection;
+    let functions;try{functions=await connection;}catch(error){connection=undefined;throw error;}
     const execution=await functions.createExecution({functionId:settings.functionId,body:JSON.stringify({...data,action:`guide:${action}`}),async:false,path:'/',method:'POST'});
     let result;
     try { result=JSON.parse(execution.responseBody||'{}'); } catch { throw Error('guide_unavailable'); }

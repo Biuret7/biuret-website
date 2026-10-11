@@ -1659,6 +1659,73 @@
     ]
   },
   {
+    "id": "biuret-ctf",
+    "site": "academy",
+    "path": "ctf.html",
+    "title": {
+      "en": "Biuret CTF practice",
+      "ar": "تدريب Biuret CTF"
+    },
+    "body": {
+      "en": "Biuret CTF has six free evidence-analysis missions for signed-in accounts with their real full name. Topics cover hostname parsing, Base64 encoding, session correlation, Linux file permissions, transport protection and UTC timelines. Each mission asks for a flag and an explanation, with progressive hints and a learning explanation. This is inspectable local browser practice, not a protected competition, final exam or credential. Temporary tab progress is not synced and grants no verified XP or Coins. Start with Foundations and use the related path links to deepen your learning.",
+      "ar": "تضم Biuret CTF ست مهمات تحليل أدلة مجانية للحسابات المسجلة باسم حقيقي كامل: المضيف في الرابط وترميز Base64 وربط الجلسات وصلاحيات Linux وحماية النقل والخط الزمني UTC. تطلب كل مهمة علماً وشرحاً، مع تلميحات تدريجية وتفسير تعليمي. هذا تدريب محلي قابل لفحص شيفرته في المتصفح، وليس مسابقة محمية أو امتحاناً نهائياً أو شهادة. التقدم مؤقت في التبويب، لا يتزامن ولا يمنح XP موثقاً أو عملات. ابدأ بالأساسيات ثم تعمق عبر روابط المسارات المرتبطة."
+    },
+    "keywords": [
+      "CTF",
+      "capture flag",
+      "biuret ctf",
+      "flags",
+      "العلم",
+      "تحديات ctf",
+      "مسابقة",
+      "تحليل الأدلة"
+    ]
+  },
+  {
+    "id": "text-compare",
+    "site": "playground",
+    "path": "compare.html",
+    "title": {
+      "en": "Compare two text versions",
+      "ar": "مقارنة نسختين من النص"
+    },
+    "body": {
+      "en": "Text Compare displays additions, removals and unchanged lines between two text versions. It supports 150 lines and 25,000 characters per version, a changes-only view, a fictional sample, clipboard copy and TXT export. Letter case and spaces count as changes. All processing is local, input is not sent to Guide and results are invalidated when input changes.",
+      "ar": "تعرض أداة مقارنة النصوص الأسطر المضافة والمحذوفة وغير المتغيرة بين نسختين. الحد 150 سطراً و25000 محرف لكل نسخة، مع عرض التغييرات فقط وعينة تدريبية ونسخ وتنزيل TXT. المسافات وحالة الأحرف تعد تغييرات. المعالجة محلية، والمدخلات لا ترسل إلى الدليل، والنتيجة تصبح قديمة بمجرد تغيير المدخلات."
+    },
+    "keywords": [
+      "compare",
+      "diff",
+      "patch",
+      "text compare",
+      "مقارنة",
+      "قارن النصوص",
+      "فروق"
+    ]
+  },
+  {
+    "id": "url-inspector",
+    "site": "playground",
+    "path": "url.html",
+    "title": {
+      "en": "Inspect URL structure locally",
+      "ar": "فحص بنية الرابط محلياً"
+    },
+    "body": {
+      "en": "URL Inspector parses HTTP or HTTPS URLs without opening or fetching them. It displays the actual ASCII hostname, path, query fields and fragment; warns about embedded user information, HTTP, IDNs, IP hosts and explicit ports. It does not assess site reputation or malware safety. Embedded credentials are omitted from reports, but query values may contain private tokens; review before copying or exporting TXT. Tool input is never sent to Guide.",
+      "ar": "يفحص فاحص الروابط بنية HTTP أو HTTPS دون فتح الرابط أو الاتصال به. يعرض المضيف الحقيقي بصيغة ASCII والمسار ومعاملات الاستعلام وجزء الصفحة، وينبه لبيانات المستخدم المضمنة وHTTP والنطاقات الدولية وعناوين IP والمنافذ الصريحة. لا يقيّم سمعة الموقع أو خلوه من البرمجيات الخبيثة. بيانات الاعتماد لا تعرض في التقرير، لكن قيم الاستعلام قد تحتوي رموزاً خاصة؛ راجعها قبل النسخ أو تنزيل TXT. لا ترسل مدخلات الأداة إلى الدليل."
+    },
+    "keywords": [
+      "url inspector",
+      "inspect link",
+      "hostname",
+      "url",
+      "فحص الرابط",
+      "فاحص الروابط",
+      "المضيف"
+    ]
+  },
+  {
     "id": "all-learning-paths",
     "site": "academy",
     "path": "paths.html",

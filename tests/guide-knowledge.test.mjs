@@ -8,8 +8,8 @@ const cards=JSON.parse(readFileSync(new URL('guide/knowledge.json',root)));
 // Deployment checks run from this repository alone. Cross-site routes were
 // reviewed against their source repositories; verify those files too when present.
 const routes={
- academy:new Set('index free-studio paths quizzes labs certificate membership profile shop search courses certifications progress notes operations professional path course lab challenges operation practice-quiz library-course practice-lab practice-challenge soc-investigation'.split(' ').map(s=>`${s}.html`)),
- playground:new Set('studyflow workspace index focus json hash text software'.split(' ').map(s=>`${s}.html`))
+ academy:new Set('index free-studio paths quizzes labs certificate membership profile shop search courses certifications progress notes operations professional path course lab challenges operation practice-quiz library-course practice-lab practice-challenge soc-investigation ctf'.split(' ').map(s=>`${s}.html`)),
+ playground:new Set('studyflow workspace index focus json hash text software compare url'.split(' ').map(s=>`${s}.html`))
 };
 
 test('expanded knowledge is bilingual, synchronized and cites real public pages only',()=>{

@@ -2,7 +2,7 @@ const arabicTranslations = {
   "Playground ↗": "Playground ↗",
   "Try the tools ↗": "جرّب الأدوات ↗",
   "Less friction. More making.": "خطوات أقل. وإنجاز أكثر.",
-  "Five free tools for planning, focus, code and everyday work. Open a tool and start immediately.": "خمس أدوات مجانية للتخطيط والتركيز والبرمجة والعمل اليومي. افتح الأداة وابدأ فوراً.",
+  "Seven free tools for planning, focus, code and everyday work. Open a tool and start immediately.": "سبع أدوات مجانية للتخطيط والتركيز والبرمجة والعمل اليومي. افتح الأداة وابدأ فوراً.",
   "Open Playground ↗": "افتح Playground ↗",
   "No account. No uploads. Arabic & English.": "دون حساب أو رفع بيانات. بالعربية والإنجليزية.",
   "Plan, practice and track your next step.": "خطط وطبّق وتابع خطوتك القادمة.",
