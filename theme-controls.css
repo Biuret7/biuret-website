@@ -1,0 +1,28 @@
+/* A single accessible control, shared by the three Biuret sites. */
+.theme-toggle { display:inline-flex!important; align-items:center; justify-content:center; gap:8px; flex:0 0 auto; height:44px; min-height:44px; padding:8px 12px; border:1px solid #36443c; border-radius:12px; background:#141c19; color:#e0ecd9; font-family:inherit; font-size:12px; font-weight:600; line-height:1.3; white-space:nowrap; cursor:pointer; transition:background-color .2s,border-color .2s,transform .2s,box-shadow .2s; }
+.theme-toggle:hover { background:#223022; border-color:#8ba953; transform:translateY(-1px); box-shadow:0 4px 16px #0002; }
+.theme-toggle:focus-visible { outline:2px solid #a9d95a; outline-offset:4px; }
+.theme-glyph { position:relative; display:block; width:22px; height:22px; padding:0!important; }
+.theme-glyph svg { position:absolute; inset:0; width:22px; height:22px; fill:none; stroke:currentColor; stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round; transition:transform .35s cubic-bezier(.22,.75,.3,1),opacity .25s; }
+.theme-moon { opacity:0; transform:rotate(-65deg) scale(.45); }
+.theme-toggle[data-mode=light] .theme-sun { opacity:0; transform:rotate(90deg) scale(.45); }
+.theme-toggle[data-mode=light] .theme-moon { opacity:1; transform:rotate(0) scale(1); }
+.theme-floating { position:fixed; inset-inline-end:18px; top:18px; z-index:75; }
+html[data-theme=light] .theme-toggle { background:#fff; color:#345516; border-color:#aab99d; box-shadow:0 2px 8px #13251608; }
+html[data-theme=light] .theme-toggle:hover { background:#edf4e5; border-color:#667f44; box-shadow:0 4px 14px #13251610; }
+html[data-theme=light] .theme-toggle:focus-visible { outline-color:#44631c; }
+html[data-theme=light] :is(.button-primary,.primary) { background:#c9ff39; color:#1b2b0b; border-color:#90b72b; }
+html[data-theme=light] :is(.button-primary,.primary):hover { background:#bdec38; color:#152108; }
+html[data-theme=light] dialog::backdrop { background:#18261a66; }
+html[data-theme=light] .logo-mark { background:#132116; }
+html[data-theme=light] { scrollbar-color:#a2b299 #f6f8f4; }
+.theme-changing :where(body,header,aside,main,section,article,dialog,button,a,input,textarea,select,p,h1,h2,h3,pre,code) { transition:background-color .32s,border-color .32s,color .32s,box-shadow .32s!important; }
+.workspace-embedded .theme-toggle { display:none!important; }
+@media(max-width:640px) { .theme-toggle { padding:8px; min-width:40px; height:40px; min-height:40px; }.theme-label { display:none; }.theme-glyph,.theme-glyph svg { width:20px; height:20px; }.top nav { flex-wrap:wrap; }.top { height:auto; min-height:86px; }.theme-floating { top:12px; inset-inline-end:12px; } }
+@media(prefers-reduced-motion:reduce) { .theme-toggle,.theme-glyph svg,.theme-changing :where(body,header,aside,main,section,article,dialog,button,a,input,textarea,select,p,h1,h2,h3,pre,code) { transition:none!important; } }
+
+html[data-theme=light] :is(.sidebar-brand-mark,.brand-mark) { background:#132116; border-color:#627b36; }
+html[data-theme=light] .top .brand img { background:#132116; border-radius:6px; padding:3px; }
+
+html[data-theme=light] :is(.certificate-media,.certificate-viewer-image) { background:#303932; }
+html[data-theme=light] .certificate-media::after { background:none; }

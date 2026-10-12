@@ -1,4 +1,5 @@
 import { cp, mkdir, readdir, rm, stat, writeFile, readFile } from 'node:fs/promises';
+import './build-theme.mjs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -46,6 +47,8 @@ const publicFiles = [
   'sitemap.xml',
   'sniff_icon.ico',
   'style.css',
+  'theme.js',
+  'theme.css',
   'experience.css',
   'site-switcher.css',
   'site-switcher.js',
