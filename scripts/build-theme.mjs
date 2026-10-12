@@ -14,10 +14,10 @@ function palette(r,g,b,a,kind) {
  let h=0,s=0;
  if(d) {s=d/(255-Math.abs(max+min-255));h=max===r?((g-b)/d)%6:max===g?(b-r)/d+2:(r-g)/d+4;h=((h*60)%360+360)%360;}
  let light,sat;
- if(kind==='background') {if(l>.45&&s>.4){light=l;sat=s;}else{light=l<.4?.985-l*.18:.94;sat=s*.14;}}
- else if(kind==='border') {light=l<.42?.66+l*.4:.42;sat=Math.min(s,.25);}
+ if(kind==='background') {if(l>.45&&s>.4){light=l;sat=s;}else{light=l<.4?.96-l*.32:.90;sat=s*.18;}}
+ else if(kind==='border') {light=l<.42?.58+l*.45:.36;sat=Math.min(s,.25);}
  else if(kind==='shadow') return `rgba(20,35,25,${Math.min(a,.16)})`;
- else {light=l>.42?.14+(1-l)*.30:.14+l*.27;sat=Math.min(s,.72);}
+ else {light=l>.42?.10+(1-l)*.26:.10+l*.24;sat=Math.min(s,.72);}
  return `hsla(${h.toFixed(1)},${(sat*100).toFixed(1)}%,${(light*100).toFixed(1)}%,${a})`;
 }
 function color(value,property) {
