@@ -19,3 +19,7 @@ Portfolio was published from master. An accidental duplicate main branch was del
 ## Light interface refinement — 2026-10-12
 
 The Light canvas stays pale while working surfaces use deeper sage and slate tones. Dark ink, charcoal header actions, darker badges/icons and clearer field boundaries improve hierarchy. Secondary actions, selected tabs and cards share restrained hover shadows and short transitions; reduced-motion preferences suppress movement. Logo tiles and certificate image mats retain their dark backgrounds. Native inputs/selects and autofill use the Light palette. CSS cache version: `20261012-light2` (JavaScript unchanged).
+
+## Light experience — studio refinement
+
+`light-experience.css` is the authored component layer, compiled into public `theme.css`. It replaces the previous component refinements: slate working surfaces, dark orientation panels, readable cards, distinct selected/keyboard states, input borders and semantic feedback. Existing Dark styling and theme JavaScript are unchanged. CSS cache: `20261012-light3`.
