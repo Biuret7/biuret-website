@@ -583,7 +583,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   document.addEventListener('click', (event) => { if (!navbar?.contains(event.target)) closeMenu(); });
   document.addEventListener('focusin', (event) => { if (!navbar?.contains(event.target)) closeMenu(); });
-  window.addEventListener('resize', () => { if (window.innerWidth >= 1800) closeMenu(); });
+  window.addEventListener('resize', () => { if (window.innerWidth >= 1200) closeMenu(); });
   document.querySelectorAll('a[href^="#"]').forEach((link) => link.addEventListener('click', (event) => {
     if (link.classList.contains('skip-link')) return;
     const target = document.getElementById(link.getAttribute('href').slice(1));
