@@ -1,0 +1,111 @@
+/* Shared interaction polish. Keeps the existing layout, palette and content. */
+:root {
+  --motion-ease:cubic-bezier(.22,1,.36,1);
+  --motion-quick:160ms;
+  --motion-normal:240ms;
+  --motion-card-shadow:0 8px 24px #0003;
+  --motion-accent:var(--accent,var(--lime,#c9ff39));
+  --motion-card-border:color-mix(in srgb,var(--motion-accent) 50%,#59675a);
+  --motion-control-shadow:0 4px 12px #0002;
+  --motion-inline:3px;
+}
+html[dir=rtl] { --motion-inline:-3px; }
+html[data-theme=dark] :is(.project-card,.certificate-card) {
+  --motion-card-border:color-mix(in srgb,var(--project-color,var(--certificate-color,var(--motion-accent))) 55%,#59675a);
+}
+html[data-theme=light] {
+  --motion-card-shadow:0 8px 24px #17372c20;
+  --motion-control-shadow:0 4px 12px #17372c16;
+  --motion-card-border:#648369;
+}
+html[dir] :is(.button,.button-primary,.button-secondary,.primary,.secondary,.card-link,.academy-live-link,
+  .filter-button,.tool-filter,.favorite-button,.intent-grid button,.plan-rename,.guide-shortcut,.dialog-close,.social-button,.hint-button,.bg-retry,
+  .nav-actions>a,.nav-actions>button,.top nav>a,.top nav>button,.workspace-tabs a,
+  .reading-controls button,.bg-launch,.bg-close,.bg-form button,.bg-suggestions button,.ecosystem-close) {
+  transition:transform var(--motion-quick) var(--motion-ease),background-color var(--motion-quick) ease,
+    border-color var(--motion-quick) ease,color var(--motion-quick) ease,box-shadow var(--motion-normal) ease;
+}
+html[dir] :is(.project-card,.certificate-card,.visitor-route,.catalog-card,.library-card,.path-card,
+  .overview-card,.ctf-card,.tool-grid .app-card,.saved-plan,.account-portal-card) {
+  transition:transform var(--motion-normal) var(--motion-ease),border-color var(--motion-quick) ease,
+    box-shadow var(--motion-normal) ease;
+}
+html[dir] :is(.sidebar-nav a,.library-row,.path-resource-row[href],.ecosystem-links a,.playground-shortcuts>a) {
+  transition:transform var(--motion-quick) var(--motion-ease),background-color var(--motion-quick) ease,
+    border-color var(--motion-quick) ease,color var(--motion-quick) ease,box-shadow var(--motion-normal) ease;
+}
+.site-nav a::after { transition:transform var(--motion-normal) var(--motion-ease); }
+html[dir] :is(.ctf-arrow,.project-link b,.sidebar-link-index svg,.app-icon svg),.visitor-route::after {
+  transition:transform var(--motion-normal) var(--motion-ease);
+}
+.certificate-media img { transition:transform 360ms var(--motion-ease); }
+.js .reveal { transition:opacity 420ms ease,transform 420ms var(--motion-ease); }
+.biuret-guide .bg-panel[open],.ecosystem-panel[open],.certificate-viewer[open],.auth-dialog[open],.challenge-dialog[open],.modal[open] {
+  transform-origin:bottom center; animation:biuret-dialog-in 220ms var(--motion-ease);
+}
+.ecosystem-panel[open] { transform-origin:top center; }
+dialog[open]::backdrop { animation:biuret-backdrop-in 180ms ease; }
+.ui-enter { animation:biuret-content-in 300ms var(--motion-ease) both; }
+.intent-result { animation:biuret-content-in 220ms var(--motion-ease); }
+@media(max-width:1799px) { .navbar.menu-open .site-nav { animation:biuret-content-in 180ms var(--motion-ease); } }
+@keyframes biuret-dialog-in {
+  from { opacity:0; transform:translateY(8px) scale(.985); }
+  to { opacity:1; transform:none; }
+}
+@keyframes biuret-backdrop-in { from { opacity:0; } to { opacity:1; } }
+@keyframes biuret-content-in { from { opacity:.65; transform:translateY(6px); } to { opacity:1; transform:none; } }
+@view-transition { navigation:auto; }
+::view-transition-old(root) { animation:biuret-page-out 100ms ease both; }
+::view-transition-new(root) { animation:biuret-page-in 160ms ease both; }
+@keyframes biuret-page-out { to { opacity:0; } }
+@keyframes biuret-page-in { from { opacity:.35; } to { opacity:1; } }
+@media(hover:hover) and (pointer:fine) {
+  html[dir] :is(.button,.button-primary,.button-secondary,.primary,.secondary,.card-link,.academy-live-link,
+    .nav-actions>a,.nav-actions>button,.top nav>a,.top nav>button,.bg-launch):not(:disabled):not([aria-disabled=true]):hover {
+    transform:translateY(-2px); box-shadow:var(--motion-control-shadow);
+  }
+  html[dir] :is(.project-card,.certificate-card,.visitor-route,.catalog-card,.library-card,.path-card,
+    .overview-card,.ctf-card,.tool-grid .app-card,.saved-plan,.account-portal-card):hover {
+    transform:translateY(-3px); border-color:var(--motion-card-border); box-shadow:var(--motion-card-shadow);
+  }
+  html[dir] :is(.sidebar-nav a,.library-row,.path-resource-row[href],.ecosystem-links a,.playground-shortcuts>a):hover {
+    transform:translateX(var(--motion-inline));
+  }
+  html[dir] :is(.ctf-card:hover .ctf-arrow,.project-link:hover b) { transform:translateX(var(--motion-inline)); }
+  .tool-grid .app-card:hover .app-icon svg,.sidebar-nav a:hover .sidebar-link-index svg { transform:scale(1.08); }
+  .certificate-card:hover .certificate-media img { transform:scale(1.025); }
+}
+html[dir] :is(.button,.button-primary,.button-secondary,.primary,.secondary,.card-link,.academy-live-link,
+  .filter-button,.tool-filter,.favorite-button,.intent-grid button,.plan-rename,.guide-shortcut,.dialog-close,.social-button,.hint-button,.bg-retry,
+  .nav-actions>a,.nav-actions>button,.top nav>a,.top nav>button,.workspace-tabs a,
+  .bg-launch,.bg-close,.bg-form button,.bg-suggestions button,.ecosystem-close):not(:disabled):not([aria-disabled=true]):active {
+  transform:translateY(0) scale(.985); transition-duration:80ms;
+}
+html[dir] :is(button:disabled,[aria-disabled=true]):is(:hover,:active) { transform:none!important; box-shadow:none!important; }
+@media(hover:none), (pointer:coarse) {
+  /* Touch receives press feedback, without sticky hover displacement. */
+  html[dir] .navbar .nav-actions>:is(a,button):hover,
+  html[dir] .top nav>:is(a,button):hover,
+  html[dir] :is(.button,.button-primary,.button-secondary,.primary,.secondary,.card-link,.bg-launch):hover { transform:none; }
+  html[dir] :is(.project-card,.certificate-card,.visitor-route,.catalog-card,.library-card,.path-card,
+    .overview-card,.ctf-card,.tool-grid .app-card,.saved-plan,.sidebar-nav a,.library-row,
+    .path-resource-row[href],.ecosystem-links a,.account-portal-card):hover { transform:none; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .js .reveal { opacity:1; transform:none; }
+  *,*::before,*::after { animation:none!important; transition:none!important; scroll-behavior:auto!important; }
+  html[dir] :is(a,button,.project-card,.certificate-card,.visitor-route,.catalog-card,.library-card,.path-card,
+    .overview-card,.ctf-card,.tool-grid .app-card,.saved-plan,.account-portal-card,.ctf-arrow,
+    .project-link b,.sidebar-link-index svg,.app-icon svg,.certificate-media img):is(:hover,:active,:focus-within),
+  .ctf-card:hover .ctf-arrow,.project-link:hover b,.tool-grid .app-card:hover .app-icon svg,
+  .sidebar-nav a:hover .sidebar-link-index svg,.certificate-card:hover .certificate-media img { transform:none!important; }
+  ::view-transition-old(root),::view-transition-new(root) { animation:none!important; }
+}
+html.reduce-motion *,html.reduce-motion *::before,html.reduce-motion *::after {
+  animation:none!important; transition:none!important; scroll-behavior:auto!important;
+}
+html.reduce-motion :is(a,button,.project-card,.certificate-card,.visitor-route,.account-portal-card):is(:hover,:active,:focus-within),
+html.reduce-motion .project-link:hover b,html.reduce-motion .certificate-card:hover .certificate-media img { transform:none!important; }
+
+html.reduce-motion .reveal { opacity:1; transform:none; }
+html.reduce-motion::view-transition-old(root),html.reduce-motion::view-transition-new(root) { animation:none!important; }

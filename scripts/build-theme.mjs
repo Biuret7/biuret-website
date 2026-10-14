@@ -55,5 +55,6 @@ let result='/* Generated light surfaces from the source cascade. Images and layo
 for(const file of config.css){if(!existsSync(path.join(root,file)))throw Error('Missing theme source: '+file);result+='/* '+file+' */\n'+rules(readFileSync(path.join(root,file),'utf8'));}
 result+=readFileSync(path.join(root,'theme-controls.css'),'utf8');
 result+=readFileSync(path.join(root,'light-experience.css'),'utf8');
+result+=readFileSync(path.join(root,'motion.css'),'utf8');
 writeFileSync(path.join(root,'theme.css'),result);
 console.log('Generated light palette for '+config.css.length+' stylesheets.');
