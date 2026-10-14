@@ -521,43 +521,6 @@ html[data-theme="light"] .bg-topic p{color:hsla(129.5,16.8%,15.8%,1);}
 html[data-theme="light"] .bg-message-action{color:hsla(120.0,19.3%,16.1%,1);border:1px solid hsla(115.7,16.9%,72.6%,1);}
 html[data-theme="light"] .bg-message-action:hover,html[data-theme="light"] .bg-tabs button:hover{border-color:hsla(82.1,25.0%,36.0%,1);}
 html[data-theme="light"] .bg-exchange>p:not(.bg-question){color:hsla(135.8,15.4%,16.3%,1);}
-/* ui-refresh.css */
-html[data-theme="light"]{--refresh-surface:hsla(192.0,27.3%,12.6%,1);--refresh-line:hsla(190.4,18.1%,16.0%,1);--refresh-copy:hsla(194.3,17.6%,16.1%,1);}
-html[data-theme="light"] body{background-color:hsla(198.0,6.0%,94.1%,1);}
-html[data-theme="light"] .navbar,html[data-theme="light"] .navbar.scrolled{background:hsla(197.1,6.3%,93.5%,0.937);border-bottom:1px solid hsla(196.4,20.0%,67.7%,1);}
-html[data-theme="light"] .navbar .nav-actions>:is(a,button){border-color:hsla(191.1,18.9%,70.6%,1);background:hsla(192.0,5.8%,91.2%,1);color:hsla(192.0,30.6%,12.5%,1);}
-html[data-theme="light"] .navbar .nav-actions>.account-btn{background:hsla(117.3,4.5%,90.5%,1);border-color:hsla(89.4,24.4%,75.0%,1);color:hsla(85.0,60.0%,13.1%,1);}
-html[data-theme="light"] .navbar .site-nav>a:not(.mobile-account-link):not(.mobile-github-link){color:hsla(198.3,19.3%,16.1%,1);}
-html[data-theme="light"] .navbar .site-nav>a:not(.mobile-account-link):not(.mobile-github-link).active{color:hsla(82.2,72.0%,15.7%,1);}
-html[data-theme="light"] .navbar .site-nav>a:not(.mobile-account-link):not(.mobile-github-link)::after{background:hsla(82.3,85.8%,72.4%,1);}
-html[data-theme="light"] .portfolio-hero .hero-text{color:var(--refresh-copy);}
-html[data-theme="light"] .portfolio-hero .badge{border-color:hsla(88.8,25.0%,73.0%,1);background:hsla(76.4,100.0%,61.2%,0.035);}
-html[data-theme="light"] .portfolio-hero .hero-stage{color:hsla(200.8,15.3%,18.7%,1);}
-html[data-theme="light"] .hero-proof>span{border-color:hsla(190.9,17.2%,69.3%,1);background:hsla(191.3,5.0%,92.4%,1);}
-html[data-theme="light"] .hero-proof b{color:hsla(83.7,72.0%,16.4%,1);}
-html[data-theme="light"] .visitor-route{background:hsla(195.0,5.1%,92.5%,1);border-color:var(--refresh-line);}
-html[data-theme="light"] .visitor-route>span{color:hsla(88.1,47.8%,16.8%,1);}
-html[data-theme="light"] .visitor-route p{color:var(--refresh-copy);}
-html[data-theme="light"] .section-heading>p{color:var(--refresh-copy);}
-html[data-theme="light"] .project-filter,html[data-theme="light"] .credential-filters{background:hsla(193.3,5.6%,92.4%,1);border:1px solid hsla(190.9,16.9%,69.5%,1);}
-html[data-theme="light"] .filter-button{color:hsla(196.4,18.3%,16.1%,1);}
-html[data-theme="light"] .filter-button[aria-pressed=true]{background:hsla(135.7,3.6%,88.8%,1);color:hsla(92.0,68.2%,12.2%,1);border-color:hsla(106.0,20.0%,36.0%,1);}
-html[data-theme="light"] .project-card{border-color:hsla(195.8,14.1%,69.9%,1);}
-html[data-theme="light"] .project-card>p{color:hsla(199.1,18.0%,16.2%,1);}
-html[data-theme="light"] .card-actions .project-link{border:1px solid hsla(182.7,14.1%,71.8%,1);background:hsla(185.2,5.4%,91.2%,1);color:hsla(180.0,22.4%,12.5%,1);}
-html[data-theme="light"] .button-secondary{background:hsla(191.4,5.3%,91.5%,1);border-color:hsla(191.1,17.2%,71.9%,1);color:hsla(195.0,33.3%,12.4%,1);}
-html[data-theme="light"] .playground-showcase,html[data-theme="light"] .portfolio-snapshot{background:hsla(193.3,5.6%,92.4%,1);border-color:hsla(191.1,18.9%,70.6%,1);}
-html[data-theme="light"] .playground-shortcuts a{background:hsla(193.0,5.7%,91.4%,1);border-color:hsla(192.0,20.0%,71.2%,1);}
-html[data-theme="light"] .credential-discovery{background:hsla(193.3,5.6%,92.4%,1);border-color:hsla(191.1,18.9%,70.6%,1);}
-html[data-theme="light"] .certificate-media{background:hsla(196.0,3.0%,90.4%,1);}
-html[data-theme="light"] .certificate-card{border-color:hsla(195.8,14.1%,69.9%,1);}
-html[data-theme="light"] .account-overview,html[data-theme="light"] .account-panel,html[data-theme="light"] .profile-metrics article{border-color:hsla(191.1,18.9%,70.6%,1);background:hsla(193.3,5.6%,92.4%,1);}
-@media(max-width:1199px){html[data-theme="light"] .navbar .site-nav{background:hsla(193.3,5.6%,92.4%,1);border-color:hsla(195.6,17.2%,71.9%,1);}
-}
-@media(hover:hover) and (pointer:fine){html[data-theme="light"] .visitor-route:hover,html[data-theme="light"] .project-card:hover,html[data-theme="light"] .certificate-card:hover{border-color:hsla(110.5,16.1%,36.0%,1);box-shadow:0 10px 24px rgba(20,35,25,0.133);}
-html[data-theme="light"] .card-actions .project-link:hover{background:hsla(187.7,4.9%,88.9%,1);color:hsla(0.0,0.0%,10.0%,1);}
-html[data-theme="light"] .navbar .nav-actions>:is(a,button):hover{background:hsla(188.6,5.4%,88.7%,1);border-color:hsla(145.0,15.7%,36.0%,1);color:hsla(0.0,0.0%,10.0%,1);}
-}
 /* A single accessible control, shared by the three Biuret sites. */
 .theme-toggle { display:inline-flex!important; align-items:center; justify-content:center; gap:8px; flex:0 0 auto; height:44px; min-height:44px; padding:8px 12px; border:1px solid #36443c; border-radius:12px; background:#141c19; color:#e0ecd9; font-family:inherit; font-size:12px; font-weight:600; line-height:1.3; white-space:nowrap; cursor:pointer; transition:background-color .2s,border-color .2s,transform .2s,box-shadow .2s; }
 .theme-toggle:hover { background:#223022; border-color:#8ba953; transform:translateY(-1px); box-shadow:0 4px 16px #0002; }
@@ -694,28 +657,3 @@ html[data-theme=light] .top .brand img { background:#132116; border-radius:6px; 
   html[data-theme=light] :is(a,button):hover,html[data-theme=light] .ctf-card:hover .ctf-arrow { transform:none!important; }
 }
 html[data-theme=light] :is(button:disabled,[aria-disabled=true]):is(:hover,:active) { transform:none!important; box-shadow:none!important; }
-
-/* Authored light palette for the shared UI refresh. */
-html[data-theme=light]{--refresh-surface:#e7eff2;--refresh-line:#a4bbc5;--refresh-copy:#425e6a}
-html[data-theme=light] body{background:#f3f7f9}
-html[data-theme=light] .navbar,html[data-theme=light] .navbar.scrolled{background:#f3f7f9f2;border-color:#b5c8d0}
-html[data-theme=light] .navbar .nav-actions>:is(a,button){background:#203f48;color:#eff7f9;border-color:#587a86}
-html[data-theme=light] .navbar .nav-actions>.account-btn{background:#d9e9cc;color:#304a28;border-color:#8aa575}
-html[data-theme=light] .navbar .site-nav>a:not(.mobile-account-link):not(.mobile-github-link){background:transparent;color:#445e6a}
-html[data-theme=light] .navbar .site-nav>a:not(.mobile-account-link):not(.mobile-github-link).active{color:#315b29}
-html[data-theme=light] .portfolio-hero .hero-stage{color:#526975}
-html[data-theme=light] .portfolio-hero .badge{background:#e3edd9;border-color:#99b580;color:#3b5b27}
-html[data-theme=light] .hero-proof>span{background:#e3ecef;border-color:#b1c6cf;color:#415e6a}
-html[data-theme=light] .hero-proof b{color:#3b642d}
-html[data-theme=light] :is(.visitor-route,.playground-showcase,.portfolio-snapshot,.credential-discovery,.account-overview,.account-panel,.profile-metrics article){background:#e7eff2;border-color:#a4bbc5}
-html[data-theme=light] .visitor-route>span{color:#436631}
-html[data-theme=light] .playground-shortcuts a{background:#dfeaec;border-color:#9fb9c2}
-html[data-theme=light] :is(.project-filter,.credential-filters){background:#e0eaee;border-color:#adc1ca}
-html[data-theme=light] .filter-button{background:transparent;border-color:transparent;color:#465f6b}
-html[data-theme=light] .filter-button[aria-pressed=true]{background:#274750;color:#f2f9f8;border-color:#587d87}
-html[data-theme=light] .project-card>p{color:#435f6b}
-html[data-theme=light] .card-actions .project-link,html[data-theme=light] .button-secondary{background:#26434c;color:#f2f8f9;border-color:#64818b}
-html[data-theme=light] .certificate-media{background:#2a363c}
-html[data-theme=light] .certificate-card{border-color:#a4bbc5}
-@media(max-width:1199px){html[data-theme=light] .navbar .site-nav{background:#edf4f6;border-color:#a4bbc5}}
-@media(hover:hover) and (pointer:fine){html[data-theme=light] .navbar .nav-actions>:is(a,button):hover{background:#345d67;color:#fff;border-color:#83a69d}html[data-theme=light] .card-actions .project-link:hover{background:#345d67;color:#fff}}

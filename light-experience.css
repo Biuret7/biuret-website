@@ -106,28 +106,3 @@ html[data-theme=light] .top .brand img { background:#132116; border-radius:6px; 
   html[data-theme=light] :is(a,button):hover,html[data-theme=light] .ctf-card:hover .ctf-arrow { transform:none!important; }
 }
 html[data-theme=light] :is(button:disabled,[aria-disabled=true]):is(:hover,:active) { transform:none!important; box-shadow:none!important; }
-
-/* Authored light palette for the shared UI refresh. */
-html[data-theme=light]{--refresh-surface:#e7eff2;--refresh-line:#a4bbc5;--refresh-copy:#425e6a}
-html[data-theme=light] body{background:#f3f7f9}
-html[data-theme=light] .navbar,html[data-theme=light] .navbar.scrolled{background:#f3f7f9f2;border-color:#b5c8d0}
-html[data-theme=light] .navbar .nav-actions>:is(a,button){background:#203f48;color:#eff7f9;border-color:#587a86}
-html[data-theme=light] .navbar .nav-actions>.account-btn{background:#d9e9cc;color:#304a28;border-color:#8aa575}
-html[data-theme=light] .navbar .site-nav>a:not(.mobile-account-link):not(.mobile-github-link){background:transparent;color:#445e6a}
-html[data-theme=light] .navbar .site-nav>a:not(.mobile-account-link):not(.mobile-github-link).active{color:#315b29}
-html[data-theme=light] .portfolio-hero .hero-stage{color:#526975}
-html[data-theme=light] .portfolio-hero .badge{background:#e3edd9;border-color:#99b580;color:#3b5b27}
-html[data-theme=light] .hero-proof>span{background:#e3ecef;border-color:#b1c6cf;color:#415e6a}
-html[data-theme=light] .hero-proof b{color:#3b642d}
-html[data-theme=light] :is(.visitor-route,.playground-showcase,.portfolio-snapshot,.credential-discovery,.account-overview,.account-panel,.profile-metrics article){background:#e7eff2;border-color:#a4bbc5}
-html[data-theme=light] .visitor-route>span{color:#436631}
-html[data-theme=light] .playground-shortcuts a{background:#dfeaec;border-color:#9fb9c2}
-html[data-theme=light] :is(.project-filter,.credential-filters){background:#e0eaee;border-color:#adc1ca}
-html[data-theme=light] .filter-button{background:transparent;border-color:transparent;color:#465f6b}
-html[data-theme=light] .filter-button[aria-pressed=true]{background:#274750;color:#f2f9f8;border-color:#587d87}
-html[data-theme=light] .project-card>p{color:#435f6b}
-html[data-theme=light] .card-actions .project-link,html[data-theme=light] .button-secondary{background:#26434c;color:#f2f8f9;border-color:#64818b}
-html[data-theme=light] .certificate-media{background:#2a363c}
-html[data-theme=light] .certificate-card{border-color:#a4bbc5}
-@media(max-width:1199px){html[data-theme=light] .navbar .site-nav{background:#edf4f6;border-color:#a4bbc5}}
-@media(hover:hover) and (pointer:fine){html[data-theme=light] .navbar .nav-actions>:is(a,button):hover{background:#345d67;color:#fff;border-color:#83a69d}html[data-theme=light] .card-actions .project-link:hover{background:#345d67;color:#fff}}

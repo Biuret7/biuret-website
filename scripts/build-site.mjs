@@ -50,7 +50,6 @@ const publicFiles = [
   'theme.js',
   'theme.css',
   'experience.css',
-  'ui-refresh.css',
   'site-switcher.css',
   'site-switcher.js',
   'terms.html',

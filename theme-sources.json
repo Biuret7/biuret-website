@@ -4,7 +4,6 @@
     "experience.css",
     "guide-pilot.css",
     "site-switcher.css",
-    "guide/widget.css",
-    "ui-refresh.css"
+    "guide/widget.css"
   ]
 }
